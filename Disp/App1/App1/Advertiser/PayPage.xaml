@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Settings.PayPage"
+             Title="Способ оплаты">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="tb_edit" Text="Изменить" Clicked="tb_edit_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid Padding="0,40,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0,2*"/>
+                        <ColumnDefinition Width="0,5*"/>
+                        <ColumnDefinition Width="0,3*"/>
+                        <ColumnDefinition Width="0,2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame BackgroundColor="#FFFFFF"
+                           Grid.ColumnSpan="4"
+                           HasShadow="True"/>
+                    <Image Source="mastercard_icon.png"/>
+                    <Label Text="MasterCard 9435"
+                           FontSize="12"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+                    <Label Text="09/21"
+                           FontSize="12"
+                           TextColor="#CCCCCC"
+                           Grid.Column="2"
+                           Grid.Row="0"
+                           VerticalOptions="CenterAndExpand"/>
+                    <RadioButton BorderColor="#FFB800"
+                                 BackgroundColor="#FFFFFF"
+                                 Grid.Row="0"
+                                 Grid.Column="3"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+                    <Frame BackgroundColor="#FFFFFF"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="4"
+                           HasShadow="True"/>
+                    <Image Source="mastercard_icon.png"
+                           Grid.Row="1"
+                           Grid.Column="0"/>
+                    <Label Text="MasterCard 9435"
+                           FontSize="12"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                    <Label Text="09/21"
+                           FontSize="12"
+                           TextColor="#CCCCCC"
+                           Grid.Column="2"
+                           Grid.Row="1"
+                           VerticalOptions="CenterAndExpand"/>
+                    <RadioButton BorderColor="#FFB800"
+                                 BackgroundColor="#FFFFFF"
+                                 Grid.Row="1"
+                                 Grid.Column="3"
+                                 IsChecked="True"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+                    <Frame BackgroundColor="#FFFFFF"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="4"
+                           HasShadow="True"/>
+                    <Label Text="+"
+                           FontSize="30"
+                           TextColor="#6F6F6F"
+                           VerticalTextAlignment="Center"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
+                    <Label Text="Новая карта"
+                           FontSize="16"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+
+                    <Frame BackgroundColor="#FFFFFF"
+                           Grid.Row="4"
+                           Grid.ColumnSpan="4"
+                           HasShadow="True"/>
+                    <Label Text="Выставить счет для оплаты через клиент-банк"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           Padding="10,0,0,0"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="4"
+                           Grid.ColumnSpan="3"/>
+                    <RadioButton BorderColor="#FFB800"
+                                 BackgroundColor="#FFFFFF"
+                                 Grid.Row="4"
+                                 Grid.Column="3"
+                                 IsChecked="False"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

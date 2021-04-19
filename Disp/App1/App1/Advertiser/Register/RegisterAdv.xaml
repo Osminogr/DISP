@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterAdv"
+             Title="Тип рекламодателя">
+    <ContentPage.Content>
+        <Grid Padding="20,30,20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Город" 
+                   FontSize="18"
+                   HorizontalOptions="Start" Margin="0,0,10,0"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8"
+                   VerticalOptions="Center"/>
+            
+            <Picker Grid.Row="1" x:Name="City" Grid.ColumnSpan="8">
+                <Picker.Items>
+                    <x:String>Москва</x:String>
+                    <x:String>Митино</x:String>
+                    <x:String>Зеленоград</x:String>
+                    <x:String>Химки</x:String>
+                    <x:String>Санкт-Петербург</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            
+            <CheckBox x:Name="Cb1" CheckedChanged="Cb1_Change"
+                      Grid.Column="0" 
+                      Grid.Row="2"/>
+            <Label Text="Частное лицо" VerticalOptions="Center"
+                   Grid.Column="1" Grid.ColumnSpan="7"
+                   Grid.Row="2"
+                   FontSize="18"/>
+
+            <CheckBox x:Name="Cb2" CheckedChanged="Cb2_Change"
+                      Grid.Column="0" 
+                      Grid.Row="3"/>
+            <Label Text="Юридическое лицо" VerticalOptions="Center"
+                   Grid.Column="1" Grid.ColumnSpan="7"
+                   Grid.Row="3"
+                   FontSize="18"/>
+            
+            <CheckBox x:Name="Cb3" CheckedChanged="Cb3_Change" 
+                      Grid.Column="0" 
+                      Grid.Row="4"/>
+            <Label Text="Рекламное агентство" VerticalOptions="Center"
+                   Grid.Column="1" Grid.ColumnSpan="7"
+                   Grid.Row="4"
+                   FontSize="18"/>
+             
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

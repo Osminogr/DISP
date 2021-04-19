@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.RegisterAdvPh.FIO"
+             Title="ФИО">
+    <ContentPage.Content>
+        <Grid Padding="20,0,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Label Text="Имя"
+                   Grid.Row="1"/>
+            <Entry 
+                Grid.Row="2"
+                x:Name="Name"/>
+
+            <Label Text="Фамилия"
+                   Grid.Row="3"/>
+            <Entry 
+                Grid.Row="4"
+                x:Name="LastName"/>
+
+            <Label Text="Отчество"
+                   Grid.Row="5"/>
+            <Entry 
+                Grid.Row="6"
+                x:Name="Patronymic"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

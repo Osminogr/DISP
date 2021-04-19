@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.DriverAdv"
+             BackgroundImage ="TaxiYellow.jpg" >
+    <ContentPage.Content>
+        <Grid HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="1" 
+                   Source="Logo.png" HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" Grid.RowSpan="2"
+                   />
+            <Button x:Name="ButtonReg" Text ="Водитель" 
+                    Clicked ="Button_Click_Dr"
+                    Grid.Row="8" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
+                    CornerRadius="40"
+                    Margin="20,3" FontAttributes="Bold"/>
+            <Button x:Name="ButtonLog" Text ="Рекламодатель" 
+                    Clicked ="Button_Click_Adv"
+                    Grid.Row="9" BackgroundColor="#FFFFFF" TextColor= "#111111"
+                    CornerRadius="40"
+                    Margin="20,3" FontAttributes="Bold"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

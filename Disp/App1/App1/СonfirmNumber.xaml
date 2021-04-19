@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.СonfirmNumber"
+             BackgroundImage ="TaxiYellow.jpg">
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="1" 
+                   Source="Logo.png" HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" Grid.RowSpan="2"/>
+            <Label Text="Код отправлен на номер:" 
+                   HorizontalOptions="Center"
+                   Grid.Row="3" TextColor="#FFFFFF" FontSize="18"/>
+            <Label x:Name="Label1"
+                   Text="+7 (903) 641-99-72" 
+                   HorizontalOptions="Center"
+                   Grid.Row="4" TextColor="#FFFFFF" FontSize="18"/>
+            <Entry x:Name="CodeEnter" TextChanged="Change_code" 
+                    Keyboard="Telephone" MaxLength="4"
+                    HorizontalOptions="Start" VerticalOptions="Center"
+                    MinimumWidthRequest="4" Placeholder="Введите код из СМС"
+                    TextColor="#FFFFFF" Grid.Row="5" 
+                    FontAttributes="Bold" FontSize="20"
+                    PlaceholderColor="#99FFFFFF"/>
+            <Button x:Name="Button" Text ="Подтвердить" 
+                    Clicked ="Button_Click"
+                    Grid.Row="6" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
+                    CornerRadius="40"
+                    Margin="20,3" FontAttributes="Bold"/>
+            <Label Text="Не получили код?"
+                   Grid.Row="7"
+                   Padding="0,15,0,0"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   TextColor="#FFFFFF"/>
+            <Button Text="Отправить повторно"
+                   x:Name="reCode"
+                   Grid.Row="8"
+                   Padding="0,0,0,0"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#FFFFFF"
+                   BackgroundColor="#00000000"
+                   Clicked="CodeReq"/>
+            <Button Text="Изменить номер"
+                   Grid.Row="9"
+                   Padding="0,0,0,0"
+                   HorizontalOptions="Center"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="#FFFFFF"
+                   BackgroundColor="#00000000"
+                   Clicked="ChangeNumber"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

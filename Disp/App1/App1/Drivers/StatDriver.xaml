@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Drivers.StatDriver">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <Grid Padding="0,40,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="ElipseYellow.png"
+                           HorizontalOptions="Center"
+                           
+                           Grid.ColumnSpan="2"/>
+                    <Image Source="foto_demo.jpg"
+                           HorizontalOptions="Center"
+                           
+                           Grid.ColumnSpan="2"/>
+
+                    <Label Text="Михаил Иванов (таксист)"
+                           TextColor="#6F6F6F"
+                           FontSize="17"
+                           FontFamily="RobotoBold"
+                           HorizontalOptions="Center"
+                           Grid.Row="1"
+                           Padding="0,15,0,0"
+                           Grid.ColumnSpan="2"/>
+                    <Label Text="Nissan Almera А788МТ123"
+                           TextColor="#6F6F6F"
+                           FontSize="15"
+                           HorizontalTextAlignment="Center"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           />
+                    <Frame BackgroundColor="#FFB800"
+                           CornerRadius="20"
+                           Grid.Row="3"
+                           Grid.ColumnSpan="2"
+                           Margin="80,0,80,0"/>
+                    <Label Text="Популярный маршрут"
+                           FontSize="16"
+                           TextColor="#FFFFFF"
+                           Grid.Row="3"
+                           HorizontalOptions="Center"
+                           Grid.ColumnSpan="2"/>
+                    <Image Source="maps_stat.png"
+                           Margin="0,25,0,-25"
+                           Grid.Row="3"
+                           Grid.ColumnSpan="2"/>
+
+                    <Label Text="- Начало сотрудничества с DISP: 01/01/2020"
+                           Grid.Row="4"
+                           Grid.ColumnSpan="2"
+                           Padding="24,30,0,0"/>
+
+
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

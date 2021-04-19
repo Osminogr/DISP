@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Drivers.Alerts"
+             Title="Оповещения"
+             >
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="Stack">
+
+                <Grid Padding="10,15,10,15" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Frame BackgroundColor="White"
+                           HasShadow="True"
+                           CornerRadius="24"
+                           Grid.ColumnSpan="2"
+                           Grid.RowSpan="4"/>
+                    <Label Text="Оплата"
+                           TextColor="#000000"
+                           FontSize="14"
+                           FontFamily="Roboto"
+                           Padding="16,16,0,0"
+                           Grid.Column="0"
+                           Grid.Row="0"/>
+                    <Label Text="03/05/2021"
+                           TextColor="#6F6F6F"
+                           FontSize="12"
+                           FontFamily="Roboto"
+                           HorizontalTextAlignment="End"
+                           Padding="0,16,16,0"
+                           Grid.Row="0"
+                           Grid.Column="1"/>
+                    <BoxView BackgroundColor="#CCCCCC" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+                    <Label Text="Не проходит оплата"
+                           TextColor="#000000"
+                           FontSize="14"
+                           FontFamily="RobotoBold"
+                           Padding="16,16,0,0"
+                           Grid.Row="2"
+                           Grid.Column="0"
+                           />
+
+                    <Image Source="mastercard_icon.png"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           Margin="0,16,16,0"
+                           HorizontalOptions="End"
+                           VerticalOptions="CenterAndExpand"
+                           />
+
+                    <Label Grid.Row="3"
+                           Grid.ColumnSpan="2"
+                           Padding="16,0,0,16"
+                           TextColor="#6F6F6F"
+                           FontSize="12"
+                           FontFamily="Roboto">
+                        <Label.Text>
+                           С Вашей карты не прошла	оплата.	Просьба	связаться с нами через чат или позвонить в колл-центр. Рекламная компания не будет запущена, пока не пройдет оплата.
+                           
+С уважением, 
+DISP
+                        </Label.Text>
+                    </Label>
+
+
+
+
+                </Grid>
+                
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

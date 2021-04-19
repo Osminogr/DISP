@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Settings.ChangeTelAdv"
+             Title="Настройки">
+    <ContentPage.Content>
+        <StackLayout Padding="24,50,24,0">
+            <Label Text="Номер телефона"
+                   FontFamily="RobotoBold"/>
+            <Entry Placeholder="+7(000) 000-00-00"
+                   FontSize="16"
+                   Keyboard="Telephone"/>
+
+            <Label Text="Новый номер телефона"
+                   FontFamily="RobotoBold"/>
+            <Entry Placeholder="+7(999) 999-99-99"
+                   FontSize="16"
+                   Keyboard="Telephone"/>
+
+            <Button Text="Готово"
+                    TextColor="#FFFFFF"
+                    Margin="70,20,70,0"
+                    BackgroundColor="#FFB800"
+                    CornerRadius="40"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

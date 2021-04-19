@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Drivers.Balance"
+             Title="Баланс">
+    <ContentPage.Content>
+        <StackLayout>
+            
+                
+                <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="55"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                <Label Text="Ваш баланс: 2200₽" HorizontalOptions="Center" VerticalOptions="Center"
+                   Grid.Row="0" Grid.ColumnSpan="2" FontSize="18" Margin="20,0,20,0" />
+
+
+                <Frame BackgroundColor="White" Grid.ColumnSpan="2" Grid.Row="1" HasShadow="True" Margin="-22,0,-22,0"/>
+                <DatePicker MinimumDate="03/14/2021"
+                        MaximumDate="12/31/2021"
+                        Date="03/14/2021" 
+                        TextColor="#F39F26"
+                        BackgroundColor="#FFFFFF"
+                        Margin="20,7,0,0"
+                        Grid.Column="0"
+                        Grid.Row="1"/>
+                    
+                <DatePicker MinimumDate="03/14/2021"
+                        MaximumDate="12/31/2021"
+                        Date="03/14/2021" 
+                        TextColor="Silver"
+                        BackgroundColor="#FFFFFF"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="0,7,20,0"/>
+
+            </Grid>
+        
+        <Grid Margin="30,15,30,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+
+            
+            <Label Text="Video201231" HorizontalOptions="Start" 
+                   Grid.Row="0"  Grid.Column="0" />
+            <Label Text="ООО 'Компания'" HorizontalOptions="Center" 
+                   Grid.Row="0" Grid.Column="1"/>
+            <Label Text="13₽" HorizontalOptions="End" 
+                   Grid.Row="0" Grid.Column="2" />
+
+
+            <Label Text="Video201232" HorizontalOptions="Start" 
+                   Grid.Row="1"  Grid.Column="0" />
+            <Label Text="ООО 'Компания'" HorizontalOptions="Center" 
+                   Grid.Row="1" Grid.Column="1"/>
+            <Label Text="15₽" HorizontalOptions="End" 
+                   Grid.Row="1" Grid.Column="2"/>
+            
+            <Label Text="Video201233" HorizontalOptions="Start" 
+                   Grid.Row="2"  Grid.Column="0" />
+            <Label Text="ООО 'Компания'" HorizontalOptions="Center" 
+                   Grid.Row="2" Grid.Column="1"/>
+            <Label Text="10₽" HorizontalOptions="End" 
+                   Grid.Row="2" Grid.Column="2"/>
+
+            <Label Text="Итого: 38₽" HorizontalOptions="End" 
+                   Grid.Row="3" Grid.Column="2" />
+
+            <Label Text="История перечислений" 
+                   HorizontalOptions="Start" VerticalOptions="Start" 
+                   TextColor="#F39F26" FontAttributes="Bold" 
+                   Grid.Row="4" Grid.ColumnSpan="3" FontSize="20" />
+
+            <Label Text="Перевод денежных средств на банковскую карту" HorizontalOptions="Start"
+                   Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0"/>
+
+            <Label Text="03.01.2021" HorizontalOptions="Start"
+                   Grid.Row="6" Grid.Column="0"/>
+            <Label Text="1000₽" HorizontalOptions="End"
+                   Grid.Row="6" Grid.Column="2" />
+            <BoxView BackgroundColor="#F39F26" Grid.ColumnSpan="3" Grid.Row="7" />
+
+            <Label Text="Перевод денежных средств на банковскую карту" HorizontalOptions="Start"
+               Grid.Row="8" Grid.ColumnSpan="2" Grid.Column="0"/>
+            <Label Text="03.01.2021" HorizontalOptions="Start"
+               Grid.Row="9" Grid.Column="0"/>
+            <Label Text="850₽" HorizontalOptions="End"
+               Grid.Row="9" Grid.Column="2" />
+            <BoxView BackgroundColor="#F39F26" Grid.ColumnSpan="3" Grid.Row="10" />
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

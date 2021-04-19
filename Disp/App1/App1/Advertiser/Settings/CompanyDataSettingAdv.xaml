@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Settings.CompanyDataSettingAdv"
+             Title="Настройки"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="tb" Text="Сохранить"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="24,20,24,20">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Entry Placeholder="Название компании"
+                           FontSize="15"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Юридический адрес"
+                           FontSize="17"
+                           Grid.Row="1"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="ОГРН"
+                           FontSize="17"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="ИНН"
+                           FontSize="17"
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           Keyboard="Numeric"/>
+                    <Entry Placeholder="КПП"
+                           FontSize="17"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           Keyboard="Numeric"/>
+
+                    <Label Text="Руководитель"
+                           FontSize="18"
+                           TextColor="#FFB800"
+                           Padding="0,20,0,0"
+                           Grid.Row="4"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="ФИО (полностью)"
+                           FontSize="17"
+                           Grid.Row="5"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Должность"
+                           FontSize="17"
+                           Grid.Row="6"
+                           Grid.ColumnSpan="2"/>
+                    <Label Text="Контактное лицо"
+                           FontSize="18"
+                           TextColor="#FFB800"
+                           Padding="0,20,0,0"
+                           Grid.Row="7"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="ФИО (полностью)"
+                           FontSize="17"
+                           Grid.Row="8"
+                           Grid.ColumnSpan="2"/>
+                    <Entry Placeholder="Должность"
+                           FontSize="17"
+                           Grid.Row="9"
+                           Grid.ColumnSpan="2"/>
+
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

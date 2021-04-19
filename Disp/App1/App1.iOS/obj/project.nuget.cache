@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "f+HBnAt3evAvEblvSkMlvtvP2T+y/ma9Q+n24oD3/x/RxCTN5qT9dRi+cCsqbZhb4Xh9p6X8tEVWTcvo9CgzOA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Osminogr\\Downloads\\Telegram Desktop\\Disp\\Disp\\App1\\App1.iOS\\App1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Osminogr\\.nuget\\packages\\plugin.mediamanager\\1.0.8\\plugin.mediamanager.1.0.8.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\plugin.mediamanager.forms\\1.0.8\\plugin.mediamanager.forms.1.0.8.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\plugin.permissions\\5.0.0-beta\\plugin.permissions.5.0.0-beta.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\rox.xamarin.video\\2.1.0\\rox.xamarin.video.2.1.0.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\xam.plugin.geolocator\\4.6.2-beta\\xam.plugin.geolocator.4.6.2-beta.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2012\\xamarin.forms.maps.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Osminogr\\.nuget\\packages\\xamarin.jsqmessagesviewcontroller\\7.3.5.1\\xamarin.jsqmessagesviewcontroller.7.3.5.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.6.1 на 1.3.1. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n App1.iOS -> DISP -> Xamarin.Essentials (>= 1.6.1) \r\n App1.iOS -> Xamarin.Essentials (>= 1.3.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

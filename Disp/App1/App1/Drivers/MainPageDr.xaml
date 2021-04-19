@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.MainPageDr"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
+                  Grid.ColumnSpan="2"/>
+
+        <Label Text="" Grid.RowSpan="8" Grid.ColumnSpan="2">
+            <Label.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Right" Swiped="Open"/>
+                <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+        <Button x:Name="Button1" Text ="Активировать" 
+                            Clicked ="Activate"
+                            Grid.Row="6" BackgroundColor="#F39F26" TextColor="#FFFFFF" 
+                            CornerRadius="40"
+                            Margin="30,10" FontAttributes="Bold"
+                Grid.ColumnSpan="2"/>
+
+
+        <Grid IsVisible="False"  IsEnabled="False" 
+              Grid.RowSpan="8" Grid.Column ="0"
+              x:Name="SideBar" BackgroundColor="#FBFBFB" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.RowSpan="2" BackgroundColor="#F39F26" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="4"/>
+                <Label Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                       TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
+                       FontSize="14" Grid.RowSpan="2"
+                       x:Name="UserName"/>
+            </Grid>
+            <Button BackgroundColor="#0000" Text="Видеоролики"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    Margin="19,0,0,0"
+                    Grid.Row="2"
+                    Clicked="Videos"/>
+
+            <Button BackgroundColor="#0000" Text="Баланс"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Margin="15,0,0,0"
+                        Grid.Row="3"
+                    Clicked="Balance"/>
+            <Button BackgroundColor="#0000" Text="Оповещения"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Margin="18,0,0,0"
+                        Grid.Row="4"
+                    Clicked="Alerts"/>
+            <Button BackgroundColor="#0000" Text="Чат"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Grid.Row="5"
+                    Clicked="Chat"/>
+            <Button BackgroundColor="#0000" Text="Настройки"
+                        Margin="17,0,0,0"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Grid.Row="6"
+                    Clicked="Settings"/>
+            <Button BackgroundColor="#0000" Text="Выйти"
+                        FontAttributes="Bold"
+                        TextColor="#F39F26"
+                        HorizontalOptions="Start"
+                        Margin="10,0,0,0"
+                        Grid.Row="11"
+                    Clicked="Exit"/>
+        </Grid>
+        
+        
+
+    </Grid>
+</ContentPage>

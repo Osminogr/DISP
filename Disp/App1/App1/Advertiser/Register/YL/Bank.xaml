@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.RegisterAdvYL.Bank"
+             Title ="Реквизиты банка">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20,35,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                    <RowDefinition Height="65"/>
+                </Grid.RowDefinitions>
+                
+                <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
+                       x:Name="Name"/>
+                <Entry Placeholder="Адрес банка" Grid.Row="1"
+                       x:Name="Address"/>
+                <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
+                       x:Name="NumberR"/>
+                <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
+                       x:Name="NumberK"/>
+                <Entry Placeholder="БИК банка" Grid.Row="4"
+                        x:Name="BIK"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterDrLic"
+             Title="Регистрация">
+    <ContentPage.Content>
+            <Grid Padding="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Label Text="Водительское удостоверение"  TextColor="#FFB800" 
+                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
+                   Grid.Row ="0" FontAttributes="Bold" />
+
+                <Entry Grid.Row ="1" Margin="0,0,10,0" Placeholder="Серия и номер"
+                       x:Name="Number" Keyboard="Numeric"/>
+
+                <Entry Grid.Row ="2" Margin="0,0,10,0" Placeholder ="Дата выдачи"
+                       x:Name="Data"/>
+
+                <Entry Grid.Row ="3" Margin="0,0,10,0" Placeholder ="Срок действия"
+                       x:Name="Period"/>
+
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

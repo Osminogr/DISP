@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Advertiser.VideosAct"
+             Title="Видео">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#FAFAFA">
+            <Grid BackgroundColor="White" Grid.ColumnSpan="4">
+                <Button Grid.Column="0" BackgroundColor="#00000000"
+                        Text="Загруженные" TextColor="#F39F26"/>
+                <Button Grid.Column="1" BackgroundColor="#0B0000AA" 
+                        Text="Одобренные" TextColor="#BCBCBC" Clicked="ToAppr"/>
+            </Grid>
+
+            <DatePicker MinimumDate="03/14/2021"
+                        MaximumDate="12/31/2021"
+                        Date="03/14/2021" 
+                        TextColor="#F39F26" BackgroundColor="#FFFFFF" 
+                        Grid.Row="1" Grid.ColumnSpan="4"/>
+
+            <ScrollView Grid.Row="2"
+                        Grid.ColumnSpan="4"
+                        >
+                <StackLayout Margin="10,10,10,10" x:Name="videos"  VerticalOptions="FillAndExpand">
+                    <WebView Source="http://46.101.167.149:8003/api/?name=Pexels_Videos_2313069_iwOTG0H.mp4"/>
+                </StackLayout>
+            </ScrollView>
+
+            
+            
+            <Frame BackgroundColor="#F39F26" CornerRadius="100"
+                    Grid.RowSpan="2"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="20" WidthRequest="20"
+                    Grid.Column="3" Grid.Row="8">
+            </Frame>
+
+            <Label  Text="+"
+                    BackgroundColor="#F39F26"
+                    TextColor="White" FontSize="40"
+                    Grid.RowSpan="2"  Grid.Column="3" Grid.Row="8"
+                    VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Button 
+                    Grid.Column="3" Grid.Row="8"
+                    Grid.RowSpan="2"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="60" WidthRequest="60"
+                    BackgroundColor="#00000000" Clicked="NewVideo"/>
+            
+        </Grid>
+        <!--<ScrollView>
+            <StackLayout x:Name="stack">
+            </StackLayout>
+        </ScrollView>-->
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Advertiser.CampaignsAct"
+             Title ="Рекламные кампании">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#FAFAFA">
+            <Grid BackgroundColor="White" Grid.ColumnSpan="4">
+                <Button Grid.Column="0" BackgroundColor="#00000000"
+                        Text="Активные" TextColor="#F39F26"/>
+                
+                <Button Grid.Column="1" BackgroundColor="#0B0000AA" 
+                        Text="Завершённые" TextColor="#BCBCBC" Clicked="ToCompl"/>
+            </Grid>
+
+            <DatePicker MinimumDate="03/14/2021"
+                        MaximumDate="12/31/2021"
+                        Date="03/14/2021" 
+                        TextColor="#F39F26" BackgroundColor="#FFFFFF" 
+                        Grid.Row="1" Grid.ColumnSpan="4"/>
+            <ScrollView Grid.Row="2"
+                        Grid.ColumnSpan="4">
+                <StackLayout Margin="10,10,10,10" x:Name="videos">
+                </StackLayout>
+            </ScrollView>
+            
+            <Button 
+                    Grid.Row="3" Text="Водители" Grid.ColumnSpan="4"
+                    Margin="10,10,10,10"
+                    BackgroundColor="#BCBCBC" Clicked="ToDrivers"/>
+            
+            <Button 
+                    Grid.Row="4" Text="Тарифы" Grid.ColumnSpan="4"
+                    Margin="10,10,10,10"
+                    BackgroundColor="#BCBCBC" Clicked="ToRates"/>
+            
+            <Button 
+                    Grid.Row="5" Text="Тепловая карта" Grid.ColumnSpan="4"
+                    Margin="10,10,10,10"
+                    BackgroundColor="#BCBCBC" Clicked="ToHMap"/>
+
+            <Frame BackgroundColor="#F39F26" CornerRadius="100"
+                    Grid.RowSpan="2"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="20" WidthRequest="20"
+                    Grid.Column="3" Grid.Row="8"/>
+
+            <Label  Text="+"
+                    BackgroundColor="#F39F26"
+                    TextColor="White" FontSize="40"
+                    Grid.RowSpan="2"  Grid.Column="3" Grid.Row="8"
+                    VerticalOptions="Center" HorizontalOptions="Center"/>
+
+            <Button 
+                    Grid.Column="3" Grid.Row="8"
+                    Grid.RowSpan="2"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    HeightRequest="60" WidthRequest="60"
+                    Clicked="NewCampaigns" BackgroundColor="#00000000"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

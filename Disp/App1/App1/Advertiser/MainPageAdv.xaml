@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.MainPageAdv"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
+                  Grid.ColumnSpan="2"/>
+
+            <Label Text="" Grid.RowSpan="8" Grid.ColumnSpan="2">
+                <Label.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Right" Swiped="Open"/>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Grid IsVisible="True"  IsEnabled="False" 
+              Grid.RowSpan="8" Grid.Column ="0"
+              x:Name="SideBar" BackgroundColor="#FBFBFB">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.RowSpan="2" BackgroundColor="#F39F26" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="3"/>
+                <Label x:Name ="NLabel" Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                       TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
+                       FontSize="14"/>
+                    <Label x:Name ="CLabel" Text="ООО 'КОМПАНИЯ'" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                       TextColor="White" HorizontalOptions="Center"
+                       FontSize="14"  Grid.RowSpan="2"/>
+            </Grid>
+            <Button BackgroundColor="#0000" Text="Видеоролики"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    Margin="20,0,0,0"
+                    Grid.Row="2"
+                    Clicked="Videos"/>
+            <Button BackgroundColor="#0000" Text="Новая Кампания"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Margin="16,0,0,0"
+                        Grid.Row="3"
+                    Clicked="NewСampaign"/>
+            <Button BackgroundColor="#0000" Text="Статистика"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Margin="18,0,0,0"
+                        Grid.Row="4"
+                    Clicked="Statistic"/>
+            <Button BackgroundColor="#0000" Text="Способы оплаты"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Margin="19,0,0,0"
+                        Grid.Row="5"
+                    Clicked="PayMethod"/>
+            <Button BackgroundColor="#0000" Text="Оповещения"
+                        Margin="19,0,0,0"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Grid.Row="6"
+                    Clicked="Alerts"/>
+                <Button BackgroundColor="#0000" Text="Чат"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Grid.Row="7"
+                    Clicked="Chat"/>
+                <Button BackgroundColor="#0000" Text="Настройки"
+                        Margin="17,0,0,0"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        Grid.Row="8"
+                    Clicked="Settings"/>
+                <Label Text="Показать всех водителей Disp"
+                        HorizontalOptions="Start"
+                       VerticalOptions="End"
+                        Grid.Row="9" Margin="28,0,0,0"/>
+                <Switch IsToggled="True" 
+                        Grid.Row="10"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Toggled="Switched" Margin="18,0,0,0"/>
+                <Button BackgroundColor="#0000" Text="Выйти"
+                        FontAttributes="Bold"
+                        TextColor="#F39F26"
+                        HorizontalOptions="Start"
+                        Margin="10,0,0,0"
+                        Grid.Row="11"
+                    Clicked="Exit"/>
+        </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

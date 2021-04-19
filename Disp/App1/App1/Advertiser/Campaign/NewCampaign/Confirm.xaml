@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Campaign.NewCampaign.Confirm">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Frame>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Vid_1.mp4" Grid.Row="0"/>
+
+                            <WebView Grid.Row="1" Source = "http://46.101.167.149:8003/api/?name=Pexels_Videos_2313069_iwOTG0H.mp4" HorizontalOptions="FillAndExpand"/>
+
+                            <Label Text="Срок размещения: 30 дней" Grid.Row="2"/>
+
+                            <Label Text="Условия размещения: 10 экранов" Grid.Row="3"/>
+
+                            <BoxView Grid.Row="4" HorizontalOptions="Fill" HeightRequest="2" Margin="20, 0, 20, 0"/>
+
+                            <Label Text="Итого: 18 000Р" Grid.Row="5" HorizontalOptions="Start" />
+
+                            <Button Clicked="NewCampaigns" HorizontalOptions="Center" Grid.Row="6" Text="Оплатить" TextColor="White" BackgroundColor="#F39F26"/>
+
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

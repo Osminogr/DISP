@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterCar"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Padding="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Автомобиль"  TextColor="#FFB800" 
+                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
+                   Grid.Row ="0" FontAttributes="Bold" />
+
+            <Entry Grid.Row ="1" Placeholder="Марка"
+                   x:Name="Mark"/>
+
+            <Entry Grid.Row ="2" Placeholder ="Модель"
+                   x:Name="Model"/>
+
+            <Entry Grid.Row ="3" Placeholder ="Госномер"
+                   x:Name="Number"/>
+
+            <Entry Grid.Row ="4" Placeholder ="Год выпуска"
+                   x:Name="Data"/>
+
+            <Entry Grid.Row ="5" Placeholder ="Цвет"
+                   x:Name="Color"/>
+
+            <Entry Grid.Row ="6" Placeholder ="VIN"
+                   x:Name="VIN"/>
+
+            <Label Grid.Row ="7" Text="Свидетельство о регистрации"/>
+            <Entry Grid.Row ="7"
+                   x:Name="Reg"/>
+
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

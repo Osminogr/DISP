@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterDr"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <Grid Padding="20,0,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Label  Text="Имя"
+                    HorizontalOptions="Start" 
+                    Grid.Row ="1"/>
+            <Entry Grid.Row ="1" Margin="0,0,10,0" x:Name="Name"/>
+
+
+            <Label  Text="Отчество" 
+                    HorizontalOptions="Start"
+                    Grid.Row ="2" Margin="0,0,10,0"/>
+            <Entry Grid.Row ="2" Margin="0,0,10,0"  x:Name="Patronymic"/>
+
+
+            <Label Text="Фамилия"
+                HorizontalOptions="Start" Grid.Row ="3" Margin="0,0,10,0"
+                   x:Name="LastName"/>
+            <Entry Grid.Row ="3" Margin="0,0,10,0"/>
+
+            <Label Text="Город"
+                HorizontalOptions="Start" Grid.Row ="4" Margin="0,0,10,0"/>
+            
+            <Picker Grid.Row="4" x:Name="city">
+                <Picker.Items>
+                    <x:String>Москва</x:String>
+                    <x:String>Митино</x:String>
+                    <x:String>Зеленоград</x:String>
+                    <x:String>Химки</x:String>
+                    <x:String>Санкт-Петербург</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

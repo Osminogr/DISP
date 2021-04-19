@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.RegisterPasp"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+            <Label Text="Паспортные данные"  TextColor="#FFB800" 
+                   FontSize="25" HorizontalOptions="Start" 
+                   Grid.Row ="0" FontAttributes="Bold" />
+            
+            <Entry Grid.Row ="1" Margin="0,0,10,0" Placeholder="Серия и номер"
+                   x:Name="number" Keyboard="Numeric"/>
+            
+            <Label Text="Дата выдачи"
+                    HorizontalOptions="Start" Grid.Row ="2" 
+                   FontAttributes="Bold" />
+            <Entry Grid.Row ="2" Margin="0,0,10,0"
+                   x:Name="Data"/>
+
+            <Label Text="Кем выдан"
+                    HorizontalOptions="Start" Grid.Row ="3" 
+                   FontAttributes="Bold" />
+            <Entry Grid.Row ="3" Margin="0,0,10,0"
+                   x:Name="Org"/>
+
+            <Label Text="Код подразделения"
+                    HorizontalOptions="Start" Grid.Row ="4" 
+                   FontAttributes="Bold" />
+            <Entry Grid.Row ="4" Margin="0,0,10,0"
+                   x:Name="Code" Keyboard="Numeric"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,374 @@
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.dll
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
+C:\Users\User\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.dll
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+C:\Users\maksi\Documents\Disp\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
+C:\Users\maksi\Documents\Disp\App1\App1\bin\Debug\netstandard2.0\App1.dll
+C:\Users\maksi\Documents\Disp\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
+C:\Users\maksi\Documents\Disp\App1\App1\bin\Debug\netstandard2.0\App1.pdb
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\LogReg.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\Login.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\RegisterDr.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\PhoneNumber\StartPage.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\PhoneNumber\СonfirmNumber.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterAdv.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLic.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLicPh.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLicPh2.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPasp.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh2.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh3.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCar.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCarPh.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCarPh2.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Card.xaml.g.cs
+C:\Users\maksi\Documents\Disp\App1\App1\obj\Debug\netstandard2.0\TermsOfUse.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
+C:\Users\maksi\source\repos\Disp\App1\App1\bin\Debug\netstandard2.0\App1.dll
+C:\Users\maksi\source\repos\Disp\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
+C:\Users\maksi\source\repos\Disp\App1\App1\bin\Debug\netstandard2.0\App1.pdb
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\Login.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\LogReg.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\PhoneNumber\StartPage.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\PhoneNumber\СonfirmNumber.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterAdv.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Card.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCar.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCarPh.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\Car\RegisterCarPh2.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLic.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLicPh.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\DrLic\RegisterDrLicPh2.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegisterDr\RegisterDr.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPasp.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh2.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\RegPasp\RegisterPaspPh3.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\TermsOfUse.xaml.g.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.dll
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+C:\Users\maksi\source\repos\Disp\App1\App1\obj\Debug\netstandard2.0\Test.xaml.g.cs
+D:\Projects\Disp\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
+D:\Projects\Disp\App1\App1\bin\Debug\netstandard2.0\App1.dll
+D:\Projects\Disp\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
+D:\Projects\Disp\App1\App1\bin\Debug\netstandard2.0\App1.pdb
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.dll
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.dll
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.pdb
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Adv\Register\Ph\FIO.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Adv\Register\Ph\TermOfUse.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Adv\Register\RegisterAdv.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Adv\Register\YL\Bank.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Adv\Register\YL\Organiz.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\СonfirmNumber.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+D:\Projects\Disp2\Disp\App1\App1\bin\Debug\netstandard2.0\App1.deps.json
+D:\Projects\Disp2\Disp\App1\App1\bin\Debug\netstandard2.0\App1.dll
+D:\Projects\Disp2\Disp\App1\App1\bin\Debug\netstandard2.0\ref\App1.dll
+D:\Projects\Disp2\Disp\App1\App1\bin\Debug\netstandard2.0\App1.pdb
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Balance.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\MainPageDr.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Card.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCar.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh2.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLic.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh2.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegisterDr.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPasp.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh2.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh3.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\TermsOfUse.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Videos.xaml.g.cs
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Projects\Disp2\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\Settings.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Balance.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\MainPageDr.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Card.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCar.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh2.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLic.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh2.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegisterDr.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPasp.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh2.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh3.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\TermsOfUse.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\Settings.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Videos.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\СonfirmNumber.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Alerts.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\MainPageAdv.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\Ph\FIO.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\RegisterAdv.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Bank.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Organiz.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\TermOfUse.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\VideosAct.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\VideoAppr.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\CampaignComp.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Chat.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Chat.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\CampaignsAct.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\BankUpdate.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\CarUpdate.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\DrLicUpdate.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PasportDataUpdate.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PersonalDataUpdate.xaml.g.cs
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Projects\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Drivers.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Chat.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\MainPageAdv.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\Ph\FIO.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\RegisterAdv.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\TermOfUse.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Bank.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Organiz.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Alerts.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Balance.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Chat.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\MainPageDr.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Card.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCar.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh2.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLic.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh2.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegisterDr.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPasp.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh2.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh3.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\TermsOfUse.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\BankUpdate.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\CarUpdate.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\DrLicUpdate.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PasportDataUpdate.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PersonalDataUpdate.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\Settings.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Videos.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\СonfirmNumber.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Alerts.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Loader.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideoAppr.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideosAct.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Page1.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.Properties.Resources.resources
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.GenerateResource.cache
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignComp.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignsAct.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\Drivers.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\HeatMap.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\ChoseVid.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Confirm.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Rates.xaml.g.cs
+C:\Users\Osminogr\Desktop\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.deps.json
+C:\Users\Osminogr\Desktop\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.dll
+C:\Users\Osminogr\Desktop\Disp\App1\App1\bin\Debug\netstandard2.0\ref\DISP.dll
+C:\Users\Osminogr\Desktop\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.pdb
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.dll
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\ref\DISP.dll
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.pdb
+C:\Users\Osminogr\Desktop\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+E:\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.deps.json
+E:\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.dll
+E:\Disp\App1\App1\bin\Debug\netstandard2.0\ref\DISP.dll
+E:\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.pdb
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.Properties.Resources.resources
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.GenerateResource.cache
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Alerts.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignComp.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignsAct.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\Drivers.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\HeatMap.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\ChoseVid.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Confirm.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Rates.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Chat.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\MainPageAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\PayPage.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\Ph\FIO.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\RegisterAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\TermOfUse.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Bank.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Organiz.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\ChangeEmailAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\ChangeTelAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\CompanyDataSettingAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\DataOrganizationBankAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\DogovorAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\PasswordChangeAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\SettingsAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\StatisticAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Loader.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Page1.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideoAppr.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideosAct.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Alerts.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Balance.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Chat.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\MainPageDr.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Card.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCar.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh2.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLic.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh2.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegisterDr.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPasp.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh2.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh3.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\TermsOfUse.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\BankUpdate.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\CarUpdate.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\ContractAdverService.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\DrLicUpdate.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PasportDataUpdate.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PersonalDataUpdate.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\Settings.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Videos.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\СonfirmNumber.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.dll
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\ref\DISP.dll
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.pdb
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\EditPayMethod.xaml.g.cs
+E:\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\StatDriver.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.deps.json
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.dll
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\bin\Debug\netstandard2.0\ref\DISP.dll
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\bin\Debug\netstandard2.0\DISP.pdb
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csprojAssemblyReference.cache
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.Properties.Resources.resources
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.GenerateResource.cache
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Alerts.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignComp.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\CampaignsAct.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\Drivers.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\HeatMap.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\ChoseVid.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Confirm.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Campaign\NewCampaign\Rates.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Chat.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\EditPayMethod.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\MainPageAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\PayPage.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\Ph\FIO.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\RegisterAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\TermOfUse.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Bank.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Register\YL\Organiz.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\ChangeEmailAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\ChangeTelAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\CompanyDataSettingAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\DataOrganizationBankAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\DogovorAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\PasswordChangeAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Settings\SettingsAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\StatisticAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Loader.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\Page1.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideoAppr.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Advertiser\Videos\VideosAct.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\DriverAdv.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Alerts.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Balance.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Chat.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\MainPageDr.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Card.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCar.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\Car\RegisterCarPh2.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLic.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\DrLic\RegisterDrLicPh2.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegisterDr.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPasp.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh2.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\RegPasp\RegisterPaspPh3.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Register\TermsOfUse.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\BankUpdate.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\CarUpdate.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\ContractAdverService.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\DrLicUpdate.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PasportDataUpdate.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\PersonalDataUpdate.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Settings\Settings.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\StatDriver.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Drivers\Videos.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\StartPage.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\СonfirmNumber.xaml.g.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfoInputs.cache
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.AssemblyInfo.cs
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\App1.csproj.CoreCompileInputs.cache
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.dll
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\ref\DISP.dll
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\DISP.pdb
+C:\Users\Osminogr\Downloads\Telegram Desktop\Disp\Disp\App1\App1\obj\Debug\netstandard2.0\Vid.xaml.g.cs

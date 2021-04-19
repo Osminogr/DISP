@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.TermsOfUse"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="1. Все действия в приложении должны соответствовать законодательству РФ &#10;
+1.1  Какие-то очень важные правила, &#10;
+1.2  которые никто не любит читать &#10;
+2. Соглашаясь с данным документом, &#10;
+2.1 вы передаёте свою душу в собственность компании &#10;
+3. Скажу, что заела клавиша ааааааааааааааааааааааааааааааааааа&#10;
+3.1 ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа&#10;
+3.2 ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа&#10;
+3.3 ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа&#10;"
+                           Padding="20,20,20,20"
+                           />
+                </StackLayout>
+            </ScrollView>
+            <Button x:Name="Button1" Text ="Подтвердить" 
+                            Clicked ="Button_Click"
+                            Grid.Row="5" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
+                            CornerRadius="40"
+                            Margin="20,3" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
