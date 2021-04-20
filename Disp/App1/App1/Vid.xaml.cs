@@ -22,8 +22,8 @@ namespace App1
         public static readonly BindableProperty urlProperty = BindableProperty.Create(nameof(Url), typeof(string), typeof(Vid), string.Empty);
         public string Url
         {
-            get => (string)GetValue(Vid.nameProperty);
-            set => SetValue(Vid.nameProperty, value);
+            get => (string)GetValue(Vid.urlProperty);
+            set => SetValue(Vid.urlProperty, value);
         }
         public Vid()
         {
