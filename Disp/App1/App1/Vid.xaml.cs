@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App1
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     [DesignTimeVisible(true)]
     public partial class Vid : ContentView
     {

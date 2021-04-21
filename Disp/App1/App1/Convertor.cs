@@ -7,38 +7,6 @@ namespace App1
 {
     public struct Driver
     {
-        /*public Driver(string str = "")
-        {
-            name = "";
-            lastname = "";
-            patronymic = "";
-            pasp = "";
-            DrLic = "";
-            city = "";
-            phone = "";
-
-
-
-            paspPh1 = "";
-            paspPh2 = "";
-            paspPh3 = "";
-
-            drLicPh1 = "";
-            drLicPh2 = "";
-
-            regCertPh1 = "";
-            regCertPh2 = "";
-
-            mark = "";
-            model = "";
-            dataCar = "";
-            color = "";
-            vin = "";
-            regNumberCar = "";
-            carNumber = "";
-
-            card = "";
-        }*/
         public int companies;
         public string name, lastname, patronymic;
         public string city;
