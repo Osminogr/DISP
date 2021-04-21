@@ -3918,1613 +3918,6 @@ namespace App1.Droid
 			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_tileMode = global::App1.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Plugin.Permissions.Resource.Styleable.GradientColor_android_type = global::App1.Droid.Resource.Styleable.GradientColor_android_type;
 			global::Plugin.Permissions.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::App1.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
-			global::RoxVideo.Resource.Animation.abc_fade_in = global::App1.Droid.Resource.Animation.abc_fade_in;
-			global::RoxVideo.Resource.Animation.abc_fade_out = global::App1.Droid.Resource.Animation.abc_fade_out;
-			global::RoxVideo.Resource.Animation.abc_grow_fade_in_from_bottom = global::App1.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::RoxVideo.Resource.Animation.abc_popup_enter = global::App1.Droid.Resource.Animation.abc_popup_enter;
-			global::RoxVideo.Resource.Animation.abc_popup_exit = global::App1.Droid.Resource.Animation.abc_popup_exit;
-			global::RoxVideo.Resource.Animation.abc_shrink_fade_out_from_bottom = global::App1.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::RoxVideo.Resource.Animation.abc_slide_in_bottom = global::App1.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::RoxVideo.Resource.Animation.abc_slide_in_top = global::App1.Droid.Resource.Animation.abc_slide_in_top;
-			global::RoxVideo.Resource.Animation.abc_slide_out_bottom = global::App1.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::RoxVideo.Resource.Animation.abc_slide_out_top = global::App1.Droid.Resource.Animation.abc_slide_out_top;
-			global::RoxVideo.Resource.Animation.design_bottom_sheet_slide_in = global::App1.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::RoxVideo.Resource.Animation.design_bottom_sheet_slide_out = global::App1.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::RoxVideo.Resource.Animation.design_snackbar_in = global::App1.Droid.Resource.Animation.design_snackbar_in;
-			global::RoxVideo.Resource.Animation.design_snackbar_out = global::App1.Droid.Resource.Animation.design_snackbar_out;
-			global::RoxVideo.Resource.Attribute.actionBarDivider = global::App1.Droid.Resource.Attribute.actionBarDivider;
-			global::RoxVideo.Resource.Attribute.actionBarItemBackground = global::App1.Droid.Resource.Attribute.actionBarItemBackground;
-			global::RoxVideo.Resource.Attribute.actionBarPopupTheme = global::App1.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::RoxVideo.Resource.Attribute.actionBarSize = global::App1.Droid.Resource.Attribute.actionBarSize;
-			global::RoxVideo.Resource.Attribute.actionBarSplitStyle = global::App1.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::RoxVideo.Resource.Attribute.actionBarStyle = global::App1.Droid.Resource.Attribute.actionBarStyle;
-			global::RoxVideo.Resource.Attribute.actionBarTabBarStyle = global::App1.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::RoxVideo.Resource.Attribute.actionBarTabStyle = global::App1.Droid.Resource.Attribute.actionBarTabStyle;
-			global::RoxVideo.Resource.Attribute.actionBarTabTextStyle = global::App1.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::RoxVideo.Resource.Attribute.actionBarTheme = global::App1.Droid.Resource.Attribute.actionBarTheme;
-			global::RoxVideo.Resource.Attribute.actionBarWidgetTheme = global::App1.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::RoxVideo.Resource.Attribute.actionButtonStyle = global::App1.Droid.Resource.Attribute.actionButtonStyle;
-			global::RoxVideo.Resource.Attribute.actionDropDownStyle = global::App1.Droid.Resource.Attribute.actionDropDownStyle;
-			global::RoxVideo.Resource.Attribute.actionLayout = global::App1.Droid.Resource.Attribute.actionLayout;
-			global::RoxVideo.Resource.Attribute.actionMenuTextAppearance = global::App1.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::RoxVideo.Resource.Attribute.actionMenuTextColor = global::App1.Droid.Resource.Attribute.actionMenuTextColor;
-			global::RoxVideo.Resource.Attribute.actionModeBackground = global::App1.Droid.Resource.Attribute.actionModeBackground;
-			global::RoxVideo.Resource.Attribute.actionModeCloseButtonStyle = global::App1.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::RoxVideo.Resource.Attribute.actionModeCloseDrawable = global::App1.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::RoxVideo.Resource.Attribute.actionModeCopyDrawable = global::App1.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::RoxVideo.Resource.Attribute.actionModeCutDrawable = global::App1.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::RoxVideo.Resource.Attribute.actionModeFindDrawable = global::App1.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::RoxVideo.Resource.Attribute.actionModePasteDrawable = global::App1.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::RoxVideo.Resource.Attribute.actionModePopupWindowStyle = global::App1.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::RoxVideo.Resource.Attribute.actionModeSelectAllDrawable = global::App1.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::RoxVideo.Resource.Attribute.actionModeShareDrawable = global::App1.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::RoxVideo.Resource.Attribute.actionModeSplitBackground = global::App1.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::RoxVideo.Resource.Attribute.actionModeStyle = global::App1.Droid.Resource.Attribute.actionModeStyle;
-			global::RoxVideo.Resource.Attribute.actionModeWebSearchDrawable = global::App1.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::RoxVideo.Resource.Attribute.actionOverflowButtonStyle = global::App1.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::RoxVideo.Resource.Attribute.actionOverflowMenuStyle = global::App1.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::RoxVideo.Resource.Attribute.actionProviderClass = global::App1.Droid.Resource.Attribute.actionProviderClass;
-			global::RoxVideo.Resource.Attribute.actionViewClass = global::App1.Droid.Resource.Attribute.actionViewClass;
-			global::RoxVideo.Resource.Attribute.activityChooserViewStyle = global::App1.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::RoxVideo.Resource.Attribute.alertDialogButtonGroupStyle = global::App1.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::RoxVideo.Resource.Attribute.alertDialogCenterButtons = global::App1.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::RoxVideo.Resource.Attribute.alertDialogStyle = global::App1.Droid.Resource.Attribute.alertDialogStyle;
-			global::RoxVideo.Resource.Attribute.alertDialogTheme = global::App1.Droid.Resource.Attribute.alertDialogTheme;
-			global::RoxVideo.Resource.Attribute.allowStacking = global::App1.Droid.Resource.Attribute.allowStacking;
-			global::RoxVideo.Resource.Attribute.arrowHeadLength = global::App1.Droid.Resource.Attribute.arrowHeadLength;
-			global::RoxVideo.Resource.Attribute.arrowShaftLength = global::App1.Droid.Resource.Attribute.arrowShaftLength;
-			global::RoxVideo.Resource.Attribute.autoCompleteTextViewStyle = global::App1.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::RoxVideo.Resource.Attribute.background = global::App1.Droid.Resource.Attribute.background;
-			global::RoxVideo.Resource.Attribute.backgroundSplit = global::App1.Droid.Resource.Attribute.backgroundSplit;
-			global::RoxVideo.Resource.Attribute.backgroundStacked = global::App1.Droid.Resource.Attribute.backgroundStacked;
-			global::RoxVideo.Resource.Attribute.backgroundTint = global::App1.Droid.Resource.Attribute.backgroundTint;
-			global::RoxVideo.Resource.Attribute.backgroundTintMode = global::App1.Droid.Resource.Attribute.backgroundTintMode;
-			global::RoxVideo.Resource.Attribute.barLength = global::App1.Droid.Resource.Attribute.barLength;
-			global::RoxVideo.Resource.Attribute.behavior_hideable = global::App1.Droid.Resource.Attribute.behavior_hideable;
-			global::RoxVideo.Resource.Attribute.behavior_overlapTop = global::App1.Droid.Resource.Attribute.behavior_overlapTop;
-			global::RoxVideo.Resource.Attribute.behavior_peekHeight = global::App1.Droid.Resource.Attribute.behavior_peekHeight;
-			global::RoxVideo.Resource.Attribute.borderWidth = global::App1.Droid.Resource.Attribute.borderWidth;
-			global::RoxVideo.Resource.Attribute.borderlessButtonStyle = global::App1.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::RoxVideo.Resource.Attribute.bottomSheetDialogTheme = global::App1.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::RoxVideo.Resource.Attribute.bottomSheetStyle = global::App1.Droid.Resource.Attribute.bottomSheetStyle;
-			global::RoxVideo.Resource.Attribute.buttonBarButtonStyle = global::App1.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::RoxVideo.Resource.Attribute.buttonBarNegativeButtonStyle = global::App1.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::RoxVideo.Resource.Attribute.buttonBarNeutralButtonStyle = global::App1.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::RoxVideo.Resource.Attribute.buttonBarPositiveButtonStyle = global::App1.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::RoxVideo.Resource.Attribute.buttonBarStyle = global::App1.Droid.Resource.Attribute.buttonBarStyle;
-			global::RoxVideo.Resource.Attribute.buttonPanelSideLayout = global::App1.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::RoxVideo.Resource.Attribute.buttonStyle = global::App1.Droid.Resource.Attribute.buttonStyle;
-			global::RoxVideo.Resource.Attribute.buttonStyleSmall = global::App1.Droid.Resource.Attribute.buttonStyleSmall;
-			global::RoxVideo.Resource.Attribute.buttonTint = global::App1.Droid.Resource.Attribute.buttonTint;
-			global::RoxVideo.Resource.Attribute.buttonTintMode = global::App1.Droid.Resource.Attribute.buttonTintMode;
-			global::RoxVideo.Resource.Attribute.cardBackgroundColor = global::App1.Droid.Resource.Attribute.cardBackgroundColor;
-			global::RoxVideo.Resource.Attribute.cardCornerRadius = global::App1.Droid.Resource.Attribute.cardCornerRadius;
-			global::RoxVideo.Resource.Attribute.cardElevation = global::App1.Droid.Resource.Attribute.cardElevation;
-			global::RoxVideo.Resource.Attribute.cardMaxElevation = global::App1.Droid.Resource.Attribute.cardMaxElevation;
-			global::RoxVideo.Resource.Attribute.cardPreventCornerOverlap = global::App1.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::RoxVideo.Resource.Attribute.cardUseCompatPadding = global::App1.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::RoxVideo.Resource.Attribute.checkboxStyle = global::App1.Droid.Resource.Attribute.checkboxStyle;
-			global::RoxVideo.Resource.Attribute.checkedTextViewStyle = global::App1.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::RoxVideo.Resource.Attribute.closeIcon = global::App1.Droid.Resource.Attribute.closeIcon;
-			global::RoxVideo.Resource.Attribute.closeItemLayout = global::App1.Droid.Resource.Attribute.closeItemLayout;
-			global::RoxVideo.Resource.Attribute.collapseContentDescription = global::App1.Droid.Resource.Attribute.collapseContentDescription;
-			global::RoxVideo.Resource.Attribute.collapseIcon = global::App1.Droid.Resource.Attribute.collapseIcon;
-			global::RoxVideo.Resource.Attribute.collapsedTitleGravity = global::App1.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::RoxVideo.Resource.Attribute.collapsedTitleTextAppearance = global::App1.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::RoxVideo.Resource.Attribute.color = global::App1.Droid.Resource.Attribute.color;
-			global::RoxVideo.Resource.Attribute.colorAccent = global::App1.Droid.Resource.Attribute.colorAccent;
-			global::RoxVideo.Resource.Attribute.colorButtonNormal = global::App1.Droid.Resource.Attribute.colorButtonNormal;
-			global::RoxVideo.Resource.Attribute.colorControlActivated = global::App1.Droid.Resource.Attribute.colorControlActivated;
-			global::RoxVideo.Resource.Attribute.colorControlHighlight = global::App1.Droid.Resource.Attribute.colorControlHighlight;
-			global::RoxVideo.Resource.Attribute.colorControlNormal = global::App1.Droid.Resource.Attribute.colorControlNormal;
-			global::RoxVideo.Resource.Attribute.colorPrimary = global::App1.Droid.Resource.Attribute.colorPrimary;
-			global::RoxVideo.Resource.Attribute.colorPrimaryDark = global::App1.Droid.Resource.Attribute.colorPrimaryDark;
-			global::RoxVideo.Resource.Attribute.colorSwitchThumbNormal = global::App1.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::RoxVideo.Resource.Attribute.commitIcon = global::App1.Droid.Resource.Attribute.commitIcon;
-			global::RoxVideo.Resource.Attribute.contentInsetEnd = global::App1.Droid.Resource.Attribute.contentInsetEnd;
-			global::RoxVideo.Resource.Attribute.contentInsetLeft = global::App1.Droid.Resource.Attribute.contentInsetLeft;
-			global::RoxVideo.Resource.Attribute.contentInsetRight = global::App1.Droid.Resource.Attribute.contentInsetRight;
-			global::RoxVideo.Resource.Attribute.contentInsetStart = global::App1.Droid.Resource.Attribute.contentInsetStart;
-			global::RoxVideo.Resource.Attribute.contentPadding = global::App1.Droid.Resource.Attribute.contentPadding;
-			global::RoxVideo.Resource.Attribute.contentPaddingBottom = global::App1.Droid.Resource.Attribute.contentPaddingBottom;
-			global::RoxVideo.Resource.Attribute.contentPaddingLeft = global::App1.Droid.Resource.Attribute.contentPaddingLeft;
-			global::RoxVideo.Resource.Attribute.contentPaddingRight = global::App1.Droid.Resource.Attribute.contentPaddingRight;
-			global::RoxVideo.Resource.Attribute.contentPaddingTop = global::App1.Droid.Resource.Attribute.contentPaddingTop;
-			global::RoxVideo.Resource.Attribute.contentScrim = global::App1.Droid.Resource.Attribute.contentScrim;
-			global::RoxVideo.Resource.Attribute.controlBackground = global::App1.Droid.Resource.Attribute.controlBackground;
-			global::RoxVideo.Resource.Attribute.counterEnabled = global::App1.Droid.Resource.Attribute.counterEnabled;
-			global::RoxVideo.Resource.Attribute.counterMaxLength = global::App1.Droid.Resource.Attribute.counterMaxLength;
-			global::RoxVideo.Resource.Attribute.counterOverflowTextAppearance = global::App1.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::RoxVideo.Resource.Attribute.counterTextAppearance = global::App1.Droid.Resource.Attribute.counterTextAppearance;
-			global::RoxVideo.Resource.Attribute.customNavigationLayout = global::App1.Droid.Resource.Attribute.customNavigationLayout;
-			global::RoxVideo.Resource.Attribute.defaultQueryHint = global::App1.Droid.Resource.Attribute.defaultQueryHint;
-			global::RoxVideo.Resource.Attribute.dialogPreferredPadding = global::App1.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::RoxVideo.Resource.Attribute.dialogTheme = global::App1.Droid.Resource.Attribute.dialogTheme;
-			global::RoxVideo.Resource.Attribute.displayOptions = global::App1.Droid.Resource.Attribute.displayOptions;
-			global::RoxVideo.Resource.Attribute.divider = global::App1.Droid.Resource.Attribute.divider;
-			global::RoxVideo.Resource.Attribute.dividerHorizontal = global::App1.Droid.Resource.Attribute.dividerHorizontal;
-			global::RoxVideo.Resource.Attribute.dividerPadding = global::App1.Droid.Resource.Attribute.dividerPadding;
-			global::RoxVideo.Resource.Attribute.dividerVertical = global::App1.Droid.Resource.Attribute.dividerVertical;
-			global::RoxVideo.Resource.Attribute.drawableSize = global::App1.Droid.Resource.Attribute.drawableSize;
-			global::RoxVideo.Resource.Attribute.drawerArrowStyle = global::App1.Droid.Resource.Attribute.drawerArrowStyle;
-			global::RoxVideo.Resource.Attribute.dropDownListViewStyle = global::App1.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::RoxVideo.Resource.Attribute.dropdownListPreferredItemHeight = global::App1.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::RoxVideo.Resource.Attribute.editTextBackground = global::App1.Droid.Resource.Attribute.editTextBackground;
-			global::RoxVideo.Resource.Attribute.editTextColor = global::App1.Droid.Resource.Attribute.editTextColor;
-			global::RoxVideo.Resource.Attribute.editTextStyle = global::App1.Droid.Resource.Attribute.editTextStyle;
-			global::RoxVideo.Resource.Attribute.elevation = global::App1.Droid.Resource.Attribute.elevation;
-			global::RoxVideo.Resource.Attribute.errorEnabled = global::App1.Droid.Resource.Attribute.errorEnabled;
-			global::RoxVideo.Resource.Attribute.errorTextAppearance = global::App1.Droid.Resource.Attribute.errorTextAppearance;
-			global::RoxVideo.Resource.Attribute.expandActivityOverflowButtonDrawable = global::App1.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::RoxVideo.Resource.Attribute.expanded = global::App1.Droid.Resource.Attribute.expanded;
-			global::RoxVideo.Resource.Attribute.expandedTitleGravity = global::App1.Droid.Resource.Attribute.expandedTitleGravity;
-			global::RoxVideo.Resource.Attribute.expandedTitleMargin = global::App1.Droid.Resource.Attribute.expandedTitleMargin;
-			global::RoxVideo.Resource.Attribute.expandedTitleMarginBottom = global::App1.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::RoxVideo.Resource.Attribute.expandedTitleMarginEnd = global::App1.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::RoxVideo.Resource.Attribute.expandedTitleMarginStart = global::App1.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::RoxVideo.Resource.Attribute.expandedTitleMarginTop = global::App1.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::RoxVideo.Resource.Attribute.expandedTitleTextAppearance = global::App1.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::RoxVideo.Resource.Attribute.externalRouteEnabledDrawable = global::App1.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::RoxVideo.Resource.Attribute.fabSize = global::App1.Droid.Resource.Attribute.fabSize;
-			global::RoxVideo.Resource.Attribute.foregroundInsidePadding = global::App1.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::RoxVideo.Resource.Attribute.gapBetweenBars = global::App1.Droid.Resource.Attribute.gapBetweenBars;
-			global::RoxVideo.Resource.Attribute.goIcon = global::App1.Droid.Resource.Attribute.goIcon;
-			global::RoxVideo.Resource.Attribute.headerLayout = global::App1.Droid.Resource.Attribute.headerLayout;
-			global::RoxVideo.Resource.Attribute.height = global::App1.Droid.Resource.Attribute.height;
-			global::RoxVideo.Resource.Attribute.hideOnContentScroll = global::App1.Droid.Resource.Attribute.hideOnContentScroll;
-			global::RoxVideo.Resource.Attribute.hintAnimationEnabled = global::App1.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::RoxVideo.Resource.Attribute.hintEnabled = global::App1.Droid.Resource.Attribute.hintEnabled;
-			global::RoxVideo.Resource.Attribute.hintTextAppearance = global::App1.Droid.Resource.Attribute.hintTextAppearance;
-			global::RoxVideo.Resource.Attribute.homeAsUpIndicator = global::App1.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::RoxVideo.Resource.Attribute.homeLayout = global::App1.Droid.Resource.Attribute.homeLayout;
-			global::RoxVideo.Resource.Attribute.icon = global::App1.Droid.Resource.Attribute.icon;
-			global::RoxVideo.Resource.Attribute.iconifiedByDefault = global::App1.Droid.Resource.Attribute.iconifiedByDefault;
-			global::RoxVideo.Resource.Attribute.imageButtonStyle = global::App1.Droid.Resource.Attribute.imageButtonStyle;
-			global::RoxVideo.Resource.Attribute.indeterminateProgressStyle = global::App1.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::RoxVideo.Resource.Attribute.initialActivityCount = global::App1.Droid.Resource.Attribute.initialActivityCount;
-			global::RoxVideo.Resource.Attribute.insetForeground = global::App1.Droid.Resource.Attribute.insetForeground;
-			global::RoxVideo.Resource.Attribute.isLightTheme = global::App1.Droid.Resource.Attribute.isLightTheme;
-			global::RoxVideo.Resource.Attribute.itemBackground = global::App1.Droid.Resource.Attribute.itemBackground;
-			global::RoxVideo.Resource.Attribute.itemIconTint = global::App1.Droid.Resource.Attribute.itemIconTint;
-			global::RoxVideo.Resource.Attribute.itemPadding = global::App1.Droid.Resource.Attribute.itemPadding;
-			global::RoxVideo.Resource.Attribute.itemTextAppearance = global::App1.Droid.Resource.Attribute.itemTextAppearance;
-			global::RoxVideo.Resource.Attribute.itemTextColor = global::App1.Droid.Resource.Attribute.itemTextColor;
-			global::RoxVideo.Resource.Attribute.keylines = global::App1.Droid.Resource.Attribute.keylines;
-			global::RoxVideo.Resource.Attribute.layout = global::App1.Droid.Resource.Attribute.layout;
-			global::RoxVideo.Resource.Attribute.layoutManager = global::App1.Droid.Resource.Attribute.layoutManager;
-			global::RoxVideo.Resource.Attribute.layout_anchor = global::App1.Droid.Resource.Attribute.layout_anchor;
-			global::RoxVideo.Resource.Attribute.layout_anchorGravity = global::App1.Droid.Resource.Attribute.layout_anchorGravity;
-			global::RoxVideo.Resource.Attribute.layout_behavior = global::App1.Droid.Resource.Attribute.layout_behavior;
-			global::RoxVideo.Resource.Attribute.layout_collapseMode = global::App1.Droid.Resource.Attribute.layout_collapseMode;
-			global::RoxVideo.Resource.Attribute.layout_collapseParallaxMultiplier = global::App1.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::RoxVideo.Resource.Attribute.layout_keyline = global::App1.Droid.Resource.Attribute.layout_keyline;
-			global::RoxVideo.Resource.Attribute.layout_scrollFlags = global::App1.Droid.Resource.Attribute.layout_scrollFlags;
-			global::RoxVideo.Resource.Attribute.layout_scrollInterpolator = global::App1.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::RoxVideo.Resource.Attribute.listChoiceBackgroundIndicator = global::App1.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::RoxVideo.Resource.Attribute.listDividerAlertDialog = global::App1.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::RoxVideo.Resource.Attribute.listItemLayout = global::App1.Droid.Resource.Attribute.listItemLayout;
-			global::RoxVideo.Resource.Attribute.listLayout = global::App1.Droid.Resource.Attribute.listLayout;
-			global::RoxVideo.Resource.Attribute.listPopupWindowStyle = global::App1.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::RoxVideo.Resource.Attribute.listPreferredItemHeight = global::App1.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::RoxVideo.Resource.Attribute.listPreferredItemHeightLarge = global::App1.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::RoxVideo.Resource.Attribute.listPreferredItemHeightSmall = global::App1.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::RoxVideo.Resource.Attribute.listPreferredItemPaddingLeft = global::App1.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::RoxVideo.Resource.Attribute.listPreferredItemPaddingRight = global::App1.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::RoxVideo.Resource.Attribute.logo = global::App1.Droid.Resource.Attribute.logo;
-			global::RoxVideo.Resource.Attribute.logoDescription = global::App1.Droid.Resource.Attribute.logoDescription;
-			global::RoxVideo.Resource.Attribute.maxActionInlineWidth = global::App1.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::RoxVideo.Resource.Attribute.maxButtonHeight = global::App1.Droid.Resource.Attribute.maxButtonHeight;
-			global::RoxVideo.Resource.Attribute.measureWithLargestChild = global::App1.Droid.Resource.Attribute.measureWithLargestChild;
-			global::RoxVideo.Resource.Attribute.mediaRouteAudioTrackDrawable = global::App1.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRouteButtonStyle = global::App1.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::RoxVideo.Resource.Attribute.mediaRouteCloseDrawable = global::App1.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRouteDefaultIconDrawable = global::App1.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRoutePauseDrawable = global::App1.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRoutePlayDrawable = global::App1.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::App1.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::App1.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::RoxVideo.Resource.Attribute.mediaRouteTvIconDrawable = global::App1.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::RoxVideo.Resource.Attribute.menu = global::App1.Droid.Resource.Attribute.menu;
-			global::RoxVideo.Resource.Attribute.multiChoiceItemLayout = global::App1.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::RoxVideo.Resource.Attribute.navigationContentDescription = global::App1.Droid.Resource.Attribute.navigationContentDescription;
-			global::RoxVideo.Resource.Attribute.navigationIcon = global::App1.Droid.Resource.Attribute.navigationIcon;
-			global::RoxVideo.Resource.Attribute.navigationMode = global::App1.Droid.Resource.Attribute.navigationMode;
-			global::RoxVideo.Resource.Attribute.overlapAnchor = global::App1.Droid.Resource.Attribute.overlapAnchor;
-			global::RoxVideo.Resource.Attribute.paddingEnd = global::App1.Droid.Resource.Attribute.paddingEnd;
-			global::RoxVideo.Resource.Attribute.paddingStart = global::App1.Droid.Resource.Attribute.paddingStart;
-			global::RoxVideo.Resource.Attribute.panelBackground = global::App1.Droid.Resource.Attribute.panelBackground;
-			global::RoxVideo.Resource.Attribute.panelMenuListTheme = global::App1.Droid.Resource.Attribute.panelMenuListTheme;
-			global::RoxVideo.Resource.Attribute.panelMenuListWidth = global::App1.Droid.Resource.Attribute.panelMenuListWidth;
-			global::RoxVideo.Resource.Attribute.popupMenuStyle = global::App1.Droid.Resource.Attribute.popupMenuStyle;
-			global::RoxVideo.Resource.Attribute.popupTheme = global::App1.Droid.Resource.Attribute.popupTheme;
-			global::RoxVideo.Resource.Attribute.popupWindowStyle = global::App1.Droid.Resource.Attribute.popupWindowStyle;
-			global::RoxVideo.Resource.Attribute.preserveIconSpacing = global::App1.Droid.Resource.Attribute.preserveIconSpacing;
-			global::RoxVideo.Resource.Attribute.pressedTranslationZ = global::App1.Droid.Resource.Attribute.pressedTranslationZ;
-			global::RoxVideo.Resource.Attribute.progressBarPadding = global::App1.Droid.Resource.Attribute.progressBarPadding;
-			global::RoxVideo.Resource.Attribute.progressBarStyle = global::App1.Droid.Resource.Attribute.progressBarStyle;
-			global::RoxVideo.Resource.Attribute.queryBackground = global::App1.Droid.Resource.Attribute.queryBackground;
-			global::RoxVideo.Resource.Attribute.queryHint = global::App1.Droid.Resource.Attribute.queryHint;
-			global::RoxVideo.Resource.Attribute.radioButtonStyle = global::App1.Droid.Resource.Attribute.radioButtonStyle;
-			global::RoxVideo.Resource.Attribute.ratingBarStyle = global::App1.Droid.Resource.Attribute.ratingBarStyle;
-			global::RoxVideo.Resource.Attribute.ratingBarStyleIndicator = global::App1.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::RoxVideo.Resource.Attribute.ratingBarStyleSmall = global::App1.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::RoxVideo.Resource.Attribute.reverseLayout = global::App1.Droid.Resource.Attribute.reverseLayout;
-			global::RoxVideo.Resource.Attribute.rippleColor = global::App1.Droid.Resource.Attribute.rippleColor;
-			global::RoxVideo.Resource.Attribute.searchHintIcon = global::App1.Droid.Resource.Attribute.searchHintIcon;
-			global::RoxVideo.Resource.Attribute.searchIcon = global::App1.Droid.Resource.Attribute.searchIcon;
-			global::RoxVideo.Resource.Attribute.searchViewStyle = global::App1.Droid.Resource.Attribute.searchViewStyle;
-			global::RoxVideo.Resource.Attribute.seekBarStyle = global::App1.Droid.Resource.Attribute.seekBarStyle;
-			global::RoxVideo.Resource.Attribute.selectableItemBackground = global::App1.Droid.Resource.Attribute.selectableItemBackground;
-			global::RoxVideo.Resource.Attribute.selectableItemBackgroundBorderless = global::App1.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::RoxVideo.Resource.Attribute.showAsAction = global::App1.Droid.Resource.Attribute.showAsAction;
-			global::RoxVideo.Resource.Attribute.showDividers = global::App1.Droid.Resource.Attribute.showDividers;
-			global::RoxVideo.Resource.Attribute.showText = global::App1.Droid.Resource.Attribute.showText;
-			global::RoxVideo.Resource.Attribute.singleChoiceItemLayout = global::App1.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::RoxVideo.Resource.Attribute.spanCount = global::App1.Droid.Resource.Attribute.spanCount;
-			global::RoxVideo.Resource.Attribute.spinBars = global::App1.Droid.Resource.Attribute.spinBars;
-			global::RoxVideo.Resource.Attribute.spinnerDropDownItemStyle = global::App1.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::RoxVideo.Resource.Attribute.spinnerStyle = global::App1.Droid.Resource.Attribute.spinnerStyle;
-			global::RoxVideo.Resource.Attribute.splitTrack = global::App1.Droid.Resource.Attribute.splitTrack;
-			global::RoxVideo.Resource.Attribute.srcCompat = global::App1.Droid.Resource.Attribute.srcCompat;
-			global::RoxVideo.Resource.Attribute.stackFromEnd = global::App1.Droid.Resource.Attribute.stackFromEnd;
-			global::RoxVideo.Resource.Attribute.state_above_anchor = global::App1.Droid.Resource.Attribute.state_above_anchor;
-			global::RoxVideo.Resource.Attribute.statusBarBackground = global::App1.Droid.Resource.Attribute.statusBarBackground;
-			global::RoxVideo.Resource.Attribute.statusBarScrim = global::App1.Droid.Resource.Attribute.statusBarScrim;
-			global::RoxVideo.Resource.Attribute.submitBackground = global::App1.Droid.Resource.Attribute.submitBackground;
-			global::RoxVideo.Resource.Attribute.subtitle = global::App1.Droid.Resource.Attribute.subtitle;
-			global::RoxVideo.Resource.Attribute.subtitleTextAppearance = global::App1.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::RoxVideo.Resource.Attribute.subtitleTextColor = global::App1.Droid.Resource.Attribute.subtitleTextColor;
-			global::RoxVideo.Resource.Attribute.subtitleTextStyle = global::App1.Droid.Resource.Attribute.subtitleTextStyle;
-			global::RoxVideo.Resource.Attribute.suggestionRowLayout = global::App1.Droid.Resource.Attribute.suggestionRowLayout;
-			global::RoxVideo.Resource.Attribute.switchMinWidth = global::App1.Droid.Resource.Attribute.switchMinWidth;
-			global::RoxVideo.Resource.Attribute.switchPadding = global::App1.Droid.Resource.Attribute.switchPadding;
-			global::RoxVideo.Resource.Attribute.switchStyle = global::App1.Droid.Resource.Attribute.switchStyle;
-			global::RoxVideo.Resource.Attribute.switchTextAppearance = global::App1.Droid.Resource.Attribute.switchTextAppearance;
-			global::RoxVideo.Resource.Attribute.tabBackground = global::App1.Droid.Resource.Attribute.tabBackground;
-			global::RoxVideo.Resource.Attribute.tabContentStart = global::App1.Droid.Resource.Attribute.tabContentStart;
-			global::RoxVideo.Resource.Attribute.tabGravity = global::App1.Droid.Resource.Attribute.tabGravity;
-			global::RoxVideo.Resource.Attribute.tabIndicatorColor = global::App1.Droid.Resource.Attribute.tabIndicatorColor;
-			global::RoxVideo.Resource.Attribute.tabIndicatorHeight = global::App1.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::RoxVideo.Resource.Attribute.tabMaxWidth = global::App1.Droid.Resource.Attribute.tabMaxWidth;
-			global::RoxVideo.Resource.Attribute.tabMinWidth = global::App1.Droid.Resource.Attribute.tabMinWidth;
-			global::RoxVideo.Resource.Attribute.tabMode = global::App1.Droid.Resource.Attribute.tabMode;
-			global::RoxVideo.Resource.Attribute.tabPadding = global::App1.Droid.Resource.Attribute.tabPadding;
-			global::RoxVideo.Resource.Attribute.tabPaddingBottom = global::App1.Droid.Resource.Attribute.tabPaddingBottom;
-			global::RoxVideo.Resource.Attribute.tabPaddingEnd = global::App1.Droid.Resource.Attribute.tabPaddingEnd;
-			global::RoxVideo.Resource.Attribute.tabPaddingStart = global::App1.Droid.Resource.Attribute.tabPaddingStart;
-			global::RoxVideo.Resource.Attribute.tabPaddingTop = global::App1.Droid.Resource.Attribute.tabPaddingTop;
-			global::RoxVideo.Resource.Attribute.tabSelectedTextColor = global::App1.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::RoxVideo.Resource.Attribute.tabTextAppearance = global::App1.Droid.Resource.Attribute.tabTextAppearance;
-			global::RoxVideo.Resource.Attribute.tabTextColor = global::App1.Droid.Resource.Attribute.tabTextColor;
-			global::RoxVideo.Resource.Attribute.textAllCaps = global::App1.Droid.Resource.Attribute.textAllCaps;
-			global::RoxVideo.Resource.Attribute.textAppearanceLargePopupMenu = global::App1.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::RoxVideo.Resource.Attribute.textAppearanceListItem = global::App1.Droid.Resource.Attribute.textAppearanceListItem;
-			global::RoxVideo.Resource.Attribute.textAppearanceListItemSmall = global::App1.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::RoxVideo.Resource.Attribute.textAppearanceSearchResultSubtitle = global::App1.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::RoxVideo.Resource.Attribute.textAppearanceSearchResultTitle = global::App1.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::RoxVideo.Resource.Attribute.textAppearanceSmallPopupMenu = global::App1.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::RoxVideo.Resource.Attribute.textColorAlertDialogListItem = global::App1.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::RoxVideo.Resource.Attribute.textColorSearchUrl = global::App1.Droid.Resource.Attribute.textColorSearchUrl;
-			global::RoxVideo.Resource.Attribute.theme = global::App1.Droid.Resource.Attribute.theme;
-			global::RoxVideo.Resource.Attribute.thickness = global::App1.Droid.Resource.Attribute.thickness;
-			global::RoxVideo.Resource.Attribute.thumbTextPadding = global::App1.Droid.Resource.Attribute.thumbTextPadding;
-			global::RoxVideo.Resource.Attribute.title = global::App1.Droid.Resource.Attribute.title;
-			global::RoxVideo.Resource.Attribute.titleEnabled = global::App1.Droid.Resource.Attribute.titleEnabled;
-			global::RoxVideo.Resource.Attribute.titleMarginBottom = global::App1.Droid.Resource.Attribute.titleMarginBottom;
-			global::RoxVideo.Resource.Attribute.titleMarginEnd = global::App1.Droid.Resource.Attribute.titleMarginEnd;
-			global::RoxVideo.Resource.Attribute.titleMarginStart = global::App1.Droid.Resource.Attribute.titleMarginStart;
-			global::RoxVideo.Resource.Attribute.titleMarginTop = global::App1.Droid.Resource.Attribute.titleMarginTop;
-			global::RoxVideo.Resource.Attribute.titleMargins = global::App1.Droid.Resource.Attribute.titleMargins;
-			global::RoxVideo.Resource.Attribute.titleTextAppearance = global::App1.Droid.Resource.Attribute.titleTextAppearance;
-			global::RoxVideo.Resource.Attribute.titleTextColor = global::App1.Droid.Resource.Attribute.titleTextColor;
-			global::RoxVideo.Resource.Attribute.titleTextStyle = global::App1.Droid.Resource.Attribute.titleTextStyle;
-			global::RoxVideo.Resource.Attribute.toolbarId = global::App1.Droid.Resource.Attribute.toolbarId;
-			global::RoxVideo.Resource.Attribute.toolbarNavigationButtonStyle = global::App1.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::RoxVideo.Resource.Attribute.toolbarStyle = global::App1.Droid.Resource.Attribute.toolbarStyle;
-			global::RoxVideo.Resource.Attribute.track = global::App1.Droid.Resource.Attribute.track;
-			global::RoxVideo.Resource.Attribute.useCompatPadding = global::App1.Droid.Resource.Attribute.useCompatPadding;
-			global::RoxVideo.Resource.Attribute.voiceIcon = global::App1.Droid.Resource.Attribute.voiceIcon;
-			global::RoxVideo.Resource.Attribute.windowActionBar = global::App1.Droid.Resource.Attribute.windowActionBar;
-			global::RoxVideo.Resource.Attribute.windowActionBarOverlay = global::App1.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::RoxVideo.Resource.Attribute.windowActionModeOverlay = global::App1.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::RoxVideo.Resource.Attribute.windowFixedHeightMajor = global::App1.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::RoxVideo.Resource.Attribute.windowFixedHeightMinor = global::App1.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::RoxVideo.Resource.Attribute.windowFixedWidthMajor = global::App1.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::RoxVideo.Resource.Attribute.windowFixedWidthMinor = global::App1.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::RoxVideo.Resource.Attribute.windowMinWidthMajor = global::App1.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::RoxVideo.Resource.Attribute.windowMinWidthMinor = global::App1.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::RoxVideo.Resource.Attribute.windowNoTitle = global::App1.Droid.Resource.Attribute.windowNoTitle;
-			global::RoxVideo.Resource.Boolean.abc_action_bar_embed_tabs = global::App1.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::RoxVideo.Resource.Boolean.abc_allow_stacked_button_bar = global::App1.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::RoxVideo.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::App1.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::RoxVideo.Resource.Color.abc_background_cache_hint_selector_material_dark = global::App1.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::RoxVideo.Resource.Color.abc_background_cache_hint_selector_material_light = global::App1.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::RoxVideo.Resource.Color.abc_color_highlight_material = global::App1.Droid.Resource.Color.abc_color_highlight_material;
-			global::RoxVideo.Resource.Color.abc_primary_text_disable_only_material_dark = global::App1.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::RoxVideo.Resource.Color.abc_primary_text_disable_only_material_light = global::App1.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::RoxVideo.Resource.Color.abc_primary_text_material_dark = global::App1.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::RoxVideo.Resource.Color.abc_primary_text_material_light = global::App1.Droid.Resource.Color.abc_primary_text_material_light;
-			global::RoxVideo.Resource.Color.abc_search_url_text = global::App1.Droid.Resource.Color.abc_search_url_text;
-			global::RoxVideo.Resource.Color.abc_search_url_text_normal = global::App1.Droid.Resource.Color.abc_search_url_text_normal;
-			global::RoxVideo.Resource.Color.abc_search_url_text_pressed = global::App1.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::RoxVideo.Resource.Color.abc_search_url_text_selected = global::App1.Droid.Resource.Color.abc_search_url_text_selected;
-			global::RoxVideo.Resource.Color.abc_secondary_text_material_dark = global::App1.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::RoxVideo.Resource.Color.abc_secondary_text_material_light = global::App1.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::RoxVideo.Resource.Color.accent_material_dark = global::App1.Droid.Resource.Color.accent_material_dark;
-			global::RoxVideo.Resource.Color.accent_material_light = global::App1.Droid.Resource.Color.accent_material_light;
-			global::RoxVideo.Resource.Color.background_floating_material_dark = global::App1.Droid.Resource.Color.background_floating_material_dark;
-			global::RoxVideo.Resource.Color.background_floating_material_light = global::App1.Droid.Resource.Color.background_floating_material_light;
-			global::RoxVideo.Resource.Color.background_material_dark = global::App1.Droid.Resource.Color.background_material_dark;
-			global::RoxVideo.Resource.Color.background_material_light = global::App1.Droid.Resource.Color.background_material_light;
-			global::RoxVideo.Resource.Color.bright_foreground_disabled_material_dark = global::App1.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::RoxVideo.Resource.Color.bright_foreground_disabled_material_light = global::App1.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::RoxVideo.Resource.Color.bright_foreground_inverse_material_dark = global::App1.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::RoxVideo.Resource.Color.bright_foreground_inverse_material_light = global::App1.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::RoxVideo.Resource.Color.bright_foreground_material_dark = global::App1.Droid.Resource.Color.bright_foreground_material_dark;
-			global::RoxVideo.Resource.Color.bright_foreground_material_light = global::App1.Droid.Resource.Color.bright_foreground_material_light;
-			global::RoxVideo.Resource.Color.button_material_dark = global::App1.Droid.Resource.Color.button_material_dark;
-			global::RoxVideo.Resource.Color.button_material_light = global::App1.Droid.Resource.Color.button_material_light;
-			global::RoxVideo.Resource.Color.cardview_dark_background = global::App1.Droid.Resource.Color.cardview_dark_background;
-			global::RoxVideo.Resource.Color.cardview_light_background = global::App1.Droid.Resource.Color.cardview_light_background;
-			global::RoxVideo.Resource.Color.cardview_shadow_end_color = global::App1.Droid.Resource.Color.cardview_shadow_end_color;
-			global::RoxVideo.Resource.Color.cardview_shadow_start_color = global::App1.Droid.Resource.Color.cardview_shadow_start_color;
-			global::RoxVideo.Resource.Color.design_fab_shadow_end_color = global::App1.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::RoxVideo.Resource.Color.design_fab_shadow_mid_color = global::App1.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::RoxVideo.Resource.Color.design_fab_shadow_start_color = global::App1.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::RoxVideo.Resource.Color.design_fab_stroke_end_inner_color = global::App1.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::RoxVideo.Resource.Color.design_fab_stroke_end_outer_color = global::App1.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::RoxVideo.Resource.Color.design_fab_stroke_top_inner_color = global::App1.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::RoxVideo.Resource.Color.design_fab_stroke_top_outer_color = global::App1.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::RoxVideo.Resource.Color.design_snackbar_background_color = global::App1.Droid.Resource.Color.design_snackbar_background_color;
-			global::RoxVideo.Resource.Color.dim_foreground_disabled_material_dark = global::App1.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::RoxVideo.Resource.Color.dim_foreground_disabled_material_light = global::App1.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::RoxVideo.Resource.Color.dim_foreground_material_dark = global::App1.Droid.Resource.Color.dim_foreground_material_dark;
-			global::RoxVideo.Resource.Color.dim_foreground_material_light = global::App1.Droid.Resource.Color.dim_foreground_material_light;
-			global::RoxVideo.Resource.Color.foreground_material_dark = global::App1.Droid.Resource.Color.foreground_material_dark;
-			global::RoxVideo.Resource.Color.foreground_material_light = global::App1.Droid.Resource.Color.foreground_material_light;
-			global::RoxVideo.Resource.Color.highlighted_text_material_dark = global::App1.Droid.Resource.Color.highlighted_text_material_dark;
-			global::RoxVideo.Resource.Color.highlighted_text_material_light = global::App1.Droid.Resource.Color.highlighted_text_material_light;
-			global::RoxVideo.Resource.Color.material_blue_grey_800 = global::App1.Droid.Resource.Color.material_blue_grey_800;
-			global::RoxVideo.Resource.Color.material_blue_grey_900 = global::App1.Droid.Resource.Color.material_blue_grey_900;
-			global::RoxVideo.Resource.Color.material_blue_grey_950 = global::App1.Droid.Resource.Color.material_blue_grey_950;
-			global::RoxVideo.Resource.Color.material_deep_teal_200 = global::App1.Droid.Resource.Color.material_deep_teal_200;
-			global::RoxVideo.Resource.Color.material_deep_teal_500 = global::App1.Droid.Resource.Color.material_deep_teal_500;
-			global::RoxVideo.Resource.Color.material_grey_100 = global::App1.Droid.Resource.Color.material_grey_100;
-			global::RoxVideo.Resource.Color.material_grey_300 = global::App1.Droid.Resource.Color.material_grey_300;
-			global::RoxVideo.Resource.Color.material_grey_50 = global::App1.Droid.Resource.Color.material_grey_50;
-			global::RoxVideo.Resource.Color.material_grey_600 = global::App1.Droid.Resource.Color.material_grey_600;
-			global::RoxVideo.Resource.Color.material_grey_800 = global::App1.Droid.Resource.Color.material_grey_800;
-			global::RoxVideo.Resource.Color.material_grey_850 = global::App1.Droid.Resource.Color.material_grey_850;
-			global::RoxVideo.Resource.Color.material_grey_900 = global::App1.Droid.Resource.Color.material_grey_900;
-			global::RoxVideo.Resource.Color.primary_dark_material_dark = global::App1.Droid.Resource.Color.primary_dark_material_dark;
-			global::RoxVideo.Resource.Color.primary_dark_material_light = global::App1.Droid.Resource.Color.primary_dark_material_light;
-			global::RoxVideo.Resource.Color.primary_material_dark = global::App1.Droid.Resource.Color.primary_material_dark;
-			global::RoxVideo.Resource.Color.primary_material_light = global::App1.Droid.Resource.Color.primary_material_light;
-			global::RoxVideo.Resource.Color.primary_text_default_material_dark = global::App1.Droid.Resource.Color.primary_text_default_material_dark;
-			global::RoxVideo.Resource.Color.primary_text_default_material_light = global::App1.Droid.Resource.Color.primary_text_default_material_light;
-			global::RoxVideo.Resource.Color.primary_text_disabled_material_dark = global::App1.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::RoxVideo.Resource.Color.primary_text_disabled_material_light = global::App1.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::RoxVideo.Resource.Color.ripple_material_dark = global::App1.Droid.Resource.Color.ripple_material_dark;
-			global::RoxVideo.Resource.Color.ripple_material_light = global::App1.Droid.Resource.Color.ripple_material_light;
-			global::RoxVideo.Resource.Color.secondary_text_default_material_dark = global::App1.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::RoxVideo.Resource.Color.secondary_text_default_material_light = global::App1.Droid.Resource.Color.secondary_text_default_material_light;
-			global::RoxVideo.Resource.Color.secondary_text_disabled_material_dark = global::App1.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::RoxVideo.Resource.Color.secondary_text_disabled_material_light = global::App1.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::RoxVideo.Resource.Color.switch_thumb_disabled_material_dark = global::App1.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::RoxVideo.Resource.Color.switch_thumb_disabled_material_light = global::App1.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::RoxVideo.Resource.Color.switch_thumb_material_dark = global::App1.Droid.Resource.Color.switch_thumb_material_dark;
-			global::RoxVideo.Resource.Color.switch_thumb_material_light = global::App1.Droid.Resource.Color.switch_thumb_material_light;
-			global::RoxVideo.Resource.Color.switch_thumb_normal_material_dark = global::App1.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::RoxVideo.Resource.Color.switch_thumb_normal_material_light = global::App1.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_content_inset_material = global::App1.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_default_height_material = global::App1.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_default_padding_end_material = global::App1.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_default_padding_start_material = global::App1.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::App1.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::App1.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::App1.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_stacked_max_height = global::App1.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::App1.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::App1.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::RoxVideo.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::App1.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::RoxVideo.Resource.Dimension.abc_action_button_min_height_material = global::App1.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::RoxVideo.Resource.Dimension.abc_action_button_min_width_material = global::App1.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::RoxVideo.Resource.Dimension.abc_action_button_min_width_overflow_material = global::App1.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::RoxVideo.Resource.Dimension.abc_alert_dialog_button_bar_height = global::App1.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::RoxVideo.Resource.Dimension.abc_button_inset_horizontal_material = global::App1.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::RoxVideo.Resource.Dimension.abc_button_inset_vertical_material = global::App1.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::RoxVideo.Resource.Dimension.abc_button_padding_horizontal_material = global::App1.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::RoxVideo.Resource.Dimension.abc_button_padding_vertical_material = global::App1.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::RoxVideo.Resource.Dimension.abc_config_prefDialogWidth = global::App1.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::RoxVideo.Resource.Dimension.abc_control_corner_material = global::App1.Droid.Resource.Dimension.abc_control_corner_material;
-			global::RoxVideo.Resource.Dimension.abc_control_inset_material = global::App1.Droid.Resource.Dimension.abc_control_inset_material;
-			global::RoxVideo.Resource.Dimension.abc_control_padding_material = global::App1.Droid.Resource.Dimension.abc_control_padding_material;
-			global::RoxVideo.Resource.Dimension.abc_dialog_fixed_height_major = global::App1.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::RoxVideo.Resource.Dimension.abc_dialog_fixed_height_minor = global::App1.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::RoxVideo.Resource.Dimension.abc_dialog_fixed_width_major = global::App1.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::RoxVideo.Resource.Dimension.abc_dialog_fixed_width_minor = global::App1.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::RoxVideo.Resource.Dimension.abc_dialog_min_width_major = global::App1.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::RoxVideo.Resource.Dimension.abc_dialog_min_width_minor = global::App1.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::RoxVideo.Resource.Dimension.abc_dialog_padding_material = global::App1.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::RoxVideo.Resource.Dimension.abc_dialog_padding_top_material = global::App1.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::RoxVideo.Resource.Dimension.abc_disabled_alpha_material_dark = global::App1.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::RoxVideo.Resource.Dimension.abc_disabled_alpha_material_light = global::App1.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::RoxVideo.Resource.Dimension.abc_dropdownitem_icon_width = global::App1.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::RoxVideo.Resource.Dimension.abc_dropdownitem_text_padding_left = global::App1.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::RoxVideo.Resource.Dimension.abc_dropdownitem_text_padding_right = global::App1.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::RoxVideo.Resource.Dimension.abc_edit_text_inset_bottom_material = global::App1.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::RoxVideo.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::App1.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::RoxVideo.Resource.Dimension.abc_edit_text_inset_top_material = global::App1.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::RoxVideo.Resource.Dimension.abc_floating_window_z = global::App1.Droid.Resource.Dimension.abc_floating_window_z;
-			global::RoxVideo.Resource.Dimension.abc_list_item_padding_horizontal_material = global::App1.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::RoxVideo.Resource.Dimension.abc_panel_menu_list_width = global::App1.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::RoxVideo.Resource.Dimension.abc_search_view_preferred_width = global::App1.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::RoxVideo.Resource.Dimension.abc_seekbar_track_background_height_material = global::App1.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::RoxVideo.Resource.Dimension.abc_seekbar_track_progress_height_material = global::App1.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::RoxVideo.Resource.Dimension.abc_select_dialog_padding_start_material = global::App1.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::RoxVideo.Resource.Dimension.abc_switch_padding = global::App1.Droid.Resource.Dimension.abc_switch_padding;
-			global::RoxVideo.Resource.Dimension.abc_text_size_body_1_material = global::App1.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_body_2_material = global::App1.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_button_material = global::App1.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_caption_material = global::App1.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_display_1_material = global::App1.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_display_2_material = global::App1.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_display_3_material = global::App1.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_display_4_material = global::App1.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_headline_material = global::App1.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_large_material = global::App1.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_medium_material = global::App1.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_menu_material = global::App1.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_small_material = global::App1.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_subhead_material = global::App1.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::App1.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::RoxVideo.Resource.Dimension.abc_text_size_title_material = global::App1.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::RoxVideo.Resource.Dimension.abc_text_size_title_material_toolbar = global::App1.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::RoxVideo.Resource.Dimension.cardview_compat_inset_shadow = global::App1.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::RoxVideo.Resource.Dimension.cardview_default_elevation = global::App1.Droid.Resource.Dimension.cardview_default_elevation;
-			global::RoxVideo.Resource.Dimension.cardview_default_radius = global::App1.Droid.Resource.Dimension.cardview_default_radius;
-			global::RoxVideo.Resource.Dimension.design_appbar_elevation = global::App1.Droid.Resource.Dimension.design_appbar_elevation;
-			global::RoxVideo.Resource.Dimension.design_bottom_sheet_modal_elevation = global::App1.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::RoxVideo.Resource.Dimension.design_fab_border_width = global::App1.Droid.Resource.Dimension.design_fab_border_width;
-			global::RoxVideo.Resource.Dimension.design_fab_elevation = global::App1.Droid.Resource.Dimension.design_fab_elevation;
-			global::RoxVideo.Resource.Dimension.design_fab_image_size = global::App1.Droid.Resource.Dimension.design_fab_image_size;
-			global::RoxVideo.Resource.Dimension.design_fab_size_mini = global::App1.Droid.Resource.Dimension.design_fab_size_mini;
-			global::RoxVideo.Resource.Dimension.design_fab_size_normal = global::App1.Droid.Resource.Dimension.design_fab_size_normal;
-			global::RoxVideo.Resource.Dimension.design_fab_translation_z_pressed = global::App1.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::RoxVideo.Resource.Dimension.design_navigation_elevation = global::App1.Droid.Resource.Dimension.design_navigation_elevation;
-			global::RoxVideo.Resource.Dimension.design_navigation_icon_padding = global::App1.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::RoxVideo.Resource.Dimension.design_navigation_icon_size = global::App1.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::RoxVideo.Resource.Dimension.design_navigation_max_width = global::App1.Droid.Resource.Dimension.design_navigation_max_width;
-			global::RoxVideo.Resource.Dimension.design_navigation_padding_bottom = global::App1.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::RoxVideo.Resource.Dimension.design_navigation_separator_vertical_padding = global::App1.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::RoxVideo.Resource.Dimension.design_snackbar_action_inline_max_width = global::App1.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::RoxVideo.Resource.Dimension.design_snackbar_background_corner_radius = global::App1.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::RoxVideo.Resource.Dimension.design_snackbar_elevation = global::App1.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::RoxVideo.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::App1.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::RoxVideo.Resource.Dimension.design_snackbar_max_width = global::App1.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::RoxVideo.Resource.Dimension.design_snackbar_min_width = global::App1.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::RoxVideo.Resource.Dimension.design_snackbar_padding_horizontal = global::App1.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::RoxVideo.Resource.Dimension.design_snackbar_padding_vertical = global::App1.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::RoxVideo.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::App1.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::RoxVideo.Resource.Dimension.design_snackbar_text_size = global::App1.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::RoxVideo.Resource.Dimension.design_tab_max_width = global::App1.Droid.Resource.Dimension.design_tab_max_width;
-			global::RoxVideo.Resource.Dimension.design_tab_scrollable_min_width = global::App1.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::RoxVideo.Resource.Dimension.design_tab_text_size = global::App1.Droid.Resource.Dimension.design_tab_text_size;
-			global::RoxVideo.Resource.Dimension.design_tab_text_size_2line = global::App1.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::RoxVideo.Resource.Dimension.disabled_alpha_material_dark = global::App1.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::RoxVideo.Resource.Dimension.disabled_alpha_material_light = global::App1.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::RoxVideo.Resource.Dimension.highlight_alpha_material_colored = global::App1.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::RoxVideo.Resource.Dimension.highlight_alpha_material_dark = global::App1.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::RoxVideo.Resource.Dimension.highlight_alpha_material_light = global::App1.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::RoxVideo.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::App1.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::RoxVideo.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::App1.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::RoxVideo.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::App1.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::RoxVideo.Resource.Dimension.mr_controller_volume_group_list_item_height = global::App1.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::RoxVideo.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::App1.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::RoxVideo.Resource.Dimension.mr_controller_volume_group_list_max_height = global::App1.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::RoxVideo.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::App1.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::RoxVideo.Resource.Dimension.mr_dialog_fixed_width_major = global::App1.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::RoxVideo.Resource.Dimension.mr_dialog_fixed_width_minor = global::App1.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::RoxVideo.Resource.Dimension.notification_large_icon_height = global::App1.Droid.Resource.Dimension.notification_large_icon_height;
-			global::RoxVideo.Resource.Dimension.notification_large_icon_width = global::App1.Droid.Resource.Dimension.notification_large_icon_width;
-			global::RoxVideo.Resource.Dimension.notification_subtext_size = global::App1.Droid.Resource.Dimension.notification_subtext_size;
-			global::RoxVideo.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_action_bar_item_background_material = global::App1.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::RoxVideo.Resource.Drawable.abc_btn_borderless_material = global::App1.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::RoxVideo.Resource.Drawable.abc_btn_check_material = global::App1.Droid.Resource.Drawable.abc_btn_check_material;
-			global::RoxVideo.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::App1.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::RoxVideo.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::App1.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::RoxVideo.Resource.Drawable.abc_btn_colored_material = global::App1.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::RoxVideo.Resource.Drawable.abc_btn_default_mtrl_shape = global::App1.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::RoxVideo.Resource.Drawable.abc_btn_radio_material = global::App1.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::RoxVideo.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::App1.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::RoxVideo.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::App1.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::RoxVideo.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::App1.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::RoxVideo.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::App1.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::RoxVideo.Resource.Drawable.abc_cab_background_internal_bg = global::App1.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::RoxVideo.Resource.Drawable.abc_cab_background_top_material = global::App1.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::RoxVideo.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_control_background_material = global::App1.Droid.Resource.Drawable.abc_control_background_material;
-			global::RoxVideo.Resource.Drawable.abc_edit_text_material = global::App1.Droid.Resource.Drawable.abc_edit_text_material;
-			global::RoxVideo.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::App1.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::App1.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_ic_star_black_16dp = global::App1.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::RoxVideo.Resource.Drawable.abc_ic_star_black_36dp = global::App1.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::RoxVideo.Resource.Drawable.abc_ic_star_half_black_16dp = global::App1.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::RoxVideo.Resource.Drawable.abc_ic_star_half_black_36dp = global::App1.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::RoxVideo.Resource.Drawable.abc_item_background_holo_dark = global::App1.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::RoxVideo.Resource.Drawable.abc_item_background_holo_light = global::App1.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::RoxVideo.Resource.Drawable.abc_list_divider_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_list_focused_holo = global::App1.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::RoxVideo.Resource.Drawable.abc_list_longpressed_holo = global::App1.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::RoxVideo.Resource.Drawable.abc_list_pressed_holo_dark = global::App1.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::RoxVideo.Resource.Drawable.abc_list_pressed_holo_light = global::App1.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::App1.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::App1.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::App1.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_disabled_holo_light = global::App1.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_holo_dark = global::App1.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::RoxVideo.Resource.Drawable.abc_list_selector_holo_light = global::App1.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::RoxVideo.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::App1.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::RoxVideo.Resource.Drawable.abc_popup_background_mtrl_mult = global::App1.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::RoxVideo.Resource.Drawable.abc_ratingbar_indicator_material = global::App1.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::RoxVideo.Resource.Drawable.abc_ratingbar_small_material = global::App1.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::RoxVideo.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::App1.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::RoxVideo.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::App1.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::RoxVideo.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_seekbar_thumb_material = global::App1.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::RoxVideo.Resource.Drawable.abc_seekbar_track_material = global::App1.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::RoxVideo.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::App1.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::RoxVideo.Resource.Drawable.abc_spinner_textfield_background_material = global::App1.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::RoxVideo.Resource.Drawable.abc_switch_thumb_material = global::App1.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::RoxVideo.Resource.Drawable.abc_switch_track_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_tab_indicator_material = global::App1.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::RoxVideo.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_text_cursor_material = global::App1.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::RoxVideo.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::App1.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::RoxVideo.Resource.Drawable.abc_textfield_search_material = global::App1.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::RoxVideo.Resource.Drawable.design_fab_background = global::App1.Droid.Resource.Drawable.design_fab_background;
-			global::RoxVideo.Resource.Drawable.design_snackbar_background = global::App1.Droid.Resource.Drawable.design_snackbar_background;
-			global::RoxVideo.Resource.Drawable.ic_audiotrack_light = global::App1.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::RoxVideo.Resource.Drawable.mr_dialog_material_background_dark = global::App1.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::RoxVideo.Resource.Drawable.mr_dialog_material_background_light = global::App1.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::RoxVideo.Resource.Drawable.notification_template_icon_bg = global::App1.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::RoxVideo.Resource.Id.action0 = global::App1.Droid.Resource.Id.action0;
-			global::RoxVideo.Resource.Id.action_bar = global::App1.Droid.Resource.Id.action_bar;
-			global::RoxVideo.Resource.Id.action_bar_activity_content = global::App1.Droid.Resource.Id.action_bar_activity_content;
-			global::RoxVideo.Resource.Id.action_bar_container = global::App1.Droid.Resource.Id.action_bar_container;
-			global::RoxVideo.Resource.Id.action_bar_root = global::App1.Droid.Resource.Id.action_bar_root;
-			global::RoxVideo.Resource.Id.action_bar_spinner = global::App1.Droid.Resource.Id.action_bar_spinner;
-			global::RoxVideo.Resource.Id.action_bar_subtitle = global::App1.Droid.Resource.Id.action_bar_subtitle;
-			global::RoxVideo.Resource.Id.action_bar_title = global::App1.Droid.Resource.Id.action_bar_title;
-			global::RoxVideo.Resource.Id.action_context_bar = global::App1.Droid.Resource.Id.action_context_bar;
-			global::RoxVideo.Resource.Id.action_divider = global::App1.Droid.Resource.Id.action_divider;
-			global::RoxVideo.Resource.Id.action_menu_divider = global::App1.Droid.Resource.Id.action_menu_divider;
-			global::RoxVideo.Resource.Id.action_menu_presenter = global::App1.Droid.Resource.Id.action_menu_presenter;
-			global::RoxVideo.Resource.Id.action_mode_bar = global::App1.Droid.Resource.Id.action_mode_bar;
-			global::RoxVideo.Resource.Id.action_mode_bar_stub = global::App1.Droid.Resource.Id.action_mode_bar_stub;
-			global::RoxVideo.Resource.Id.action_mode_close_button = global::App1.Droid.Resource.Id.action_mode_close_button;
-			global::RoxVideo.Resource.Id.activity_chooser_view_content = global::App1.Droid.Resource.Id.activity_chooser_view_content;
-			global::RoxVideo.Resource.Id.alertTitle = global::App1.Droid.Resource.Id.alertTitle;
-			global::RoxVideo.Resource.Id.always = global::App1.Droid.Resource.Id.always;
-			global::RoxVideo.Resource.Id.beginning = global::App1.Droid.Resource.Id.beginning;
-			global::RoxVideo.Resource.Id.bottom = global::App1.Droid.Resource.Id.bottom;
-			global::RoxVideo.Resource.Id.buttonPanel = global::App1.Droid.Resource.Id.buttonPanel;
-			global::RoxVideo.Resource.Id.cancel_action = global::App1.Droid.Resource.Id.cancel_action;
-			global::RoxVideo.Resource.Id.center = global::App1.Droid.Resource.Id.center;
-			global::RoxVideo.Resource.Id.center_horizontal = global::App1.Droid.Resource.Id.center_horizontal;
-			global::RoxVideo.Resource.Id.center_vertical = global::App1.Droid.Resource.Id.center_vertical;
-			global::RoxVideo.Resource.Id.checkbox = global::App1.Droid.Resource.Id.checkbox;
-			global::RoxVideo.Resource.Id.chronometer = global::App1.Droid.Resource.Id.chronometer;
-			global::RoxVideo.Resource.Id.clip_horizontal = global::App1.Droid.Resource.Id.clip_horizontal;
-			global::RoxVideo.Resource.Id.clip_vertical = global::App1.Droid.Resource.Id.clip_vertical;
-			global::RoxVideo.Resource.Id.collapseActionView = global::App1.Droid.Resource.Id.collapseActionView;
-			global::RoxVideo.Resource.Id.contentPanel = global::App1.Droid.Resource.Id.contentPanel;
-			global::RoxVideo.Resource.Id.custom = global::App1.Droid.Resource.Id.custom;
-			global::RoxVideo.Resource.Id.customPanel = global::App1.Droid.Resource.Id.customPanel;
-			global::RoxVideo.Resource.Id.decor_content_parent = global::App1.Droid.Resource.Id.decor_content_parent;
-			global::RoxVideo.Resource.Id.default_activity_button = global::App1.Droid.Resource.Id.default_activity_button;
-			global::RoxVideo.Resource.Id.design_bottom_sheet = global::App1.Droid.Resource.Id.design_bottom_sheet;
-			global::RoxVideo.Resource.Id.design_menu_item_action_area = global::App1.Droid.Resource.Id.design_menu_item_action_area;
-			global::RoxVideo.Resource.Id.design_menu_item_action_area_stub = global::App1.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::RoxVideo.Resource.Id.design_menu_item_text = global::App1.Droid.Resource.Id.design_menu_item_text;
-			global::RoxVideo.Resource.Id.design_navigation_view = global::App1.Droid.Resource.Id.design_navigation_view;
-			global::RoxVideo.Resource.Id.disableHome = global::App1.Droid.Resource.Id.disableHome;
-			global::RoxVideo.Resource.Id.edit_query = global::App1.Droid.Resource.Id.edit_query;
-			global::RoxVideo.Resource.Id.end = global::App1.Droid.Resource.Id.end;
-			global::RoxVideo.Resource.Id.end_padder = global::App1.Droid.Resource.Id.end_padder;
-			global::RoxVideo.Resource.Id.enterAlways = global::App1.Droid.Resource.Id.enterAlways;
-			global::RoxVideo.Resource.Id.enterAlwaysCollapsed = global::App1.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::RoxVideo.Resource.Id.exitUntilCollapsed = global::App1.Droid.Resource.Id.exitUntilCollapsed;
-			global::RoxVideo.Resource.Id.expand_activities_button = global::App1.Droid.Resource.Id.expand_activities_button;
-			global::RoxVideo.Resource.Id.expanded_menu = global::App1.Droid.Resource.Id.expanded_menu;
-			global::RoxVideo.Resource.Id.fill = global::App1.Droid.Resource.Id.fill;
-			global::RoxVideo.Resource.Id.fill_horizontal = global::App1.Droid.Resource.Id.fill_horizontal;
-			global::RoxVideo.Resource.Id.fill_vertical = global::App1.Droid.Resource.Id.fill_vertical;
-			global::RoxVideo.Resource.Id.@fixed = global::App1.Droid.Resource.Id.@fixed;
-			global::RoxVideo.Resource.Id.home = global::App1.Droid.Resource.Id.home;
-			global::RoxVideo.Resource.Id.homeAsUp = global::App1.Droid.Resource.Id.homeAsUp;
-			global::RoxVideo.Resource.Id.icon = global::App1.Droid.Resource.Id.icon;
-			global::RoxVideo.Resource.Id.ifRoom = global::App1.Droid.Resource.Id.ifRoom;
-			global::RoxVideo.Resource.Id.image = global::App1.Droid.Resource.Id.image;
-			global::RoxVideo.Resource.Id.info = global::App1.Droid.Resource.Id.info;
-			global::RoxVideo.Resource.Id.item_touch_helper_previous_elevation = global::App1.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::RoxVideo.Resource.Id.left = global::App1.Droid.Resource.Id.left;
-			global::RoxVideo.Resource.Id.line1 = global::App1.Droid.Resource.Id.line1;
-			global::RoxVideo.Resource.Id.line3 = global::App1.Droid.Resource.Id.line3;
-			global::RoxVideo.Resource.Id.listMode = global::App1.Droid.Resource.Id.listMode;
-			global::RoxVideo.Resource.Id.list_item = global::App1.Droid.Resource.Id.list_item;
-			global::RoxVideo.Resource.Id.media_actions = global::App1.Droid.Resource.Id.media_actions;
-			global::RoxVideo.Resource.Id.middle = global::App1.Droid.Resource.Id.middle;
-			global::RoxVideo.Resource.Id.mini = global::App1.Droid.Resource.Id.mini;
-			global::RoxVideo.Resource.Id.mr_art = global::App1.Droid.Resource.Id.mr_art;
-			global::RoxVideo.Resource.Id.mr_chooser_list = global::App1.Droid.Resource.Id.mr_chooser_list;
-			global::RoxVideo.Resource.Id.mr_chooser_route_desc = global::App1.Droid.Resource.Id.mr_chooser_route_desc;
-			global::RoxVideo.Resource.Id.mr_chooser_route_icon = global::App1.Droid.Resource.Id.mr_chooser_route_icon;
-			global::RoxVideo.Resource.Id.mr_chooser_route_name = global::App1.Droid.Resource.Id.mr_chooser_route_name;
-			global::RoxVideo.Resource.Id.mr_close = global::App1.Droid.Resource.Id.mr_close;
-			global::RoxVideo.Resource.Id.mr_control_divider = global::App1.Droid.Resource.Id.mr_control_divider;
-			global::RoxVideo.Resource.Id.mr_control_subtitle = global::App1.Droid.Resource.Id.mr_control_subtitle;
-			global::RoxVideo.Resource.Id.mr_control_title = global::App1.Droid.Resource.Id.mr_control_title;
-			global::RoxVideo.Resource.Id.mr_control_title_container = global::App1.Droid.Resource.Id.mr_control_title_container;
-			global::RoxVideo.Resource.Id.mr_custom_control = global::App1.Droid.Resource.Id.mr_custom_control;
-			global::RoxVideo.Resource.Id.mr_default_control = global::App1.Droid.Resource.Id.mr_default_control;
-			global::RoxVideo.Resource.Id.mr_dialog_area = global::App1.Droid.Resource.Id.mr_dialog_area;
-			global::RoxVideo.Resource.Id.mr_expandable_area = global::App1.Droid.Resource.Id.mr_expandable_area;
-			global::RoxVideo.Resource.Id.mr_group_expand_collapse = global::App1.Droid.Resource.Id.mr_group_expand_collapse;
-			global::RoxVideo.Resource.Id.mr_media_main_control = global::App1.Droid.Resource.Id.mr_media_main_control;
-			global::RoxVideo.Resource.Id.mr_name = global::App1.Droid.Resource.Id.mr_name;
-			global::RoxVideo.Resource.Id.mr_playback_control = global::App1.Droid.Resource.Id.mr_playback_control;
-			global::RoxVideo.Resource.Id.mr_title_bar = global::App1.Droid.Resource.Id.mr_title_bar;
-			global::RoxVideo.Resource.Id.mr_volume_control = global::App1.Droid.Resource.Id.mr_volume_control;
-			global::RoxVideo.Resource.Id.mr_volume_group_list = global::App1.Droid.Resource.Id.mr_volume_group_list;
-			global::RoxVideo.Resource.Id.mr_volume_item_icon = global::App1.Droid.Resource.Id.mr_volume_item_icon;
-			global::RoxVideo.Resource.Id.mr_volume_slider = global::App1.Droid.Resource.Id.mr_volume_slider;
-			global::RoxVideo.Resource.Id.multiply = global::App1.Droid.Resource.Id.multiply;
-			global::RoxVideo.Resource.Id.navigation_header_container = global::App1.Droid.Resource.Id.navigation_header_container;
-			global::RoxVideo.Resource.Id.never = global::App1.Droid.Resource.Id.never;
-			global::RoxVideo.Resource.Id.none = global::App1.Droid.Resource.Id.none;
-			global::RoxVideo.Resource.Id.normal = global::App1.Droid.Resource.Id.normal;
-			global::RoxVideo.Resource.Id.parallax = global::App1.Droid.Resource.Id.parallax;
-			global::RoxVideo.Resource.Id.parentPanel = global::App1.Droid.Resource.Id.parentPanel;
-			global::RoxVideo.Resource.Id.pin = global::App1.Droid.Resource.Id.pin;
-			global::RoxVideo.Resource.Id.progress_circular = global::App1.Droid.Resource.Id.progress_circular;
-			global::RoxVideo.Resource.Id.progress_horizontal = global::App1.Droid.Resource.Id.progress_horizontal;
-			global::RoxVideo.Resource.Id.radio = global::App1.Droid.Resource.Id.radio;
-			global::RoxVideo.Resource.Id.right = global::App1.Droid.Resource.Id.right;
-			global::RoxVideo.Resource.Id.screen = global::App1.Droid.Resource.Id.screen;
-			global::RoxVideo.Resource.Id.scroll = global::App1.Droid.Resource.Id.scroll;
-			global::RoxVideo.Resource.Id.scrollIndicatorDown = global::App1.Droid.Resource.Id.scrollIndicatorDown;
-			global::RoxVideo.Resource.Id.scrollIndicatorUp = global::App1.Droid.Resource.Id.scrollIndicatorUp;
-			global::RoxVideo.Resource.Id.scrollView = global::App1.Droid.Resource.Id.scrollView;
-			global::RoxVideo.Resource.Id.scrollable = global::App1.Droid.Resource.Id.scrollable;
-			global::RoxVideo.Resource.Id.search_badge = global::App1.Droid.Resource.Id.search_badge;
-			global::RoxVideo.Resource.Id.search_bar = global::App1.Droid.Resource.Id.search_bar;
-			global::RoxVideo.Resource.Id.search_button = global::App1.Droid.Resource.Id.search_button;
-			global::RoxVideo.Resource.Id.search_close_btn = global::App1.Droid.Resource.Id.search_close_btn;
-			global::RoxVideo.Resource.Id.search_edit_frame = global::App1.Droid.Resource.Id.search_edit_frame;
-			global::RoxVideo.Resource.Id.search_go_btn = global::App1.Droid.Resource.Id.search_go_btn;
-			global::RoxVideo.Resource.Id.search_mag_icon = global::App1.Droid.Resource.Id.search_mag_icon;
-			global::RoxVideo.Resource.Id.search_plate = global::App1.Droid.Resource.Id.search_plate;
-			global::RoxVideo.Resource.Id.search_src_text = global::App1.Droid.Resource.Id.search_src_text;
-			global::RoxVideo.Resource.Id.search_voice_btn = global::App1.Droid.Resource.Id.search_voice_btn;
-			global::RoxVideo.Resource.Id.select_dialog_listview = global::App1.Droid.Resource.Id.select_dialog_listview;
-			global::RoxVideo.Resource.Id.shortcut = global::App1.Droid.Resource.Id.shortcut;
-			global::RoxVideo.Resource.Id.showCustom = global::App1.Droid.Resource.Id.showCustom;
-			global::RoxVideo.Resource.Id.showHome = global::App1.Droid.Resource.Id.showHome;
-			global::RoxVideo.Resource.Id.showTitle = global::App1.Droid.Resource.Id.showTitle;
-			global::RoxVideo.Resource.Id.snackbar_action = global::App1.Droid.Resource.Id.snackbar_action;
-			global::RoxVideo.Resource.Id.snackbar_text = global::App1.Droid.Resource.Id.snackbar_text;
-			global::RoxVideo.Resource.Id.snap = global::App1.Droid.Resource.Id.snap;
-			global::RoxVideo.Resource.Id.spacer = global::App1.Droid.Resource.Id.spacer;
-			global::RoxVideo.Resource.Id.split_action_bar = global::App1.Droid.Resource.Id.split_action_bar;
-			global::RoxVideo.Resource.Id.src_atop = global::App1.Droid.Resource.Id.src_atop;
-			global::RoxVideo.Resource.Id.src_in = global::App1.Droid.Resource.Id.src_in;
-			global::RoxVideo.Resource.Id.src_over = global::App1.Droid.Resource.Id.src_over;
-			global::RoxVideo.Resource.Id.start = global::App1.Droid.Resource.Id.start;
-			global::RoxVideo.Resource.Id.status_bar_latest_event_content = global::App1.Droid.Resource.Id.status_bar_latest_event_content;
-			global::RoxVideo.Resource.Id.submit_area = global::App1.Droid.Resource.Id.submit_area;
-			global::RoxVideo.Resource.Id.tabMode = global::App1.Droid.Resource.Id.tabMode;
-			global::RoxVideo.Resource.Id.text = global::App1.Droid.Resource.Id.text;
-			global::RoxVideo.Resource.Id.text2 = global::App1.Droid.Resource.Id.text2;
-			global::RoxVideo.Resource.Id.textSpacerNoButtons = global::App1.Droid.Resource.Id.textSpacerNoButtons;
-			global::RoxVideo.Resource.Id.time = global::App1.Droid.Resource.Id.time;
-			global::RoxVideo.Resource.Id.title = global::App1.Droid.Resource.Id.title;
-			global::RoxVideo.Resource.Id.title_template = global::App1.Droid.Resource.Id.title_template;
-			global::RoxVideo.Resource.Id.top = global::App1.Droid.Resource.Id.top;
-			global::RoxVideo.Resource.Id.topPanel = global::App1.Droid.Resource.Id.topPanel;
-			global::RoxVideo.Resource.Id.touch_outside = global::App1.Droid.Resource.Id.touch_outside;
-			global::RoxVideo.Resource.Id.up = global::App1.Droid.Resource.Id.up;
-			global::RoxVideo.Resource.Id.useLogo = global::App1.Droid.Resource.Id.useLogo;
-			global::RoxVideo.Resource.Id.view_offset_helper = global::App1.Droid.Resource.Id.view_offset_helper;
-			global::RoxVideo.Resource.Id.volume_item_container = global::App1.Droid.Resource.Id.volume_item_container;
-			global::RoxVideo.Resource.Id.withText = global::App1.Droid.Resource.Id.withText;
-			global::RoxVideo.Resource.Id.wrap_content = global::App1.Droid.Resource.Id.wrap_content;
-			global::RoxVideo.Resource.Integer.abc_config_activityDefaultDur = global::App1.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::RoxVideo.Resource.Integer.abc_config_activityShortDur = global::App1.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::RoxVideo.Resource.Integer.bottom_sheet_slide_duration = global::App1.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::RoxVideo.Resource.Integer.cancel_button_image_alpha = global::App1.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::RoxVideo.Resource.Integer.design_snackbar_text_max_lines = global::App1.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::RoxVideo.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::App1.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::RoxVideo.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::App1.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::RoxVideo.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::App1.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::RoxVideo.Resource.Integer.status_bar_notification_info_maxnum = global::App1.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::RoxVideo.Resource.Interpolator.mr_fast_out_slow_in = global::App1.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::RoxVideo.Resource.Interpolator.mr_linear_out_slow_in = global::App1.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::RoxVideo.Resource.Layout.abc_action_bar_title_item = global::App1.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::RoxVideo.Resource.Layout.abc_action_bar_up_container = global::App1.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::RoxVideo.Resource.Layout.abc_action_menu_item_layout = global::App1.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::RoxVideo.Resource.Layout.abc_action_menu_layout = global::App1.Droid.Resource.Layout.abc_action_menu_layout;
-			global::RoxVideo.Resource.Layout.abc_action_mode_bar = global::App1.Droid.Resource.Layout.abc_action_mode_bar;
-			global::RoxVideo.Resource.Layout.abc_action_mode_close_item_material = global::App1.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::RoxVideo.Resource.Layout.abc_activity_chooser_view = global::App1.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::RoxVideo.Resource.Layout.abc_activity_chooser_view_list_item = global::App1.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::RoxVideo.Resource.Layout.abc_alert_dialog_button_bar_material = global::App1.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::RoxVideo.Resource.Layout.abc_alert_dialog_material = global::App1.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::RoxVideo.Resource.Layout.abc_dialog_title_material = global::App1.Droid.Resource.Layout.abc_dialog_title_material;
-			global::RoxVideo.Resource.Layout.abc_expanded_menu_layout = global::App1.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::RoxVideo.Resource.Layout.abc_list_menu_item_checkbox = global::App1.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::RoxVideo.Resource.Layout.abc_list_menu_item_icon = global::App1.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::RoxVideo.Resource.Layout.abc_list_menu_item_layout = global::App1.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::RoxVideo.Resource.Layout.abc_list_menu_item_radio = global::App1.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::RoxVideo.Resource.Layout.abc_popup_menu_item_layout = global::App1.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::RoxVideo.Resource.Layout.abc_screen_content_include = global::App1.Droid.Resource.Layout.abc_screen_content_include;
-			global::RoxVideo.Resource.Layout.abc_screen_simple = global::App1.Droid.Resource.Layout.abc_screen_simple;
-			global::RoxVideo.Resource.Layout.abc_screen_simple_overlay_action_mode = global::App1.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::RoxVideo.Resource.Layout.abc_screen_toolbar = global::App1.Droid.Resource.Layout.abc_screen_toolbar;
-			global::RoxVideo.Resource.Layout.abc_search_dropdown_item_icons_2line = global::App1.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::RoxVideo.Resource.Layout.abc_search_view = global::App1.Droid.Resource.Layout.abc_search_view;
-			global::RoxVideo.Resource.Layout.abc_select_dialog_material = global::App1.Droid.Resource.Layout.abc_select_dialog_material;
-			global::RoxVideo.Resource.Layout.design_bottom_sheet_dialog = global::App1.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::RoxVideo.Resource.Layout.design_layout_snackbar = global::App1.Droid.Resource.Layout.design_layout_snackbar;
-			global::RoxVideo.Resource.Layout.design_layout_snackbar_include = global::App1.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::RoxVideo.Resource.Layout.design_layout_tab_icon = global::App1.Droid.Resource.Layout.design_layout_tab_icon;
-			global::RoxVideo.Resource.Layout.design_layout_tab_text = global::App1.Droid.Resource.Layout.design_layout_tab_text;
-			global::RoxVideo.Resource.Layout.design_menu_item_action_area = global::App1.Droid.Resource.Layout.design_menu_item_action_area;
-			global::RoxVideo.Resource.Layout.design_navigation_item = global::App1.Droid.Resource.Layout.design_navigation_item;
-			global::RoxVideo.Resource.Layout.design_navigation_item_header = global::App1.Droid.Resource.Layout.design_navigation_item_header;
-			global::RoxVideo.Resource.Layout.design_navigation_item_separator = global::App1.Droid.Resource.Layout.design_navigation_item_separator;
-			global::RoxVideo.Resource.Layout.design_navigation_item_subheader = global::App1.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::RoxVideo.Resource.Layout.design_navigation_menu = global::App1.Droid.Resource.Layout.design_navigation_menu;
-			global::RoxVideo.Resource.Layout.design_navigation_menu_item = global::App1.Droid.Resource.Layout.design_navigation_menu_item;
-			global::RoxVideo.Resource.Layout.mr_chooser_dialog = global::App1.Droid.Resource.Layout.mr_chooser_dialog;
-			global::RoxVideo.Resource.Layout.mr_chooser_list_item = global::App1.Droid.Resource.Layout.mr_chooser_list_item;
-			global::RoxVideo.Resource.Layout.mr_controller_material_dialog_b = global::App1.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::RoxVideo.Resource.Layout.mr_controller_volume_item = global::App1.Droid.Resource.Layout.mr_controller_volume_item;
-			global::RoxVideo.Resource.Layout.mr_playback_control = global::App1.Droid.Resource.Layout.mr_playback_control;
-			global::RoxVideo.Resource.Layout.mr_volume_control = global::App1.Droid.Resource.Layout.mr_volume_control;
-			global::RoxVideo.Resource.Layout.notification_media_action = global::App1.Droid.Resource.Layout.notification_media_action;
-			global::RoxVideo.Resource.Layout.notification_media_cancel_action = global::App1.Droid.Resource.Layout.notification_media_cancel_action;
-			global::RoxVideo.Resource.Layout.notification_template_big_media = global::App1.Droid.Resource.Layout.notification_template_big_media;
-			global::RoxVideo.Resource.Layout.notification_template_big_media_narrow = global::App1.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::RoxVideo.Resource.Layout.notification_template_media = global::App1.Droid.Resource.Layout.notification_template_media;
-			global::RoxVideo.Resource.Layout.notification_template_part_chronometer = global::App1.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::RoxVideo.Resource.Layout.notification_template_part_time = global::App1.Droid.Resource.Layout.notification_template_part_time;
-			global::RoxVideo.Resource.Layout.select_dialog_item_material = global::App1.Droid.Resource.Layout.select_dialog_item_material;
-			global::RoxVideo.Resource.Layout.select_dialog_multichoice_material = global::App1.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::RoxVideo.Resource.Layout.select_dialog_singlechoice_material = global::App1.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::RoxVideo.Resource.Layout.support_simple_spinner_dropdown_item = global::App1.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::RoxVideo.Resource.String.ApplicationName = global::App1.Droid.Resource.String.ApplicationName;
-			global::RoxVideo.Resource.String.Hello = global::App1.Droid.Resource.String.Hello;
-			global::RoxVideo.Resource.String.abc_action_bar_home_description = global::App1.Droid.Resource.String.abc_action_bar_home_description;
-			global::RoxVideo.Resource.String.abc_action_bar_up_description = global::App1.Droid.Resource.String.abc_action_bar_up_description;
-			global::RoxVideo.Resource.String.abc_action_menu_overflow_description = global::App1.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::RoxVideo.Resource.String.abc_action_mode_done = global::App1.Droid.Resource.String.abc_action_mode_done;
-			global::RoxVideo.Resource.String.abc_activity_chooser_view_see_all = global::App1.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::RoxVideo.Resource.String.abc_activitychooserview_choose_application = global::App1.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::RoxVideo.Resource.String.abc_capital_off = global::App1.Droid.Resource.String.abc_capital_off;
-			global::RoxVideo.Resource.String.abc_capital_on = global::App1.Droid.Resource.String.abc_capital_on;
-			global::RoxVideo.Resource.String.abc_search_hint = global::App1.Droid.Resource.String.abc_search_hint;
-			global::RoxVideo.Resource.String.abc_searchview_description_clear = global::App1.Droid.Resource.String.abc_searchview_description_clear;
-			global::RoxVideo.Resource.String.abc_searchview_description_query = global::App1.Droid.Resource.String.abc_searchview_description_query;
-			global::RoxVideo.Resource.String.abc_searchview_description_search = global::App1.Droid.Resource.String.abc_searchview_description_search;
-			global::RoxVideo.Resource.String.abc_searchview_description_submit = global::App1.Droid.Resource.String.abc_searchview_description_submit;
-			global::RoxVideo.Resource.String.abc_searchview_description_voice = global::App1.Droid.Resource.String.abc_searchview_description_voice;
-			global::RoxVideo.Resource.String.abc_shareactionprovider_share_with = global::App1.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::RoxVideo.Resource.String.abc_shareactionprovider_share_with_application = global::App1.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::RoxVideo.Resource.String.abc_toolbar_collapse_description = global::App1.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::RoxVideo.Resource.String.appbar_scrolling_view_behavior = global::App1.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::RoxVideo.Resource.String.bottom_sheet_behavior = global::App1.Droid.Resource.String.bottom_sheet_behavior;
-			global::RoxVideo.Resource.String.character_counter_pattern = global::App1.Droid.Resource.String.character_counter_pattern;
-			global::RoxVideo.Resource.String.mr_button_content_description = global::App1.Droid.Resource.String.mr_button_content_description;
-			global::RoxVideo.Resource.String.mr_chooser_searching = global::App1.Droid.Resource.String.mr_chooser_searching;
-			global::RoxVideo.Resource.String.mr_chooser_title = global::App1.Droid.Resource.String.mr_chooser_title;
-			global::RoxVideo.Resource.String.mr_controller_casting_screen = global::App1.Droid.Resource.String.mr_controller_casting_screen;
-			global::RoxVideo.Resource.String.mr_controller_close_description = global::App1.Droid.Resource.String.mr_controller_close_description;
-			global::RoxVideo.Resource.String.mr_controller_collapse_group = global::App1.Droid.Resource.String.mr_controller_collapse_group;
-			global::RoxVideo.Resource.String.mr_controller_disconnect = global::App1.Droid.Resource.String.mr_controller_disconnect;
-			global::RoxVideo.Resource.String.mr_controller_expand_group = global::App1.Droid.Resource.String.mr_controller_expand_group;
-			global::RoxVideo.Resource.String.mr_controller_no_info_available = global::App1.Droid.Resource.String.mr_controller_no_info_available;
-			global::RoxVideo.Resource.String.mr_controller_no_media_selected = global::App1.Droid.Resource.String.mr_controller_no_media_selected;
-			global::RoxVideo.Resource.String.mr_controller_pause = global::App1.Droid.Resource.String.mr_controller_pause;
-			global::RoxVideo.Resource.String.mr_controller_play = global::App1.Droid.Resource.String.mr_controller_play;
-			global::RoxVideo.Resource.String.mr_controller_stop = global::App1.Droid.Resource.String.mr_controller_stop;
-			global::RoxVideo.Resource.String.mr_system_route_name = global::App1.Droid.Resource.String.mr_system_route_name;
-			global::RoxVideo.Resource.String.mr_user_route_category_name = global::App1.Droid.Resource.String.mr_user_route_category_name;
-			global::RoxVideo.Resource.String.status_bar_notification_info_overflow = global::App1.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::RoxVideo.Resource.Style.AlertDialog_AppCompat = global::App1.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::RoxVideo.Resource.Style.AlertDialog_AppCompat_Light = global::App1.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Animation_AppCompat_Dialog = global::App1.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Animation_AppCompat_DropDownUp = global::App1.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::RoxVideo.Resource.Style.Animation_Design_BottomSheetDialog = global::App1.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::RoxVideo.Resource.Style.Base_AlertDialog_AppCompat = global::App1.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::RoxVideo.Resource.Style.Base_AlertDialog_AppCompat_Light = global::App1.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_Animation_AppCompat_Dialog = global::App1.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::App1.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::RoxVideo.Resource.Style.Base_CardView = global::App1.Droid.Resource.Style.Base_CardView;
-			global::RoxVideo.Resource.Style.Base_DialogWindowTitle_AppCompat = global::App1.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::RoxVideo.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::App1.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Button = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Large = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Small = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Title = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::App1.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::App1.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::App1.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::RoxVideo.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::App1.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat = global::App1.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Dialog = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::RoxVideo.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::App1.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::RoxVideo.Resource.Style.Base_ThemeOverlay_AppCompat = global::App1.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::RoxVideo.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::App1.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::RoxVideo.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::App1.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::RoxVideo.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::App1.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::RoxVideo.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::App1.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_V21_Theme_AppCompat = global::App1.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::App1.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Base_V21_Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::App1.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::RoxVideo.Resource.Style.Base_V22_Theme_AppCompat = global::App1.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Base_V22_Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_V23_Theme_AppCompat = global::App1.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Base_V23_Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_V7_Theme_AppCompat = global::App1.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::App1.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Base_V7_Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::App1.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::RoxVideo.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::App1.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::RoxVideo.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::App1.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionButton = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActionMode = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Button_Small = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_EditText = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ImageButton = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ListView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_RatingBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_SearchView = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_SeekBar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Spinner = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Toolbar = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::RoxVideo.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::App1.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::RoxVideo.Resource.Style.Base_Widget_Design_TabLayout = global::App1.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::RoxVideo.Resource.Style.CardView = global::App1.Droid.Resource.Style.CardView;
-			global::RoxVideo.Resource.Style.CardView_Dark = global::App1.Droid.Resource.Style.CardView_Dark;
-			global::RoxVideo.Resource.Style.CardView_Light = global::App1.Droid.Resource.Style.CardView_Light;
-			global::RoxVideo.Resource.Style.Platform_AppCompat = global::App1.Droid.Resource.Style.Platform_AppCompat;
-			global::RoxVideo.Resource.Style.Platform_AppCompat_Light = global::App1.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Platform_ThemeOverlay_AppCompat = global::App1.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::RoxVideo.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::App1.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::RoxVideo.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::App1.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Platform_Widget_AppCompat_Spinner = global::App1.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::RoxVideo.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::App1.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::RoxVideo.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::App1.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::RoxVideo.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::App1.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::RoxVideo.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::App1.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat = global::App1.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Body1 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Body2 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Button = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Caption = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Display1 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Display2 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Display3 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Display4 = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Headline = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Large = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Medium = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Menu = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Small = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Subhead = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Title = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::RoxVideo.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::App1.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::App1.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Counter = global::App1.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Counter_Overflow = global::App1.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Error = global::App1.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Hint = global::App1.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Snackbar_Message = global::App1.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::RoxVideo.Resource.Style.TextAppearance_Design_Tab = global::App1.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::RoxVideo.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::App1.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::RoxVideo.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::App1.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::RoxVideo.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::App1.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::RoxVideo.Resource.Style.Theme_AppCompat = global::App1.Droid.Resource.Style.Theme_AppCompat;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_CompactMenu = global::App1.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::App1.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Dialog = global::App1.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Dialog_Alert = global::App1.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::App1.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::App1.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light = global::App1.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_Dialog = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::App1.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::RoxVideo.Resource.Style.Theme_AppCompat_NoActionBar = global::App1.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::RoxVideo.Resource.Style.Theme_Design = global::App1.Droid.Resource.Style.Theme_Design;
-			global::RoxVideo.Resource.Style.Theme_Design_BottomSheetDialog = global::App1.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::RoxVideo.Resource.Style.Theme_Design_Light = global::App1.Droid.Resource.Style.Theme_Design_Light;
-			global::RoxVideo.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::App1.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::RoxVideo.Resource.Style.Theme_Design_Light_NoActionBar = global::App1.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::RoxVideo.Resource.Style.Theme_Design_NoActionBar = global::App1.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::RoxVideo.Resource.Style.Theme_MediaRouter = global::App1.Droid.Resource.Style.Theme_MediaRouter;
-			global::RoxVideo.Resource.Style.Theme_MediaRouter_Light = global::App1.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::RoxVideo.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::App1.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::RoxVideo.Resource.Style.Theme_MediaRouter_LightControlPanel = global::App1.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::RoxVideo.Resource.Style.ThemeOverlay_AppCompat = global::App1.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::RoxVideo.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::App1.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::RoxVideo.Resource.Style.ThemeOverlay_AppCompat_Dark = global::App1.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::RoxVideo.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::App1.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::RoxVideo.Resource.Style.ThemeOverlay_AppCompat_Light = global::App1.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionBar = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionButton = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActionMode = global::App1.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ActivityChooserView = global::App1.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::App1.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button = global::App1.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button_Borderless = global::App1.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::App1.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::App1.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button_Colored = global::App1.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Button_Small = global::App1.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ButtonBar = global::App1.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::App1.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::App1.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::App1.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::App1.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::App1.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::App1.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_EditText = global::App1.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ImageButton = global::App1.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionButton = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_SearchView = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::App1.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ListPopupWindow = global::App1.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ListView = global::App1.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ListView_DropDown = global::App1.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ListView_Menu = global::App1.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_PopupMenu = global::App1.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::App1.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_PopupWindow = global::App1.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ProgressBar = global::App1.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::App1.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_RatingBar = global::App1.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::App1.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_RatingBar_Small = global::App1.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_SearchView = global::App1.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::App1.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_SeekBar = global::App1.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Spinner = global::App1.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::App1.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::App1.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::App1.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::App1.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Toolbar = global::App1.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::RoxVideo.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::App1.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::RoxVideo.Resource.Style.Widget_Design_AppBarLayout = global::App1.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::RoxVideo.Resource.Style.Widget_Design_BottomSheet_Modal = global::App1.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::RoxVideo.Resource.Style.Widget_Design_CollapsingToolbar = global::App1.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::RoxVideo.Resource.Style.Widget_Design_FloatingActionButton = global::App1.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::RoxVideo.Resource.Style.Widget_Design_NavigationView = global::App1.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::RoxVideo.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::App1.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::RoxVideo.Resource.Style.Widget_Design_Snackbar = global::App1.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::RoxVideo.Resource.Style.Widget_Design_TabLayout = global::App1.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::RoxVideo.Resource.Style.Widget_Design_TextInputLayout = global::App1.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::RoxVideo.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::App1.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::RoxVideo.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::App1.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::RoxVideo.Resource.Styleable.ActionBar = global::App1.Droid.Resource.Styleable.ActionBar;
-			global::RoxVideo.Resource.Styleable.ActionBar_background = global::App1.Droid.Resource.Styleable.ActionBar_background;
-			global::RoxVideo.Resource.Styleable.ActionBar_backgroundSplit = global::App1.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::RoxVideo.Resource.Styleable.ActionBar_backgroundStacked = global::App1.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::RoxVideo.Resource.Styleable.ActionBar_contentInsetEnd = global::App1.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::RoxVideo.Resource.Styleable.ActionBar_contentInsetLeft = global::App1.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::RoxVideo.Resource.Styleable.ActionBar_contentInsetRight = global::App1.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::RoxVideo.Resource.Styleable.ActionBar_contentInsetStart = global::App1.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::RoxVideo.Resource.Styleable.ActionBar_customNavigationLayout = global::App1.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::RoxVideo.Resource.Styleable.ActionBar_displayOptions = global::App1.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::RoxVideo.Resource.Styleable.ActionBar_divider = global::App1.Droid.Resource.Styleable.ActionBar_divider;
-			global::RoxVideo.Resource.Styleable.ActionBar_elevation = global::App1.Droid.Resource.Styleable.ActionBar_elevation;
-			global::RoxVideo.Resource.Styleable.ActionBar_height = global::App1.Droid.Resource.Styleable.ActionBar_height;
-			global::RoxVideo.Resource.Styleable.ActionBar_hideOnContentScroll = global::App1.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::RoxVideo.Resource.Styleable.ActionBar_homeAsUpIndicator = global::App1.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::RoxVideo.Resource.Styleable.ActionBar_homeLayout = global::App1.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::RoxVideo.Resource.Styleable.ActionBar_icon = global::App1.Droid.Resource.Styleable.ActionBar_icon;
-			global::RoxVideo.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::App1.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::RoxVideo.Resource.Styleable.ActionBar_itemPadding = global::App1.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::RoxVideo.Resource.Styleable.ActionBar_logo = global::App1.Droid.Resource.Styleable.ActionBar_logo;
-			global::RoxVideo.Resource.Styleable.ActionBar_navigationMode = global::App1.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::RoxVideo.Resource.Styleable.ActionBar_popupTheme = global::App1.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::RoxVideo.Resource.Styleable.ActionBar_progressBarPadding = global::App1.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::RoxVideo.Resource.Styleable.ActionBar_progressBarStyle = global::App1.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::RoxVideo.Resource.Styleable.ActionBar_subtitle = global::App1.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::RoxVideo.Resource.Styleable.ActionBar_subtitleTextStyle = global::App1.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::RoxVideo.Resource.Styleable.ActionBar_title = global::App1.Droid.Resource.Styleable.ActionBar_title;
-			global::RoxVideo.Resource.Styleable.ActionBar_titleTextStyle = global::App1.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::RoxVideo.Resource.Styleable.ActionBarLayout = global::App1.Droid.Resource.Styleable.ActionBarLayout;
-			global::RoxVideo.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::App1.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::RoxVideo.Resource.Styleable.ActionMenuItemView = global::App1.Droid.Resource.Styleable.ActionMenuItemView;
-			global::RoxVideo.Resource.Styleable.ActionMenuItemView_android_minWidth = global::App1.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::RoxVideo.Resource.Styleable.ActionMenuView = global::App1.Droid.Resource.Styleable.ActionMenuView;
-			global::RoxVideo.Resource.Styleable.ActionMode = global::App1.Droid.Resource.Styleable.ActionMode;
-			global::RoxVideo.Resource.Styleable.ActionMode_background = global::App1.Droid.Resource.Styleable.ActionMode_background;
-			global::RoxVideo.Resource.Styleable.ActionMode_backgroundSplit = global::App1.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::RoxVideo.Resource.Styleable.ActionMode_closeItemLayout = global::App1.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::RoxVideo.Resource.Styleable.ActionMode_height = global::App1.Droid.Resource.Styleable.ActionMode_height;
-			global::RoxVideo.Resource.Styleable.ActionMode_subtitleTextStyle = global::App1.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::RoxVideo.Resource.Styleable.ActionMode_titleTextStyle = global::App1.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::RoxVideo.Resource.Styleable.ActivityChooserView = global::App1.Droid.Resource.Styleable.ActivityChooserView;
-			global::RoxVideo.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::App1.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::RoxVideo.Resource.Styleable.ActivityChooserView_initialActivityCount = global::App1.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::RoxVideo.Resource.Styleable.AlertDialog = global::App1.Droid.Resource.Styleable.AlertDialog;
-			global::RoxVideo.Resource.Styleable.AlertDialog_android_layout = global::App1.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::RoxVideo.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::App1.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::RoxVideo.Resource.Styleable.AlertDialog_listItemLayout = global::App1.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::RoxVideo.Resource.Styleable.AlertDialog_listLayout = global::App1.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::RoxVideo.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::App1.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::RoxVideo.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::App1.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::RoxVideo.Resource.Styleable.AppBarLayout = global::App1.Droid.Resource.Styleable.AppBarLayout;
-			global::RoxVideo.Resource.Styleable.AppBarLayout_android_background = global::App1.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::RoxVideo.Resource.Styleable.AppBarLayout_elevation = global::App1.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::RoxVideo.Resource.Styleable.AppBarLayout_expanded = global::App1.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::RoxVideo.Resource.Styleable.AppCompatImageView = global::App1.Droid.Resource.Styleable.AppCompatImageView;
-			global::RoxVideo.Resource.Styleable.AppCompatImageView_android_src = global::App1.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::RoxVideo.Resource.Styleable.AppCompatImageView_srcCompat = global::App1.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::RoxVideo.Resource.Styleable.AppCompatTextView = global::App1.Droid.Resource.Styleable.AppCompatTextView;
-			global::RoxVideo.Resource.Styleable.AppCompatTextView_android_textAppearance = global::App1.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::RoxVideo.Resource.Styleable.AppCompatTextView_textAllCaps = global::App1.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarDivider = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarSize = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::App1.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::App1.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::App1.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_checkboxStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorAccent = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorControlActivated = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorControlNormal = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorPrimary = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::App1.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_controlBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::App1.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dialogTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::App1.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dividerVertical = global::App1.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::App1.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_editTextBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_editTextColor = global::App1.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_editTextStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::App1.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::App1.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::App1.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::App1.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_panelBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::App1.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::App1.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::App1.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::App1.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_searchViewStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_seekBarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::App1.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::App1.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_spinnerStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_switchStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::App1.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::App1.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::App1.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_toolbarStyle = global::App1.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowActionBar = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::RoxVideo.Resource.Styleable.AppCompatTheme_windowNoTitle = global::App1.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::RoxVideo.Resource.Styleable.ButtonBarLayout = global::App1.Droid.Resource.Styleable.ButtonBarLayout;
-			global::RoxVideo.Resource.Styleable.ButtonBarLayout_allowStacking = global::App1.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::RoxVideo.Resource.Styleable.CardView = global::App1.Droid.Resource.Styleable.CardView;
-			global::RoxVideo.Resource.Styleable.CardView_android_minHeight = global::App1.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::RoxVideo.Resource.Styleable.CardView_android_minWidth = global::App1.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::RoxVideo.Resource.Styleable.CardView_cardBackgroundColor = global::App1.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::RoxVideo.Resource.Styleable.CardView_cardCornerRadius = global::App1.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::RoxVideo.Resource.Styleable.CardView_cardElevation = global::App1.Droid.Resource.Styleable.CardView_cardElevation;
-			global::RoxVideo.Resource.Styleable.CardView_cardMaxElevation = global::App1.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::RoxVideo.Resource.Styleable.CardView_cardPreventCornerOverlap = global::App1.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::RoxVideo.Resource.Styleable.CardView_cardUseCompatPadding = global::App1.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::RoxVideo.Resource.Styleable.CardView_contentPadding = global::App1.Droid.Resource.Styleable.CardView_contentPadding;
-			global::RoxVideo.Resource.Styleable.CardView_contentPaddingBottom = global::App1.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::RoxVideo.Resource.Styleable.CardView_contentPaddingLeft = global::App1.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::RoxVideo.Resource.Styleable.CardView_contentPaddingRight = global::App1.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::RoxVideo.Resource.Styleable.CardView_contentPaddingTop = global::App1.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_title = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::RoxVideo.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::App1.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::RoxVideo.Resource.Styleable.CompoundButton = global::App1.Droid.Resource.Styleable.CompoundButton;
-			global::RoxVideo.Resource.Styleable.CompoundButton_android_button = global::App1.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::RoxVideo.Resource.Styleable.CompoundButton_buttonTint = global::App1.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::RoxVideo.Resource.Styleable.CompoundButton_buttonTintMode = global::App1.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::RoxVideo.Resource.Styleable.CoordinatorLayout = global::App1.Droid.Resource.Styleable.CoordinatorLayout;
-			global::RoxVideo.Resource.Styleable.CoordinatorLayout_keylines = global::App1.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::RoxVideo.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::App1.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle = global::App1.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_barLength = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_color = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_drawableSize = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_spinBars = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::RoxVideo.Resource.Styleable.DrawerArrowToggle_thickness = global::App1.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton = global::App1.Droid.Resource.Styleable.FloatingActionButton;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_backgroundTint = global::App1.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::App1.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_borderWidth = global::App1.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_elevation = global::App1.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_fabSize = global::App1.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::App1.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_rippleColor = global::App1.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::RoxVideo.Resource.Styleable.FloatingActionButton_useCompatPadding = global::App1.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::RoxVideo.Resource.Styleable.ForegroundLinearLayout = global::App1.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::RoxVideo.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::App1.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::RoxVideo.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::App1.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::RoxVideo.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::App1.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat = global::App1.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_android_gravity = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_android_orientation = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_divider = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_showDividers = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_Layout = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::RoxVideo.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::App1.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::RoxVideo.Resource.Styleable.ListPopupWindow = global::App1.Droid.Resource.Styleable.ListPopupWindow;
-			global::RoxVideo.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::App1.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::RoxVideo.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::App1.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::RoxVideo.Resource.Styleable.MediaRouteButton = global::App1.Droid.Resource.Styleable.MediaRouteButton;
-			global::RoxVideo.Resource.Styleable.MediaRouteButton_android_minHeight = global::App1.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::RoxVideo.Resource.Styleable.MediaRouteButton_android_minWidth = global::App1.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::RoxVideo.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::App1.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::RoxVideo.Resource.Styleable.MenuGroup = global::App1.Droid.Resource.Styleable.MenuGroup;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_checkableBehavior = global::App1.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_enabled = global::App1.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_id = global::App1.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_menuCategory = global::App1.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_orderInCategory = global::App1.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::RoxVideo.Resource.Styleable.MenuGroup_android_visible = global::App1.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::RoxVideo.Resource.Styleable.MenuItem = global::App1.Droid.Resource.Styleable.MenuItem;
-			global::RoxVideo.Resource.Styleable.MenuItem_actionLayout = global::App1.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::RoxVideo.Resource.Styleable.MenuItem_actionProviderClass = global::App1.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::RoxVideo.Resource.Styleable.MenuItem_actionViewClass = global::App1.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::App1.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_checkable = global::App1.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_checked = global::App1.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_enabled = global::App1.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_icon = global::App1.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_id = global::App1.Droid.Resource.Styleable.MenuItem_android_id;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_menuCategory = global::App1.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_numericShortcut = global::App1.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_onClick = global::App1.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_orderInCategory = global::App1.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_title = global::App1.Droid.Resource.Styleable.MenuItem_android_title;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_titleCondensed = global::App1.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::RoxVideo.Resource.Styleable.MenuItem_android_visible = global::App1.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::RoxVideo.Resource.Styleable.MenuItem_showAsAction = global::App1.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::RoxVideo.Resource.Styleable.MenuView = global::App1.Droid.Resource.Styleable.MenuView;
-			global::RoxVideo.Resource.Styleable.MenuView_android_headerBackground = global::App1.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::RoxVideo.Resource.Styleable.MenuView_android_horizontalDivider = global::App1.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::RoxVideo.Resource.Styleable.MenuView_android_itemBackground = global::App1.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::RoxVideo.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::App1.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::RoxVideo.Resource.Styleable.MenuView_android_itemTextAppearance = global::App1.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::RoxVideo.Resource.Styleable.MenuView_android_verticalDivider = global::App1.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::RoxVideo.Resource.Styleable.MenuView_android_windowAnimationStyle = global::App1.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::RoxVideo.Resource.Styleable.MenuView_preserveIconSpacing = global::App1.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::RoxVideo.Resource.Styleable.NavigationView = global::App1.Droid.Resource.Styleable.NavigationView;
-			global::RoxVideo.Resource.Styleable.NavigationView_android_background = global::App1.Droid.Resource.Styleable.NavigationView_android_background;
-			global::RoxVideo.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::App1.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::RoxVideo.Resource.Styleable.NavigationView_android_maxWidth = global::App1.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::RoxVideo.Resource.Styleable.NavigationView_elevation = global::App1.Droid.Resource.Styleable.NavigationView_elevation;
-			global::RoxVideo.Resource.Styleable.NavigationView_headerLayout = global::App1.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::RoxVideo.Resource.Styleable.NavigationView_itemBackground = global::App1.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::RoxVideo.Resource.Styleable.NavigationView_itemIconTint = global::App1.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::RoxVideo.Resource.Styleable.NavigationView_itemTextAppearance = global::App1.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::RoxVideo.Resource.Styleable.NavigationView_itemTextColor = global::App1.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::RoxVideo.Resource.Styleable.NavigationView_menu = global::App1.Droid.Resource.Styleable.NavigationView_menu;
-			global::RoxVideo.Resource.Styleable.PopupWindow = global::App1.Droid.Resource.Styleable.PopupWindow;
-			global::RoxVideo.Resource.Styleable.PopupWindow_android_popupBackground = global::App1.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::RoxVideo.Resource.Styleable.PopupWindow_overlapAnchor = global::App1.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::RoxVideo.Resource.Styleable.PopupWindowBackgroundState = global::App1.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::RoxVideo.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::App1.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::RoxVideo.Resource.Styleable.RecyclerView = global::App1.Droid.Resource.Styleable.RecyclerView;
-			global::RoxVideo.Resource.Styleable.RecyclerView_android_orientation = global::App1.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::RoxVideo.Resource.Styleable.RecyclerView_layoutManager = global::App1.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::RoxVideo.Resource.Styleable.RecyclerView_reverseLayout = global::App1.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::RoxVideo.Resource.Styleable.RecyclerView_spanCount = global::App1.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::RoxVideo.Resource.Styleable.RecyclerView_stackFromEnd = global::App1.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::RoxVideo.Resource.Styleable.ScrimInsetsFrameLayout = global::App1.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::RoxVideo.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::App1.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::RoxVideo.Resource.Styleable.SearchView = global::App1.Droid.Resource.Styleable.SearchView;
-			global::RoxVideo.Resource.Styleable.SearchView_android_focusable = global::App1.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::RoxVideo.Resource.Styleable.SearchView_android_imeOptions = global::App1.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::RoxVideo.Resource.Styleable.SearchView_android_inputType = global::App1.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::RoxVideo.Resource.Styleable.SearchView_android_maxWidth = global::App1.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::RoxVideo.Resource.Styleable.SearchView_closeIcon = global::App1.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::RoxVideo.Resource.Styleable.SearchView_commitIcon = global::App1.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::RoxVideo.Resource.Styleable.SearchView_defaultQueryHint = global::App1.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::RoxVideo.Resource.Styleable.SearchView_goIcon = global::App1.Droid.Resource.Styleable.SearchView_goIcon;
-			global::RoxVideo.Resource.Styleable.SearchView_iconifiedByDefault = global::App1.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::RoxVideo.Resource.Styleable.SearchView_layout = global::App1.Droid.Resource.Styleable.SearchView_layout;
-			global::RoxVideo.Resource.Styleable.SearchView_queryBackground = global::App1.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::RoxVideo.Resource.Styleable.SearchView_queryHint = global::App1.Droid.Resource.Styleable.SearchView_queryHint;
-			global::RoxVideo.Resource.Styleable.SearchView_searchHintIcon = global::App1.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::RoxVideo.Resource.Styleable.SearchView_searchIcon = global::App1.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::RoxVideo.Resource.Styleable.SearchView_submitBackground = global::App1.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::RoxVideo.Resource.Styleable.SearchView_suggestionRowLayout = global::App1.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::RoxVideo.Resource.Styleable.SearchView_voiceIcon = global::App1.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::RoxVideo.Resource.Styleable.SnackbarLayout = global::App1.Droid.Resource.Styleable.SnackbarLayout;
-			global::RoxVideo.Resource.Styleable.SnackbarLayout_android_maxWidth = global::App1.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::RoxVideo.Resource.Styleable.SnackbarLayout_elevation = global::App1.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::RoxVideo.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::App1.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::RoxVideo.Resource.Styleable.Spinner = global::App1.Droid.Resource.Styleable.Spinner;
-			global::RoxVideo.Resource.Styleable.Spinner_android_dropDownWidth = global::App1.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::RoxVideo.Resource.Styleable.Spinner_android_entries = global::App1.Droid.Resource.Styleable.Spinner_android_entries;
-			global::RoxVideo.Resource.Styleable.Spinner_android_popupBackground = global::App1.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::RoxVideo.Resource.Styleable.Spinner_android_prompt = global::App1.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::RoxVideo.Resource.Styleable.Spinner_popupTheme = global::App1.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::RoxVideo.Resource.Styleable.SwitchCompat = global::App1.Droid.Resource.Styleable.SwitchCompat;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_android_textOff = global::App1.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_android_textOn = global::App1.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_android_thumb = global::App1.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_showText = global::App1.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_splitTrack = global::App1.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_switchMinWidth = global::App1.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_switchPadding = global::App1.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_switchTextAppearance = global::App1.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_thumbTextPadding = global::App1.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::RoxVideo.Resource.Styleable.SwitchCompat_track = global::App1.Droid.Resource.Styleable.SwitchCompat_track;
-			global::RoxVideo.Resource.Styleable.TabItem = global::App1.Droid.Resource.Styleable.TabItem;
-			global::RoxVideo.Resource.Styleable.TabItem_android_icon = global::App1.Droid.Resource.Styleable.TabItem_android_icon;
-			global::RoxVideo.Resource.Styleable.TabItem_android_layout = global::App1.Droid.Resource.Styleable.TabItem_android_layout;
-			global::RoxVideo.Resource.Styleable.TabItem_android_text = global::App1.Droid.Resource.Styleable.TabItem_android_text;
-			global::RoxVideo.Resource.Styleable.TabLayout = global::App1.Droid.Resource.Styleable.TabLayout;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabBackground = global::App1.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabContentStart = global::App1.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabGravity = global::App1.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabIndicatorColor = global::App1.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabIndicatorHeight = global::App1.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabMaxWidth = global::App1.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabMinWidth = global::App1.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabMode = global::App1.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabPadding = global::App1.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabPaddingBottom = global::App1.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabPaddingEnd = global::App1.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabPaddingStart = global::App1.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabPaddingTop = global::App1.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabSelectedTextColor = global::App1.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabTextAppearance = global::App1.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::RoxVideo.Resource.Styleable.TabLayout_tabTextColor = global::App1.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::RoxVideo.Resource.Styleable.TextAppearance = global::App1.Droid.Resource.Styleable.TextAppearance;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_shadowColor = global::App1.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_shadowDx = global::App1.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_shadowDy = global::App1.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_shadowRadius = global::App1.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_textColor = global::App1.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_textSize = global::App1.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_textStyle = global::App1.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::RoxVideo.Resource.Styleable.TextAppearance_android_typeface = global::App1.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::RoxVideo.Resource.Styleable.TextAppearance_textAllCaps = global::App1.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::RoxVideo.Resource.Styleable.TextInputLayout = global::App1.Droid.Resource.Styleable.TextInputLayout;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_android_hint = global::App1.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_android_textColorHint = global::App1.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_counterEnabled = global::App1.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_counterMaxLength = global::App1.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::App1.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_counterTextAppearance = global::App1.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_errorEnabled = global::App1.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_errorTextAppearance = global::App1.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::App1.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_hintEnabled = global::App1.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::RoxVideo.Resource.Styleable.TextInputLayout_hintTextAppearance = global::App1.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::RoxVideo.Resource.Styleable.Toolbar = global::App1.Droid.Resource.Styleable.Toolbar;
-			global::RoxVideo.Resource.Styleable.Toolbar_android_gravity = global::App1.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::RoxVideo.Resource.Styleable.Toolbar_android_minHeight = global::App1.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::RoxVideo.Resource.Styleable.Toolbar_collapseContentDescription = global::App1.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::RoxVideo.Resource.Styleable.Toolbar_collapseIcon = global::App1.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::RoxVideo.Resource.Styleable.Toolbar_contentInsetEnd = global::App1.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::RoxVideo.Resource.Styleable.Toolbar_contentInsetLeft = global::App1.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::RoxVideo.Resource.Styleable.Toolbar_contentInsetRight = global::App1.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::RoxVideo.Resource.Styleable.Toolbar_contentInsetStart = global::App1.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::RoxVideo.Resource.Styleable.Toolbar_logo = global::App1.Droid.Resource.Styleable.Toolbar_logo;
-			global::RoxVideo.Resource.Styleable.Toolbar_logoDescription = global::App1.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::RoxVideo.Resource.Styleable.Toolbar_maxButtonHeight = global::App1.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::RoxVideo.Resource.Styleable.Toolbar_navigationContentDescription = global::App1.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::RoxVideo.Resource.Styleable.Toolbar_navigationIcon = global::App1.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::RoxVideo.Resource.Styleable.Toolbar_popupTheme = global::App1.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::RoxVideo.Resource.Styleable.Toolbar_subtitle = global::App1.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::RoxVideo.Resource.Styleable.Toolbar_subtitleTextAppearance = global::App1.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::RoxVideo.Resource.Styleable.Toolbar_subtitleTextColor = global::App1.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::RoxVideo.Resource.Styleable.Toolbar_title = global::App1.Droid.Resource.Styleable.Toolbar_title;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleMarginBottom = global::App1.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleMarginEnd = global::App1.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleMarginStart = global::App1.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleMarginTop = global::App1.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleMargins = global::App1.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleTextAppearance = global::App1.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::RoxVideo.Resource.Styleable.Toolbar_titleTextColor = global::App1.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::RoxVideo.Resource.Styleable.View = global::App1.Droid.Resource.Styleable.View;
-			global::RoxVideo.Resource.Styleable.View_android_focusable = global::App1.Droid.Resource.Styleable.View_android_focusable;
-			global::RoxVideo.Resource.Styleable.View_android_theme = global::App1.Droid.Resource.Styleable.View_android_theme;
-			global::RoxVideo.Resource.Styleable.View_paddingEnd = global::App1.Droid.Resource.Styleable.View_paddingEnd;
-			global::RoxVideo.Resource.Styleable.View_paddingStart = global::App1.Droid.Resource.Styleable.View_paddingStart;
-			global::RoxVideo.Resource.Styleable.View_theme = global::App1.Droid.Resource.Styleable.View_theme;
-			global::RoxVideo.Resource.Styleable.ViewBackgroundHelper = global::App1.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::RoxVideo.Resource.Styleable.ViewBackgroundHelper_android_background = global::App1.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::RoxVideo.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::App1.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::RoxVideo.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::App1.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::RoxVideo.Resource.Styleable.ViewStubCompat = global::App1.Droid.Resource.Styleable.ViewStubCompat;
-			global::RoxVideo.Resource.Styleable.ViewStubCompat_android_id = global::App1.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::RoxVideo.Resource.Styleable.ViewStubCompat_android_inflatedId = global::App1.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::RoxVideo.Resource.Styleable.ViewStubCompat_android_layout = global::App1.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::App1.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::App1.Droid.Resource.Attribute.font;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::App1.Droid.Resource.Attribute.fontProviderAuthority;
@@ -24085,530 +22478,524 @@ namespace App1.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0E0002
-			public const int abc_action_bar_home_description = 2131623938;
-			
-			// aapt resource value: 0x7F0E0003
-			public const int abc_action_bar_up_description = 2131623939;
-			
-			// aapt resource value: 0x7F0E0004
-			public const int abc_action_menu_overflow_description = 2131623940;
-			
-			// aapt resource value: 0x7F0E0005
-			public const int abc_action_mode_done = 2131623941;
-			
-			// aapt resource value: 0x7F0E0007
-			public const int abc_activitychooserview_choose_application = 2131623943;
-			
-			// aapt resource value: 0x7F0E0006
-			public const int abc_activity_chooser_view_see_all = 2131623942;
-			
-			// aapt resource value: 0x7F0E0008
-			public const int abc_capital_off = 2131623944;
-			
-			// aapt resource value: 0x7F0E0009
-			public const int abc_capital_on = 2131623945;
-			
-			// aapt resource value: 0x7F0E000A
-			public const int abc_menu_alt_shortcut_label = 2131623946;
-			
-			// aapt resource value: 0x7F0E000B
-			public const int abc_menu_ctrl_shortcut_label = 2131623947;
-			
-			// aapt resource value: 0x7F0E000C
-			public const int abc_menu_delete_shortcut_label = 2131623948;
-			
-			// aapt resource value: 0x7F0E000D
-			public const int abc_menu_enter_shortcut_label = 2131623949;
-			
-			// aapt resource value: 0x7F0E000E
-			public const int abc_menu_function_shortcut_label = 2131623950;
-			
-			// aapt resource value: 0x7F0E000F
-			public const int abc_menu_meta_shortcut_label = 2131623951;
-			
-			// aapt resource value: 0x7F0E0010
-			public const int abc_menu_shift_shortcut_label = 2131623952;
-			
-			// aapt resource value: 0x7F0E0011
-			public const int abc_menu_space_shortcut_label = 2131623953;
-			
-			// aapt resource value: 0x7F0E0012
-			public const int abc_menu_sym_shortcut_label = 2131623954;
-			
-			// aapt resource value: 0x7F0E0013
-			public const int abc_prepend_shortcut_label = 2131623955;
-			
-			// aapt resource value: 0x7F0E0015
-			public const int abc_searchview_description_clear = 2131623957;
-			
-			// aapt resource value: 0x7F0E0016
-			public const int abc_searchview_description_query = 2131623958;
-			
-			// aapt resource value: 0x7F0E0017
-			public const int abc_searchview_description_search = 2131623959;
-			
-			// aapt resource value: 0x7F0E0018
-			public const int abc_searchview_description_submit = 2131623960;
-			
-			// aapt resource value: 0x7F0E0019
-			public const int abc_searchview_description_voice = 2131623961;
-			
-			// aapt resource value: 0x7F0E0014
-			public const int abc_search_hint = 2131623956;
-			
-			// aapt resource value: 0x7F0E001A
-			public const int abc_shareactionprovider_share_with = 2131623962;
-			
-			// aapt resource value: 0x7F0E001B
-			public const int abc_shareactionprovider_share_with_application = 2131623963;
-			
-			// aapt resource value: 0x7F0E001C
-			public const int abc_toolbar_collapse_description = 2131623964;
-			
-			// aapt resource value: 0x7F0E001D
-			public const int appbar_scrolling_view_behavior = 2131623965;
-			
 			// aapt resource value: 0x7F0E0000
-			public const int ApplicationName = 2131623936;
-			
-			// aapt resource value: 0x7F0E001E
-			public const int bottom_sheet_behavior = 2131623966;
-			
-			// aapt resource value: 0x7F0E001F
-			public const int character_counter_content_description = 2131623967;
-			
-			// aapt resource value: 0x7F0E0020
-			public const int character_counter_overflowed_content_description = 2131623968;
-			
-			// aapt resource value: 0x7F0E0021
-			public const int character_counter_pattern = 2131623969;
-			
-			// aapt resource value: 0x7F0E0022
-			public const int chip_text = 2131623970;
-			
-			// aapt resource value: 0x7F0E0023
-			public const int clear_text_end_icon_content_description = 2131623971;
-			
-			// aapt resource value: 0x7F0E0024
-			public const int common_google_play_services_enable_button = 2131623972;
-			
-			// aapt resource value: 0x7F0E0025
-			public const int common_google_play_services_enable_text = 2131623973;
-			
-			// aapt resource value: 0x7F0E0026
-			public const int common_google_play_services_enable_title = 2131623974;
-			
-			// aapt resource value: 0x7F0E0027
-			public const int common_google_play_services_install_button = 2131623975;
-			
-			// aapt resource value: 0x7F0E0028
-			public const int common_google_play_services_install_text = 2131623976;
-			
-			// aapt resource value: 0x7F0E0029
-			public const int common_google_play_services_install_title = 2131623977;
-			
-			// aapt resource value: 0x7F0E002A
-			public const int common_google_play_services_notification_channel_name = 2131623978;
-			
-			// aapt resource value: 0x7F0E002B
-			public const int common_google_play_services_notification_ticker = 2131623979;
-			
-			// aapt resource value: 0x7F0E002C
-			public const int common_google_play_services_unknown_issue = 2131623980;
-			
-			// aapt resource value: 0x7F0E002D
-			public const int common_google_play_services_unsupported_text = 2131623981;
-			
-			// aapt resource value: 0x7F0E002E
-			public const int common_google_play_services_update_button = 2131623982;
-			
-			// aapt resource value: 0x7F0E002F
-			public const int common_google_play_services_update_text = 2131623983;
-			
-			// aapt resource value: 0x7F0E0030
-			public const int common_google_play_services_update_title = 2131623984;
-			
-			// aapt resource value: 0x7F0E0031
-			public const int common_google_play_services_updating_text = 2131623985;
-			
-			// aapt resource value: 0x7F0E0032
-			public const int common_google_play_services_wear_update_text = 2131623986;
-			
-			// aapt resource value: 0x7F0E0033
-			public const int common_open_on_phone = 2131623987;
-			
-			// aapt resource value: 0x7F0E0034
-			public const int common_signin_button_text = 2131623988;
-			
-			// aapt resource value: 0x7F0E0035
-			public const int common_signin_button_text_long = 2131623989;
-			
-			// aapt resource value: 0x7F0E0036
-			public const int copy_toast_msg = 2131623990;
-			
-			// aapt resource value: 0x7F0E0037
-			public const int error_icon_content_description = 2131623991;
-			
-			// aapt resource value: 0x7F0E0038
-			public const int exo_controls_fastforward_description = 2131623992;
-			
-			// aapt resource value: 0x7F0E0039
-			public const int exo_controls_fullscreen_description = 2131623993;
-			
-			// aapt resource value: 0x7F0E003A
-			public const int exo_controls_hide = 2131623994;
-			
-			// aapt resource value: 0x7F0E003B
-			public const int exo_controls_next_description = 2131623995;
-			
-			// aapt resource value: 0x7F0E003C
-			public const int exo_controls_pause_description = 2131623996;
-			
-			// aapt resource value: 0x7F0E003D
-			public const int exo_controls_play_description = 2131623997;
-			
-			// aapt resource value: 0x7F0E003E
-			public const int exo_controls_previous_description = 2131623998;
-			
-			// aapt resource value: 0x7F0E003F
-			public const int exo_controls_repeat_all_description = 2131623999;
-			
-			// aapt resource value: 0x7F0E0040
-			public const int exo_controls_repeat_off_description = 2131624000;
-			
-			// aapt resource value: 0x7F0E0041
-			public const int exo_controls_repeat_one_description = 2131624001;
-			
-			// aapt resource value: 0x7F0E0042
-			public const int exo_controls_rewind_description = 2131624002;
-			
-			// aapt resource value: 0x7F0E0043
-			public const int exo_controls_show = 2131624003;
-			
-			// aapt resource value: 0x7F0E0044
-			public const int exo_controls_shuffle_off_description = 2131624004;
-			
-			// aapt resource value: 0x7F0E0045
-			public const int exo_controls_shuffle_on_description = 2131624005;
-			
-			// aapt resource value: 0x7F0E0046
-			public const int exo_controls_stop_description = 2131624006;
-			
-			// aapt resource value: 0x7F0E0047
-			public const int exo_controls_vr_description = 2131624007;
-			
-			// aapt resource value: 0x7F0E0048
-			public const int exo_download_completed = 2131624008;
-			
-			// aapt resource value: 0x7F0E0049
-			public const int exo_download_description = 2131624009;
-			
-			// aapt resource value: 0x7F0E004A
-			public const int exo_download_downloading = 2131624010;
-			
-			// aapt resource value: 0x7F0E004B
-			public const int exo_download_failed = 2131624011;
-			
-			// aapt resource value: 0x7F0E004C
-			public const int exo_download_notification_channel_name = 2131624012;
-			
-			// aapt resource value: 0x7F0E004D
-			public const int exo_download_removing = 2131624013;
-			
-			// aapt resource value: 0x7F0E004E
-			public const int exo_item_list = 2131624014;
-			
-			// aapt resource value: 0x7F0E004F
-			public const int exo_media_action_repeat_all_description = 2131624015;
-			
-			// aapt resource value: 0x7F0E0050
-			public const int exo_media_action_repeat_off_description = 2131624016;
-			
-			// aapt resource value: 0x7F0E0051
-			public const int exo_media_action_repeat_one_description = 2131624017;
-			
-			// aapt resource value: 0x7F0E0052
-			public const int exo_track_bitrate = 2131624018;
-			
-			// aapt resource value: 0x7F0E0053
-			public const int exo_track_mono = 2131624019;
-			
-			// aapt resource value: 0x7F0E0054
-			public const int exo_track_resolution = 2131624020;
-			
-			// aapt resource value: 0x7F0E0055
-			public const int exo_track_role_alternate = 2131624021;
-			
-			// aapt resource value: 0x7F0E0056
-			public const int exo_track_role_closed_captions = 2131624022;
-			
-			// aapt resource value: 0x7F0E0057
-			public const int exo_track_role_commentary = 2131624023;
-			
-			// aapt resource value: 0x7F0E0058
-			public const int exo_track_role_supplementary = 2131624024;
-			
-			// aapt resource value: 0x7F0E0059
-			public const int exo_track_selection_auto = 2131624025;
-			
-			// aapt resource value: 0x7F0E005A
-			public const int exo_track_selection_none = 2131624026;
-			
-			// aapt resource value: 0x7F0E005B
-			public const int exo_track_selection_title_audio = 2131624027;
-			
-			// aapt resource value: 0x7F0E005C
-			public const int exo_track_selection_title_text = 2131624028;
-			
-			// aapt resource value: 0x7F0E005D
-			public const int exo_track_selection_title_video = 2131624029;
-			
-			// aapt resource value: 0x7F0E005E
-			public const int exo_track_stereo = 2131624030;
-			
-			// aapt resource value: 0x7F0E005F
-			public const int exo_track_surround = 2131624031;
-			
-			// aapt resource value: 0x7F0E0060
-			public const int exo_track_surround_5_point_1 = 2131624032;
-			
-			// aapt resource value: 0x7F0E0061
-			public const int exo_track_surround_7_point_1 = 2131624033;
-			
-			// aapt resource value: 0x7F0E0062
-			public const int exo_track_unknown = 2131624034;
-			
-			// aapt resource value: 0x7F0E0063
-			public const int exposed_dropdown_menu_content_description = 2131624035;
-			
-			// aapt resource value: 0x7F0E0064
-			public const int fab_transformation_scrim_behavior = 2131624036;
-			
-			// aapt resource value: 0x7F0E0065
-			public const int fab_transformation_sheet_behavior = 2131624037;
-			
-			// aapt resource value: 0x7F0E0066
-			public const int fallback_menu_item_copy_link = 2131624038;
-			
-			// aapt resource value: 0x7F0E0067
-			public const int fallback_menu_item_open_in_browser = 2131624039;
-			
-			// aapt resource value: 0x7F0E0068
-			public const int fallback_menu_item_share_link = 2131624040;
-			
-			// aapt resource value: 0x7F0E0069
-			public const int font_fontFamily_medium = 2131624041;
+			public const int abc_action_bar_home_description = 2131623936;
 			
 			// aapt resource value: 0x7F0E0001
-			public const int Hello = 2131623937;
+			public const int abc_action_bar_up_description = 2131623937;
+			
+			// aapt resource value: 0x7F0E0002
+			public const int abc_action_menu_overflow_description = 2131623938;
+			
+			// aapt resource value: 0x7F0E0003
+			public const int abc_action_mode_done = 2131623939;
+			
+			// aapt resource value: 0x7F0E0005
+			public const int abc_activitychooserview_choose_application = 2131623941;
+			
+			// aapt resource value: 0x7F0E0004
+			public const int abc_activity_chooser_view_see_all = 2131623940;
+			
+			// aapt resource value: 0x7F0E0006
+			public const int abc_capital_off = 2131623942;
+			
+			// aapt resource value: 0x7F0E0007
+			public const int abc_capital_on = 2131623943;
+			
+			// aapt resource value: 0x7F0E0008
+			public const int abc_menu_alt_shortcut_label = 2131623944;
+			
+			// aapt resource value: 0x7F0E0009
+			public const int abc_menu_ctrl_shortcut_label = 2131623945;
+			
+			// aapt resource value: 0x7F0E000A
+			public const int abc_menu_delete_shortcut_label = 2131623946;
+			
+			// aapt resource value: 0x7F0E000B
+			public const int abc_menu_enter_shortcut_label = 2131623947;
+			
+			// aapt resource value: 0x7F0E000C
+			public const int abc_menu_function_shortcut_label = 2131623948;
+			
+			// aapt resource value: 0x7F0E000D
+			public const int abc_menu_meta_shortcut_label = 2131623949;
+			
+			// aapt resource value: 0x7F0E000E
+			public const int abc_menu_shift_shortcut_label = 2131623950;
+			
+			// aapt resource value: 0x7F0E000F
+			public const int abc_menu_space_shortcut_label = 2131623951;
+			
+			// aapt resource value: 0x7F0E0010
+			public const int abc_menu_sym_shortcut_label = 2131623952;
+			
+			// aapt resource value: 0x7F0E0011
+			public const int abc_prepend_shortcut_label = 2131623953;
+			
+			// aapt resource value: 0x7F0E0013
+			public const int abc_searchview_description_clear = 2131623955;
+			
+			// aapt resource value: 0x7F0E0014
+			public const int abc_searchview_description_query = 2131623956;
+			
+			// aapt resource value: 0x7F0E0015
+			public const int abc_searchview_description_search = 2131623957;
+			
+			// aapt resource value: 0x7F0E0016
+			public const int abc_searchview_description_submit = 2131623958;
+			
+			// aapt resource value: 0x7F0E0017
+			public const int abc_searchview_description_voice = 2131623959;
+			
+			// aapt resource value: 0x7F0E0012
+			public const int abc_search_hint = 2131623954;
+			
+			// aapt resource value: 0x7F0E0018
+			public const int abc_shareactionprovider_share_with = 2131623960;
+			
+			// aapt resource value: 0x7F0E0019
+			public const int abc_shareactionprovider_share_with_application = 2131623961;
+			
+			// aapt resource value: 0x7F0E001A
+			public const int abc_toolbar_collapse_description = 2131623962;
+			
+			// aapt resource value: 0x7F0E001B
+			public const int appbar_scrolling_view_behavior = 2131623963;
+			
+			// aapt resource value: 0x7F0E001C
+			public const int bottom_sheet_behavior = 2131623964;
+			
+			// aapt resource value: 0x7F0E001D
+			public const int character_counter_content_description = 2131623965;
+			
+			// aapt resource value: 0x7F0E001E
+			public const int character_counter_overflowed_content_description = 2131623966;
+			
+			// aapt resource value: 0x7F0E001F
+			public const int character_counter_pattern = 2131623967;
+			
+			// aapt resource value: 0x7F0E0020
+			public const int chip_text = 2131623968;
+			
+			// aapt resource value: 0x7F0E0021
+			public const int clear_text_end_icon_content_description = 2131623969;
+			
+			// aapt resource value: 0x7F0E0022
+			public const int common_google_play_services_enable_button = 2131623970;
+			
+			// aapt resource value: 0x7F0E0023
+			public const int common_google_play_services_enable_text = 2131623971;
+			
+			// aapt resource value: 0x7F0E0024
+			public const int common_google_play_services_enable_title = 2131623972;
+			
+			// aapt resource value: 0x7F0E0025
+			public const int common_google_play_services_install_button = 2131623973;
+			
+			// aapt resource value: 0x7F0E0026
+			public const int common_google_play_services_install_text = 2131623974;
+			
+			// aapt resource value: 0x7F0E0027
+			public const int common_google_play_services_install_title = 2131623975;
+			
+			// aapt resource value: 0x7F0E0028
+			public const int common_google_play_services_notification_channel_name = 2131623976;
+			
+			// aapt resource value: 0x7F0E0029
+			public const int common_google_play_services_notification_ticker = 2131623977;
+			
+			// aapt resource value: 0x7F0E002A
+			public const int common_google_play_services_unknown_issue = 2131623978;
+			
+			// aapt resource value: 0x7F0E002B
+			public const int common_google_play_services_unsupported_text = 2131623979;
+			
+			// aapt resource value: 0x7F0E002C
+			public const int common_google_play_services_update_button = 2131623980;
+			
+			// aapt resource value: 0x7F0E002D
+			public const int common_google_play_services_update_text = 2131623981;
+			
+			// aapt resource value: 0x7F0E002E
+			public const int common_google_play_services_update_title = 2131623982;
+			
+			// aapt resource value: 0x7F0E002F
+			public const int common_google_play_services_updating_text = 2131623983;
+			
+			// aapt resource value: 0x7F0E0030
+			public const int common_google_play_services_wear_update_text = 2131623984;
+			
+			// aapt resource value: 0x7F0E0031
+			public const int common_open_on_phone = 2131623985;
+			
+			// aapt resource value: 0x7F0E0032
+			public const int common_signin_button_text = 2131623986;
+			
+			// aapt resource value: 0x7F0E0033
+			public const int common_signin_button_text_long = 2131623987;
+			
+			// aapt resource value: 0x7F0E0034
+			public const int copy_toast_msg = 2131623988;
+			
+			// aapt resource value: 0x7F0E0035
+			public const int error_icon_content_description = 2131623989;
+			
+			// aapt resource value: 0x7F0E0036
+			public const int exo_controls_fastforward_description = 2131623990;
+			
+			// aapt resource value: 0x7F0E0037
+			public const int exo_controls_fullscreen_description = 2131623991;
+			
+			// aapt resource value: 0x7F0E0038
+			public const int exo_controls_hide = 2131623992;
+			
+			// aapt resource value: 0x7F0E0039
+			public const int exo_controls_next_description = 2131623993;
+			
+			// aapt resource value: 0x7F0E003A
+			public const int exo_controls_pause_description = 2131623994;
+			
+			// aapt resource value: 0x7F0E003B
+			public const int exo_controls_play_description = 2131623995;
+			
+			// aapt resource value: 0x7F0E003C
+			public const int exo_controls_previous_description = 2131623996;
+			
+			// aapt resource value: 0x7F0E003D
+			public const int exo_controls_repeat_all_description = 2131623997;
+			
+			// aapt resource value: 0x7F0E003E
+			public const int exo_controls_repeat_off_description = 2131623998;
+			
+			// aapt resource value: 0x7F0E003F
+			public const int exo_controls_repeat_one_description = 2131623999;
+			
+			// aapt resource value: 0x7F0E0040
+			public const int exo_controls_rewind_description = 2131624000;
+			
+			// aapt resource value: 0x7F0E0041
+			public const int exo_controls_show = 2131624001;
+			
+			// aapt resource value: 0x7F0E0042
+			public const int exo_controls_shuffle_off_description = 2131624002;
+			
+			// aapt resource value: 0x7F0E0043
+			public const int exo_controls_shuffle_on_description = 2131624003;
+			
+			// aapt resource value: 0x7F0E0044
+			public const int exo_controls_stop_description = 2131624004;
+			
+			// aapt resource value: 0x7F0E0045
+			public const int exo_controls_vr_description = 2131624005;
+			
+			// aapt resource value: 0x7F0E0046
+			public const int exo_download_completed = 2131624006;
+			
+			// aapt resource value: 0x7F0E0047
+			public const int exo_download_description = 2131624007;
+			
+			// aapt resource value: 0x7F0E0048
+			public const int exo_download_downloading = 2131624008;
+			
+			// aapt resource value: 0x7F0E0049
+			public const int exo_download_failed = 2131624009;
+			
+			// aapt resource value: 0x7F0E004A
+			public const int exo_download_notification_channel_name = 2131624010;
+			
+			// aapt resource value: 0x7F0E004B
+			public const int exo_download_removing = 2131624011;
+			
+			// aapt resource value: 0x7F0E004C
+			public const int exo_item_list = 2131624012;
+			
+			// aapt resource value: 0x7F0E004D
+			public const int exo_media_action_repeat_all_description = 2131624013;
+			
+			// aapt resource value: 0x7F0E004E
+			public const int exo_media_action_repeat_off_description = 2131624014;
+			
+			// aapt resource value: 0x7F0E004F
+			public const int exo_media_action_repeat_one_description = 2131624015;
+			
+			// aapt resource value: 0x7F0E0050
+			public const int exo_track_bitrate = 2131624016;
+			
+			// aapt resource value: 0x7F0E0051
+			public const int exo_track_mono = 2131624017;
+			
+			// aapt resource value: 0x7F0E0052
+			public const int exo_track_resolution = 2131624018;
+			
+			// aapt resource value: 0x7F0E0053
+			public const int exo_track_role_alternate = 2131624019;
+			
+			// aapt resource value: 0x7F0E0054
+			public const int exo_track_role_closed_captions = 2131624020;
+			
+			// aapt resource value: 0x7F0E0055
+			public const int exo_track_role_commentary = 2131624021;
+			
+			// aapt resource value: 0x7F0E0056
+			public const int exo_track_role_supplementary = 2131624022;
+			
+			// aapt resource value: 0x7F0E0057
+			public const int exo_track_selection_auto = 2131624023;
+			
+			// aapt resource value: 0x7F0E0058
+			public const int exo_track_selection_none = 2131624024;
+			
+			// aapt resource value: 0x7F0E0059
+			public const int exo_track_selection_title_audio = 2131624025;
+			
+			// aapt resource value: 0x7F0E005A
+			public const int exo_track_selection_title_text = 2131624026;
+			
+			// aapt resource value: 0x7F0E005B
+			public const int exo_track_selection_title_video = 2131624027;
+			
+			// aapt resource value: 0x7F0E005C
+			public const int exo_track_stereo = 2131624028;
+			
+			// aapt resource value: 0x7F0E005D
+			public const int exo_track_surround = 2131624029;
+			
+			// aapt resource value: 0x7F0E005E
+			public const int exo_track_surround_5_point_1 = 2131624030;
+			
+			// aapt resource value: 0x7F0E005F
+			public const int exo_track_surround_7_point_1 = 2131624031;
+			
+			// aapt resource value: 0x7F0E0060
+			public const int exo_track_unknown = 2131624032;
+			
+			// aapt resource value: 0x7F0E0061
+			public const int exposed_dropdown_menu_content_description = 2131624033;
+			
+			// aapt resource value: 0x7F0E0062
+			public const int fab_transformation_scrim_behavior = 2131624034;
+			
+			// aapt resource value: 0x7F0E0063
+			public const int fab_transformation_sheet_behavior = 2131624035;
+			
+			// aapt resource value: 0x7F0E0064
+			public const int fallback_menu_item_copy_link = 2131624036;
+			
+			// aapt resource value: 0x7F0E0065
+			public const int fallback_menu_item_open_in_browser = 2131624037;
+			
+			// aapt resource value: 0x7F0E0066
+			public const int fallback_menu_item_share_link = 2131624038;
+			
+			// aapt resource value: 0x7F0E0067
+			public const int font_fontFamily_medium = 2131624039;
+			
+			// aapt resource value: 0x7F0E0068
+			public const int hide_bottom_view_on_scroll_behavior = 2131624040;
+			
+			// aapt resource value: 0x7F0E0069
+			public const int icon_content_description = 2131624041;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int hide_bottom_view_on_scroll_behavior = 2131624042;
+			public const int mr_button_content_description = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int icon_content_description = 2131624043;
+			public const int mr_cast_button_connected = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int mr_button_content_description = 2131624044;
+			public const int mr_cast_button_connecting = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int mr_cast_button_connected = 2131624045;
+			public const int mr_cast_button_disconnected = 2131624045;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int mr_cast_button_connecting = 2131624046;
+			public const int mr_cast_dialog_title_view_placeholder = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int mr_cast_button_disconnected = 2131624047;
+			public const int mr_chooser_searching = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int mr_cast_dialog_title_view_placeholder = 2131624048;
+			public const int mr_chooser_title = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int mr_chooser_searching = 2131624049;
+			public const int mr_controller_album_art = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int mr_chooser_title = 2131624050;
+			public const int mr_controller_casting_screen = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int mr_controller_album_art = 2131624051;
+			public const int mr_controller_close_description = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int mr_controller_casting_screen = 2131624052;
+			public const int mr_controller_collapse_group = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int mr_controller_close_description = 2131624053;
+			public const int mr_controller_disconnect = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int mr_controller_collapse_group = 2131624054;
+			public const int mr_controller_expand_group = 2131624054;
 			
 			// aapt resource value: 0x7F0E0077
-			public const int mr_controller_disconnect = 2131624055;
+			public const int mr_controller_no_info_available = 2131624055;
 			
 			// aapt resource value: 0x7F0E0078
-			public const int mr_controller_expand_group = 2131624056;
+			public const int mr_controller_no_media_selected = 2131624056;
 			
 			// aapt resource value: 0x7F0E0079
-			public const int mr_controller_no_info_available = 2131624057;
+			public const int mr_controller_pause = 2131624057;
 			
 			// aapt resource value: 0x7F0E007A
-			public const int mr_controller_no_media_selected = 2131624058;
+			public const int mr_controller_play = 2131624058;
 			
 			// aapt resource value: 0x7F0E007B
-			public const int mr_controller_pause = 2131624059;
+			public const int mr_controller_stop = 2131624059;
 			
 			// aapt resource value: 0x7F0E007C
-			public const int mr_controller_play = 2131624060;
+			public const int mr_controller_stop_casting = 2131624060;
 			
 			// aapt resource value: 0x7F0E007D
-			public const int mr_controller_stop = 2131624061;
+			public const int mr_controller_volume_slider = 2131624061;
 			
 			// aapt resource value: 0x7F0E007E
-			public const int mr_controller_stop_casting = 2131624062;
+			public const int mr_dialog_default_group_name = 2131624062;
 			
 			// aapt resource value: 0x7F0E007F
-			public const int mr_controller_volume_slider = 2131624063;
+			public const int mr_dialog_groupable_header = 2131624063;
 			
 			// aapt resource value: 0x7F0E0080
-			public const int mr_dialog_default_group_name = 2131624064;
+			public const int mr_dialog_transferable_header = 2131624064;
 			
 			// aapt resource value: 0x7F0E0081
-			public const int mr_dialog_groupable_header = 2131624065;
+			public const int mr_system_route_name = 2131624065;
 			
 			// aapt resource value: 0x7F0E0082
-			public const int mr_dialog_transferable_header = 2131624066;
+			public const int mr_user_route_category_name = 2131624066;
 			
 			// aapt resource value: 0x7F0E0083
-			public const int mr_system_route_name = 2131624067;
+			public const int mtrl_badge_numberless_content_description = 2131624067;
 			
 			// aapt resource value: 0x7F0E0084
-			public const int mr_user_route_category_name = 2131624068;
+			public const int mtrl_chip_close_icon_content_description = 2131624068;
 			
 			// aapt resource value: 0x7F0E0085
-			public const int mtrl_badge_numberless_content_description = 2131624069;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131624069;
 			
 			// aapt resource value: 0x7F0E0086
-			public const int mtrl_chip_close_icon_content_description = 2131624070;
+			public const int mtrl_picker_a11y_next_month = 2131624070;
 			
 			// aapt resource value: 0x7F0E0087
-			public const int mtrl_exceed_max_badge_number_suffix = 2131624071;
+			public const int mtrl_picker_a11y_prev_month = 2131624071;
 			
 			// aapt resource value: 0x7F0E0088
-			public const int mtrl_picker_a11y_next_month = 2131624072;
+			public const int mtrl_picker_announce_current_selection = 2131624072;
 			
 			// aapt resource value: 0x7F0E0089
-			public const int mtrl_picker_a11y_prev_month = 2131624073;
+			public const int mtrl_picker_cancel = 2131624073;
 			
 			// aapt resource value: 0x7F0E008A
-			public const int mtrl_picker_announce_current_selection = 2131624074;
+			public const int mtrl_picker_confirm = 2131624074;
 			
 			// aapt resource value: 0x7F0E008B
-			public const int mtrl_picker_cancel = 2131624075;
+			public const int mtrl_picker_date_header_selected = 2131624075;
 			
 			// aapt resource value: 0x7F0E008C
-			public const int mtrl_picker_confirm = 2131624076;
+			public const int mtrl_picker_date_header_title = 2131624076;
 			
 			// aapt resource value: 0x7F0E008D
-			public const int mtrl_picker_date_header_selected = 2131624077;
+			public const int mtrl_picker_date_header_unselected = 2131624077;
 			
 			// aapt resource value: 0x7F0E008E
-			public const int mtrl_picker_date_header_title = 2131624078;
+			public const int mtrl_picker_day_of_week_column_header = 2131624078;
 			
 			// aapt resource value: 0x7F0E008F
-			public const int mtrl_picker_date_header_unselected = 2131624079;
+			public const int mtrl_picker_invalid_format = 2131624079;
 			
 			// aapt resource value: 0x7F0E0090
-			public const int mtrl_picker_day_of_week_column_header = 2131624080;
+			public const int mtrl_picker_invalid_format_example = 2131624080;
 			
 			// aapt resource value: 0x7F0E0091
-			public const int mtrl_picker_invalid_format = 2131624081;
+			public const int mtrl_picker_invalid_format_use = 2131624081;
 			
 			// aapt resource value: 0x7F0E0092
-			public const int mtrl_picker_invalid_format_example = 2131624082;
+			public const int mtrl_picker_invalid_range = 2131624082;
 			
 			// aapt resource value: 0x7F0E0093
-			public const int mtrl_picker_invalid_format_use = 2131624083;
+			public const int mtrl_picker_navigate_to_year_description = 2131624083;
 			
 			// aapt resource value: 0x7F0E0094
-			public const int mtrl_picker_invalid_range = 2131624084;
+			public const int mtrl_picker_out_of_range = 2131624084;
 			
 			// aapt resource value: 0x7F0E0095
-			public const int mtrl_picker_navigate_to_year_description = 2131624085;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624085;
 			
 			// aapt resource value: 0x7F0E0096
-			public const int mtrl_picker_out_of_range = 2131624086;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624086;
 			
 			// aapt resource value: 0x7F0E0097
-			public const int mtrl_picker_range_header_only_end_selected = 2131624087;
+			public const int mtrl_picker_range_header_selected = 2131624087;
 			
 			// aapt resource value: 0x7F0E0098
-			public const int mtrl_picker_range_header_only_start_selected = 2131624088;
+			public const int mtrl_picker_range_header_title = 2131624088;
 			
 			// aapt resource value: 0x7F0E0099
-			public const int mtrl_picker_range_header_selected = 2131624089;
+			public const int mtrl_picker_range_header_unselected = 2131624089;
 			
 			// aapt resource value: 0x7F0E009A
-			public const int mtrl_picker_range_header_title = 2131624090;
+			public const int mtrl_picker_save = 2131624090;
 			
 			// aapt resource value: 0x7F0E009B
-			public const int mtrl_picker_range_header_unselected = 2131624091;
+			public const int mtrl_picker_text_input_date_hint = 2131624091;
 			
 			// aapt resource value: 0x7F0E009C
-			public const int mtrl_picker_save = 2131624092;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624092;
 			
 			// aapt resource value: 0x7F0E009D
-			public const int mtrl_picker_text_input_date_hint = 2131624093;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624093;
 			
 			// aapt resource value: 0x7F0E009E
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624094;
+			public const int mtrl_picker_text_input_day_abbr = 2131624094;
 			
 			// aapt resource value: 0x7F0E009F
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624095;
+			public const int mtrl_picker_text_input_month_abbr = 2131624095;
 			
 			// aapt resource value: 0x7F0E00A0
-			public const int mtrl_picker_text_input_day_abbr = 2131624096;
+			public const int mtrl_picker_text_input_year_abbr = 2131624096;
 			
 			// aapt resource value: 0x7F0E00A1
-			public const int mtrl_picker_text_input_month_abbr = 2131624097;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624097;
 			
 			// aapt resource value: 0x7F0E00A2
-			public const int mtrl_picker_text_input_year_abbr = 2131624098;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624098;
 			
 			// aapt resource value: 0x7F0E00A3
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624099;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624099;
 			
 			// aapt resource value: 0x7F0E00A4
-			public const int mtrl_picker_toggle_to_day_selection = 2131624100;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624100;
 			
 			// aapt resource value: 0x7F0E00A5
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624101;
+			public const int overflow_tab_title = 2131624101;
 			
 			// aapt resource value: 0x7F0E00A6
-			public const int mtrl_picker_toggle_to_year_selection = 2131624102;
+			public const int password_toggle_content_description = 2131624102;
 			
 			// aapt resource value: 0x7F0E00A7
-			public const int overflow_tab_title = 2131624103;
+			public const int path_password_eye = 2131624103;
 			
 			// aapt resource value: 0x7F0E00A8
-			public const int password_toggle_content_description = 2131624104;
+			public const int path_password_eye_mask_strike_through = 2131624104;
 			
 			// aapt resource value: 0x7F0E00A9
-			public const int path_password_eye = 2131624105;
+			public const int path_password_eye_mask_visible = 2131624105;
 			
 			// aapt resource value: 0x7F0E00AA
-			public const int path_password_eye_mask_strike_through = 2131624106;
+			public const int path_password_strike_through = 2131624106;
 			
 			// aapt resource value: 0x7F0E00AB
-			public const int path_password_eye_mask_visible = 2131624107;
+			public const int search_menu_title = 2131624107;
 			
 			// aapt resource value: 0x7F0E00AC
-			public const int path_password_strike_through = 2131624108;
-			
-			// aapt resource value: 0x7F0E00AD
-			public const int search_menu_title = 2131624109;
-			
-			// aapt resource value: 0x7F0E00AE
-			public const int status_bar_notification_info_overflow = 2131624110;
+			public const int status_bar_notification_info_overflow = 2131624108;
 			
 			static String()
 			{
