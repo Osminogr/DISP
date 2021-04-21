@@ -23,9 +23,8 @@
 
             <ScrollView Grid.Row="2"
                         Grid.ColumnSpan="4"
-                        >
+                        Grid.RowSpan="8">
                 <StackLayout Margin="10,10,10,10" x:Name="videos"  VerticalOptions="FillAndExpand">
-                    <WebView Source="http://46.101.167.149:8003/api/?name=Pexels_Videos_2313069_iwOTG0H.mp4"/>
                 </StackLayout>
             </ScrollView>
 
@@ -52,11 +51,5 @@
                     BackgroundColor="#00000000" Clicked="NewVideo"/>
             
         </Grid>
-        <!--<ScrollView>
-            <StackLayout x:Name="stack">
-            </StackLayout>
-        </ScrollView>-->
-
-
     </ContentPage.Content>
 </ContentPage>
