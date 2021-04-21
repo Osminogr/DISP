@@ -8,6 +8,7 @@ namespace App1.Domain
         public string bunkNumberR;
         public string bunkNumberK;
         public string bik;
+        public string cardNumber;
 
         public AccountNumber() { }
     }

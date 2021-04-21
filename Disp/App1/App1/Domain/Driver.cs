@@ -16,8 +16,7 @@ namespace App1.Domain
         public string drLicData;
 
         public Car car;
-
-        public string card;
+        public AccountNumber accountNumber;
 
         public Driver() { }
     }
