@@ -1,7 +1,7 @@
 ﻿using System;
 namespace App1.Domain
 {
-    public class Car
+    public class Car : Entity
     {
         public string mark;
         public string model;

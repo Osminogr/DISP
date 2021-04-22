@@ -1,7 +1,7 @@
 ﻿using System;
 namespace App1.Domain
 {
-    public class Company
+    public class Company : Entity
     {
         public string city;
         public string phone;

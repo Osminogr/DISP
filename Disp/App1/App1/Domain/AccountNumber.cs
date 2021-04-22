@@ -1,7 +1,7 @@
 ﻿using System;
 namespace App1.Domain
 {
-    public class AccountNumber
+    public class AccountNumber : Entity
     {
         public string bankName;
         public string bankAddress;

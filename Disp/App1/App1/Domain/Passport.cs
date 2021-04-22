@@ -1,7 +1,7 @@
 ﻿using System;
 namespace App1.Domain
 {
-    public class Passport
+    public class Passport : Entity
     {
         public string number;
         public string date;

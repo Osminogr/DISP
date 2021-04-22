@@ -1,10 +1,8 @@
 ﻿using System;
 namespace App1.Domain
 {
-    public class Driver : Person
+    public class Driver : Entity
     {
-        public int companies;
-
         public string drLicPh1;
         public string drLicPh2;
 
@@ -17,6 +15,7 @@ namespace App1.Domain
 
         public Car car;
         public AccountNumber accountNumber;
+        public Person person;
 
         public Driver() { }
     }
