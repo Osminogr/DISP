@@ -1,17 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Advertiser.Campaign.NewCampaign.ChoseVid">
+             x:Class="App1.Advertiser.Campaign.NewCampaign.ChoseVid"
+             Title="Выбор видеоролика">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <Grid BackgroundColor="#FAFAFA">
-                    <Frame>
-                        <Grid>
-                            <Button Clicked="ToConf"/>
-                        </Grid>
-                    </Frame>
-                </Grid>
+            <StackLayout x:Name="videos">
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

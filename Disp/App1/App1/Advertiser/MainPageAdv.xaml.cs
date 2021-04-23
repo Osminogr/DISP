@@ -5,6 +5,8 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
+using Xamarin.Essentials;
 
 namespace App1
 {
@@ -28,7 +30,6 @@ namespace App1
             position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
                                             Distance.FromMiles(1)));
-
         }
 
         public async void Activate(object sender, EventArgs e)
@@ -85,6 +86,7 @@ namespace App1
 
         public async void Exit(object sender, EventArgs e)
         {
+            Preferences.Clear();
             await Navigation.PopToRootAsync();
         }
 

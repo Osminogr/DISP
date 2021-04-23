@@ -3,6 +3,8 @@ using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
+using Newtonsoft.Json;
 
 namespace App1.Advertiser
 {
@@ -66,6 +68,8 @@ namespace App1.Advertiser
 
 
             gr.Children.Add(gr1, 4, 0);
+
+            videos.Children.Add(gr);
         }
         
 
@@ -83,10 +87,12 @@ namespace App1.Advertiser
         {
             await Navigation.PushAsync(new Campaign.NewCampaign.ChoseVid(nowUser));
         }
+
         private async void ToRates(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Rates(nowUser));
         }
+
         public async void ToHMap(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Campaign.HeatMap(nowUser));

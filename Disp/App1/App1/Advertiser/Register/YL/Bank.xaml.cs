@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1.RegisterAdvYL
 {
@@ -22,22 +23,22 @@ namespace App1.RegisterAdvYL
                 if (Name.Text != null)
                 {
                     b1 = true;
-                    nowUser.name = Name.Text;
+                    nowUser.company.accountNumber.bankName = Name.Text;
                 }
                 if (Address.Text != null)
                 {
                     b2 = true;
-                    nowUser.BankAddress = Address.Text;
+                    nowUser.company.accountNumber.bankAddress = Address.Text;
                 }
                 if (NumberK.Text != null)
                 {
                     b3 = true;
-                    nowUser.BunkNumberK = NumberK.Text;
+                    nowUser.company.accountNumber.bunkNumberK = NumberK.Text;
                 }
                 if (NumberR.Text != null)
                 {
                     b4 = true;
-                    nowUser.BunkNumberR = NumberR.Text;
+                    nowUser.company.accountNumber.bunkNumberR = NumberR.Text;
                 }
                 if (b1 && b2 && b3 && b4)
                     await Navigation.PushAsync(new RegisterAdvPh.TermOfUse(nowUser));

@@ -8,6 +8,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
+using App1.Domain;
 
 
 namespace App1.Advertiser
@@ -27,12 +28,13 @@ namespace App1.Advertiser
         {
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(Server.url + "video/?phone=" + nowUser.phone);
+            var answer = await client.GetAsync(Server.url + "video/?id=" + nowUser.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             List<VideoObj> list = JsonConvert.DeserializeObject<List<VideoObj>>(responseBody);
 
-            videos.Children.Clear();
+            videosAct.Children.Clear();
+            videosAppr.Children.Clear();
 
             bool loaded = false;
 
@@ -41,8 +43,10 @@ namespace App1.Advertiser
                 loaded = true;
                 foreach (var item in list)
                 {
-                    if (!item.is_validated)
-                        videos.Children.Add(new Vid() { Name = item.video, Url = "http://46.101.167.149:8000/media/" + item.video });
+                    if (!item.validated)
+                        videosAct.Children.Add(new Vid() { Name = item.name, Url = item.url });
+                    else
+                        videosAppr.Children.Add(new Vid() { Name = item.name, Url = item.url });
                 }
             }
 
@@ -52,13 +56,25 @@ namespace App1.Advertiser
                 l.Text = "У Вас нет загруженных видеороликов";
                 l.HorizontalOptions = LayoutOptions.Center;
                 l.VerticalOptions = LayoutOptions.Center;
-                videos.Children.Add(new Label());
+                videosAct.Children.Add(new Label());
+                videosAppr.Children.Add(new Label());
             }
         }
 
-        private async void ToAppr(object sender, EventArgs e)
+        private void ToAppr(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new VideoAppr(nowUser));
+            act.IsVisible = false;
+            appr.IsVisible = true;
+            loaded.BackgroundColor = Color.FromHex("#0B0000AA");
+            appeared.BackgroundColor = Color.FromHex("#00000000");
+        }
+
+        private void ToAct(object sender, EventArgs e)
+        {
+            act.IsVisible = true;
+            appr.IsVisible = false;
+            appeared.BackgroundColor = Color.FromHex("#0B0000AA");
+            loaded.BackgroundColor = Color.FromHex("#00000000");
         }
 
         private async void NewVideo(object sender, EventArgs e)

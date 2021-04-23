@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1.RegisterAdvPh
 {
@@ -37,8 +38,7 @@ namespace App1.RegisterAdvPh
                 }
                 if (b1 && b2 && b3)
                 {
-                    nowUser.fioDir = fio;
-                    nowUser.name = fio;
+                    nowUser.company.director.lastName = fio;
                     await Navigation.PushAsync(new RegisterAdvPh.TermOfUse(nowUser));
                 }
             };

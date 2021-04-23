@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+
 namespace App1
 {
-    class VideoObj
+    public class VideoObj
     {
-        public string user_id;
-        public string video;
-        public bool is_validated;
+        public string name;
+        public string url;
+        public bool validated;
         public int id;
 
         public VideoObj() { }

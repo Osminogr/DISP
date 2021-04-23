@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -10,7 +11,7 @@ namespace App1
         Adv nowUser = new Adv();
         public RegisterAdv(string number)
         {
-            nowUser.phone = number;
+            nowUser.company.phone = number;
             InitializeComponent();
             ToolbarItem tb = new ToolbarItem
             {
@@ -22,7 +23,7 @@ namespace App1
                 {
                     if (City.SelectedIndex != -1)
                     {
-                        nowUser.city = City.Items[City.SelectedIndex];
+                        nowUser.company.city = City.Items[City.SelectedIndex];
                         await Navigation.PushAsync(new RegisterAdvPh.FIO(nowUser));
                     }
                 }
@@ -32,7 +33,7 @@ namespace App1
                     {
                         if (City.SelectedIndex != -1)
                         {
-                            nowUser.city = City.Items[City.SelectedIndex];
+                            nowUser.company.city = City.Items[City.SelectedIndex];
                             await Navigation.PushAsync(new RegisterAdvYL.Organiz(nowUser));
                         }
                     }
@@ -45,7 +46,7 @@ namespace App1
         {
             Cb2.IsChecked = false;
             Cb3.IsChecked = false;
-            nowUser.type = 1;
+            nowUser.c_type = 1;
         }
 
         void Cb2_Change(object sender, CheckedChangedEventArgs e)
@@ -53,7 +54,7 @@ namespace App1
             Cb1.IsChecked = false;
             Cb3.IsChecked = false;
             //Cb2.IsChecked = true;
-            nowUser.type = 2;
+            nowUser.c_type = 2;
         }
 
         void Cb3_Change(object sender, CheckedChangedEventArgs e)
@@ -61,7 +62,7 @@ namespace App1
             Cb1.IsChecked = false;
             Cb2.IsChecked = false;
             //Cb3.IsChecked = true;
-            nowUser.type = 3;
+            nowUser.c_type = 3;
         }
     }
 }

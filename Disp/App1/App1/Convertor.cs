@@ -42,7 +42,7 @@ namespace App1
         public string card;
     }
 
-    public struct Adv
+    public struct Adv1
     {
         public string name;
         public string city;
@@ -95,12 +95,6 @@ namespace App1
 
             request.Content = new StringContent(content, Encoding.UTF8, "application/json");
             var ans = await client.SendAsync(request);
-
-            //var client = new HttpClient();
-            //var uri = new Uri(url);
-            //Stream respStream = await client.GetStreamAsync(uri);
-            //DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(rootObject));
-            //rootObject feed = (rootObject)ser.ReadObject(respStream);
         }
     }
 }

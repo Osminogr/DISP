@@ -1,4 +1,10 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Essentials;
+using Newtonsoft.Json;
+using App1.Domain;
+using System.Net.Http;
+using System.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace App1
 {
@@ -7,13 +13,13 @@ namespace App1
         public App()
         {
             InitializeComponent();
-            //MainPage = new NavigationPage(new MainPage(new User()));
-            //MainPage = new Drivers.Videos();
+
             MainPage = new NavigationPage(new StartPage()) { BarBackgroundColor = Color.FromRgb(255, 184, 0) };
         }
 
         protected override void OnStart()
         {
+            
         }
 
         protected override void OnSleep()

@@ -10,8 +10,9 @@
       "DISP/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "13.0.1",
+          "Octane.Xam.VideoPlayer": "3.1.0",
           "Plugin.MediaManager.Forms": "1.0.8",
-          "Rox.Xamarin.Video": "2.1.0",
           "Xam.Plugin.Geolocator": "4.6.2-beta",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012",
@@ -25,6 +26,25 @@
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "Octane.Xam.VideoPlayer/3.1.0": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Octane.Xamarin.Forms.VideoPlayer.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
+          }
         }
       },
       "Plugin.MediaManager/1.0.8": {
@@ -44,17 +64,6 @@
           "lib/netstandard2.0/MediaManager.Forms.dll": {
             "assemblyVersion": "1.0.8.0",
             "fileVersion": "1.0.8.0"
-          }
-        }
-      },
-      "Rox.Xamarin.Video/2.1.0": {
-        "dependencies": {
-          "Xamarin.Forms": "5.0.0.2012"
-        },
-        "runtime": {
-          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Rox.Xamarin.Video.Portable.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -134,6 +143,20 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "Octane.Xam.VideoPlayer/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JFjIeDBrmv1cX8B/N7vuaz2DM75hxufRbfPQVoVNkjp+j/9964lwcIyY6tfZwS3OW2INoPih6snjXG+PdlM6aw==",
+      "path": "octane.xam.videoplayer/3.1.0",
+      "hashPath": "octane.xam.videoplayer.3.1.0.nupkg.sha512"
+    },
     "Plugin.MediaManager/1.0.8": {
       "type": "package",
       "serviceable": true,
@@ -147,13 +170,6 @@
       "sha512": "sha512-OUKAyYRtvr0NgummQ6H8g17nDp+e78wxLjpz2/QFuJre0z6a4nwK0zR6e6B8CH0NtrNmhCWG4jYW9dwvKubiog==",
       "path": "plugin.mediamanager.forms/1.0.8",
       "hashPath": "plugin.mediamanager.forms.1.0.8.nupkg.sha512"
-    },
-    "Rox.Xamarin.Video/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ILz5NXXyh6T2el/CoKv+zOgxxVcHBH46iGc0iqlznwI2/JCI/IYUPz7qZXwVGwFPRbpCoODu1TR8iQEZ96E2gQ==",
-      "path": "rox.xamarin.video/2.1.0",
-      "hashPath": "rox.xamarin.video.2.1.0.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Campaign.NewCampaign.ChoseTarif"
+             Title="Выбор тарифа">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Row="1"
+                                    Grid.Column="0"
+                                    Padding="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="Center"
+                                   CornerRadius="100"
+                                   IsClippedToBounds="True"
+                                   HeightRequest="10"
+                                   WidthRequest="10"
+                                   BackgroundColor="Orange"/>
+                            <BoxView BackgroundColor = "Gray"
+                         WidthRequest="3"
+                         Grid.Row="1"
+                         Grid.RowSpan="4"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Center"
+                             Margin="0,25,0,20"/>
+                            <Frame Grid.Row="4"
+                        Grid.Column="0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        CornerRadius="100"
+                        IsClippedToBounds="True"
+                        HeightRequest="10"
+                        WidthRequest="10"
+                       BackgroundColor="Orange"/>
+                            <Label Text="Эконом" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="Минимальная стоимость размещения: 18 000 Р" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="Минимальный срок размещения: 30 дней" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="День показа на одном экране: 60 Р" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
+                            <Label Text="День показа на десяти экранах: 600 Р" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
+                            <Button Text="Выбрать" Clicked="SelectTarif" CommandParameter="1" Grid.Row="5" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                    <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50"  Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Row="1"
+                    Grid.Column="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    CornerRadius="100"
+                    IsClippedToBounds="True"
+                    HeightRequest="10"
+                    WidthRequest="10"
+                           
+                       BackgroundColor="Orange"/>
+                            <BoxView BackgroundColor = "Gray"
+                         WidthRequest="3"
+                         Grid.Row="1"
+                         Grid.RowSpan="4"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Center"
+                             Margin="0,25,0,20"/>
+                            <Frame Grid.Row="4"
+                        Grid.Column="0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        CornerRadius="100"
+                        IsClippedToBounds="True"
+                        HeightRequest="10"
+                        WidthRequest="10"
+                       BackgroundColor="Orange"/>
+                            <Label Text="Стандарт" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="Минимальная стоимость размещения: 37 500 Р" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="Минимальный срок размещения: 15 дней" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="День показа на одном экране: 50 Р" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
+                            <Label Text="День показа на десяти экранах: 2 500 Р" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
+                            <Button Text="Выбрать" Clicked="SelectTarif" CommandParameter="2" Grid.Row="5" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                    <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame Grid.Row="1"
+                    Grid.Column="0"
+                    Padding="0"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    CornerRadius="100"
+                    IsClippedToBounds="True"
+                    HeightRequest="10"
+                    WidthRequest="10"
+                           
+                       BackgroundColor="Orange"/>
+                            <BoxView BackgroundColor = "Gray"
+                         WidthRequest="3"
+                         Grid.Row="1"
+                         Grid.RowSpan="4"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Center"
+                             Margin="0,25,0,20"/>
+                            <Frame Grid.Row="4"
+                        Grid.Column="0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        CornerRadius="100"
+                        IsClippedToBounds="True"
+                        HeightRequest="10"
+                        WidthRequest="10"
+                       BackgroundColor="Orange"/>
+                            <Label Text="Люкс" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="Минимальная стоимость размещения: 67 500 Р" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                            <Label Text="Минимальный срок размещения: 15 дней" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="День показа на одном экране: 45 Р" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
+                            <Label Text="День показа на десяти экранах: 4 500 Р" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
+                            <Button Text="Выбрать" Clicked="SelectTarif" CommandParameter="3" Grid.Row="5" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

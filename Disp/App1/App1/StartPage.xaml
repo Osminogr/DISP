@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="App1.StartPage"
-             
              BackgroundImage ="TaxiYellow.jpg" BackgroundColor="#000000">
     <ContentPage.Content>
         <Grid>

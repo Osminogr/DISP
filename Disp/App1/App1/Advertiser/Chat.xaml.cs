@@ -4,6 +4,8 @@ using Xamarin.Forms.Xaml;
 using System.Net.Http;
 using System;
 using System.Collections.Generic;
+using App1.Domain;
+
 namespace App1.Advs
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -21,7 +23,7 @@ namespace App1.Advs
 
             HttpClient client = new HttpClient();
             Stack.Children.Clear();
-            var answer = await client.GetAsync(Server.url + "msg/?phone=" + nowUser.phone.Trim('"'));
+            var answer = await client.GetAsync(Server.url + "msg/?phone=" + nowUser.company.phone.Trim('"'));
             var responseBody = await answer.Content.ReadAsStringAsync();
             char[] sym = new char[] { '[', ']', '{', ',' };
             foreach (var ch in sym)
@@ -30,7 +32,7 @@ namespace App1.Advs
             }
             responseBody = responseBody.Replace("text\":", " ").Trim(' ');
             Console.WriteLine(responseBody);
-            Console.WriteLine(Server.url + "msg/?phone=" + nowUser.phone);
+            Console.WriteLine(Server.url + "msg/?phone=" + nowUser.company.phone);
             var dictionary = responseBody.Trim('}').Split('}');
             foreach (var x in dictionary)
             {
@@ -100,7 +102,7 @@ namespace App1.Advs
             }
         public void SendMsg(object sender, EventArgs e) {
             string content = @"{""msg"":{""author"":";
-            content += nowUser.phone ;
+            content += nowUser.company.phone ;
             content += @",""text"":""";
             content += messege.Text;
             content += @"""}}";

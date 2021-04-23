@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1.Advertiser
 {
@@ -17,7 +18,7 @@ namespace App1.Advertiser
         {
             nowUser = now;
             InitializeComponent();
-            LoadForm.Source = "http://46.101.167.149:8003/api/loader/" + now.phone;
+            LoadForm.Source = "http://46.101.167.149:8003/api/loader/" + now.company.phone;
         }
     }
 }

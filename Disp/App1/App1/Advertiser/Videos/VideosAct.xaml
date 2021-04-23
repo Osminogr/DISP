@@ -9,9 +9,9 @@
     <ContentPage.Content>
         <Grid BackgroundColor="#FAFAFA">
             <Grid BackgroundColor="White" Grid.ColumnSpan="4">
-                <Button Grid.Column="0" BackgroundColor="#00000000"
-                        Text="Загруженные" TextColor="#F39F26"/>
-                <Button Grid.Column="1" BackgroundColor="#0B0000AA" 
+                <Button Grid.Column="0" BackgroundColor="#00000000" x:Name="loaded"
+                        Text="Загруженные" TextColor="#F39F26" Clicked="ToAct"/>
+                <Button Grid.Column="1" BackgroundColor="#0B0000AA" x:Name="appeared"
                         Text="Одобренные" TextColor="#BCBCBC" Clicked="ToAppr"/>
             </Grid>
 
@@ -23,12 +23,17 @@
 
             <ScrollView Grid.Row="2"
                         Grid.ColumnSpan="4"
-                        Grid.RowSpan="8">
-                <StackLayout Margin="10,10,10,10" x:Name="videos"  VerticalOptions="FillAndExpand">
+                        Grid.RowSpan="8" x:Name="act">
+                <StackLayout Margin="10,10,10,10" x:Name="videosAct"  VerticalOptions="FillAndExpand">
                 </StackLayout>
             </ScrollView>
 
-            
+            <ScrollView Grid.Row="2"
+                        Grid.ColumnSpan="4"
+                        Grid.RowSpan="8" IsVisible="false" x:Name="appr">
+                <StackLayout Margin="10,10,10,10" x:Name="videosAppr"  VerticalOptions="FillAndExpand">
+                </StackLayout>
+            </ScrollView>
             
             <Frame BackgroundColor="#F39F26" CornerRadius="100"
                     Grid.RowSpan="2"
