@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1.Drivers.Settings
 {
@@ -12,13 +13,13 @@ namespace App1.Drivers.Settings
         {
             nowUser = now;
             InitializeComponent();
-            Mark.Text = nowUser.mark;
-            Model.Text = nowUser.model;
-            Number.Text = nowUser.carNumber;
-            Data.Text = nowUser.dataCar;
-            Color.Text = nowUser.color;
-            VIN.Text = nowUser.vin;
-            Reg.Text = nowUser.regNumberCar;
+            Mark.Text = nowUser.car.mark;
+            Model.Text = nowUser.car.model;
+            Number.Text = nowUser.car.carNumber;
+            Data.Text = nowUser.car.dataCar;
+            Color.Text = nowUser.car.color;
+            VIN.Text = nowUser.car.vin;
+            Reg.Text = nowUser.car.regNumberCar;
             ToolbarItem tb = new ToolbarItem
             {
                 Text = "Сохранить"
@@ -29,37 +30,37 @@ namespace App1.Drivers.Settings
                 if (Mark.Text != null)
                 {
                     b1 = true;
-                    nowUser.mark = Mark.Text;
+                    nowUser.car.mark = Mark.Text;
                 }
                 if (Model.Text != null)
                 {
                     b2 = true;
-                    nowUser.model = Model.Text;
+                    nowUser.car.model = Model.Text;
                 }
                 if (Number.Text != null)
                 {
                     b3 = true;
-                    nowUser.carNumber = Number.Text;
+                    nowUser.car.carNumber = Number.Text;
                 }
                 if (Data.Text != null)
                 {
                     b4 = true;
-                    nowUser.dataCar = Data.Text;
+                    nowUser.car.dataCar = Data.Text;
                 }
                 if (Color.Text != null)
                 {
                     b5 = true;
-                    nowUser.color = Color.Text;
+                    nowUser.car.color = Color.Text;
                 }
                 if (VIN.Text != null)
                 {
                     b6 = true;
-                    nowUser.vin = VIN.Text;
+                    nowUser.car.vin = VIN.Text;
                 }
                 if (Reg.Text != null)
                 {
                     b7 = true;
-                    nowUser.regNumberCar = Reg.Text;
+                    nowUser.car.regNumberCar = Reg.Text;
                 }
                 if (b1 && b2 && b3 && b4 && b5 && b6 && b7)
                     await Navigation.PopAsync();

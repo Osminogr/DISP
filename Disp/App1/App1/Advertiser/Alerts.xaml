@@ -5,14 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="App1.Advs.Alerts"
-             Title="Уведомления"
-             >
+             xmlns:templates="clr-namespace:App1.Templates">
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout x:Name="Stack1">
-                <Grid Padding="10,15,10,15" HorizontalOptions="FillAndExpand">
+                <Grid Padding="0,0,0,0" HorizontalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
                         <RowDefinition Height="45"/>
                         <RowDefinition Height="1"/>
                         <RowDefinition Height="50"/>
@@ -24,49 +24,50 @@
                         <ColumnDefinition Width="100"/>
                     </Grid.ColumnDefinitions>
 
+                    <templates:LineTemplate Grid.Row="0" Grid.ColumnSpan="2"/>
 
                     <Frame BackgroundColor="White"
-                           HasShadow="True"
-                           CornerRadius="24"
+                           HasShadow="True" Grid.Row="1"
+                           CornerRadius="24" Margin="20, 20, 20, 0"
                            Grid.ColumnSpan="2"
                            Grid.RowSpan="4"/>
                     <Label Text="Оплата"
                            TextColor="#000000"
                            FontSize="14"
                            FontFamily="Roboto"
-                           Padding="16,16,0,0"
+                           Padding="36,26,0,0"
                            Grid.Column="0"
-                           Grid.Row="0"/>
+                           Grid.Row="1"/>
                     <Label Text="03/05/2021"
                            TextColor="#6F6F6F"
                            FontSize="12"
                            FontFamily="Roboto"
                            HorizontalTextAlignment="End"
-                           Padding="0,16,16,0"
-                           Grid.Row="0"
+                           Padding="0,26,36,0"
+                           Grid.Row="1"
                            Grid.Column="1"/>
-                    <BoxView BackgroundColor="#CCCCCC" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <BoxView BackgroundColor="#CCCCCC" Grid.Row="2" Grid.ColumnSpan="2" Margin="20, 0, 20, 0"/>
 
                     <Label Text="Не проходит оплата"
                            TextColor="#000000"
                            FontSize="14"
                            FontFamily="RobotoBold"
-                           Padding="16,16,0,0"
-                           Grid.Row="2"
+                           Padding="36,16,0,0"
+                           Grid.Row="3"
                            Grid.Column="0"
                            />
 
                     <Image Source="mastercard_icon.png"
-                           Grid.Row="2"
+                           Grid.Row="3"
                            Grid.Column="1"
-                           Margin="0,16,16,0"
+                           Margin="0,10,36,0"
                            HorizontalOptions="End"
                            VerticalOptions="CenterAndExpand"
                            />
 
-                    <Label Grid.Row="3"
+                    <Label Grid.Row="4"
                            Grid.ColumnSpan="2"
-                           Padding="16,0,0,16"
+                           Padding="36,0,36,16"
                            TextColor="#6F6F6F"
                            FontSize="12"
                            FontFamily="Roboto">
@@ -77,10 +78,6 @@
 DISP
                         </Label.Text>
                     </Label>
-
-
-
-
                 </Grid>
             </StackLayout>
         </ScrollView>

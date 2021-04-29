@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vv="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              x:Name="this"
-             x:Class="App1.Vid">
+             x:Class="App1.Templates.VideoTemplate">
     <Grid BindingContext="{x:Reference this}">
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
@@ -11,10 +11,9 @@
         </Grid.RowDefinitions>
 
         <Frame BackgroundColor="#FFB800"
-                       CornerRadius="12" Grid.Column="0" Grid.Row="0" Margin="5,0,0,-20 ">
+                       CornerRadius="12" Grid.Column="0" Grid.Row="0" Margin="0,0,0,-20">
 
-            <Label 
-                Text="{Binding Name}"
+            <Label Text="{Binding Name}"
                                FontSize="Small"
                                TextColor="White"
                                HorizontalOptions="Center"
@@ -29,7 +28,8 @@
                        VerticalOptions="FillAndExpand"
                        Grid.ColumnSpan="2"
                        Grid.Row="1"
+                       x:Name="vp"
                        HeightRequest="200"
-                       Margin="5,0,5,10"/>
+                       Margin="0,0,0,0"/>
     </Grid>
 </ContentView>

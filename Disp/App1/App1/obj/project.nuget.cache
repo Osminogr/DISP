@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YE9LphIOg4MpV6ssVxpuxFPjheEm8jL3RR8gkYhEL02lWoskTGCZzM1vHKv2V+2w/dmLXvgTbEFk67JPaix2FA==",
+  "dgSpecHash": "eY6YKj7+db/YHdou+SJCMQmLsJFHtYVU/8QJ0u6ia1vR0bPgvxXfCa5SgIL2XTIt1MXvsZb/UZj0A07ITIPlSw==",
   "success": true,
   "projectFilePath": "/Users/wecant/Projects/DISP/Disp/App1/App1/App1.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,15 @@
     "/Users/wecant/.nuget/packages/octane.xam.videoplayer/3.1.0/octane.xam.videoplayer.3.1.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/plugin.mediamanager/1.0.8/plugin.mediamanager.1.0.8.nupkg.sha512",
     "/Users/wecant/.nuget/packages/plugin.mediamanager.forms/1.0.8/plugin.mediamanager.forms.1.0.8.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/skiasharp/1.68.0/skiasharp.1.68.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xam.plugin.geolocator/4.6.2-beta/xam.plugin.geolocator.4.6.2-beta.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.ffimageloading/2.4.11.982/xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.ffimageloading.forms/2.4.11.982/xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg/2.4.11.982/xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg.forms/2.4.11.982/xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms.maps/5.0.0.2012/xamarin.forms.maps.5.0.0.2012.nupkg.sha512"
   ],

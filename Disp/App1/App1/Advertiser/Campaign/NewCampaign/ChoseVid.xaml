@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Campaign.NewCampaign.ChoseVid"
-             Title="Выбор видеоролика">
+             BackgroundColor="#FAFAFA"
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout x:Name="videos">
+            <StackLayout x:Name="videos" Padding="0" Margin="0">
+                <templates:LineTemplate/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

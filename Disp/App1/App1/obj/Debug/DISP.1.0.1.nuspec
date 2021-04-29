@@ -10,9 +10,13 @@
       <group targetFramework=".NETStandard2.0">
         <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
         <dependency id="Octane.Xam.VideoPlayer" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Plugin.MediaManager" version="1.0.8" exclude="Build,Analyzers" />
         <dependency id="Plugin.MediaManager.Forms" version="1.0.8" exclude="Build,Analyzers" />
         <dependency id="Xam.Plugin.Geolocator" version="4.6.2-beta" exclude="Build,Analyzers" />
+        <dependency id="Xam.Plugin.Media" version="5.0.1" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Essentials" version="1.6.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.FFImageLoading.Svg" version="2.4.11.982" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.FFImageLoading.Svg.Forms" version="2.4.11.982" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Forms" version="5.0.0.2012" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Forms.Maps" version="5.0.0.2012" exclude="Build,Analyzers" />
       </group>

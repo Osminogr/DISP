@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Advertiser.Campaign.HeatMap">
+             x:Class="App1.Advertiser.Campaign.HeatMap"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid Padding="0" Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <templates:LineTemplate Grid.Row="0"/>
+
+            <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" Grid.Row="1" HasScrollEnabled="False" HasZoomEnabled="False"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.Advertiser.Settings
 {
@@ -18,11 +19,15 @@ namespace App1.Advertiser.Settings
         {
             nowUser = now;
             InitializeComponent();
+
+            OverrideTitleView("Оплата", "Изменить", 90, -1);
         }
 
-        private async void tb_edit_Clicked(object sender, EventArgs e)
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
-            await Navigation.PushAsync(new EditPayMethod(nowUser));
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() => {
+                Navigation.PushAsync(new EditPayMethod(nowUser));
+            })));
         }
     }
 }

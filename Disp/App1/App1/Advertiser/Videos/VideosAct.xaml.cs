@@ -9,7 +9,10 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using App1.Domain;
-
+using App1.Utils;
+using App1.Templates;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 
 namespace App1.Advertiser
 {
@@ -31,7 +34,7 @@ namespace App1.Advertiser
             var answer = await client.GetAsync(Server.url + "video/?id=" + nowUser.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            List<VideoObj> list = JsonConvert.DeserializeObject<List<VideoObj>>(responseBody);
+            List<Video> list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
 
             videosAct.Children.Clear();
             videosAppr.Children.Clear();
@@ -44,10 +47,12 @@ namespace App1.Advertiser
                 foreach (var item in list)
                 {
                     if (!item.validated)
-                        videosAct.Children.Add(new Vid() { Name = item.name, Url = item.url });
+                        videosAct.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
                     else
-                        videosAppr.Children.Add(new Vid() { Name = item.name, Url = item.url });
+                        videosAppr.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
                 }
+
+                OverrideTitleView("Видеоролики", videosAct.Children.Count);
             }
 
             if (!loaded)
@@ -59,27 +64,68 @@ namespace App1.Advertiser
                 videosAct.Children.Add(new Label());
                 videosAppr.Children.Add(new Label());
             }
+
+            LoadVideoLabel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsPickVideoSupported)
+                    {
+                        MediaFile video = await CrossMedia.Current.PickVideoAsync();
+
+                        if (video != null)
+                        {
+                            
+                        }
+                    }
+                })
+            });
+        }
+
+        private void OverrideTitleView(string name, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
         }
 
         private void ToAppr(object sender, EventArgs e)
         {
             act.IsVisible = false;
             appr.IsVisible = true;
-            loaded.BackgroundColor = Color.FromHex("#0B0000AA");
-            appeared.BackgroundColor = Color.FromHex("#00000000");
+            loaded.TextColor = Color.FromHex("#BCBCBC");
+            appeared.TextColor = Color.FromHex("#F39F26");
+            OverrideTitleView("Видеоролики", videosAppr.Children.Count);
+            BtnAddVideoDialog.IsVisible = false;
         }
 
         private void ToAct(object sender, EventArgs e)
         {
             act.IsVisible = true;
             appr.IsVisible = false;
-            appeared.BackgroundColor = Color.FromHex("#0B0000AA");
-            loaded.BackgroundColor = Color.FromHex("#00000000");
+            appeared.TextColor = Color.FromHex("#BCBCBC");
+            loaded.TextColor = Color.FromHex("#F39F26");
+            OverrideTitleView("Видеоролики", videosAct.Children.Count);
+            BtnAddVideoDialog.IsVisible = true;
         }
 
-        private async void NewVideo(object sender, EventArgs e)
+        private void NewVideo(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Loader(nowUser));
+            AddVideoDialog.IsEnabled = true;
+            AddVideoDialog.IsVisible = true;
+        }
+
+        public void CloseAddVideoDialog(object sender, EventArgs e)
+        {
+            AddVideoDialog.IsEnabled = false;
+            AddVideoDialog.IsVisible = false;
+        }
+
+        private async void RequestVideo(object sender, EventArgs e)
+        {
+            AddVideoDialog.IsEnabled = false;
+            AddVideoDialog.IsVisible = false;
+
+            await Navigation.PushAsync(new VideosRequest(nowUser));
+
         }
     }
 }

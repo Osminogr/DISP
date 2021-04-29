@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -24,22 +25,22 @@ namespace App1
                 if (Name.Text != null)
                 {
                     b1 = true;
-                    nowUser.name = Name.Text;
+                    nowUser.person.firstName = Name.Text;
                 }
                 if (LastName.Text != null)
                 {
                     b2 = true;
-                    nowUser.lastname = LastName.Text;
+                    nowUser.person.lastName = LastName.Text;
                 }
                 if (Patronymic.Text != null)
                 {
                     b3 = true;
-                    nowUser.patronymic = Patronymic.Text;
+                    nowUser.person.patronymic = Patronymic.Text;
                 }
                 if (city.SelectedIndex != -1)
                 {
                     b4 = true;
-                    nowUser.city = city.Items[city.SelectedIndex];
+                    nowUser.person.city = city.Items[city.SelectedIndex];
                 }
                 if (b1 && b2 && b3 && b4)
                     await Navigation.PushAsync(new RegisterPasp(nowUser));

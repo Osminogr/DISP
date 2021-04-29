@@ -7,6 +7,11 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using Xamarin.Essentials;
+using App1.Advertiser.Campaign;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace App1
 {
@@ -17,10 +22,17 @@ namespace App1
         public MainPageAdv(Adv now)
         {
             nowUser = now;
+
             MoveMap();
             InitializeComponent();
+
+            actInd.IsRunning = true;
+            actInd.IsVisible = true;
+            gridRoot.IsEnabled = false;
+
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
+            SideBarBottom.IsVisible = true;
         }
 
         private async void MoveMap()
@@ -30,6 +42,11 @@ namespace App1
             position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
                                             Distance.FromMiles(1)));
+
+            await Task.Delay(1000);
+            actInd.IsRunning = false;
+            actInd.IsVisible = false;
+            gridRoot.IsEnabled = true;
         }
 
         public async void Activate(object sender, EventArgs e)
@@ -49,6 +66,18 @@ namespace App1
             SideBar.IsVisible = false;
         }
 
+        public void OpenBottom(object sender, EventArgs e)
+        {
+            SideBarBottom.IsEnabled = true;
+            SideBarBottom.IsVisible = true;
+        }
+
+        public void CloseBottom(object sender, EventArgs e)
+        {
+            SideBarBottom.IsEnabled = false;
+            SideBarBottom.IsVisible = false;
+        }
+
         public async void Videos(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new VideosAct(nowUser));
@@ -66,7 +95,7 @@ namespace App1
 
         public async void Statistic(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StatisticAdv(nowUser));
+            await Navigation.PushAsync(new Statistic(null));
         }
 
         public async void PayMethod(object sender, EventArgs e)
@@ -94,6 +123,21 @@ namespace App1
         public async void Switched(object sender, EventArgs e)
         {
 
+        }
+
+        public async void LoadVideo(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new VideosAct(nowUser));
+        }
+
+        public async void NewCompaign(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Advertiser.Campaign.NewCampaign.ChoseTarif(nowUser));
+        }
+
+        public async void LoadStats(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Statistic(null));
         }
     }
 }

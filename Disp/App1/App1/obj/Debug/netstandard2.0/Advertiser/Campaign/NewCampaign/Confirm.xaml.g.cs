@@ -20,25 +20,13 @@ namespace App1.Advertiser.Campaign.NewCampaign {
         private global::Xamarin.Forms.ContentPage @this;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label labelTextVideo;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Octane.Xamarin.Forms.VideoPlayer.VideoPlayer videoPlayer;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label minDays;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label amount;
+        private global::App1.Templates.VideoTemplate videoPlayer;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Confirm));
             @this = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ContentPage>(this, "this");
-            labelTextVideo = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "labelTextVideo");
-            videoPlayer = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Octane.Xamarin.Forms.VideoPlayer.VideoPlayer>(this, "videoPlayer");
-            minDays = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "minDays");
-            amount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "amount");
+            videoPlayer = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::App1.Templates.VideoTemplate>(this, "videoPlayer");
         }
     }
 }

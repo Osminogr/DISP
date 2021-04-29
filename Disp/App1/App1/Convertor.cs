@@ -3,69 +3,13 @@ using System.Net.Http;
 using System.Text;
 using Xamarin.Forms;
 
+using App1.Domain;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace App1
 {
-    public struct Driver
-    {
-        public int companies;
-        public string name, lastname, patronymic;
-        public string city;
-        public string phone;
-
-        public string paspNumber;
-        public string paspData;
-        public string paspOrg;
-        public string paspCode;
-
-        public string paspPh1;
-        public string paspPh2;
-        public string paspPh3;
-
-        public string drLicPh1;
-        public string drLicPh2;
-
-        public string regCertPh1;
-        public string regCertPh2;
-
-        public string drLicNumber;
-        public string drLicPeriod;
-        public string drLicData;
-
-        public string mark;
-        public string model;
-        public string dataCar;
-        public string color;
-        public string vin;
-        public string regNumberCar;
-        public string carNumber;
-
-        public string card;
-    }
-
-    public struct Adv1
-    {
-        public string name;
-        public string city;
-        public string phone;
-        public string address;
-        public string ogrn;
-        public string inn;
-        public string kpp;
-
-        public string fioDir;
-        public string dirPost;
-        public string fioCont;
-        public string contPost;
-
-        public string BankName;
-        public string BankAddress;
-        public string BunkNumberR;
-        public string BunkNumberK;
-        public string BIK;
-
-        public int type;
-    }
-
     public static class Server
     {
         public static string url = "http://46.101.167.149:8003/api/";

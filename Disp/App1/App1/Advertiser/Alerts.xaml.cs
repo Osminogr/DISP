@@ -5,6 +5,7 @@ using System.Net.Http;
 using System;
 using System.Collections.Generic;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.Advs
 {
@@ -17,10 +18,12 @@ namespace App1.Advs
             InitializeComponent();
             nowUser = now;
             Request();
+
+            OverrideTitleView("Оповещения", -1);
         }
+
         public async void Request()
         {
-
             HttpClient client = new HttpClient();
 
             var answer = await client.GetAsync(Server.url + "alert/?phone=" + nowUser.company.phone.Trim('"'));
@@ -39,6 +42,11 @@ namespace App1.Advs
             Console.WriteLine(responseBody);
             Console.WriteLine(Server.url + "alert/?phone=" + nowUser.company.phone);
             var dictionary = responseBody.Trim('}').Split('}');
+        }
+
+        private void OverrideTitleView(string name, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
         }
     }
 }

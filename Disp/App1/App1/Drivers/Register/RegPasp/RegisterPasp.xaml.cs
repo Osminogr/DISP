@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -22,22 +23,22 @@ namespace App1
                 if (number.Text != null)
                 {
                     b1 = true;
-                    nowUser.paspNumber = number.Text;
+                    nowUser.person.passport.number = number.Text;
                 }
                 if (Data.Text != null)
                 {
                     b2 = true;
-                    nowUser.paspData = Data.Text;
+                    nowUser.person.passport.date = Data.Text;
                 }
                 if (Org.Text != null)
                 {
                     b3 = true;
-                    nowUser.paspOrg = Org.Text;
+                    nowUser.person.passport.who = Org.Text;
                 }
                 if (Code.Text != null)
                 {
                     b4 = true;
-                    nowUser.paspCode = Code.Text;
+                    nowUser.person.passport.code = Code.Text;
                 }
                 if (b1 && b2 && b3 && b4)
                     await Navigation.PushAsync(new RegisterPaspPh(nowUser));

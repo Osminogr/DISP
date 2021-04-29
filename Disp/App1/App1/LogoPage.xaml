@@ -4,8 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.Advertiser.Loader">
+             x:Class="App1.LogoPage">
+
     <ContentPage.Content>
-        <WebView x:Name="LoadForm" />
+        <Grid HorizontalOptions="Center">
+            <Image Source="Logo.png" WidthRequest="200" HeightRequest="200" VerticalOptions="Start" Margin="0, 100, 0, 0"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

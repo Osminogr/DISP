@@ -2,26 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Settings.ChangeTelAdv"
-             Title="Настройки">
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <StackLayout Padding="24,50,24,0">
-            <Label Text="Номер телефона"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <templates:LineTemplate Grid.Row="0"/>
+            <StackLayout Padding="24,50,24,0" Grid.Row="1">
+                <Label Text="Номер телефона"
                    FontFamily="RobotoBold"/>
-            <Entry Placeholder="+7(000) 000-00-00"
+                <Entry Placeholder="+7(000) 000-00-00"
                    FontSize="16"
                    Keyboard="Telephone"/>
 
-            <Label Text="Новый номер телефона"
+                <Label Text="Новый номер телефона"
                    FontFamily="RobotoBold"/>
-            <Entry Placeholder="+7(999) 999-99-99"
+                <Entry Placeholder="+7(999) 999-99-99"
                    FontSize="16"
                    Keyboard="Telephone"/>
 
-            <Button Text="Готово"
+                <Button Text="Готово"
                     TextColor="#FFFFFF"
                     Margin="70,20,70,0"
                     BackgroundColor="#FFB800"
                     CornerRadius="40"/>
-        </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

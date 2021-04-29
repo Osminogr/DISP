@@ -8,17 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Advertiser.Campaign.Drivers.xaml", "Advertiser/Campaign/Drivers.xaml", typeof(global::App1.Advertiser.Drivers))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("App1.Advertiser.Campaign.Drivers.xaml", "Advertiser/Campaign/Drivers.xaml", typeof(global::App1.Advertiser.Campaign.Drivers))]
 
-namespace App1.Advertiser {
+namespace App1.Advertiser.Campaign {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Advertiser/Campaign/Drivers.xaml")]
     public partial class Drivers : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ContentPage @this;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout driversList;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Drivers));
+            @this = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ContentPage>(this, "this");
+            driversList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "driversList");
         }
     }
 }

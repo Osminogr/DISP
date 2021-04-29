@@ -4,6 +4,7 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -17,7 +18,7 @@ namespace App1
 
             MoveMap();
             InitializeComponent();
-            UserName.Text = nowUser.name + " " + nowUser.lastname;
+            UserName.Text = nowUser.person.firstName + " " + nowUser.person.lastName;
 
             NavigationPage.SetHasNavigationBar(this, false);
         }

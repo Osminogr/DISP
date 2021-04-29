@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Plugin.MediaManager": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
             "Plugin.MediaManager.Forms": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -60,9 +64,21 @@
               "target": "Package",
               "version": "[4.6.2-beta, )"
             },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
+            },
+            "Xamarin.FFImageLoading.Svg": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
+            },
+            "Xamarin.FFImageLoading.Svg.Forms": {
+              "target": "Package",
+              "version": "[2.4.11.982, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

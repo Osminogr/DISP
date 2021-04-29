@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="White"
+             xmlns:templates="clr-namespace:App1.Templates"
+             x:Class="App1.Advertiser.VideosRequest">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <templates:LineTemplate Grid.Row="0" Grid.ColumnSpan="3"></templates:LineTemplate>
+
+            <Label Text="Загрузить файлы" TextColor="#FFB800" FontSize="18" Grid.Row="1" Grid.ColumnSpan="3" Margin="30, 20, 30, 0"></Label>
+
+            <Button Grid.Row="2" ImageSource="photoactive.png" x:Name="photo1" BackgroundColor="Transparent" Grid.Column="0" Margin="30, 0, 0, 0" Clicked="AddPhoto" CommandParameter="0"></Button>
+            <Button Grid.Row="2" ImageSource="photodef.png"  x:Name="photo2" BackgroundColor="Transparent" Grid.Column="1" Margin="0, 0, 0, 0" IsEnabled="False" Clicked="AddPhoto" CommandParameter="1"></Button>
+            <Button Grid.Row="2" ImageSource="photodef.png" x:Name="photo3" BackgroundColor="Transparent" Grid.Column="2" Margin="0, 0, 30, 0" IsEnabled="False" Clicked="AddPhoto" CommandParameter="2"></Button>
+
+            <Label Text="Описание видеоролика" TextColor="Black" FontSize="17" Grid.Row="3" Grid.ColumnSpan="3" Margin="30, 10, 30, 0"></Label>
+
+            <Editor Placeholder="Описание видеоролика" x:Name="editorText" HeightRequest="300" Grid.Row="4" Grid.ColumnSpan="3" Margin="30, 0, 30, 100"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

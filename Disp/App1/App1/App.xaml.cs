@@ -14,12 +14,21 @@ namespace App1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new StartPage()) { BarBackgroundColor = Color.FromRgb(255, 184, 0) };
+            MainPage = new NavigationPage(new LogoPage())
+            {
+                BarTextColor = Color.FromHex("#FFB800")
+            };
+            /*
+            MainPage = new NavigationPage(new StartPage()) {
+                BarBackgroundColor = Color.White,//Color.FromRgb(255, 184, 0),
+                BarTextColor = Color.FromHex("#FFB800")
+            };
+            */
         }
 
         protected override void OnStart()
         {
-            
+
         }
 
         protected override void OnSleep()

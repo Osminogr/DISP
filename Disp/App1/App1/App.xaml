@@ -10,6 +10,6 @@
         <Style x:Key="LabelStyle" TargetType="Label">
             <Setter Property="FontFamily" Value="Roboto"/>
         </Style>
-        
+
     </Application.Resources>
 </Application>

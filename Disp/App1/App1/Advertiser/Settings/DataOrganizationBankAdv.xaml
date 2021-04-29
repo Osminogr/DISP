@@ -2,45 +2,45 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Settings.DataOrganizationBankAdv"
-             Title="Банковские реквизиты">
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
         <StackLayout>
-            <Grid Padding="20,35,20,0">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
+                <templates:LineTemplate Grid.Row="0"/>
+
+                <Grid Padding="20,35,20,0" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
                        x:Name="Name"
                        FontSize="16"/>
-                <Entry Placeholder="Адрес банка" Grid.Row="1"
+                    <Entry Placeholder="Адрес банка" Grid.Row="1"
                        x:Name="Address"
                        FontSize="16"/>
-                <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
+                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
                        x:Name="NumberR"
                        Keyboard="Numeric"
                        FontSize="16"/>
-                <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
+                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
                        x:Name="NumberK"
                        Keyboard="Numeric"
                        FontSize="16"/>
-                <Entry Placeholder="БИК банка" Grid.Row="4"
+                    <Entry Placeholder="БИК банка" Grid.Row="4"
                        FontSize="16"
                         x:Name="BIK"/>
-                <Button Text="Сохранить"
-                        FontSize="14"
-                        FontFamily="RobotoBold"
-                        BackgroundColor="#FFB800"
-                        TextColor="White"
-                        VerticalOptions="EndAndExpand"
-                        Margin="90,20,90,0"
-                        CornerRadius="40"
-                        Grid.Row="5"/>
+                </Grid>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

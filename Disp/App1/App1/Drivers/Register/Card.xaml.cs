@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -20,7 +21,7 @@ namespace App1
             {
                 if (Numb.Text != null)
                 {
-                    nowUser.card = Numb.Text;
+                    nowUser.accountNumber.cardNumber = Numb.Text;
                     await Navigation.PushAsync(new TermsOfUse(nowUser));
                 }
             };

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.Advertiser.Settings
 {
@@ -18,6 +19,15 @@ namespace App1.Advertiser.Settings
         {
             nowUser = now;
             InitializeComponent();
+            OverrideTitleView("Настройки", "Сохранить", 90, -1);
+        }
+
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
+            {
+                Navigation.PopAsync();
+            })));
         }
     }
 }

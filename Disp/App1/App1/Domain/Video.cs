@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace App1
+namespace App1.Domain
 {
-    public class VideoObj
+    public class Video : Entity
     {
-        public string name;
         public string url;
         public bool validated;
-        public int id;
 
-        public VideoObj() { }
+        public Video() { }
     }
 }

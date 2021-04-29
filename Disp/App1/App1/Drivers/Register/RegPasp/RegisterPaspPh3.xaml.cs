@@ -4,6 +4,7 @@ using System.IO;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -24,7 +25,7 @@ namespace App1
             {
                 if (img.Source != null)
                 {
-                    nowUser.paspPh3 = img.Source.ToString();
+                    nowUser.person.passport.paspPh3 = img.Source.ToString();
                     await Navigation.PushAsync(new RegisterDrLic(nowUser));
                 }
             };

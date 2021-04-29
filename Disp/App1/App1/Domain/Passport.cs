@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace App1.Domain
 {
     public class Passport : Entity
@@ -11,6 +12,10 @@ namespace App1.Domain
         public string firstName;
         public string lastName;
         public string patronymic;
+
+        public string paspPh1;
+        public string paspPh2;
+        public string paspPh3;
 
         public Passport()
         {

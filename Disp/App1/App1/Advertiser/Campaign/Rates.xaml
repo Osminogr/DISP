@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Advertiser.Campaing.Rates">
+             x:Class="App1.Advertiser.Campaign.Rates"
+             x:Name="this"
+             Title="Тарифы">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView BindingContext="{x:Reference this}">
             <StackLayout>
             <Grid>
             <Grid.RowDefinitions>
@@ -11,7 +13,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="0">
+            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="0" x:Name="tarifEconom">
                 <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -61,7 +63,7 @@
 
                 </Grid>
             </Frame>
-            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50"  Grid.Row="1">
+            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50"  Grid.Row="1" x:Name="tarifStandard">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -111,7 +113,7 @@
 
                 </Grid>
             </Frame>
-            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="2">
+            <Frame CornerRadius="10" Margin="10,20,10,10" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="2" x:Name="tarifLux">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>

@@ -1,6 +1,7 @@
 ﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1.Drivers.Settings
 {
@@ -12,7 +13,7 @@ namespace App1.Drivers.Settings
         {
             nowUser = now;
             InitializeComponent();
-            Numb.Text = nowUser.card;
+            Numb.Text = nowUser.accountNumber.cardNumber;
             ToolbarItem tb = new ToolbarItem
             {
                 Text = "Сохранить"
@@ -21,7 +22,7 @@ namespace App1.Drivers.Settings
             {
                 if (Numb.Text != null)
                 {
-                    nowUser.card = Numb.Text;
+                    nowUser.accountNumber.cardNumber = Numb.Text;
                     await Navigation.PopAsync();
                 }
             };

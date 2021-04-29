@@ -6,6 +6,8 @@ using System.Net.Http;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
+using App1.Templates;
 
 namespace App1.Drivers
 {
@@ -28,7 +30,7 @@ namespace App1.Drivers
 
             HttpClient client = new HttpClient();
             var i = 0;
-            var answer = await client.GetAsync(Server.url + "video/?phone=" + nowUser.phone);
+            var answer = await client.GetAsync(Server.url + "video/?phone=" + nowUser.person.phone);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             var dictionary = responseBody
@@ -37,7 +39,7 @@ namespace App1.Drivers
             foreach (var x in dictionary)
             {
 
-                videos.Children.Add(new Vid { Name = x, Url = "http://46.101.167.149:8000/media/" + x });
+                videos.Children.Add(new VideoTemplate { Name = x, Url = "http://46.101.167.149:8000/media/" + x });
             }
         }
 
@@ -46,7 +48,7 @@ namespace App1.Drivers
             HttpClient client = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage();
 
-            request.RequestUri = new Uri(Server.url + "video/?phone=" + nowUser.phone);
+            request.RequestUri = new Uri(Server.url + "video/?phone=" + nowUser.person.phone);
             request.Method = HttpMethod.Get;
 
             var answer = await client.SendAsync(request);

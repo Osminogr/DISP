@@ -10,6 +10,7 @@ using App1.Domain;
 
 using Newtonsoft.Json;
 using System.Net.Http;
+using App1.Utils;
 
 namespace App1.Advertiser.Campaign.NewCampaign
 {
@@ -25,15 +26,22 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
             BindingContext = this;
 
-            labelTextVideo.Text = compaign.video.name;
-            videoPlayer.Source = compaign.video.url;
-            amount.Text = string.Format("Итого: {0}Р", compaign.tarif.amount.ToString());
-            minDays.Text = string.Format("Срок размещения: {0} дней", compaign.tarif.minDays.ToString());
+            videoPlayer.Name = compaign.video.name;
+            videoPlayer.Url = compaign.video.url;
+
+            OverrideTitleView(compaign.tarif.name, -1);
+        }
+
+        private void OverrideTitleView(string name, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, 80, count));
         }
 
         public async void NewCampaigns(object sender, EventArgs e)
         {
             string json = JsonConvert.SerializeObject(compaign);
+            json = "{\"Compaign\": " + json + "}";
+            Server.Request(json, "post", "adreqcount");
             await Navigation.PushAsync(new CampaignsAct(compaign.adv));
         }
     }

@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.Advertiser.Settings.SettingsAdv">
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Advertiser.Settings.SettingsAdv"
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <Grid Padding="0,20,0,0">
+        <Grid Padding="0,0,0,0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="1"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -15,7 +20,9 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="1">
+            <templates:LineTemplate Grid.Row="0"/>
+
+            <Grid Grid.Row="1" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -28,26 +35,26 @@
                 <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
                     <Label Text="ООО Название компании" Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0"/>
+                        Margin="10,0,10,0"/>
                 </Frame>
 
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
                        />
 
-                <Button Margin="10,0,10,0" 
-                        BackgroundColor="#00000000"
+                <Button Margin="10,0,10,0"
+                        BackgroundColor="#00000000" Grid.Column="0"
                         CornerRadius="5" Grid.ColumnSpan="7"
                         Clicked="CompanyDataUpdate"/>
-
-
-
             </Grid>
 
-            <Grid Grid.Row="2">
+            <Grid Grid.Row="2" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -60,10 +67,13 @@
                 <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
                     <Label Text="mail@email.com" Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0" />
+                        Margin="10,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -74,7 +84,7 @@
                         Clicked="ChangeEmailAdv"/>
             </Grid>
 
-            <Grid Grid.Row="3">
+            <Grid Grid.Row="3" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -88,12 +98,15 @@
                     <Label Text="+7 (999) 999-99-99" 
                            Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0" />
+                        Margin="10,0,10,0" />
                     <!-- Номер телефона нужно привязать {Binding} к номеру nowUser -->
                 </Frame>
-                
-                <Image Source="go_next_str"
+
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -105,7 +118,7 @@
                         />
             </Grid>
 
-            <Grid Grid.Row="4">
+            <Grid Grid.Row="4" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -118,10 +131,13 @@
                 <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
                     <Label Text="Сменить пароль" Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0" />
+                        Margin="10,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -132,7 +148,7 @@
                         Clicked="PasswordChangeAdv"/>
             </Grid>
 
-            <Grid Grid.Row="5">
+            <Grid Grid.Row="5" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -145,10 +161,13 @@
                 <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
                     <Label Text="Договор на оказание рекламных услуг" Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0" />
+                        Margin="10,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -159,7 +178,7 @@
                         Clicked="DogovorAdv_Clicked"/>
             </Grid>
 
-            <Grid Grid.Row="6">
+            <Grid Grid.Row="6" Margin="10, 0, 10, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -173,11 +192,14 @@
 
                     <Label Text="Банковские реквизиты" Grid.ColumnSpan="6"
                        TextColor="Black" FontSize="Subtitle"  VerticalTextAlignment="Center" 
-                        Margin="20,0,10,0" />
+                        Margin="10,0,10,0" />
                 </Frame>
 
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -189,6 +211,26 @@
                         Clicked="DataOrganizationBankAdv_Clicked"/>
             </Grid>
 
+            <Grid Grid.Row="7" Margin="10, 0, 10, 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Показать на карте только автомобили, учавствующие в рекламных компаниях"
+                        HorizontalOptions="Start" Grid.ColumnSpan="4" TextColor="#6F6F6F" FontSize="12"
+                         Margin="10,0,10,0"/>
+
+                <Switch IsToggled="True" 
+                        Grid.Column="6"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start" Margin="0,0,0,0"/>
+            </Grid>
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -198,8 +240,8 @@
                     <ColumnDefinition Width="0,3"/>
                 </Grid.ColumnDefinitions>
             </Grid>
-            
-            
+
+
         </Grid>
 
     </ContentPage.Content>

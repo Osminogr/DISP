@@ -7,6 +7,8 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Xamarin.Essentials;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace App1
 {
@@ -21,6 +23,9 @@ namespace App1
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
+            actInd.IsRunning = true;
+            actInd.IsVisible = true;
+            gridRoot.IsEnabled = false;
             loadPreferences();
         }
 
@@ -30,7 +35,7 @@ namespace App1
 
             if (json == null)
             {
-                await Navigation.PushAsync(new StartPage());
+                return;
             }
 
             AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
@@ -42,8 +47,6 @@ namespace App1
 
             NumberEnter.Text = authObject.phone;
 
-            bool auth = false;
-
             if (authObject.isCompany)
             {
                 HttpClient client = new HttpClient();
@@ -52,9 +55,9 @@ namespace App1
                 var resp = await req.Content.ReadAsStringAsync();
                 if (resp != null && resp.Contains("Adv"))
                 {
-                    auth = true;
                     JObject j = JObject.Parse(resp);
                     Adv adv = JsonConvert.DeserializeObject<Adv>(j["Adv"].ToString());
+
                     await Navigation.PushAsync(new MainPageAdv(adv));
                 }
             }
@@ -66,17 +69,22 @@ namespace App1
                 var resp = await req.Content.ReadAsStringAsync();
                 if (resp != null && resp.Contains("Drivers"))
                 {
-                    auth = true;
                     JObject j = JObject.Parse(resp);
-                    App1.Domain.Driver drv = JsonConvert.DeserializeObject<App1.Domain.Driver>(j["Drivers"].ToString());
-                    await Navigation.PushAsync(new MainPageAdv(null));
+                    Driver drv = JsonConvert.DeserializeObject<App1.Domain.Driver>(j["Drivers"].ToString());
+
+                    await Navigation.PushAsync(new MainPageDr(drv));
                 }
             }
+
+            await Task.Delay(1000);
+            actInd.IsRunning = false;
+            actInd.IsVisible = false;
+            gridRoot.IsEnabled = true;
         }
 
         private async void Button_Click(object sender, EventArgs e)
         {
-            if (number != null && number.Length == 10)
+            if (number != null)// && number.Length == 10)
             {
                 string content = String.Format(@" ""phone"" : ""{0}""", number);
                 content = @"{ ""CodeReq"" :{ " + content + "} }";

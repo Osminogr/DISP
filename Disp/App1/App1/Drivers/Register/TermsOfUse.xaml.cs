@@ -2,6 +2,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Domain;
 
 namespace App1
 {
@@ -18,11 +19,11 @@ namespace App1
         private async void Button_Click(object sender, EventArgs e)
         {
             string content = @"{ ""Driver"": { ""name"" : ";
-            content += @"""" + nowUser.name + " " + nowUser.lastname + " " + nowUser.patronymic + @""",";
-            content += @" ""sity"" :""" + nowUser.city + @""",";
-            content += @" ""phone"":""" + nowUser.phone + @""",";
+            content += @"""" + nowUser.person.firstName + " " + nowUser.person.lastName + " " + nowUser.person.patronymic + @""",";
+            content += @" ""sity"" :""" + nowUser.person.city + @""",";
+            content += @" ""phone"":""" + nowUser.person.phone + @""",";
             content += @" ""is_online"": ""false "",";
-            content += @" ""pass_date"" : """ + nowUser.city + @""",";
+            content += @" ""pass_date"" : """ + nowUser.person.city + @""",";
             content += @" ""balance"" : ""0"",";
             content += @" ""x"" : ""0"",";
             content += @" ""y"" : ""0"" } }";

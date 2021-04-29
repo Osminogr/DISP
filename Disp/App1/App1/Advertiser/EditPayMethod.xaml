@@ -2,16 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.EditPayMethod"
-             Title="Изменить">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="tb_ok" Text="Готово"/>
-    </ContentPage.ToolbarItems>
-
+             BackgroundColor="White"
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <StackLayout>
-            <ScrollView>
-                <Grid Padding="0,40,0,0">
+        <StackLayout VerticalOptions="Fill">
+            <ScrollView Margin="0, 0, 0, 0">
+                <Grid Padding="0,0,0,0">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -27,36 +25,12 @@
                         <ColumnDefinition Width="0,2*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Frame BackgroundColor="#FFFFFF"
-                           Grid.ColumnSpan="4"
-                           HasShadow="True"/>
-                    <Image Source="mastercard_icon.png"/>
-                    <Label Text="MasterCard 9435"
-                           FontSize="12"
-                           VerticalOptions="CenterAndExpand"
-                           FontFamily="Roboto"
-                           TextColor="#6F6F6F"
-                           Grid.Row="0"
-                           Grid.Column="1"/>
-                    <Label Text="09/21"
-                           FontSize="12"
-                           TextColor="#CCCCCC"
-                           Grid.Column="2"
-                           Grid.Row="0"
-                           VerticalOptions="CenterAndExpand"/>
-                    <Image Source="x_icon.png"
-                           Margin="0,0,24,0"
-                           Grid.Row="0"
-                           Grid.Column="3"
-                           HorizontalOptions="EndAndExpand"/>
-
+                    <templates:LineTemplate Grid.Row="0" Grid.ColumnSpan="4"/>
 
                     <Frame BackgroundColor="#FFFFFF"
-                           Grid.Row="1"
-                           Grid.ColumnSpan="4"
+                           Grid.ColumnSpan="4" Grid.Row="1"
                            HasShadow="True"/>
-                    <Image Source="mastercard_icon.png"
-                           Grid.Row="1"
+                    <Image Source="mastercard_icon.png" Grid.Row="1"
                            Grid.Column="0"/>
                     <Label Text="MasterCard 9435"
                            FontSize="12"
@@ -74,6 +48,33 @@
                     <Image Source="x_icon.png"
                            Margin="0,0,24,0"
                            Grid.Row="1"
+                           Grid.Column="3"
+                           HorizontalOptions="EndAndExpand"/>
+
+
+                    <Frame BackgroundColor="#FFFFFF"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="4"
+                           HasShadow="True"/>
+                    <Image Source="mastercard_icon.png"
+                           Grid.Row="2"
+                           Grid.Column="0"/>
+                    <Label Text="MasterCard 9435"
+                           FontSize="12"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+                    <Label Text="09/21"
+                           FontSize="12"
+                           TextColor="#CCCCCC"
+                           Grid.Column="2"
+                           Grid.Row="2"
+                           VerticalOptions="CenterAndExpand"/>
+                    <Image Source="x_icon.png"
+                           Margin="0,0,24,0"
+                           Grid.Row="2"
                            Grid.Column="3"
                            HorizontalOptions="EndAndExpand"/>
                 </Grid>

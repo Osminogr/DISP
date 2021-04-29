@@ -2,24 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Settings.ChangeEmailAdv"
-             Title="Настройки ">
+             xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <StackLayout Padding="24,20,24,20">
-            <Label Text="E-mail"/>
-            <Entry Placeholder="e-mail@address.com"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <templates:LineTemplate Grid.Row="0"/>
+
+            <StackLayout Padding="24,20,24,20" Grid.Row="1">
+                <Label Text="E-mail"/>
+                <Entry Placeholder="e-mail@address.com"
                    Keyboard="Email"/>
-            <Label Text="Новый E-mail"/>
-            <Entry Placeholder="new-email@address.com"
+                <Label Text="Новый E-mail"/>
+                <Entry Placeholder="new-email@address.com"
                    Keyboard="Email"/>
-            <Label Text="Проверочный код" 
+                <Label Text="Проверочный код" 
                    IsVisible="false"
                    x:Name="Lb_verification"/>
-            <Entry Placeholder="Введите код" 
+                <Entry Placeholder="Введите код" 
                    IsVisible="false"
                    x:Name="Entr_verification"
                    Keyboard="Numeric"/>
-            
-            <Button Text="Получить код"
+
+                <Button Text="Получить код"
                     x:Name="GetCodeBtn"
                     Clicked="GetCodeBtn_Clicked"
                     IsVisible="true"
@@ -27,6 +35,7 @@
                     Margin="70,20,70,0"
                     BackgroundColor="#FFB800"
                     CornerRadius="40"/>
-        </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

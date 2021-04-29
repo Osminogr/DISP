@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.Campaign.NewCampaign.ConfirmTarif"
+             x:Name="this"
+             xmlns:templates="clr-namespace:App1.Templates"
+             BackgroundColor="#FAFAFA">
+    <ContentPage.Content>
+        <ScrollView BindingContext="{x:Reference this}">
+            <StackLayout>
+                <templates:LineTemplate/>
+                <Grid Padding="20, 20, 20, 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="1"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="1"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Text="Срок размещения" FontSize="18" TextColor="#FBB800"></Label>
+                    <Label Grid.Row="1" Text="Количество дней" FontSize="12" TextColor="Black"></Label>
+                    <Label Grid.Row="2" Text="30" FontSize="16"></Label>
+                    <BoxView BackgroundColor="LightGray" Grid.Row="3"></BoxView>
+
+                    <Label Grid.Row="5" Text="Условия размещения" TextColor="#FBB800" FontSize="18"></Label>
+                    <Label Grid.Row="6" Text="Количество экранов" FontSize="12" TextColor="Black"></Label>
+                    <Label Grid.Row="7" Text="10" FontSize="16"></Label>
+                    <BoxView BackgroundColor="LightGray" Grid.Row="8"></BoxView>
+
+                    <Label Grid.Row="10" x:Name="Amount" FontSize="17"></Label>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

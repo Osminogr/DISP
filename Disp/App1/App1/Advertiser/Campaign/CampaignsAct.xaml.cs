@@ -1,10 +1,14 @@
-﻿using App1.Advertiser.Campaing;
+﻿using App1.Advertiser.Campaign;
 using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Templates;
 using Newtonsoft.Json;
+using System.Net.Http;
+using System.Collections.Generic;
+using App1.Utils;
 
 namespace App1.Advertiser
 {
@@ -17,86 +21,55 @@ namespace App1.Advertiser
             nowUser = now;
             InitializeComponent();
             Request();
+
+            OverrideTitleView("Мои компании", -1);
+        }
+
+        private void OverrideTitleView(string name, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
         }
 
         public async void Request()
         {
+            HttpClient client = new HttpClient();
 
-            Grid gr = new Grid();
-            gr.Children.Add(new Label { Text = "Тариф: ", TextColor = Color.FromHex("#F39F26") }, 0, 0);
-            gr.Children.Add(new Label { Text = "Срок размещения: " }, 1, 0);
-            gr.Children.Add(new Label { Text = "Количество автомобилей: " }, 2, 0);
-            gr.Children.Add(new Label { Text = "Срок размещения: " }, 3, 0);
+            var answer = await client.GetAsync(Server.url + "adreq/?id=" + nowUser.id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
 
-            Grid gr1 = new Grid
+            List<Compaign> list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
+
+            if (list != null && list.Count > 0)
             {
-                ColumnDefinitions =
+                foreach (var item in list)
                 {
-                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
-                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) },
-                    new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
+                    if (item.paid)
+                        compaignAct.Children.Add(new CompaignTemplate(item));
+                    else
+                        compaignCompl.Children.Add(new CompaignTemplate(item));
                 }
-
-            };
-            gr1.Children.Add(new Label
-            {
-                Text = "Водители",
-                TextColor = Color.Black,
-                FontSize = 18,
-                VerticalTextAlignment = TextAlignment.Center
-            }, 0, 0);
-
-            gr1.Children.Add(new Label
-            {
-                Text = ">",
-                TextColor = Color.FromHex("#F39F26"),
-                FontSize = 35,
-                FontAttributes = FontAttributes.Bold,
-                VerticalTextAlignment = TextAlignment.Center,
-            }, 0, 6);
-
-            Button btn = new Button
-            {
-                BackgroundColor = Color.FromHex("#00000000"),
-                CornerRadius = 5,
-            };
-
-            btn.Clicked += ToDrivers;
-
-            Grid.SetColumnSpan(btn, 7);
-            gr1.Children.Add(btn);
-
-
-            gr.Children.Add(gr1, 4, 0);
-
-            videos.Children.Add(gr);
-        }
-        
-
-        private async void ToDrivers(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Drivers(nowUser));
+            }
         }
 
-        public async void ToCompl(object sender, EventArgs e)
+        public void ToCompl(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CampaignComp());
+            compaignActCont.IsVisible = false;
+            compaignComplCont.IsVisible = true;
+            btnAct.TextColor = Color.FromHex("#BCBCBC");
+            btnCompl.TextColor = Color.FromHex("#F39F26");
+        }
+
+        public void ToAct(object sender, EventArgs e)
+        {
+            compaignComplCont.IsVisible = false;
+            compaignActCont.IsVisible = true;
+            btnAct.TextColor = Color.FromHex("#F39F26");
+            btnCompl.TextColor = Color.FromHex("#BCBCBC");
         }
 
         public async void NewCampaigns(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Campaign.NewCampaign.ChoseVid(nowUser));
+            await Navigation.PushAsync(new Campaign.NewCampaign.ChoseTarif(nowUser));
         }
-
-        private async void ToRates(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Rates(nowUser));
-        }
-
-        public async void ToHMap(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Campaign.HeatMap(nowUser));
-        }
-
     }
 }

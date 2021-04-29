@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,18 +8,17 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Advertiser.Campaign;
 
-namespace App1.Advertiser
+namespace App1.Templates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Loader : ContentPage
+    [DesignTimeVisible(true)]
+    public partial class DriversTemplate: ContentView
     {
-        Adv nowUser;
-        public Loader(Adv now)
+        public DriversTemplate()
         {
-            nowUser = now;
             InitializeComponent();
-            LoadForm.Source = "http://46.101.167.149:8003/api/loader/" + now.company.phone;
         }
     }
 }

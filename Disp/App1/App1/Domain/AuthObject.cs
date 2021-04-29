@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace App1.Domain
 {
     public class AuthObject

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.AuthPage"
+             BackgroundImage ="TaxiYellow.jpg">
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="Center" x:Name="gridRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="1"
+                   Source="Logo.png" HorizontalOptions="FillAndExpand" Margin="0, 0, 0, 50"
+                   VerticalOptions="FillAndExpand" Grid.RowSpan="2"/>
+
+            <Label Text="" Grid.Row="3" Grid.RowSpan="3"></Label>
+
+            <Button Text="Войти"
+                    Grid.Row="6"
+                    Padding="0,0,0,0"
+                    HorizontalOptions="Center"
+                    FontSize="14"
+                    WidthRequest="185"
+                    CornerRadius="20"
+                    BackgroundColor="#FFB800"
+                    FontAttributes="Bold"
+                    Clicked="Enter"
+                    TextColor="White"/>
+            <Button Text="Регистрация"
+                    Grid.Row="8"
+                    Padding="0,0,0,0"
+                    CornerRadius="20"
+                    HorizontalOptions="Center"
+                    FontSize="14"
+                    WidthRequest="185"
+                    BackgroundColor="White"
+                    FontAttributes="Bold"
+                    Clicked="Register"
+                    TextColor="Black"/>
+            <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" Color="#FFB800" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" Grid.Row="0" Grid.RowSpan="1" IsVisible="false" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
