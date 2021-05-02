@@ -10,6 +10,7 @@ namespace App1.Domain
         public string ogrn;
         public string inn;
         public string kpp;
+        public string email;
 
         public AccountNumber accountNumber;
 

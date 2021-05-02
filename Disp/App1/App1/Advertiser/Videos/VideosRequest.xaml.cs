@@ -21,6 +21,9 @@ namespace App1.Advertiser
     {
         Adv nowUser;
         VideoRequest videoRequest;
+        bool photo1Set = false;
+        bool photo2Set = false;
+        bool photo3Set = false;
         public VideosRequest(Adv now)
         {
             nowUser = now;
@@ -30,9 +33,30 @@ namespace App1.Advertiser
 
             videoRequest = new VideoRequest();
             videoRequest.adv = nowUser;
-            videoRequest.photos = new List<Stream>();
+            videoRequest.photos = new List<Photo>();
 
             OverrideTitleView("Заказать", "Готово", 85, -1);
+
+            photo1.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() => {
+                    AddPhoto(0);
+                })
+            });
+
+            photo2.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() => {
+                    AddPhoto(1);
+                })
+            });
+
+            photo3.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() => {
+                    AddPhoto(2);
+                })
+            });
         }
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
@@ -40,41 +64,52 @@ namespace App1.Advertiser
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
             {
                 videoRequest.text = editorText.Text;
+                var answer = Server.AddVideoRequest(videoRequest);
                 Navigation.PopAsync();
             })));
         }
 
-        public async void AddPhoto(object sender, EventArgs e)
+        public async void AddPhoto(int type)
         {
-            string number = (string)((Button)sender).CommandParameter;
-
             if (CrossMedia.Current.IsPickPhotoSupported)
             {
-                List<MediaFile> photo = await CrossMedia.Current.PickPhotosAsync(null, new MultiPickerOptions() { MaximumImagesCount = 1 }, default);
+                List<MediaFile> photos = await CrossMedia.Current.PickPhotosAsync(null, new MultiPickerOptions() { MaximumImagesCount = 1 }, default);
 
-                if (photo != null && photo.Count == 1)
+                if (photos != null && photos.Count == 1)
                 {
-                    videoRequest.photos.Add(photo[0].GetStream());
-
-                    if (number == "0")
+                    foreach (var photo in photos)
                     {
-                        photo2.IsEnabled = true;
-                        photo2.ImageSource = "photoactive.png";
+                        videoRequest.photos.Add(new Photo() { name = Path.GetFileName(photo.Path), data = photo.GetStream() });
 
-                        photo1.ImageSource = photo[0].Path;
-                    }
+                        if (type == 0)
+                        {
+                            photo1Set = true;
+                            if (photo1Set && !photo2Set)
+                            {
+                                photo2.IsEnabled = true;
+                                photo2.Source = "photoactive.png";
+                            }
 
-                    if (number == "1")
-                    {
-                        photo3.IsEnabled = true;
-                        photo3.ImageSource = "photoactive.png";
+                            photo1.Source = photo.Path;
+                        }
 
-                        photo2.ImageSource = photo[0].Path;
-                    }
+                        if (type == 1)
+                        {
+                            photo2Set = true;
+                            if (photo2Set && !photo3Set)
+                            {
+                                photo3.IsEnabled = true;
+                                photo3.Source = "photoactive.png";
+                            }
 
-                    if (number == "2")
-                    {
-                        photo3.ImageSource = photo[0].Path;
+                            photo2.Source = photo.Path;
+                        }
+
+                        if (type == 2)
+                        {
+                            photo3Set = true;
+                            photo3.Source = photo.Path;
+                        }
                     }
                 }
             }

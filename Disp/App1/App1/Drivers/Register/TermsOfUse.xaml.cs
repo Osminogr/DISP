@@ -3,32 +3,39 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
+using System.Net.Http;
 
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TermsOfUse : ContentPage
     {
-        Driver nowUser;
+        Driver driver;
         public TermsOfUse(Driver now)
         {
+            driver = now;
+
             InitializeComponent();
-            nowUser = now;
+            OverrideTitleView("Соглашение", 80, -1);
         }
 
-        private async void Button_Click(object sender, EventArgs e)
+        private void OverrideTitleView(string name, int left, int count)
         {
-            string content = @"{ ""Driver"": { ""name"" : ";
-            content += @"""" + nowUser.person.firstName + " " + nowUser.person.lastName + " " + nowUser.person.patronymic + @""",";
-            content += @" ""sity"" :""" + nowUser.person.city + @""",";
-            content += @" ""phone"":""" + nowUser.person.phone + @""",";
-            content += @" ""is_online"": ""false "",";
-            content += @" ""pass_date"" : """ + nowUser.person.city + @""",";
-            content += @" ""balance"" : ""0"",";
-            content += @" ""x"" : ""0"",";
-            content += @" ""y"" : ""0"" } }";
-            Server.Request(content, "post", "drivers");
-            await Navigation.PushAsync(new MainPageDr(nowUser));
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, left, count));
+        }
+
+        private async void ToDriver(object sender, EventArgs e)
+        {
+            HttpContent response = await Server.AddDriver(driver);
+            string answer = await response.ReadAsStringAsync();
+
+            if (answer != null && answer.Contains("answer")) await Navigation.PushAsync(new MainPageDr(driver));
+            else
+            {
+                await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
+                await Navigation.PushAsync(new StartPage());
+            }
         }
     }
 }

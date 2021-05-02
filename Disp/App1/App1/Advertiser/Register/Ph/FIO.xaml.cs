@@ -2,47 +2,64 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.RegisterAdvPh
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FIO : ContentPage
     {
-        Adv nowUser;
-        public FIO(Adv now)
+        string phone;
+        Adv adv;
+        public FIO(string number)
         {
-            nowUser = now;
+            phone = number;
+            adv = new Adv();
+            adv.company = new Company();
+            adv.company.phone = phone;
+            adv.company.director = new Person();
+
             InitializeComponent();
-            ToolbarItem tb = new ToolbarItem
+
+            OverrideTitleView("Регистрация", "Дальше", 80, -1);
+        }
+
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
             {
-                Text = "Дальше"
-            };
-            tb.Clicked += async (s, e) =>
-            {
-                bool b1 = false, b2 = false, b3 = false;
-                string fio = "";
+                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false;
                 if (Name.Text != null)
                 {
                     b1 = true;
-                    fio += Name.Text;
+                    adv.company.director.firstName = Name.Text;
                 }
                 if (LastName.Text != null)
                 {
                     b2 = true;
-                    fio += LastName.Text;
+                    adv.company.director.lastName = LastName.Text;
                 }
                 if (Patronymic.Text != null)
                 {
                     b3 = true;
-                    fio += Patronymic.Text;
+                    adv.company.director.patronymic = Patronymic.Text;
                 }
-                if (b1 && b2 && b3)
+                if(Town.Text != null)
                 {
-                    nowUser.company.director.lastName = fio;
-                    await Navigation.PushAsync(new RegisterAdvPh.TermOfUse(nowUser));
+                    b4 = true;
+                    adv.company.city = Town.Text;
                 }
-            };
-            ToolbarItems.Add(tb);
+                if (Email.Text != null)
+                {
+                    b5 = true;
+                    adv.company.email = Email.Text;
+                }
+               
+                if (b1 && b2 && b3 && b4 && b5)
+                {
+                    Navigation.PushAsync(new RegisterAdvPh.TermOfUse(adv));
+                }
+            })));
         }
     }
 }

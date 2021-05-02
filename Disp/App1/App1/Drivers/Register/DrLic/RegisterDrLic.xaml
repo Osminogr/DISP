@@ -1,34 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.RegisterDrLic"
-             Title="Регистрация">
+             x:Class="App1.RegisterDrLic">
     <ContentPage.Content>
-            <Grid Padding="20,0,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
-                <Label Text="Водительское удостоверение"  TextColor="#FFB800" 
-                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
-                   Grid.Row ="0" FontAttributes="Bold" />
+        <Grid Padding="20,0,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
 
-                <Entry Grid.Row ="1" Margin="0,0,10,0" Placeholder="Серия и номер"
+            <Label Text="Водительское удостоверение"  TextColor="#FFB800" 
+                   FontSize="20" HorizontalOptions="Start" VerticalOptions="Center"  
+                   Grid.Row ="1" FontAttributes="Bold" />
+
+            <Entry Grid.Row ="2" Margin="0,10,10,0" Placeholder="Серия и номер" TextColor="#CCCCCC"
                        x:Name="Number" Keyboard="Numeric"/>
 
-                <Entry Grid.Row ="2" Margin="0,0,10,0" Placeholder ="Дата выдачи"
-                       x:Name="Data"/>
+            <Entry Grid.Row ="3" Margin="0,10,10,0" Placeholder ="Дата выдачи" TextColor="#CCCCCC"
+                       x:Name="Date"/>
 
-                <Entry Grid.Row ="3" Margin="0,0,10,0" Placeholder ="Срок действия"
+            <Entry Grid.Row ="4" Margin="0,10,10,0" Placeholder ="Срок действия" TextColor="#CCCCCC"
                        x:Name="Period"/>
 
+            <Label Text="Сфотографировать лицевую	сторону	
+водительского	удостоверения, оборотную	сторону водительского удостоверения и с	лицевой	стороной водительского удостоверения" Padding="5, 10, 0, 0" FontSize="12" TextColor="#CCCCCC" Opacity="0.7"
+                    HorizontalOptions="Start" Grid.Row ="5" />
+
+            <Grid Grid.Row="6">
+                <Image Source="photoactive.png" Grid.Column="0" x:Name="photo1"></Image>
+                <Image Source="photoactive.png" Grid.Column="1" x:Name="photo2"></Image>
+                <Image Source="photoactive.png" Grid.Column="2" x:Name="photo3"></Image>
             </Grid>
+
+            <Grid Grid.Row="7" Margin="0, 20, 0, 0">
+                <Label Text="Предоставляя эти данные, вы соглашаетесь с условиями сервиса"
+                           FontSize="15"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto" Padding="-10, 0, 10, 0"
+                           TextColor="#6F6F6F"
+                           Grid.ColumnSpan="6"
+                           Grid.Column="1"/>
+                <RadioButton BorderColor="#FFB800" x:Name="person"
+                                 BackgroundColor="Transparent"
+                                 Grid.Column="0" Margin="0, 0, 30, 0"
+                                 HorizontalOptions="EndAndExpand"/>
+            </Grid>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

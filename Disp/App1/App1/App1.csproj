@@ -56,14 +56,8 @@
     <Compile Update="Drivers\MainPageDr.xaml.cs">
       <DependentUpon>MainPageDr.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Drivers\Register\RegPasp\RegisterPaspPh.xaml.cs">
-      <DependentUpon>RegisterPaspPh.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Drivers\Register\RegPasp\RegisterPasp.xaml.cs">
       <DependentUpon>RegisterPasp.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Drivers\Register\RegisterDr.xaml.cs">
-      <DependentUpon>RegisterDr.xaml</DependentUpon>
     </Compile>
     <Compile Update="Drivers\Videos.xaml.cs">
       <DependentUpon>Videos.Actxaml</DependentUpon>
@@ -188,43 +182,13 @@
     <EmbeddedResource Update="Drivers\Register\Card.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="DriverAdv.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Advertiser\Register\RegisterAdv.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\Car\RegisterCarPh.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\Car\RegisterCarPh2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Drivers\Register\Car\RegisterCar.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\DrLic\RegisterDrLicPh2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\DrLic\RegisterDrLicPh.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Drivers\Register\DrLic\RegisterDrLic.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\RegisterDr.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Drivers\Register\RegPasp\RegisterPasp.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\RegPasp\RegisterPaspPh.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\RegPasp\RegisterPaspPh2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Drivers\Register\RegPasp\RegisterPaspPh3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Drivers\Settings\Settings.xaml">

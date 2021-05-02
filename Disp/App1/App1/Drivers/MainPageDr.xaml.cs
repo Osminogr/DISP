@@ -83,7 +83,7 @@ namespace App1
 
         public async void Exit(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            await Navigation.PushAsync(new StartPage());
         }
     }
 }

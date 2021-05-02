@@ -19,7 +19,7 @@ namespace App1
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            Navigation.PushAsync(new AuthPage());
+            Navigation.PushAsync(new StartPage());
         }
     }
 }

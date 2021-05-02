@@ -40,7 +40,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
         {
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(Server.url + "video/?id=" + nowUser.adv.id);
+            var answer = await client.GetAsync(Server.ROOT_URL + "video/?id=" + nowUser.adv.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             List<Video> list = JsonConvert.DeserializeObject<List<Video>>(responseBody);

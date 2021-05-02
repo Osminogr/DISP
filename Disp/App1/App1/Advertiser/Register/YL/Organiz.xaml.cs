@@ -2,22 +2,30 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.RegisterAdvYL
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Organiz : ContentPage
     {
-        Adv nowUser;
-        public Organiz(Adv now)
+        Adv nowUser = new Adv();
+        public Organiz(string phone)
         {
-            nowUser = now;
+            nowUser.company = new Company();
+            nowUser.company.phone = phone;
+            nowUser.company.director = new Person();
+            nowUser.company.manager = new Person();
+            nowUser.isCompany = true;
+
             InitializeComponent();
-            ToolbarItem tb = new ToolbarItem
-            {
-                Text = "Дальше"
-            };
-            tb.Clicked += async (s, e) =>
+
+            OverrideTitleView("Регистрация", "Дальше", 80, -1);
+        }
+
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
             {
                 bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false, b9 = false;
                 if (Name.Text != null)
@@ -45,48 +53,34 @@ namespace App1.RegisterAdvYL
                     b5 = true;
                     nowUser.company.kpp = Kpp.Text;
                 }
-                if (DirFIO.Text != null)
+                if (FioDirector.Text != null)
                 {
                     b6 = true;
-                    nowUser.company.director.lastName = DirFIO.Text;
+                    nowUser.company.director.lastName = FioDirector.Text;
                 }
-                if (DirPost.Text != null)
+                if (PositionDirector.Text != null)
                 {
                     b7 = true;
-                    nowUser.company.director.position = DirPost.Text;
+                    nowUser.company.director.position = PositionDirector.Text;
                 }
-                if (Cb.IsChecked)
+                if (FioManager.Text != null)
                 {
                     b8 = true;
-                    b9 = true;
-                    nowUser.company.manager.lastName = nowUser.company.director.lastName;
-                    nowUser.company.manager.position = nowUser.company.director.position;
+                    nowUser.company.manager.lastName = FioManager.Text;
                 }
+                if (PositionManager.Text != null)
+                {
+                    b9 = true;
+                    nowUser.company.manager.position = PositionManager.Text;
+                }
+
+                if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && b9)
+                    Navigation.PushAsync(new RegisterAdvYL.Bank(nowUser));
                 else
                 {
-                    if (ContFIO.Text != null)
-                    {
-                        b8 = true;
-                        nowUser.company.manager.lastName = ContFIO.Text;
-                    }
-                    if (ContPost.Text != null)
-                    {
-                        b9 = true;
-                        nowUser.company.manager.position = ContPost.Text;
-                    }
+                     DisplayAlert("Сообщение", "Необходимо заполнить всю информацию.", "OK");
                 }
-                if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && b9)
-                    await Navigation.PushAsync(new RegisterAdvYL.Bank(nowUser));
-            };
-            ToolbarItems.Add(tb);
-        }
-
-        public void TheSame(object sender, CheckedChangedEventArgs e)
-        {
-            if (Cb.IsChecked)
-                Contact.IsVisible = false;
-            else
-                Contact.IsVisible = true;
+            })));
         }
     }
 }

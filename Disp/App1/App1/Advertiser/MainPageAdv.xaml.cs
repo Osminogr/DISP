@@ -116,7 +116,7 @@ namespace App1
         public async void Exit(object sender, EventArgs e)
         {
             Preferences.Clear();
-            await Navigation.PopToRootAsync();
+            await Navigation.PushAsync(new StartPage());
         }
 
 

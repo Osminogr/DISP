@@ -26,7 +26,7 @@ namespace App1.Advs
         {
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(Server.url + "alert/?phone=" + nowUser.company.phone.Trim('"'));
+            var answer = await client.GetAsync(Server.ROOT_URL + "alert/?phone=" + nowUser.company.phone.Trim('"'));
             var responseBody = await answer.Content.ReadAsStringAsync();
             char[] sym = new char[] { '[', ']', '{', ',' };
             foreach (var ch in sym)
@@ -40,7 +40,7 @@ namespace App1.Advs
             }
             responseBody = responseBody.Replace("text\":", " ").Trim(' ');
             Console.WriteLine(responseBody);
-            Console.WriteLine(Server.url + "alert/?phone=" + nowUser.company.phone);
+            Console.WriteLine(Server.ROOT_URL + "alert/?phone=" + nowUser.company.phone);
             var dictionary = responseBody.Trim('}').Split('}');
         }
 

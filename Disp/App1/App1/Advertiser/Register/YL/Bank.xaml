@@ -8,26 +8,36 @@
              Title ="Реквизиты банка">
     <ContentPage.Content>
         <ScrollView>
-            <Grid Padding="20,35,20,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="65"/>
-                    <RowDefinition Height="65"/>
-                    <RowDefinition Height="65"/>
-                    <RowDefinition Height="65"/>
-                    <RowDefinition Height="65"/>
-                </Grid.RowDefinitions>
-                
-                <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
-                       x:Name="Name"/>
-                <Entry Placeholder="Адрес банка" Grid.Row="1"
-                       x:Name="Address"/>
-                <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
-                       x:Name="NumberR"/>
-                <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
-                       x:Name="NumberK"/>
-                <Entry Placeholder="БИК банка" Grid.Row="4"
+            <StackLayout>
+                <Grid Padding="20,35,20,0" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
+                       x:Name="Name"
+                       FontSize="16"/>
+                    <Entry Placeholder="Адрес банка" Grid.Row="1" TextColor="#CCCCCC"
+                       x:Name="Address"
+                       FontSize="16"/>
+                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
+                       x:Name="NumberR" TextColor="#CCCCCC"
+                       Keyboard="Numeric"
+                       FontSize="16"/>
+                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
+                       x:Name="NumberK" TextColor="#CCCCCC"
+                       Keyboard="Numeric"
+                       FontSize="16"/>
+                    <Entry Placeholder="БИК банка" Grid.Row="4"
+                       FontSize="16" TextColor="#CCCCCC"
                         x:Name="BIK"/>
-            </Grid>
+                </Grid>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

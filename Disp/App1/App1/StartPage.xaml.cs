@@ -23,81 +23,58 @@ namespace App1
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            actInd.IsRunning = true;
-            actInd.IsVisible = true;
-            gridRoot.IsEnabled = false;
             loadPreferences();
         }
 
         private async void loadPreferences()
         {
-            string json = Preferences.Get("auth", null);
+            string json = Preferences.Get(Server.AUTH_OBJECT, null);
 
-            if (json == null)
-            {
-                return;
-            }
+            if (json == null) return;
 
             AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
 
-            if (authObject == null)
-            {
-                return;
-            }
+            if (authObject == null) return;
 
-            NumberEnter.Text = authObject.phone;
+            if (authObject.isCompany) NumberEnter.Text = authObject.adv.company.phone;
+            else NumberEnter.Text = authObject.driver.person.phone;
+
+            ShowLoading(true);
 
             if (authObject.isCompany)
             {
-                HttpClient client = new HttpClient();
-
-                var req = await client.GetAsync(Server.url + "adv/" + authObject.phone);
-                var resp = await req.Content.ReadAsStringAsync();
-                if (resp != null && resp.Contains("Adv"))
-                {
-                    JObject j = JObject.Parse(resp);
-                    Adv adv = JsonConvert.DeserializeObject<Adv>(j["Adv"].ToString());
-
-                    await Navigation.PushAsync(new MainPageAdv(adv));
-                }
+                if (authObject.adv != null) await Navigation.PushAsync(new MainPageAdv(authObject.adv));
             }
             else
             {
-                HttpClient client = new HttpClient();
-
-                var req = await client.GetAsync(Server.url + "drivers/" + authObject.phone);
-                var resp = await req.Content.ReadAsStringAsync();
-                if (resp != null && resp.Contains("Drivers"))
-                {
-                    JObject j = JObject.Parse(resp);
-                    Driver drv = JsonConvert.DeserializeObject<App1.Domain.Driver>(j["Drivers"].ToString());
-
-                    await Navigation.PushAsync(new MainPageDr(drv));
-                }
+                if (authObject.driver != null) await Navigation.PushAsync(new MainPageDr(authObject.driver));
             }
 
             await Task.Delay(1000);
-            actInd.IsRunning = false;
-            actInd.IsVisible = false;
-            gridRoot.IsEnabled = true;
+            ShowLoading(false);
         }
 
-        private async void Button_Click(object sender, EventArgs e)
+        private async void Enter(object sender, EventArgs e)
         {
-            if (number != null)// && number.Length == 10)
+            if (number != null && number.Length == 10)
             {
-                string content = String.Format(@" ""phone"" : ""{0}""", number);
-                content = @"{ ""CodeReq"" :{ " + content + "} }";
-
-                Server.Request(content, "post", "gcode");
-
+                ShowLoading(true);
+                Server.CreateCodeReq(number);
                 await Navigation.PushAsync(new СonfirmNumber(number));
+                ShowLoading(false);
             }
         }
 
         private void Change_number(object sender, EventArgs e)
         {
             number = NumberEnter.Text;
+        }
+
+        private void ShowLoading(bool show)
+        {
+            actInd.IsRunning = show;
+            actInd.IsVisible = show;
+            gridRoot.IsEnabled = !show;
         }
     }
 }

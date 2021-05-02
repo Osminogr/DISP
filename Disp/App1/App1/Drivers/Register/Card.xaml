@@ -4,21 +4,37 @@
              x:Class="App1.Card"
              Title="Регистрация">
     <ContentPage.Content>
-        <Grid Padding="20,0,20,0">
+        <ScrollView>
+            <StackLayout>
+                <Grid Padding="20,35,20,0" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Text="Информация о карте"  TextColor="#FFB800" 
-                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
-                   FontAttributes="Bold" Grid.Row="0"/>
-            <Entry Placeholder="Номер карты" Grid.Row="1" x:Name="Numb"/>
-        </Grid>
+                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
+                       x:Name="Name"
+                       FontSize="16"/>
+                    <Entry Placeholder="Адрес банка" Grid.Row="1" TextColor="#CCCCCC"
+                       x:Name="Address"
+                       FontSize="16"/>
+                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
+                       x:Name="NumberR" TextColor="#CCCCCC"
+                       Keyboard="Numeric"
+                       FontSize="16"/>
+                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
+                       x:Name="NumberK" TextColor="#CCCCCC"
+                       Keyboard="Numeric"
+                       FontSize="16"/>
+                    <Entry Placeholder="БИК банка" Grid.Row="4"
+                       FontSize="16" TextColor="#CCCCCC"
+                        x:Name="BIK"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

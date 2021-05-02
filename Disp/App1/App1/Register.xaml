@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Register">
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="Center" x:Name="gridRoot">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Text="Водитель"
+                           FontSize="15"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Grid.Row="1"
+                           Padding="-20, 0, 0, 0"
+                           Grid.ColumnSpan="3"
+                           Grid.Column="1"/>
+            <RadioButton BorderColor="#FFB800" x:Name="driver"
+                                 BackgroundColor="Transparent"
+                                 Grid.Row="1"
+                                 Grid.Column="0"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+            <Label Text="Рекламодатель"
+                           FontSize="15"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Padding="-20, 0, 0, 0"
+                           Grid.Row="3"
+                           Grid.ColumnSpan="3"
+                           Grid.Column="1"/>
+            <RadioButton BorderColor="#FFB800" x:Name="adv"
+                                 BackgroundColor="Transparent"
+                                 Grid.Row="3"
+                                 Grid.Column="0"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+            <Label Grid.Row="7" Padding="10, 0, 10, 0" Grid.ColumnSpan="6" HorizontalTextAlignment="Center" FontSize="12" Opacity="0.7"
+                   Text="Полная регистрация необходима для проведения документального сопровождения. С Вами подписывается договор на предоставление рекламных услуг, выставляются счета и акты выполненных работ."></Label>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

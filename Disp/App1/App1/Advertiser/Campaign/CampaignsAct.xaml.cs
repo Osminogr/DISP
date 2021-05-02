@@ -34,7 +34,7 @@ namespace App1.Advertiser
         {
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(Server.url + "adreq/?id=" + nowUser.id);
+            var answer = await client.GetAsync(Server.ROOT_URL + "adreq/?id=" + nowUser.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             List<Compaign> list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);

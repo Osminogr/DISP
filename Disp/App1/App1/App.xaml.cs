@@ -12,18 +12,13 @@ namespace App1
     {
         public App()
         {
+            //Preferences.Clear();
             InitializeComponent();
 
             MainPage = new NavigationPage(new LogoPage())
             {
                 BarTextColor = Color.FromHex("#FFB800")
             };
-            /*
-            MainPage = new NavigationPage(new StartPage()) {
-                BarBackgroundColor = Color.White,//Color.FromRgb(255, 184, 0),
-                BarTextColor = Color.FromHex("#FFB800")
-            };
-            */
         }
 
         protected override void OnStart()

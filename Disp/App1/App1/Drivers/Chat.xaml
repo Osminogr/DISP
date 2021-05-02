@@ -4,8 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.Drivers.Chat"
-             Title="Чат">
+             x:Class="App1.Drivers.Chat">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,20 +15,22 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <ScrollView Grid.RowSpan="7" x:Name="sc">
+
+            <ScrollView Grid.RowSpan="7" x:Name="sc" Grid.Row="0" Padding="0" Margin="0">
                 <StackLayout x:Name="Stack"/>
             </ScrollView>
 
-            <Grid Grid.Row="7" Grid.RowSpan="2" VerticalOptions="Center" Margin="10,20,10,20">
-                <Frame BorderColor="LightGray" CornerRadius="30"  Grid.Row="0"  Grid.ColumnSpan="4" >
-                <Entry x:Name="messege"/>
+            <Grid Grid.Row="7" Grid.RowSpan="1" VerticalOptions="Center" Margin="10,3,10,23">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame BorderColor="LightGray" CornerRadius="30"  Grid.Row="0" Grid.Column="0" Padding="0" Margin="0, 0, 0, 0" Grid.ColumnSpan="5">
+                    <Entry x:Name="message" TextColor="Black" VerticalOptions="FillAndExpand" Margin="10, 0, 0, 0" />
                 </Frame>
-                <Button Text="➤" CornerRadius="100" Grid.Row="0"
-                    BackgroundColor="#F39F26"
-                    TextColor="White" FontSize="30" Grid.Column="4"
+                <Button ImageSource="send.png" Grid.Row="0" HeightRequest="40" WidthRequest="40"
+                    BackgroundColor="Transparent" Grid.Column="5"
                      Margin="0,8,0,8" Clicked="SendMsg"/>
             </Grid>
         </Grid>

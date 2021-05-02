@@ -60,11 +60,11 @@
                    FontFamily="Roboto"
                    Grid.ColumnSpan="3" PlaceholderColor="#99FFFFFF"/>
             </Grid>
-            <Button x:Name="Button1" Text ="Получить код" 
-                    Clicked ="Button_Click"
+            <Button x:Name="Button1" Text ="Войти" 
+                    Clicked ="Enter"
                     Grid.Row="5" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
                     CornerRadius="40"
-                    Margin="70,3,70,0"
+                    Margin="100,3,100,0"
                     FontSize="16"
                     FontFamily="RobotoBold"
                     />

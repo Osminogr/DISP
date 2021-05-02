@@ -12,6 +12,10 @@ namespace App1.Domain
         public string regNumberCar;
         public string carNumber;
 
+        public Photo photo1;
+        public Photo photo2;
+        public Photo photo3;
+
         public Car() { }
     }
 }

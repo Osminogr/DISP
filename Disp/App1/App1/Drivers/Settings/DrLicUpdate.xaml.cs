@@ -8,14 +8,14 @@ namespace App1.Drivers.Settings
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DrLicUpdate : ContentPage
     {
-        Driver nowUser;
+        Driver driver;
         public DrLicUpdate(Driver now)
         {
-            nowUser = now;
+            driver = now;
             InitializeComponent();
-            Number.Text = nowUser.drLicNumber;
-            Data.Text = nowUser.drLicData;
-            Period.Text = nowUser.drLicPeriod;
+            Number.Text = driver.driverLicence.number;
+            Data.Text = driver.driverLicence.date;
+            Period.Text = driver.driverLicence.period;
             ToolbarItem tb = new ToolbarItem
             {
                 Text = "Сохранить"
@@ -26,21 +26,21 @@ namespace App1.Drivers.Settings
                 if (Number.Text != null)
                 {
                     b1 = true;
-                    nowUser.drLicNumber = Number.Text;
+                    driver.driverLicence.number = Number.Text;
                 }
                 if (Data.Text != null)
                 {
                     b2 = true;
-                    nowUser.drLicData = Data.Text;
+                    driver.driverLicence.date = Data.Text;
                 }
                 if (Period.Text != null)
                 {
                     b3 = true;
-                    nowUser.drLicPeriod = Period.Text;
+                    driver.driverLicence.period = Period.Text;
                 }
 
                 if (b1 && b2 && b3)
-                    await Navigation.PushAsync(new RegisterDrLicPh(nowUser));
+                    await Navigation.PushAsync(new App1.Settings(driver));
             };
             ToolbarItems.Add(tb);
         }

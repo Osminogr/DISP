@@ -13,9 +13,9 @@ namespace App1.Domain
         public string lastName;
         public string patronymic;
 
-        public string paspPh1;
-        public string paspPh2;
-        public string paspPh3;
+        public Photo photo1;
+        public Photo photo2;
+        public Photo photo3;
 
         public Passport()
         {

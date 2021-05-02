@@ -28,6 +28,13 @@ namespace App1
             }
         }
 
+        private void ShowLoading(bool show)
+        {
+            actInd.IsRunning = show;
+            actInd.IsVisible = show;
+            gridRoot.IsEnabled = !show;
+        }
+
         public СonfirmNumber(string phone)
         {
             number = phone;
@@ -40,91 +47,51 @@ namespace App1
 
         public void CodeReq(object sender, EventArgs e)
         {
-            string content = String.Format(@" ""phone"" : ""{0}""", number);
-            content = @"{ ""CodeReq"" :{ " + content + "} }";
-            Server.Request(content, "post", "gcode");
+            ShowLoading(true);
+            Server.CreateCodeReq(number);
             reCode.IsEnabled = false;
             reCode.Text = "Код отправлен повторно";
+            ShowLoading(false);
         }
 
         public async void ChangeNumber(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new StartPage());
-
         }
 
         protected void Change_code(object sender, EventArgs e)
         {
             this.code = CodeEnter.Text;
-
         }
 
-        private async void Button_Click(object sender, EventArgs e)
+        private async void Complete(object sender, EventArgs e)
         {
             if (code != null && code.Length == 4)
             {
-                HttpClient client = new HttpClient();
+                Entity entity = await Server.GetEntity(code, number);
 
-                var answer = await client.GetAsync(Server.url + "gcode/?code=" + code + "&phone=" + number);
-                var responseBody = await answer.Content.ReadAsStringAsync();
-
-                if (responseBody.Length == 13)
+                if (entity != null)
                 {
-                    bool load = false;
-
-                    var req = await client.GetAsync(Server.url + "adv/" + number);
-                    var resp = await req.Content.ReadAsStringAsync();
-
-                    if (resp != null && resp.Length > 0)
+                    if (entity.GetType() == typeof(Adv))
                     {
-                        if (resp.Contains("Adv"))
-                        {
-                            JObject j = JObject.Parse(resp);
-                            Adv adv = JsonConvert.DeserializeObject<Adv>(j["Adv"].ToString());
-
-                            if (adv != null)
-                            {
-                                load = true;
-                                AuthObject authObject = new AuthObject();
-                                authObject.phone = adv.company.phone;
-                                authObject.isCompany = true;
-                                Preferences.Set("auth", JsonConvert.SerializeObject(authObject));
-                                await Navigation.PushAsync(new MainPageAdv(adv));
-                            }
-                        }
+                        AuthObject authObject = new AuthObject();
+                        authObject.adv = (Adv)entity;
+                        authObject.isCompany = true;
+                        Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
+                        await Navigation.PushAsync(new MainPageAdv((Adv)entity));
                     }
-
-                    if (!load)
+                    else
                     {
-                        req = await client.GetAsync(Server.url + "drivers/" + number);
-                        resp = await req.Content.ReadAsStringAsync();
-
-                        if (resp != null && resp.Length > 0)
-                        {
-                            if (resp.Contains("Drivers"))
-                            {
-                                JObject j = JObject.Parse(resp);
-                                App1.Domain.Driver drv = JsonConvert.DeserializeObject<App1.Domain.Driver>(j["Drivers"].ToString());
-
-                                if (drv != null)
-                                {
-                                    load = true;
-
-                                    AuthObject authObject = new AuthObject();
-                                    authObject.phone = drv.person.phone;
-                                    authObject.isCompany = false;
-                                    Preferences.Set("auth", JsonConvert.SerializeObject(authObject));
-                                    //await Navigation.PushAsync(new MainPageDr(drv));
-                                }
-                            }
-                        }
-                        
+                        AuthObject authObject = new AuthObject();
+                        authObject.driver = (Driver)entity;
+                        authObject.isCompany = false;
+                        Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
+                        await Navigation.PushAsync(new MainPageDr((Driver)entity));
                     }
-
-                    if (!load)
-                    {
-                        await Navigation.PushAsync(new DriverAdv(number));
-                    }
+                }
+                else
+                {
+                    await Navigation.PushAsync(new Register(number));
                 }
             }
         }

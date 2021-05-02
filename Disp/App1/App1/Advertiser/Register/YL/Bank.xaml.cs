@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.RegisterAdvYL
 {
@@ -12,14 +13,17 @@ namespace App1.RegisterAdvYL
         public Bank(Adv now)
         {
             nowUser = now;
+            nowUser.company.accountNumber = new AccountNumber();
             InitializeComponent();
-            ToolbarItem tb = new ToolbarItem
+
+            OverrideTitleView("Регистрация", "Дальше", 80, -1);
+        }
+
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
             {
-                Text = "Дальше"
-            };
-            tb.Clicked += async (s, e) =>
-            {
-                bool b1 = false, b2 = false, b3 = false, b4 = false;
+                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false;
                 if (Name.Text != null)
                 {
                     b1 = true;
@@ -40,10 +44,14 @@ namespace App1.RegisterAdvYL
                     b4 = true;
                     nowUser.company.accountNumber.bunkNumberR = NumberR.Text;
                 }
-                if (b1 && b2 && b3 && b4)
-                    await Navigation.PushAsync(new RegisterAdvPh.TermOfUse(nowUser));
-            };
-            ToolbarItems.Add(tb);
+                if (BIK.Text != null)
+                {
+                    b5 = true;
+                    nowUser.company.accountNumber.bik = BIK.Text;
+                }
+                if (b1 && b2 && b3 && b4 && b5)
+                    Navigation.PushAsync(new RegisterAdvPh.TermOfUse(nowUser));
+            })));
         }
     }
 }

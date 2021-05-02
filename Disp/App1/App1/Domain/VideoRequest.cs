@@ -9,7 +9,7 @@ namespace App1.Domain
     public class VideoRequest
     {
         public string text;
-        public List<Stream> photos;
+        public List<Photo> photos;
         public Adv adv;
 
         public VideoRequest() { }

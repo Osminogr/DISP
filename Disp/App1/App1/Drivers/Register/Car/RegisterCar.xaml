@@ -5,45 +5,76 @@
              Title="Регистрация">
     <ContentPage.Content>
         <ScrollView>
-            <Grid Padding="20,20,20,20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+            <Grid Padding="20,0,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
 
-            <Label Text="Автомобиль"  TextColor="#FFB800" 
-                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
-                   Grid.Row ="0" FontAttributes="Bold" />
+                <Label Text="Автомобиль"  TextColor="#FFB800" 
+                   FontSize="20" HorizontalOptions="Start" VerticalOptions="Center"  
+                   Grid.Row ="1" FontAttributes="Bold" />
 
-            <Entry Grid.Row ="1" Placeholder="Марка"
+                <Entry Grid.Row ="2" Placeholder="Марка" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="Mark"/>
 
-            <Entry Grid.Row ="2" Placeholder ="Модель"
+                <Entry Grid.Row ="3" Placeholder ="Модель" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="Model"/>
 
-            <Entry Grid.Row ="3" Placeholder ="Госномер"
+                <Entry Grid.Row ="4" Placeholder ="Госномер" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="Number"/>
 
-            <Entry Grid.Row ="4" Placeholder ="Год выпуска"
+                <Entry Grid.Row ="5" Placeholder ="Год выпуска" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="Data"/>
 
-            <Entry Grid.Row ="5" Placeholder ="Цвет"
+                <Entry Grid.Row ="6" Placeholder ="Цвет" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="Color"/>
 
-            <Entry Grid.Row ="6" Placeholder ="VIN"
+                <Entry Grid.Row ="7" Placeholder ="VIN" TextColor="#CCCCCC" Margin="0,10,10,0"
                    x:Name="VIN"/>
 
-            <Label Grid.Row ="7" Text="Свидетельство о регистрации"/>
-            <Entry Grid.Row ="7"
+                <Label Grid.Row ="8" Text="СТС" Padding="5, 10, 0, 0"/>
+                <Entry Grid.Row ="9" TextColor="#CCCCCC" Margin="0,0,0,0"
                    x:Name="Reg"/>
 
-        </Grid>
+                <Label Text="Сфотографировать лицевую	сторону	
+водительского	удостоверения, оборотную	сторону водительского удостоверения и с	лицевой	стороной водительского удостоверения" Padding="5, 10, 0, 0" FontSize="12" TextColor="#CCCCCC" Opacity="0.7"
+                    HorizontalOptions="Start" Grid.Row ="10" />
+
+                <Grid Grid.Row="11">
+                    <Image Source="photoactive.png" Grid.Column="0" x:Name="photo1"></Image>
+                    <Image Source="photoactive.png" Grid.Column="1" x:Name="photo2"></Image>
+                    <Image Source="photoactive.png" Grid.Column="2" x:Name="photo3"></Image>
+                </Grid>
+
+                <Grid Grid.Row="12" Margin="0, 20, 0, 0">
+                    <Label Text="Предоставляя эти данные, вы соглашаетесь с условиями сервиса"
+                           FontSize="15"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto" Padding="-10, 0, 10, 0"
+                           TextColor="#6F6F6F"
+                           Grid.ColumnSpan="6"
+                           Grid.Column="1"/>
+                    <RadioButton BorderColor="#FFB800" x:Name="person"
+                                 BackgroundColor="Transparent"
+                                 Grid.Column="0" Margin="0, 0, 30, 0"
+                                 HorizontalOptions="EndAndExpand"/>
+                </Grid>
+
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

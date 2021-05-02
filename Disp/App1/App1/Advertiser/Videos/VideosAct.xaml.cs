@@ -24,6 +24,33 @@ namespace App1.Advertiser
         {
             nowUser = now;
             InitializeComponent();
+
+            LoadVideoLabel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsPickVideoSupported)
+                    {
+                        MediaFile video = await CrossMedia.Current.PickVideoAsync();
+
+                        if (video != null)
+                        {
+                            Video videoObject = new Video();
+                            videoObject.name = Path.GetFileName(video.Path);
+                            videoObject.data = video.GetStream();
+                            videoObject.path = video.Path;
+                            videoObject.adv = nowUser;
+                            await Server.LoadVideoAsync(videoObject);
+
+                            AddVideoDialog.IsEnabled = false;
+                            AddVideoDialog.IsVisible = false;
+
+                            Request();
+                        }
+                    }
+                })
+            });
+
             Request();
         }
 
@@ -31,7 +58,7 @@ namespace App1.Advertiser
         {
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(Server.url + "video/?id=" + nowUser.id);
+            var answer = await client.GetAsync(Server.ROOT_URL + "video/?id=" + nowUser.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             List<Video> list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
@@ -63,23 +90,9 @@ namespace App1.Advertiser
                 l.VerticalOptions = LayoutOptions.Center;
                 videosAct.Children.Add(new Label());
                 videosAppr.Children.Add(new Label());
+
+                OverrideTitleView("Видеоролики", -1);
             }
-
-            LoadVideoLabel.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(async () =>
-                {
-                    if (CrossMedia.Current.IsPickVideoSupported)
-                    {
-                        MediaFile video = await CrossMedia.Current.PickVideoAsync();
-
-                        if (video != null)
-                        {
-                            
-                        }
-                    }
-                })
-            });
         }
 
         private void OverrideTitleView(string name, int count)

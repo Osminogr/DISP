@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.Drivers
 {
@@ -18,6 +19,12 @@ namespace App1.Drivers
         {
             nowUser = now;
             InitializeComponent();
+            OverrideTitleView("Статистика", 70, -1);
+        }
+
+        private void OverrideTitleView(string name, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, left, count));
         }
     }
 }

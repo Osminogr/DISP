@@ -30,7 +30,7 @@ namespace App1.Drivers
 
             HttpClient client = new HttpClient();
             var i = 0;
-            var answer = await client.GetAsync(Server.url + "video/?phone=" + nowUser.person.phone);
+            var answer = await client.GetAsync(Server.ROOT_URL + "video/?phone=" + nowUser.person.phone);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             var dictionary = responseBody
@@ -48,7 +48,7 @@ namespace App1.Drivers
             HttpClient client = new HttpClient();
             HttpRequestMessage request = new HttpRequestMessage();
 
-            request.RequestUri = new Uri(Server.url + "video/?phone=" + nowUser.person.phone);
+            request.RequestUri = new Uri(Server.ROOT_URL + "video/?phone=" + nowUser.person.phone);
             request.Method = HttpMethod.Get;
 
             var answer = await client.SendAsync(request);
