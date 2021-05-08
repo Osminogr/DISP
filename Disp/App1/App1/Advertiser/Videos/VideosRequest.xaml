@@ -10,7 +10,6 @@
     <ContentPage.Content>
         <Grid BackgroundColor="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="100"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -18,25 +17,23 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <templates:LineTemplate Grid.Row="0" Grid.ColumnSpan="3"></templates:LineTemplate>
+            <Label Text="Загрузить файлы" TextColor="#FFB800" FontSize="18" Grid.Row="0" Grid.ColumnSpan="3" Margin="30, 20, 30, 0"></Label>
 
-            <Label Text="Загрузить файлы" TextColor="#FFB800" FontSize="18" Grid.Row="1" Grid.ColumnSpan="3" Margin="30, 20, 30, 0"></Label>
-
-            <Grid Grid.Row="2" Grid.Column="0">
+            <Grid Grid.Row="1" Grid.Column="0">
                 <Image Source="photoactive.png" x:Name="photo1" BackgroundColor="Transparent" Margin="30, 0, 0, 0"></Image>
             </Grid>
 
-            <Grid Grid.Row="2" Grid.Column="1">
+            <Grid Grid.Row="1" Grid.Column="1">
                 <Image Source="photodef.png"  x:Name="photo2" BackgroundColor="Transparent" Margin="0, 0, 0, 0" IsEnabled="False"></Image>
             </Grid>
 
-            <Grid Grid.Row="2" Grid.Column="2">
+            <Grid Grid.Row="1" Grid.Column="2">
                 <Image Source="photodef.png" x:Name="photo3" BackgroundColor="Transparent" Margin="0, 0, 30, 0" IsEnabled="False"></Image>
             </Grid>
 
-            <Label Text="Описание видеоролика" TextColor="Black" FontSize="17" Grid.Row="3" Grid.ColumnSpan="3" Margin="30, 10, 30, 0"></Label>
+            <Label Text="Описание видеоролика" TextColor="Black" FontSize="17" Grid.Row="2" Grid.ColumnSpan="3" Margin="30, 10, 30, 0"></Label>
 
-            <Editor Placeholder="Описание видеоролика" x:Name="editorText" HeightRequest="300" Grid.Row="4" Grid.ColumnSpan="3" Margin="30, 0, 30, 100"/>
+            <Editor Placeholder="Описание видеоролика" x:Name="editorText" HeightRequest="300" Grid.Row="3" Grid.ColumnSpan="3" Margin="30, 0, 30, 100"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

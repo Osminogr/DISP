@@ -6,7 +6,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <templates:LineTemplate/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>

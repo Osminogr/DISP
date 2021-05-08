@@ -8,6 +8,12 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Collections.Generic;
+using Xamarin.Essentials;
+using Newtonsoft.Json.Serialization;
+using System.Linq;
+using System.Reflection;
+using App1.Domain.Json;
 
 namespace App1
 {
@@ -104,7 +110,7 @@ namespace App1
                 }
                 else
                 {
-                    entity = JsonConvert.DeserializeObject<Driver>((string)jObject[nameof(Entity)]);
+                    entity = JsonConvert.DeserializeObject<Driver>((string)jObject[nameof(Entity)].ToString());
                 }
             }
 
@@ -133,7 +139,7 @@ namespace App1
             }
 
             content.Add(new StringContent(videoRequest.text, Encoding.UTF8), "text");
-            
+
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PostAsync(uri, content);
@@ -158,7 +164,8 @@ namespace App1
         {
             var uri = new Uri(string.Format(ROOT_URL + "adv/"));
 
-            string json = JsonConvert.SerializeObject(adv);
+            string json = JsonConvert.SerializeObject(adv, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Adv"": " + json + "}";
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -171,13 +178,226 @@ namespace App1
         public static async Task<HttpContent> AddDriver(Driver driver)
         {
             var uri = new Uri(string.Format(ROOT_URL + "drivers/"));
+            var content = new MultipartFormDataContent();
 
-            string json = JsonConvert.SerializeObject(driver);
+            string json = JsonConvert.SerializeObject(driver, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Driver"": " + json + "}";
+
+            if (driver.driverLicence.photo1 != null)
+            {
+                content.Add(new StreamContent(driver.driverLicence.photo1.data), "driverLicencePhoto1", driver.driverLicence.photo1.name);
+            }
+
+            if (driver.driverLicence.photo2 != null)
+            {
+                content.Add(new StreamContent(driver.driverLicence.photo2.data), "driverLicencePhoto2", driver.driverLicence.photo2.name);
+            }
+
+            if (driver.driverLicence.photo3 != null)
+            {
+                content.Add(new StreamContent(driver.driverLicence.photo3.data), "driverLicencePhoto3", driver.driverLicence.photo3.name);
+            }
+
+            if (driver.car.photo1 != null)
+            {
+                content.Add(new StreamContent(driver.car.photo1.data), "carPhoto1", driver.car.photo1.name);
+            }
+
+            if (driver.car.photo2 != null)
+            {
+                content.Add(new StreamContent(driver.car.photo2.data), "carPhoto2", driver.car.photo2.name);
+            }
+
+            if (driver.car.photo3 != null)
+            {
+                content.Add(new StreamContent(driver.car.photo3.data), "carPhoto3", driver.car.photo3.name);
+            }
+
+            if (driver.person.passport.photo1 != null)
+            {
+                content.Add(new StreamContent(driver.person.passport.photo1.data), "personPassportPhoto1", driver.person.passport.photo1.name);
+            }
+
+            if (driver.person.passport.photo2 != null)
+            {
+                content.Add(new StreamContent(driver.person.passport.photo2.data), "personPassportPhoto2", driver.person.passport.photo2.name);
+            }
+
+            if (driver.person.passport.photo3 != null)
+            {
+                content.Add(new StreamContent(driver.person.passport.photo3.data), "personPassportPhoto3", driver.person.passport.photo3.name);
+            }
+
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> AddCompaign(Compaign compaign)
+        {
+            var uri = new Uri(ROOT_URL + "adreqcount/");
+
+            JCompaign jCompaign = new JCompaign();
+            jCompaign.adv = compaign.adv.id;
+            jCompaign.tarif = compaign.tarif.id;
+            jCompaign.video = compaign.video.id;
+
+            string json = JsonConvert.SerializeObject(jCompaign, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Compaign"": " + json + "}";
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SendMessage(Message message)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "message/"));
+
+            string json = JsonConvert.SerializeObject(message, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Message"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<List<Message>> GetMessages(Entity entity)
+        {
+            List<Message> messages = new List<Message>();
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "message/" + entity.id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null)
+            {
+                messages = JsonConvert.DeserializeObject<List<Message>>(responseBody);
+            }
+
+            return messages;
+        }
+
+        public static void SaveAuthObject(Entity entity, bool isCompany)
+        {
+            AuthObject authObject = new AuthObject();
+
+            if (isCompany) authObject.adv = (Adv)entity;
+            else authObject.driver = (Driver)entity;
+
+            authObject.isCompany = isCompany;
+
+            ClearAuthObject();
+            Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
+        }
+
+        public static void ClearAuthObject()
+        {
+            Preferences.Clear();
+        }
+
+        public static async Task<List<Compaign>> GetCompaigns(int id)
+        {
+            List<Compaign> list = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "adreqcount/" + id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null)
+            {
+                list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
+            }
+
+            return list;
+        }
+
+        public static async Task<List<Tarif>> GetTarifs()
+        {
+            List<Tarif> tarifs = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "tarif/");
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null)
+            {
+                tarifs = JsonConvert.DeserializeObject<List<Tarif>>(responseBody);
+            }
+
+            return tarifs;
+        }
+
+        public static async Task<List<Alert>> GetAlerts(Entity entity)
+        {
+            List<Alert> alerts = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "alert/" + entity.id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null)
+            {
+                alerts = JsonConvert.DeserializeObject<List<Alert>>(responseBody);
+            }
+
+            return alerts;
+        }
+
+        public static async Task<HttpContent> SaveAccountNumber(AccountNumber accountNumber)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "an/{0}", accountNumber.id));
+
+            string json = JsonConvert.SerializeObject(accountNumber, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""AccountNumber"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SaveCompany(Company company)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "company/{0}", company.id));
+
+            string json = JsonConvert.SerializeObject(company, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Company"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SavePerson(Person person)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "person/{0}", person.id));
+
+            string json = JsonConvert.SerializeObject(person, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Person"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
 
             return httpResponseMessage.Content;
         }

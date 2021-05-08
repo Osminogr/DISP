@@ -68,30 +68,32 @@ namespace App1
         {
             if (code != null && code.Length == 4)
             {
-                Entity entity = await Server.GetEntity(code, number);
-
-                if (entity != null)
+                try
                 {
-                    if (entity.GetType() == typeof(Adv))
+                    Entity entity = await Server.GetEntity(code, number);
+
+                    if (entity != null)
                     {
-                        AuthObject authObject = new AuthObject();
-                        authObject.adv = (Adv)entity;
-                        authObject.isCompany = true;
-                        Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
-                        await Navigation.PushAsync(new MainPageAdv((Adv)entity));
+                        if (entity.GetType() == typeof(Adv))
+                        {
+                            Server.SaveAuthObject(entity, true);
+                            await Navigation.PushAsync(new MainPageAdv((Adv)entity));
+                        }
+                        else
+                        {
+                            Server.SaveAuthObject(entity, false);
+                            await Navigation.PushAsync(new MainPageDr((Driver)entity));
+                        }
                     }
                     else
                     {
-                        AuthObject authObject = new AuthObject();
-                        authObject.driver = (Driver)entity;
-                        authObject.isCompany = false;
-                        Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
-                        await Navigation.PushAsync(new MainPageDr((Driver)entity));
+                        await Navigation.PushAsync(new Register(number));
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await Navigation.PushAsync(new Register(number));
+                    await DisplayAlert("Сообщение", "Не удалось выполнить авторизацию! Попробуйте позже.", "Закрыть");
+                    await Navigation.PushAsync(new StartPage());
                 }
             }
         }

@@ -68,12 +68,12 @@ namespace App1.Templates
         {
             text = message.text;
             time = message.time;
-            owner = message.owner.name;
+            if (!message.owner) owner = "Администратор";
             status = message.status.ToString();
 
             InitializeComponent();
 
-            if (message.owner.id == message.receiver.id)
+            if (message.owner)
             {
                 MyMessage.IsVisible = true;
                 OtherMessage.IsVisible = false;

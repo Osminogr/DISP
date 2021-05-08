@@ -17,9 +17,64 @@ namespace App1.Templates
     public partial class CompaignTemplate: ContentView
     {
         Compaign compaign;
+
+        public static readonly BindableProperty VideoNameProperty = BindableProperty.Create(
+                                                              "videoName",
+                                                              typeof(string),
+                                                              typeof(CompaignTemplate),
+                                                              string.Empty);
+
+        public string videoName
+        {
+            get => (string)GetValue(VideoNameProperty);
+            set => SetValue(VideoNameProperty, value);
+        }
+
+        public static readonly BindableProperty UrlProperty = BindableProperty.Create(
+                                                              "url",
+                                                              typeof(string),
+                                                              typeof(CompaignTemplate),
+                                                              string.Empty);
+
+        public string url
+        {
+            get => (string)GetValue(UrlProperty);
+            set => SetValue(UrlProperty, value);
+        }
+
+        public static readonly BindableProperty tarifNameProperty = BindableProperty.Create(
+                                                              "tarifName",
+                                                              typeof(string),
+                                                              typeof(CompaignTemplate),
+                                                              string.Empty);
+
+        public string tarifName
+        {
+            get => (string)GetValue(tarifNameProperty);
+            set => SetValue(tarifNameProperty, value);
+        }
+
+        public static readonly BindableProperty amountProperty = BindableProperty.Create(
+                                                              "amount",
+                                                              typeof(string),
+                                                              typeof(CompaignTemplate),
+                                                              string.Empty);
+
+        public string amount
+        {
+            get => (string)GetValue(amountProperty);
+            set => SetValue(amountProperty, value);
+        }
+
         public CompaignTemplate(Entity entity)
         {
             compaign = (Compaign) entity;
+
+            url = compaign.video.url;
+            tarifName = compaign.tarif.name;
+            videoName = compaign.video.name;
+            amount = compaign.tarif.amount.ToString();
+
             InitializeComponent();
 
             gridDrivers.GestureRecognizers.Add(new TapGestureRecognizer()

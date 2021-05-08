@@ -20,7 +20,7 @@
                     </Grid.RowDefinitions>
 
                     <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
-                       x:Name="Name"
+                       x:Name="Name" TextColor="#CCCCCC"
                        FontSize="16"/>
                     <Entry Placeholder="Адрес банка" Grid.Row="1" TextColor="#CCCCCC"
                        x:Name="Address"

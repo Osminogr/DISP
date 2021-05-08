@@ -7,6 +7,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.Collections.Generic;
 using System;
+using System.IO;
 
 namespace App1
 {
@@ -39,6 +40,7 @@ namespace App1
                             photo1.Source = photo.Path;
                             driver.person.passport.photo1 = new Photo();
                             driver.person.passport.photo1.data = photo.GetStream();
+                            driver.person.passport.photo1.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })
@@ -57,6 +59,7 @@ namespace App1
                             photo2.Source = photo.Path;
                             driver.person.passport.photo2 = new Photo();
                             driver.person.passport.photo2.data = photo.GetStream();
+                            driver.person.passport.photo2.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })
@@ -75,6 +78,7 @@ namespace App1
                             photo3.Source = photo.Path;
                             driver.person.passport.photo3 = new Photo();
                             driver.person.passport.photo3.data = photo.GetStream();
+                            driver.person.passport.photo3.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })

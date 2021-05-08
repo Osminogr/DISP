@@ -21,6 +21,8 @@ namespace App1
             UserName.Text = nowUser.person.firstName + " " + nowUser.person.lastName;
 
             NavigationPage.SetHasNavigationBar(this, false);
+            SideBar.IsVisible = false;
+            SideBarBottom.IsVisible = true;
         }
 
 
@@ -35,6 +37,47 @@ namespace App1
 
         }
 
+        public void OpenBottom(object sender, EventArgs e)
+        {
+            CloseLeftMenu();
+            OpenBottomMenu();
+        }
+
+        public void CloseBottom(object sender, EventArgs e)
+        {
+            CloseBottomMenu();
+        }
+
+        private void CloseBottomMenu()
+        {
+            SideBarBottom.IsEnabled = false;
+            Grid.SetRow(SideBarBottom, 7);
+            Grid.SetRowSpan(SideBarBottom, 1);
+            SideBarBottom.Margin = new Thickness(0, 20, 0, -60);
+        }
+
+        private void OpenBottomMenu()
+        {
+            SideBarBottom.IsEnabled = true;
+            Grid.SetRow(SideBarBottom, 5);
+            Grid.SetRowSpan(SideBarBottom, 4);
+            SideBarBottom.Margin = new Thickness(0, 0, 0, -60);
+        }
+
+        private void OpenLeftMenu()
+        {
+            SideBar.IsEnabled = true;
+            SideBar.IsVisible = true;
+            menuBtn.IsVisible = false;
+        }
+
+        private void CloseLeftMenu()
+        {
+            SideBar.IsEnabled = false;
+            SideBar.IsVisible = false;
+            menuBtn.IsVisible = true;
+        }
+
         public async void Activate(object sender, EventArgs e)
         {
             await DisplayAlert("Ошибка", "Аккаунт не подтверждён", "OK");
@@ -42,14 +85,13 @@ namespace App1
 
         public void Open(object sender, EventArgs e)
         {
-            SideBar.IsEnabled = true;
-            SideBar.IsVisible = true;
+            CloseBottomMenu();
+            OpenLeftMenu();
         }
 
         public void Close(object sender, EventArgs e)
         {
-            SideBar.IsEnabled = false;
-            SideBar.IsVisible = false;
+            CloseLeftMenu();
         }
 
         public async void Videos(object sender, EventArgs e)
@@ -83,6 +125,7 @@ namespace App1
 
         public async void Exit(object sender, EventArgs e)
         {
+            Server.ClearAuthObject();
             await Navigation.PushAsync(new StartPage());
         }
     }

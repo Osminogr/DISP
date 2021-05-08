@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace App1.Domain
 {
@@ -13,8 +14,11 @@ namespace App1.Domain
         public string lastName;
         public string patronymic;
 
+        [JsonIgnore]
         public Photo photo1;
+        [JsonIgnore]
         public Photo photo2;
+        [JsonIgnore]
         public Photo photo3;
 
         public Passport()

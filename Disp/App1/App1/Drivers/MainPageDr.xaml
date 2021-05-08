@@ -6,8 +6,11 @@
              mc:Ignorable="d"
              x:Class="App1.MainPageDr"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
-    <Grid>
-
+    <Grid x:Name="gridRoot">
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
+            <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
+        </Grid.GestureRecognizers>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -20,96 +23,179 @@
         </Grid.RowDefinitions>
 
         <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
-                  Grid.ColumnSpan="2"/>
+                  Grid.ColumnSpan="3"/>
 
-        <Label Text="" Grid.RowSpan="8" Grid.ColumnSpan="2">
+        <Button Grid.Row="0" x:Name="menuBtn" ImageSource="shapemenu.png" BackgroundColor="Transparent" Clicked="Open" IsEnabled="True" Margin="-15, 10, 20, 0"></Button>
+
+        <Label Text="" Grid.RowSpan="7" Grid.ColumnSpan="3" Grid.Row="1">
             <Label.GestureRecognizers>
-                <SwipeGestureRecognizer Direction="Right" Swiped="Open"/>
                 <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
+                <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
+                <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
             </Label.GestureRecognizers>
         </Label>
 
         <Button x:Name="Button1" Text ="Активировать" 
                             Clicked ="Activate"
-                            Grid.Row="6" BackgroundColor="#F39F26" TextColor="#FFFFFF" 
+                            Grid.Row="6" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
                             CornerRadius="40"
                             Margin="30,10" FontAttributes="Bold"
-                Grid.ColumnSpan="2"/>
+                Grid.ColumnSpan="3"/>
 
+        <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -60" IsVisible="True"  IsEnabled="True" Padding="0, 0, 0, 0">
+            <StackLayout Padding="0, 0, 0, 0">
+                <Grid HorizontalOptions="Fill" Margin="20, 17, 20, 0" Padding="0, 0, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="130"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
 
-        <Grid IsVisible="False"  IsEnabled="False" 
-              Grid.RowSpan="8" Grid.Column ="0"
-              x:Name="SideBar" BackgroundColor="#FBFBFB" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Padding="0, 0, 5, 0" Grid.ColumnSpan="3">
+                        <BoxView BackgroundColor="Gray" Opacity="0.2" HeightRequest="5" Margin="0, 0, 0, 0" HorizontalOptions="Center" WidthRequest="50"></BoxView>
+                    </StackLayout>
 
-            <Grid Grid.RowSpan="2" BackgroundColor="#F39F26" >
+                    <Label Text="Привет Саша!" FontAttributes="Bold" Grid.Row="1" Padding="0, 10, 0, 0" Grid.ColumnSpan="3"/>
+                    <Label Text="Благодарю за выбор DISP!" Grid.Row="2" Grid.ColumnSpan="3"/>
+
+                    <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, 0, 10, 0" Padding="0, 5, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Видеоролики" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="У Вас 1 видеоролик" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="3" Grid.Column="1" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, 0, 10, 0" Padding="0, 5, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Баланс" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="2 500 Р" TextColor="White" FontSize="24" Grid.Row="1" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="3" Grid.Column="2" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, 0, 10, 0" Padding="0, 5, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Text="Статистика" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="У Вас запущены 2 рекламные компании" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="4" Grid.Column="0" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, -10, 10, 0" Padding="0, 4, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="4" Grid.Column="1" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, -10, 10, 0" Padding="0, 4, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Grid.Row="4" Grid.Column="2" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, -10, 10, 0" Padding="0, 4, 0, 0">
+                        <Grid VerticalOptions="Fill" Margin="0, 0, 0, 0" Padding="0, 0, 0, 0" HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <BoxView BackgroundColor="White" Margin="0, -50, 0, 0" HeightRequest="10"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="2" x:Name="SideBar" CornerRadius="40" Margin="-35, 50, 0, -25" IsVisible="True"  IsEnabled="False" Padding="20, 0, 0, 25">
+            <Grid  BackgroundColor="#FBFBFB">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                
-                <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="4"/>
-                <Label Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+
+                <Grid Grid.RowSpan="2" BackgroundColor="#F39F26">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="4"/>
+                    <Label Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
                        TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
                        FontSize="14" Grid.RowSpan="2"
                        x:Name="UserName"/>
-            </Grid>
-            <Button BackgroundColor="#0000" Text="Видеоролики"
+                </Grid>
+                <Button BackgroundColor="#0000" Text="Видеоролики"
                     TextColor="Black"
                     HorizontalOptions="Start"
                     Margin="19,0,0,0"
                     Grid.Row="2"
                     Clicked="Videos"/>
 
-            <Button BackgroundColor="#0000" Text="Баланс"
+                <Button BackgroundColor="#0000" Text="Баланс"
                         TextColor="Black"
                         HorizontalOptions="Start"
-                        Margin="15,0,0,0"
+                        Margin="10,0,0,0"
                         Grid.Row="3"
                     Clicked="Balance"/>
-            <Button BackgroundColor="#0000" Text="Оповещения"
+                <Button BackgroundColor="#0000" Text="Оповещения"
                         TextColor="Black"
                         HorizontalOptions="Start"
-                        Margin="18,0,0,0"
+                        Margin="19,0,0,0"
                         Grid.Row="4"
                     Clicked="Alerts"/>
-            <Button BackgroundColor="#0000" Text="Чат"
+                <Button BackgroundColor="#0000" Text="Чат"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Grid.Row="5"
                     Clicked="Chat"/>
-            <Button BackgroundColor="#0000" Text="Настройки"
-                        Margin="17,0,0,0"
+                <Button BackgroundColor="#0000" Text="Настройки"
+                        Margin="19,0,0,0"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Grid.Row="6"
                     Clicked="Settings"/>
-            <Button BackgroundColor="#0000" Text="Выйти"
+                <Button BackgroundColor="#0000" Text="Выйти"
                         FontAttributes="Bold"
-                        TextColor="#F39F26"
+                        TextColor="#FFB800"
                         HorizontalOptions="Start"
-                        Margin="10,0,0,0"
+                        Margin="19,0,0,0"
                         Grid.Row="11"
                     Clicked="Exit"/>
-        </Grid>
-        
-        
+            </Grid>
+
+        </Frame>
 
     </Grid>
 </ContentPage>

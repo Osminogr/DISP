@@ -10,6 +10,7 @@ namespace App1.Domain
         public List<Driver> drivers;
         public Tarif tarif;
         public bool paid;
+        public bool active;
 
         public Compaign()
         {

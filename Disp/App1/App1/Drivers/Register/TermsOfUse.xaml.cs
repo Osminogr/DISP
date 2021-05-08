@@ -5,6 +5,8 @@ using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace App1
 {
@@ -27,11 +29,25 @@ namespace App1
 
         private async void ToDriver(object sender, EventArgs e)
         {
-            HttpContent response = await Server.AddDriver(driver);
-            string answer = await response.ReadAsStringAsync();
+            try
+            {
+                HttpContent response = await Server.AddDriver(driver);
+                string answer = await response.ReadAsStringAsync();
 
-            if (answer != null && answer.Contains("answer")) await Navigation.PushAsync(new MainPageDr(driver));
-            else
+                if (answer != null && answer.Contains(nameof(Driver)))
+                {
+                    JObject j = JObject.Parse(answer);
+                    Driver driverAdv = JsonConvert.DeserializeObject<Driver>(j[nameof(Driver)].ToString());
+                    Server.SaveAuthObject(driverAdv, false);
+                    await Navigation.PushAsync(new MainPageDr(driverAdv));
+                }
+                else
+                {
+                    await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
+                    await Navigation.PushAsync(new StartPage());
+                }
+            }
+            catch (Exception ex)
             {
                 await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
                 await Navigation.PushAsync(new StartPage());

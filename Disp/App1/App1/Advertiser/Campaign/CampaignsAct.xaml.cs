@@ -32,18 +32,13 @@ namespace App1.Advertiser
 
         public async void Request()
         {
-            HttpClient client = new HttpClient();
-
-            var answer = await client.GetAsync(Server.ROOT_URL + "adreq/?id=" + nowUser.id);
-            var responseBody = await answer.Content.ReadAsStringAsync();
-
-            List<Compaign> list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
+            List<Compaign> list = await Server.GetCompaigns(nowUser.id);
 
             if (list != null && list.Count > 0)
             {
                 foreach (var item in list)
                 {
-                    if (item.paid)
+                    if (item.active)
                         compaignAct.Children.Add(new CompaignTemplate(item));
                     else
                         compaignCompl.Children.Add(new CompaignTemplate(item));

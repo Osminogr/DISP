@@ -20509,41 +20509,44 @@ namespace App1.Droid
 			// aapt resource value: 0x7F0701BC
 			public const int shapegray = 2131165628;
 			
+			// aapt resource value: 0x7F0701BD
+			public const int shapemenu = 2131165629;
+			
 			// aapt resource value: 0x7F0701BA
 			public const int shape_incoming_message = 2131165626;
 			
 			// aapt resource value: 0x7F0701BB
 			public const int shape_outcoming_message = 2131165627;
 			
-			// aapt resource value: 0x7F0701BD
-			public const int Taxi = 2131165629;
-			
 			// aapt resource value: 0x7F0701BE
-			public const int TaxiYellow = 2131165630;
+			public const int Taxi = 2131165630;
 			
 			// aapt resource value: 0x7F0701BF
-			public const int test_custom_background = 2131165631;
+			public const int TaxiYellow = 2131165631;
 			
 			// aapt resource value: 0x7F0701C0
-			public const int toolbarbg = 2131165632;
+			public const int test_custom_background = 2131165632;
 			
 			// aapt resource value: 0x7F0701C1
-			public const int tooltip_frame_dark = 2131165633;
+			public const int toolbarbg = 2131165633;
 			
 			// aapt resource value: 0x7F0701C2
-			public const int tooltip_frame_light = 2131165634;
+			public const int tooltip_frame_dark = 2131165634;
 			
 			// aapt resource value: 0x7F0701C3
-			public const int User = 2131165635;
+			public const int tooltip_frame_light = 2131165635;
 			
 			// aapt resource value: 0x7F0701C4
-			public const int video1 = 2131165636;
+			public const int User = 2131165636;
 			
 			// aapt resource value: 0x7F0701C5
-			public const int Videos = 2131165637;
+			public const int video1 = 2131165637;
 			
 			// aapt resource value: 0x7F0701C6
-			public const int x_icon = 2131165638;
+			public const int Videos = 2131165638;
+			
+			// aapt resource value: 0x7F0701C7
+			public const int x_icon = 2131165639;
 			
 			static Drawable()
 			{

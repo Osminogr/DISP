@@ -6,27 +6,25 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="1"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <templates:LineTemplate Grid.Row="0"/>
-            <StackLayout Padding="24,50,24,0" Grid.Row="1">
+            <StackLayout Padding="24,50,24,0" Grid.Row="0">
                 <Label Text="Номер телефона"
                    FontFamily="RobotoBold"/>
                 <Entry Placeholder="+7(000) 000-00-00"
-                   FontSize="16"
+                   FontSize="16" x:Name="currentPhone"
                    Keyboard="Telephone"/>
 
                 <Label Text="Новый номер телефона"
                    FontFamily="RobotoBold"/>
                 <Entry Placeholder="+7(999) 999-99-99"
-                   FontSize="16"
+                   FontSize="16" x:Name="newPhone"
                    Keyboard="Telephone"/>
 
                 <Button Text="Готово"
                     TextColor="#FFFFFF"
-                    Margin="70,20,70,0"
+                    Margin="70,20,70,0" Clicked="SavePhone"
                     BackgroundColor="#FFB800"
                     CornerRadius="40"/>
             </StackLayout>

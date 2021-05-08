@@ -7,10 +7,10 @@ namespace App1.Domain
     {
         public int status;
         public string text;
-        public Entity owner;
+        public bool owner;
         public string day;
         public string time;
-        public Entity receiver;
+        public int? receiver;
 
         public Message() {
         }

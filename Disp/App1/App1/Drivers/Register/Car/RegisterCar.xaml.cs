@@ -6,6 +6,7 @@ using App1.Utils;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
+using System.IO;
 
 namespace App1
 {
@@ -39,6 +40,7 @@ namespace App1
                             photo1.Source = photo.Path;
                             driver.car.photo1 = new Photo();
                             driver.car.photo1.data = photo.GetStream();
+                            driver.car.photo1.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })
@@ -57,6 +59,7 @@ namespace App1
                             photo2.Source = photo.Path;
                             driver.car.photo2 = new Photo();
                             driver.car.photo2.data = photo.GetStream();
+                            driver.car.photo2.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })
@@ -75,6 +78,7 @@ namespace App1
                             photo3.Source = photo.Path;
                             driver.car.photo3 = new Photo();
                             driver.car.photo3.data = photo.GetStream();
+                            driver.car.photo3.name = Path.GetFileName(photo.Path);
                         }
                     }
                 })

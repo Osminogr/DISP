@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="2.0" package="com.sbmgroup.disp" android:installLocation="preferExternal" android:versionCode="2">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="3.0" package="com.sbmgroup.disp" android:installLocation="preferExternal" android:versionCode="3">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
 	<application android:label="Disp.Android" android:icon="@drawable/logo" android:usesCleartextTraffic="true" android:theme="@style/MainTheme">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBdb9NHu2C6MZVsisSZCiGEYTIcMHTIlSs" />

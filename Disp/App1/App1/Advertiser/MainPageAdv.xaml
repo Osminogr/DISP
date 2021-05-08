@@ -9,6 +9,10 @@
 
     <ContentPage.Content>
         <Grid x:Name="gridRoot">
+            <Grid.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
+                    <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
+                </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -19,31 +23,32 @@
             <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
                   Grid.ColumnSpan="3"/>
 
-            <Label Text="" Grid.RowSpan="8" Grid.ColumnSpan="3">
+            <Button Grid.Row="0" x:Name="menuBtn" ImageSource="shapemenu.png" BackgroundColor="Transparent" Clicked="Open" IsEnabled="True" Margin="-15, 10, 20, 0"></Button>
+
+            <Label Text="" Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3">
                 <Label.GestureRecognizers>
-                    <SwipeGestureRecognizer Direction="Right" Swiped="Open"/>
                     <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
                     <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
                     <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
                 </Label.GestureRecognizers>
             </Label>
 
-            <Frame Grid.RowSpan="3" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -50" IsVisible="True"  IsEnabled="True" Padding="0, 0, 0, 0">
+            <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -60" IsVisible="True"  IsEnabled="True" Padding="0, 0, 0, 0">
                 <StackLayout Padding="0, 0, 0, 0">
-                    <Grid HorizontalOptions="Fill" Margin="20, 7, 20, 0" Padding="0, 0, 0, 0">
+                    <Grid HorizontalOptions="Fill" Margin="20, 17, 20, 0" Padding="0, 0, 0, 0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="1"/>
                             <RowDefinition Height="20"/>
+                            <RowDefinition Height="30"/>
                             <RowDefinition Height="20"/>
                             <RowDefinition Height="130"/>
                             <RowDefinition Height="30"/>
                         </Grid.RowDefinitions>
 
-                        <StackLayout Grid.Row="0" Padding="0, 0, 0, 0" Grid.ColumnSpan="3">
+                        <StackLayout Grid.Row="0" Padding="0, 0, 5, 0" Grid.ColumnSpan="3">
                             <BoxView BackgroundColor="Gray" Opacity="0.2" HeightRequest="5" Margin="0, 0, 0, 0" HorizontalOptions="Center" WidthRequest="50"></BoxView>
                         </StackLayout>
 
-                        <Label Text="Привет Саша!" FontAttributes="Bold" Grid.Row="1" Grid.ColumnSpan="3"/>
+                        <Label Text="Привет Саша!" FontAttributes="Bold" Grid.Row="1" Padding="0, 10, 0, 0" Grid.ColumnSpan="3"/>
                         <Label Text="Благодарю за выбор DISP!" Grid.Row="2" Grid.ColumnSpan="3"/>
 
                         <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, 0, 10, 0" Padding="0, 5, 0, 0">
@@ -160,7 +165,7 @@
                     Margin="16,0,0,0"
                     Grid.Row="2"
                     Clicked="Videos"/>
-                    <Button BackgroundColor="#0000" Text="Новая Кампания"
+                    <Button BackgroundColor="#0000" Text="Новая Компания"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Margin="16,0,0,0"

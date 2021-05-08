@@ -5,56 +5,56 @@
              x:Class="App1.Templates.MessageTemplate">
     <StackLayout>
         <Grid Padding="0" Margin="0" VerticalOptions="StartAndExpand" x:Name="MyMessage" IsVisible="false">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Frame HorizontalOptions="EndAndExpand" BackgroundColor="#FFB800" Grid.Row="0" Grid.Column="1" Margin="0, 0, 10, 0" Grid.ColumnSpan="3" CornerRadius="30">
-            <Label Text="{Binding text, Source={x:Reference this}}" FontSize="14" TextColor="White" Margin="0, 0, 0, 0" Padding="1, 0, 1, 0" HorizontalTextAlignment="Center" >
-            </Label>
-        </Frame>
-
-        <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Padding="0" Margin="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="12"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Image Source="senddef.png" x:Name="MyImage" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" Margin="0, 3, -17, 0" Aspect="AspectFill" HeightRequest="14" WidthRequest="14"/>
-            <Label Text="{Binding time, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="End" Opacity="0.5" FontSize="10" TextColor="Gray" Padding="0, 0, 50, 0" Grid.Column="1"/>
+            <Frame HorizontalOptions="EndAndExpand" BackgroundColor="#FFB800" Grid.Row="0" Grid.Column="1" Margin="0, 0, 10, 0" Grid.ColumnSpan="3" CornerRadius="30">
+                <Label Text="{Binding text, Source={x:Reference this}}" FontSize="14" TextColor="White" Margin="10, 0, 10, 0" Padding="1, 0, 1, 0" HorizontalTextAlignment="Center">
+                </Label>
+            </Frame>
+
+            <Grid Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Padding="0" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="12"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="senddef.png" x:Name="MyImage" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" Margin="0, 3, -17, 0" Aspect="AspectFill" HeightRequest="14" WidthRequest="14"/>
+                <Label Text="{Binding time, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="End" Opacity="0.5" FontSize="10" TextColor="Gray" Padding="0, 0, 50, 0" Grid.Column="1"/>
+            </Grid>
         </Grid>
-    </Grid>
 
-    <Grid Padding="0" Margin="0" VerticalOptions="StartAndExpand" x:Name="OtherMessage" IsVisible="false">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="15"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Label Text="{Binding owner, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="Start" Opacity="0.5" FontSize="12" TextColor="Gray" Padding="46, 0, 0, 0" Grid.Column="0" Grid.ColumnSpan="2"/>
-
-        <Frame HorizontalOptions="EndAndExpand" BackgroundColor="#6F6F6F" Grid.Row="1" Grid.Column="0" Margin="10, 0, 0, 0" Grid.ColumnSpan="3" CornerRadius="30">
-            <Label Text="{Binding text, Source={x:Reference this}}" FontSize="14" TextColor="White" Margin="0, 0, 0, 0" Padding="1, 0, 1, 0" HorizontalTextAlignment="Start" >
-            </Label>
-        </Frame>
-
-        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Padding="0" Margin="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"></ColumnDefinition>
-                <ColumnDefinition Width="100"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        <Grid Padding="0" Margin="0" VerticalOptions="StartAndExpand" x:Name="OtherMessage" IsVisible="false">
             <Grid.RowDefinitions>
-                <RowDefinition Height="12"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Image Source="senddef.png" x:Name="OtherImage" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" Margin="0, 3, -4, 0" Aspect="AspectFill" HeightRequest="14" WidthRequest="14"/>
-            <Label Text="{Binding time, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="Start" FontSize="10" Opacity="0.5" TextColor="Gray" Padding="0, 0, 0, 0" Grid.Column="1"/>
+            <Label Text="{Binding owner, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="Start" Opacity="0.5" FontSize="12" TextColor="Gray" Padding="46, 0, 0, 0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Frame HorizontalOptions="StartAndExpand" BackgroundColor="#6F6F6F" Grid.Row="1" Grid.Column="0" Margin="10, 0, 0, 0" Grid.ColumnSpan="3" CornerRadius="30">
+                <Label Text="{Binding text, Source={x:Reference this}}" FontSize="14" TextColor="White" Margin="10, 0, 10, 0" Padding="1, 0, 1, 0" HorizontalTextAlignment="Start" >
+                </Label>
+            </Frame>
+
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Padding="0" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="12"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Source="senddef.png" x:Name="OtherImage" Grid.Row="0" Grid.Column="0" HorizontalOptions="End" Margin="0, 3, -4, 0" Aspect="AspectFill" HeightRequest="14" WidthRequest="14"/>
+                <Label Text="{Binding time, Source={x:Reference this}}" Grid.Row="0" HorizontalTextAlignment="Start" FontSize="10" Opacity="0.5" TextColor="Gray" Padding="0, 0, 0, 0" Grid.Column="1"/>
+            </Grid>
         </Grid>
-    </Grid>
     </StackLayout>
 </ContentView>

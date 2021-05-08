@@ -212,5 +212,6 @@
     <Folder Include="Domain\" />
     <Folder Include="Templates\" />
     <Folder Include="Utils\" />
+    <Folder Include="Domain\Json\" />
   </ItemGroup>
 </Project>

@@ -13,6 +13,7 @@ namespace App1.Advs
     public partial class Alerts : ContentPage
     {
         Adv nowUser;
+        List<Alert> alerts;
         public Alerts(Adv now)
         {
             InitializeComponent();
@@ -24,24 +25,7 @@ namespace App1.Advs
 
         public async void Request()
         {
-            HttpClient client = new HttpClient();
-
-            var answer = await client.GetAsync(Server.ROOT_URL + "alert/?phone=" + nowUser.company.phone.Trim('"'));
-            var responseBody = await answer.Content.ReadAsStringAsync();
-            char[] sym = new char[] { '[', ']', '{', ',' };
-            foreach (var ch in sym)
-            {
-                responseBody = responseBody.Replace(ch.ToString(), "");
-            }
-            string[] str = new string[] { "\\n", "\\r", "\\" };
-            foreach (var c in str)
-            {
-                responseBody = responseBody.Replace(c.ToString(), " ");
-            }
-            responseBody = responseBody.Replace("text\":", " ").Trim(' ');
-            Console.WriteLine(responseBody);
-            Console.WriteLine(Server.ROOT_URL + "alert/?phone=" + nowUser.company.phone);
-            var dictionary = responseBody.Trim('}').Split('}');
+            alerts = await Server.GetAlerts(nowUser);
         }
 
         private void OverrideTitleView(string name, int count)

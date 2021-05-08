@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vv="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              x:Name="this"
-             xmlns:line="clr-namespace:App1.Templates"
              x:Class="App1.Templates.CompaignTemplate">
-    <ScrollView BindingContext="{x:Reference this}">
+    <ScrollView>
         <StackLayout>
             <Grid Margin="0, 0, 0, 0" Padding="0, 0, 0, 0">
                 <Grid.RowDefinitions>
@@ -21,7 +20,7 @@
                 <Frame BackgroundColor="#FFB800"
                        CornerRadius="12" Grid.Column="0" Grid.Row="0" Margin="0,0,0,-20 ">
 
-                    <Label Text="{Binding compaign.video.id}"
+                    <Label Text="{Binding videoName, Source={x:Reference this}}"
                                FontSize="Small"
                                TextColor="White"
                                HorizontalOptions="Center"
@@ -30,7 +29,7 @@
 
                 </Frame>
 
-                <vv:VideoPlayer Source="{Binding compaign.video.url}"
+                <vv:VideoPlayer Source="{Binding url, Source={x:Reference this}}"
                        DisplayControls="True"
                        AutoPlay="False"
                        VerticalOptions="FillAndExpand"
@@ -43,7 +42,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="30"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -81,8 +80,8 @@
                         HeightRequest="10"
                         WidthRequest="10"
                        BackgroundColor="Orange"/>
-                        <Label Text="Эконом" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
-                        <Label Text="Минимальная стоимость размещения: 18 000 Р" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                        <Label Text="{Binding tarifName, Source={x:Reference this}}" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="Минимальная стоимость размещения:" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
                         <Label Text="Минимальный срок размещения: 30 дней" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
                         <Label Text="День показа на одном экране: 60 Р" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
                         <Label Text="День показа на десяти экранах: 600 Р" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>

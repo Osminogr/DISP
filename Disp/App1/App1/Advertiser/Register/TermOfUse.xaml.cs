@@ -5,6 +5,8 @@ using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace App1.RegisterAdvPh
 {
@@ -27,11 +29,25 @@ namespace App1.RegisterAdvPh
 
         private async void ToAdv(object sender, EventArgs e)
         {
-            HttpContent response = await Server.AddAdv(adv);
-            string answer = await response.ReadAsStringAsync();
+            try
+            {
+                HttpContent response = await Server.AddAdv(adv);
+                string answer = await response.ReadAsStringAsync();
 
-            if (answer != null && answer.Contains("answer")) await Navigation.PushAsync(new MainPageAdv(adv));
-            else
+                if (answer != null && answer.Contains(nameof(Adv)))
+                {
+                    JObject j = JObject.Parse(answer);
+                    Adv regAdv = JsonConvert.DeserializeObject<Adv>(j[nameof(Adv)].ToString());
+                    Server.SaveAuthObject(regAdv, true);
+                    await Navigation.PushAsync(new MainPageAdv(regAdv));
+                }
+                else
+                {
+                    await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
+                    await Navigation.PushAsync(new StartPage());
+                }
+            }
+            catch (Exception ex)
             {
                 await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
                 await Navigation.PushAsync(new StartPage());

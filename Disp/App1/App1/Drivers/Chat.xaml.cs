@@ -19,55 +19,6 @@ namespace App1.Drivers
             nowUser = now;
             InitializeComponent();
 
-            Adv owner = new Adv();
-            owner.id = 1;
-            owner.name = "Администратор";
-
-            Message message = new Message();
-            message.receiver = nowUser;
-            message.owner = nowUser;
-            message.status = 1;
-            message.text = "Привет! Как дела?";
-            message.time = DateTime.Now.ToShortTimeString();
-
-            createMessage(message);
-
-            message = new Message();
-            message.receiver = nowUser;
-            message.owner = owner;
-            message.status = 1;
-            message.text = "Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела?";
-            message.time = DateTime.Now.ToShortTimeString();
-
-            createMessage(message);
-
-            message = new Message();
-            message.receiver = nowUser;
-            message.owner = owner;
-            message.status = 2;
-            message.text = "Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела?";
-            message.time = DateTime.Now.ToShortTimeString();
-
-            createMessage(message);
-
-            message = new Message();
-            message.receiver = nowUser;
-            message.owner = nowUser;
-            message.status = 2;
-            message.text = "Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела?";
-            message.time = DateTime.Now.ToShortTimeString();
-
-            createMessage(message);
-
-            message = new Message();
-            message.receiver = nowUser;
-            message.owner = owner;
-            message.status = 3;
-            message.text = "Привет! Как дела? Привет! Как дела? Привет! Как дела? Привет! Как дела?";
-            message.time = DateTime.Now.ToShortTimeString();
-
-            createMessage(message);
-
             OverrideTitleView("Чат", 100, -1);
         }
 

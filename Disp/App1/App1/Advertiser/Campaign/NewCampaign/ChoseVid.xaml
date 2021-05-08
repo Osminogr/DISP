@@ -7,7 +7,6 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout x:Name="videos" Padding="0" Margin="0">
-                <templates:LineTemplate/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

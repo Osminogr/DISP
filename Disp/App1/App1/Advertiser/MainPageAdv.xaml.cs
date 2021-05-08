@@ -56,26 +56,54 @@ namespace App1
 
         public void Open(object sender, EventArgs e)
         {
+            CloseBottomMenu();
+            OpenLeftMenu();
+        }
+
+        private void OpenLeftMenu()
+        {
             SideBar.IsEnabled = true;
             SideBar.IsVisible = true;
+            menuBtn.IsVisible = false;
         }
 
         public void Close(object sender, EventArgs e)
         {
+            CloseLeftMenu();
+        }
+
+        private void CloseLeftMenu()
+        {
             SideBar.IsEnabled = false;
             SideBar.IsVisible = false;
+            menuBtn.IsVisible = true;
         }
 
         public void OpenBottom(object sender, EventArgs e)
         {
-            SideBarBottom.IsEnabled = true;
-            SideBarBottom.IsVisible = true;
+            CloseLeftMenu();
+            OpenBottomMenu();
         }
 
         public void CloseBottom(object sender, EventArgs e)
         {
+            CloseBottomMenu();
+        }
+
+        private void CloseBottomMenu()
+        {
             SideBarBottom.IsEnabled = false;
-            SideBarBottom.IsVisible = false;
+            Grid.SetRow(SideBarBottom, 7);
+            Grid.SetRowSpan(SideBarBottom, 1);
+            SideBarBottom.Margin = new Thickness(0, 20, 0, -60);
+        }
+
+        private void OpenBottomMenu()
+        {
+            SideBarBottom.IsEnabled = true;
+            Grid.SetRow(SideBarBottom, 5);
+            Grid.SetRowSpan(SideBarBottom, 4);
+            SideBarBottom.Margin = new Thickness(0, 0, 0, -60);
         }
 
         public async void Videos(object sender, EventArgs e)
@@ -115,7 +143,7 @@ namespace App1
 
         public async void Exit(object sender, EventArgs e)
         {
-            Preferences.Clear();
+            Server.ClearAuthObject();
             await Navigation.PushAsync(new StartPage());
         }
 

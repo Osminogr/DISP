@@ -8,7 +8,6 @@
     <ContentPage.Content>
         <ScrollView BindingContext="{x:Reference this}">
             <StackLayout>
-                <templates:LineTemplate/>
                 <Grid Padding="20, 20, 20, 20">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>

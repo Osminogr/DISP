@@ -393,6 +393,8 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Debug/netst
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/MainPageAdv.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/PayPage.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/Ph/FIO.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/RegisterChooseAdv.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/RegisterPhone.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/TermOfUse.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/YL/Bank.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/YL/Organiz.xaml.g.cs
@@ -413,6 +415,7 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Debug/netst
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/Car/RegisterCar.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/Card.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/DrLic/RegisterDrLic.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/RegisterChooseDriver.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/RegPasp/RegisterPasp.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/TermsOfUse.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Settings/BankUpdate.xaml.g.cs
@@ -425,6 +428,7 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Debug/netst
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/StatDriver.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Videos.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/LogoPage.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Register.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/StartPage.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Templates/CompaignTemplate.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Templates/DriversTemplate.xaml.g.cs
@@ -440,7 +444,3 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Debug/netst
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/ref/DISP.dll
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/DISP.pdb
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/App1.csprojAssemblyReference.cache
-/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Register.xaml.g.cs
-/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/RegisterChooseAdv.xaml.g.cs
-/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Advertiser/Register/RegisterPhone.xaml.g.cs
-/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Drivers/Register/RegisterChooseDriver.xaml.g.cs
