@@ -5,15 +5,15 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              xmlns:templates="clr-namespace:App1.Templates">
     <ContentPage.Content>
-        <Grid Padding="0" Margin="0">
+        <Grid Padding="0" Margin="0" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="1"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <templates:LineTemplate Grid.Row="0"/>
-
-            <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" Grid.Row="1" HasScrollEnabled="False" HasZoomEnabled="False"/>
+            <StackLayout Grid.RowSpan="8" Grid.Row="0" VerticalOptions="FillAndExpand" Padding="0" Margin="0">
+                <maps:Map x:Name="map" IsShowingUser = "True" Margin="0" HasScrollEnabled="False" VerticalOptions="FillAndExpand" HasZoomEnabled="False"/>
+            </StackLayout>
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

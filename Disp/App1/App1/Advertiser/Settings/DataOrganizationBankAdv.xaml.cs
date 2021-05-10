@@ -36,30 +36,45 @@ namespace App1.Advertiser.Settings
             {
                 try
                 {
-                    nowUser.company.accountNumber.bankAddress = Address.Text;
-                    nowUser.company.accountNumber.bankName = Name.Text;
-                    nowUser.company.accountNumber.bik = BIK.Text;
-                    nowUser.company.accountNumber.bunkNumberK = NumberK.Text;
-                    nowUser.company.accountNumber.bunkNumberR = NumberR.Text;
+                    bool v1 = false, v2 = false, v3 = false, v4 = false, v5 = false;
 
-                    HttpContent answer = await Server.SaveAccountNumber(nowUser.company.accountNumber);
-                    string response = await answer.ReadAsStringAsync();
+                    if (Name.Text.Length != 0) v1 = true;
+                    if (Address.Text.Length != 0) v2 = true;
+                    if (NumberK.Text.Length == 20) v3 = true;
+                    if (NumberR.Text.Length == 20) v4 = true;
+                    if (BIK.Text.Length == 9) v5 = true;
 
-                    if (response == null || (response != null && !response.Contains(nameof(AccountNumber))))
+                    if (v1 && v2 && v3 && v4 && v5)
                     {
-                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
+                        nowUser.company.accountNumber.bankAddress = Address.Text;
+                        nowUser.company.accountNumber.bankName = Name.Text;
+                        nowUser.company.accountNumber.bik = BIK.Text;
+                        nowUser.company.accountNumber.bunkNumberK = NumberK.Text;
+                        nowUser.company.accountNumber.bunkNumberR = NumberR.Text;
+
+                        HttpContent answer = await Server.SaveAccountNumber(nowUser.company.accountNumber);
+                        string response = await answer.ReadAsStringAsync();
+
+                        if (response == null || (response != null && !response.Contains(nameof(AccountNumber))))
+                        {
+                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
+                        }
+                        else
+                        {
+                            Server.SaveAuthObject(nowUser, true);
+
+                            await Navigation.PopAsync(true);
+                        }
                     }
                     else
                     {
-                        Server.SaveAuthObject(nowUser, nowUser.isCompany);
+                        await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }
-
-                await Navigation.PopAsync();
             })));
         }
     }

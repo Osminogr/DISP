@@ -80,11 +80,11 @@
                         HeightRequest="10"
                         WidthRequest="10"
                        BackgroundColor="Orange"/>
-                        <Label Text="{Binding tarifName, Source={x:Reference this}}" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
-                        <Label Text="Минимальная стоимость размещения:" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
-                        <Label Text="Минимальный срок размещения: 30 дней" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
-                        <Label Text="День показа на одном экране: 60 Р" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
-                        <Label Text="День показа на десяти экранах: 600 Р" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
+                        <Label Text="" x:Name="tarifName" TextColor="Orange" Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="" x:Name="tarifAmount" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                        <Label Text="" x:Name="tarifDay" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
+                        <Label Text="" x:Name="tarifAmountDay" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
+                        <Label Text="" x:Name="tarifAmountTenDays" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
 
                     </Grid>
                 </Frame>

@@ -13,6 +13,7 @@ using App1.Utils;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Windows.Input;
+using App1.Templates;
 
 namespace App1.Advertiser.Campaign.NewCampaign
 {
@@ -20,7 +21,8 @@ namespace App1.Advertiser.Campaign.NewCampaign
     public partial class ChoseTarif : ContentPage
     {
         Adv nowUser;
-        int type;
+        Tarif selectedTarif;
+        List<TarifTemplate> tarifTemplates = new List<TarifTemplate>();
         public ChoseTarif(Adv adv)
         {
             this.nowUser = adv;
@@ -28,85 +30,70 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
             OverrideTitleView("Тарифный план", "Выбрать", -1);
 
-            BindingContext = this;
-            type = -1;
+            Request();
+        }
 
-            tarif01.GestureRecognizers.Add(new TapGestureRecognizer() {
-                Command = new Command(() => {
-                    tarif01.BorderColor = Color.FromHex("#FFB800");
-                    tarif02.BorderColor = Color.Transparent;
-                    tarif03.BorderColor = Color.Transparent;
-                    type = 1;
-                })
-            });
-
-            tarif02.GestureRecognizers.Add(new TapGestureRecognizer()
+        private async void Request()
+        {
+            try
             {
-                Command = new Command(() => {
-                    tarif01.BorderColor = Color.Transparent;
-                    tarif02.BorderColor = Color.FromHex("#FFB800");
-                    tarif03.BorderColor = Color.Transparent;
-                    type = 2;
-                })
-            });
+                List<Tarif> tarifs = await Server.GetTarifs();
 
-            tarif03.GestureRecognizers.Add(new TapGestureRecognizer()
+                if (tarifs != null && tarifs.Count != 0)
+                {
+                    foreach(var tarif in tarifs)
+                    {
+                        TarifTemplate view = new TarifTemplate(tarif)
+                        {
+                            selectedTarif = OnTarifSelected
+                        };
+                        tarifsView.Children.Add(view);
+
+                        tarifTemplates.Add(view);
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Сообщение", "В данный момент тарифы недоступны! Попробуйте позже.", "Закрыть");
+                    await Navigation.PopAsync(true);
+                }
+            }
+            catch (Exception ex)
             {
-                Command = new Command(() => {
-                    tarif01.BorderColor = Color.Transparent;
-                    tarif02.BorderColor = Color.Transparent;
-                    tarif03.BorderColor = Color.FromHex("#FFB800");
-                    type = 3;
-                })
-            });
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void OnTarifSelected(object sender, Tarif tarif)
+        {
+            this.selectedTarif = tarif;
+
+            if (tarifTemplates.Count > 0)
+            {
+                foreach (var template in tarifTemplates)
+                {
+                    if (template.tarifInner.id != selectedTarif.id)
+                    {
+                        ((Frame)template.FindByName("tarifView")).BorderColor = Color.Transparent;
+                    }
+                }
+            }
         }
 
         private void OverrideTitleView(string name, string nameAction, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, count, new Command(() => {
-                SelectTarif(type);
+                SelectTarif(selectedTarif);
             })));
         }
 
-        public async void SelectTarif(int type)
+        public async void SelectTarif(Tarif tarif)
         {
-            Tarif tarif = new Tarif();
-
-            if (type == 1)
-            {
-                tarif.name = "Эконом";
-                tarif.amountDay = 60;
-                tarif.amountTenDays = 600;
-                tarif.amount = 18000;
-                tarif.minDays = 30;
-                tarif.id = 1;
-            }
-
-            if (type == 2)
-            {
-                tarif.name = "Стандарт";
-                tarif.amountDay = 100;
-                tarif.amountTenDays = 1000;
-                tarif.amount = 30000;
-                tarif.minDays = 30;
-                tarif.id = 2;
-            }
-
-            if (type == 3)
-            {
-                tarif.name = "Люкс";
-                tarif.amountDay = 150;
-                tarif.amountTenDays = 1500;
-                tarif.amount = 45000;
-                tarif.minDays = 30;
-                tarif.id = 3;
-            }
-
             Compaign compaign = new Compaign();
             compaign.tarif = tarif;
             compaign.adv = nowUser;
 
-            await Navigation.PushAsync(new ConfirmTarif(compaign));
+            await Navigation.PushAsync(new ConfirmTarif(compaign), true);
         }
     }
 }

@@ -7,6 +7,8 @@ namespace App1.Domain
         public Adv adv;
         public Driver driver;
         public bool isCompany;
+        public bool showAllDrivers;
+        public bool showDriverAdReq;
 
         public AuthObject()
         {

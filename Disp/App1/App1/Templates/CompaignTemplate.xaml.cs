@@ -42,38 +42,12 @@ namespace App1.Templates
             set => SetValue(UrlProperty, value);
         }
 
-        public static readonly BindableProperty tarifNameProperty = BindableProperty.Create(
-                                                              "tarifName",
-                                                              typeof(string),
-                                                              typeof(CompaignTemplate),
-                                                              string.Empty);
-
-        public string tarifName
-        {
-            get => (string)GetValue(tarifNameProperty);
-            set => SetValue(tarifNameProperty, value);
-        }
-
-        public static readonly BindableProperty amountProperty = BindableProperty.Create(
-                                                              "amount",
-                                                              typeof(string),
-                                                              typeof(CompaignTemplate),
-                                                              string.Empty);
-
-        public string amount
-        {
-            get => (string)GetValue(amountProperty);
-            set => SetValue(amountProperty, value);
-        }
-
         public CompaignTemplate(Entity entity)
         {
             compaign = (Compaign) entity;
 
             url = compaign.video.url;
-            tarifName = compaign.tarif.name;
             videoName = compaign.video.name;
-            amount = compaign.tarif.amount.ToString();
 
             InitializeComponent();
 
@@ -86,6 +60,12 @@ namespace App1.Templates
             {
                 Command = new Command(() => { Navigation.PushAsync(new Advertiser.Campaign.HeatMap(compaign)); })
             });
+
+            tarifName.Text = compaign.tarif.name;
+            tarifAmount.Text = String.Format("Минимальная стоимость размещения: {0}Р", compaign.tarif.amount);
+            tarifAmountDay.Text = String.Format("День показа на одном экране: {0}Р", compaign.tarif.amountDay);
+            tarifDay.Text = String.Format("Минимальный срок размещения: {0} дней", compaign.tarif.minDays);
+            tarifAmountTenDays.Text = String.Format("День показа на десяти экранах: {0}Р", compaign.tarif.amountTenDays);
         }
 
         private async void ToRates(object sender, EventArgs e)

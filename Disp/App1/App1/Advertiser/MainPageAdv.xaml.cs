@@ -12,6 +12,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace App1
 {
@@ -33,6 +34,37 @@ namespace App1
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
             SideBarBottom.IsVisible = true;
+
+            companyName.Text = now.company.name;
+
+            AuthObject authObject = Server.GetAuthObject();
+            if (authObject != null) showAllDrivers.IsToggled = authObject.showAllDrivers;
+
+            LoadStatsVideos();
+        }
+
+        private async void LoadStatsVideos()
+        {
+            try
+            {
+                List<Video> videos = await Server.GetVideos(nowUser, false);
+                if (videos != null)
+                {
+                    if (videos.Count == 0) videosCount.Text = "У Вас нет видеороликов";
+                    else videosCount.Text = String.Format("У Вас {0} видеоролик(ов)", videos.Count);
+                }
+
+                List<Compaign> compaigns = await Server.GetCompaigns(nowUser.id);
+                if (compaigns != null)
+                {
+                    if (compaigns.Count == 0) compaignCount.Text = "У Вас нет рекламных компаний";
+                    else compaignCount.Text = String.Format("У Вас {0} рекламных компаний", compaigns.Count);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private async void MoveMap()
@@ -148,9 +180,9 @@ namespace App1
         }
 
 
-        public async void Switched(object sender, EventArgs e)
+        public void Switched(object sender, EventArgs e)
         {
-
+            Server.SaveShowAllDrivers(showAllDrivers.IsToggled);
         }
 
         public async void LoadVideo(object sender, EventArgs e)

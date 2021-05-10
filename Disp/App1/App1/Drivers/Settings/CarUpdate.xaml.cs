@@ -2,6 +2,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
+using System.Net.Http;
 
 namespace App1.Drivers.Settings
 {
@@ -12,6 +14,7 @@ namespace App1.Drivers.Settings
         public CarUpdate(Driver now)
         {
             nowUser = now;
+
             InitializeComponent();
             Mark.Text = nowUser.car.mark;
             Model.Text = nowUser.car.model;
@@ -20,52 +23,51 @@ namespace App1.Drivers.Settings
             Color.Text = nowUser.car.color;
             VIN.Text = nowUser.car.vin;
             Reg.Text = nowUser.car.regNumberCar;
-            ToolbarItem tb = new ToolbarItem
-            {
-                Text = "Сохранить"
-            };
-            tb.Clicked += async (s, e) =>
+
+            OverrideTitleView("Автомобиль", "Сохранить", 80, -1);
+        }
+
+        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
                 bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false;
-                if (Mark.Text != null)
-                {
-                    b1 = true;
-                    nowUser.car.mark = Mark.Text;
-                }
-                if (Model.Text != null)
-                {
-                    b2 = true;
-                    nowUser.car.model = Model.Text;
-                }
-                if (Number.Text != null)
-                {
-                    b3 = true;
-                    nowUser.car.carNumber = Number.Text;
-                }
-                if (Data.Text != null)
-                {
-                    b4 = true;
-                    nowUser.car.dataCar = Data.Text;
-                }
-                if (Color.Text != null)
-                {
-                    b5 = true;
-                    nowUser.car.color = Color.Text;
-                }
-                if (VIN.Text != null)
-                {
-                    b6 = true;
-                    nowUser.car.vin = VIN.Text;
-                }
-                if (Reg.Text != null)
-                {
-                    b7 = true;
-                    nowUser.car.regNumberCar = Reg.Text;
-                }
+                if (Mark.Text != null) b1 = true;
+                if (Model.Text != null) b2 = true;
+                if (Number.Text != null) b3 = true;
+                if (Data.Text != null) b4 = true;
+                if (Color.Text != null) b5 = true;
+                if (VIN.Text != null) b6 = true;
+                if (Reg.Text != null) b7 = true;
+
                 if (b1 && b2 && b3 && b4 && b5 && b6 && b7)
-                    await Navigation.PopAsync();
-            };
-            ToolbarItems.Add(tb);
+                {
+                    nowUser.car.mark = Mark.Text;
+                    nowUser.car.model = Model.Text;
+                    nowUser.car.carNumber = Number.Text;
+                    nowUser.car.dataCar = Data.Text;
+                    nowUser.car.color = Color.Text;
+                    nowUser.car.vin = VIN.Text;
+                    nowUser.car.regNumberCar = Reg.Text;
+
+                    HttpContent answer = await Server.SaveCar(nowUser.car);
+                    string response = await answer.ReadAsStringAsync();
+
+                    if (response == null || (response != null && !response.Contains(nameof(Car))))
+                    {
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                    }
+                    else
+                    {
+                        Server.SaveAuthObject(nowUser, false);
+                        await Navigation.PopAsync(true);
+                    }
+                }
+                else
+                {
+                    await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                }
+            })));
         }
     }
 }

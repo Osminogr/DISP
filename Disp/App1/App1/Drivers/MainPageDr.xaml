@@ -67,7 +67,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Label Text="Видеоролики" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
-                            <Label Text="У Вас 1 видеоролик" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                            <Label Text="" x:Name="VideosCount" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
                         </Grid>
                     </Frame>
 
@@ -98,7 +98,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800" Clicked="Videos"></Button>
                         </Grid>
                     </Frame>
 
@@ -107,7 +107,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800" Clicked="Balance"></Button>
                         </Grid>
                     </Frame>
 
@@ -116,7 +116,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
-                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800"></Button>
+                            <Button Text="Посмотреть" TextColor="White" BackgroundColor="#FFB800" Clicked="StatDriver_Clicked"></Button>
                         </Grid>
                     </Frame>
                 </Grid>

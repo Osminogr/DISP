@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Templates;
+using App1.Utils;
 
 namespace App1.Drivers
 {
@@ -22,55 +23,46 @@ namespace App1.Drivers
             
             BindingContext = vid;
             InitializeComponent();
-            Reload();
+
+            Request();
         }
 
         public async void Request()
         {
+            List<Video> list = await Server.GetVideos(nowUser, true);
 
-            HttpClient client = new HttpClient();
-            var i = 0;
-            var answer = await client.GetAsync(Server.ROOT_URL + "video/?phone=" + nowUser.person.phone);
-            var responseBody = await answer.Content.ReadAsStringAsync();
+            videos.Children.Clear();
 
-            var dictionary = responseBody
-            .Split(',')
-            .ToList<string>();
-            foreach (var x in dictionary)
+            bool loaded = false;
+
+            if (list != null && list.Count != 0)
             {
+                loaded = true;
 
-                videos.Children.Add(new VideoTemplate { Name = x, Url = "http://46.101.167.149:8000/media/" + x });
+                foreach (var item in list)
+                {
+                    videos.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
+                }
+
+                OverrideTitleView("Видеоролики", videos.Children.Count);
+            }
+
+            if (!loaded)
+            {
+                Label label = new Label();
+                label.Text = "У Вас нет видеороликов";
+                label.HorizontalOptions = LayoutOptions.Center;
+                label.VerticalOptions = LayoutOptions.Center;
+
+                videos.Children.Add(label);
+
+                OverrideTitleView("Видеоролики(0)", -1);
             }
         }
 
-        async void Reload()
+        private void OverrideTitleView(string name, int count)
         {
-            HttpClient client = new HttpClient();
-            HttpRequestMessage request = new HttpRequestMessage();
-
-            request.RequestUri = new Uri(Server.ROOT_URL + "video/?phone=" + nowUser.person.phone);
-            request.Method = HttpMethod.Get;
-
-            var answer = await client.SendAsync(request);
-
-            if (answer.StatusCode == System.Net.HttpStatusCode.OK)
-            {
-                foreach (var x in vid)
-                {
-                    videos.Children.Clear();
-
-                    videos.Children.Add(x);
-                }
-            }
-            else
-            {
-                videos.Children.Add(new Label()
-                {
-                    Text = "Нет проигрываемых видео",
-                    VerticalOptions = LayoutOptions.Center,
-                    HorizontalOptions = LayoutOptions.Center
-                });
-            }
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
         }
     }
 }

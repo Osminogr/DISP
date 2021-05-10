@@ -32,10 +32,13 @@ namespace App1.Advertiser
 
         public async void Request()
         {
+            bool loaded = false;
+
             List<Compaign> list = await Server.GetCompaigns(nowUser.id);
 
             if (list != null && list.Count > 0)
             {
+                loaded = true;
                 foreach (var item in list)
                 {
                     if (item.active)
@@ -43,6 +46,24 @@ namespace App1.Advertiser
                     else
                         compaignCompl.Children.Add(new CompaignTemplate(item));
                 }
+            }
+
+            if (!loaded)
+            {
+                Label lAct = new Label();
+                lAct.Text = "У Вас нет рекламных компаний";
+                lAct.HorizontalOptions = LayoutOptions.Center;
+                lAct.VerticalOptions = LayoutOptions.Center;
+
+                Label lCompl = new Label();
+                lCompl.Text = "У Вас нет рекламных компаний";
+                lCompl.HorizontalOptions = LayoutOptions.Center;
+                lCompl.VerticalOptions = LayoutOptions.Center;
+
+                compaignAct.Children.Add(lAct);
+                compaignCompl.Children.Add(lCompl);
+
+                OverrideTitleView("Мои компании", -1);
             }
         }
 

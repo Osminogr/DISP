@@ -7,36 +7,23 @@
              x:Class="App1.Drivers.Register.RegisterChooseDriver">
 
     <ContentPage.Content>
-        <Grid Padding="20,0,20,0">
+        <Grid Padding="24,20,20,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             
-            <Label Text="Имя" TextColor="Black" Padding="5, 10, 0, 0"
-                   Grid.Row="1"/>
-            <Entry TextColor="#CCCCCC" FontSize="16"
-                Grid.Row="2"  
-                x:Name="Name"/>
+            <Label Text="Имя" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="0"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="0" x:Name="Name"/>
 
-            <Label Text="Фамилия" TextColor="Black" Padding="5, 10, 0, 0"
-                   Grid.Row="3"/>
-            <Entry TextColor="#CCCCCC" FontSize="16"
-                Grid.Row="4"
-                x:Name="LastName"/>
+            <Label Text="Фамилия" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="1"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="1" x:Name="LastName"/>
 
-            <Label Text="Отчество" TextColor="Black" Padding="5, 10, 0, 0"
-                   Grid.Row="5"/>
-            <Entry TextColor="#CCCCCC" FontSize="16"
-                Grid.Row="6"
-                x:Name="Patronymic"/>
+            <Label Text="Отчество" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="2"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="2" x:Name="Patronymic"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

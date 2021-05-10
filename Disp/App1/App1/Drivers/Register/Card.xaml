@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Grid Padding="20,35,20,0" Grid.Row="1">
+                <Grid Padding="24,20,20,0" Grid.Row="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
@@ -17,21 +17,21 @@
                     </Grid.RowDefinitions>
 
                     <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
-                       x:Name="Name" TextColor="#CCCCCC"
+                       x:Name="Name" TextColor="#CCCCCC" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Адрес банка" Grid.Row="1" TextColor="#CCCCCC"
-                       x:Name="Address"
+                       x:Name="Address" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
                        x:Name="NumberR" TextColor="#CCCCCC"
-                       Keyboard="Numeric"
+                       Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
                        x:Name="NumberK" TextColor="#CCCCCC"
-                       Keyboard="Numeric"
+                       Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="БИК банка" Grid.Row="4"
-                       FontSize="16" TextColor="#CCCCCC"
+                       FontSize="16" TextColor="#CCCCCC" MaxLength="9"
                         x:Name="BIK"/>
                 </Grid>
             </StackLayout>

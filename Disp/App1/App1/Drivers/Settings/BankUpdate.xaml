@@ -4,23 +4,31 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.Drivers.Settings.BankUpdate"
-             Title="Настройки">
+             x:Class="App1.Drivers.Settings.BankUpdate">
     <ContentPage.Content>
-        <Grid Margin="20,0,20,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label Text="Информация о карте"  TextColor="#FFB800" 
-                   FontSize="25" HorizontalOptions="Start" VerticalOptions="Center"  
-                   FontAttributes="Bold" Grid.Row="0"/>
-            <Entry Placeholder="Номер карты" Grid.Row="1" x:Name="Numb"/>
-        </Grid>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Padding="20,1,20,0" Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0" x:Name="Name" MaxLength="50" FontSize="16"/>
+                    <Entry Placeholder="Адрес банка" Grid.Row="1" x:Name="Address" MaxLength="50" FontSize="16"/>
+                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2" x:Name="NumberR" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
+                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3" x:Name="NumberK" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
+                    <Entry Placeholder="БИК банка" Grid.Row="4" FontSize="16" Keyboard="Numeric" MaxLength="9" x:Name="BIK"/>
+                </Grid>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

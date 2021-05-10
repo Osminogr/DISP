@@ -13,16 +13,16 @@
                 <ScrollView Padding="24,20,24,20" Grid.Row="0">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -30,24 +30,24 @@
                         </Grid.ColumnDefinitions>
 
                         <Entry Placeholder="Полное наименование организации"
-                           FontSize="15"
+                           FontSize="17" MaxLength="50"
                            Grid.Row="0" x:Name="Name"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="Юридический адрес"
-                           FontSize="17"
+                           FontSize="17" MaxLength="50"
                            Grid.Row="1" x:Name="Address"
                            Grid.ColumnSpan="2"/>
-                        <Entry Placeholder="ОГРН"
-                           FontSize="17"
+                        <Entry Placeholder="ОГРН" Keyboard="Numeric"
+                           FontSize="17" MaxLength="13"
                            Grid.Row="2" x:Name="Ogrn"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="ИНН"
                            FontSize="17" x:Name="Inn"
-                           Grid.Row="3"
+                           Grid.Row="3" MaxLength="10"
                            Grid.Column="0"
                            Keyboard="Numeric"/>
                         <Entry Placeholder="КПП"
-                           FontSize="17"
+                           FontSize="17" MaxLength="9"
                            Grid.Row="3" x:Name="Kpp"
                            Grid.Column="1"
                            Keyboard="Numeric"/>
@@ -55,30 +55,30 @@
                         <Label Text="Руководитель"
                            FontSize="18"
                            TextColor="#FFB800"
-                           Padding="0,20,0,0"
+                           Padding="4,5,0,0"
                            Grid.Row="4"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="ФИО (полностью)"
                            FontSize="17" x:Name="fioDir"
-                           Grid.Row="5"
+                           Grid.Row="5" MaxLength="30"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="Должность"
                            FontSize="17" x:Name="posDir"
-                           Grid.Row="6"
+                           Grid.Row="6" MaxLength="20"
                            Grid.ColumnSpan="2"/>
                         <Label Text="Контактное лицо"
                            FontSize="18"
                            TextColor="#FFB800"
-                           Padding="0,20,0,0"
+                           Padding="4,5,0,0"
                            Grid.Row="7"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="ФИО (полностью)"
-                           FontSize="17"
+                           FontSize="17" MaxLength="30"
                            Grid.Row="8" x:Name="fioManag"
                            Grid.ColumnSpan="2"/>
                         <Entry Placeholder="Должность"
                            FontSize="17" x:Name="posManag"
-                           Grid.Row="9"
+                           Grid.Row="9" MaxLength="20"
                            Grid.ColumnSpan="2"/>
 
 

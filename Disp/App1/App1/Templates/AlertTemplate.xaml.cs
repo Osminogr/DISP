@@ -14,14 +14,16 @@ namespace App1.Templates
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [DesignTimeVisible(true)]
-    public partial class DriversTemplate: ContentView
+    public partial class AlertTemplate: ContentView
     {
-        public DriversTemplate(Driver driver)
+        public AlertTemplate(Alert alert)
         {
             InitializeComponent();
 
-            carDriver.Text = String.Format("{0} {1}", driver.car.mark, driver.car.model);
-            fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
+            title.Text = alert.title;
+            header.Text = alert.header;
+            text.Text = alert.text;
+            date.Text = alert.date;
         }
     }
 }

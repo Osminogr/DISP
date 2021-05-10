@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using App1.Utils;
 
 namespace App1.Drivers.Settings
 {
@@ -16,6 +17,12 @@ namespace App1.Drivers.Settings
         public ContractAdverService(Driver nowUser)
         {
             InitializeComponent();
+            OverrideTitleView("Соглашение", 90, -1);
+        }
+
+        private void OverrideTitleView(string name, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, left, count));
         }
     }
 }

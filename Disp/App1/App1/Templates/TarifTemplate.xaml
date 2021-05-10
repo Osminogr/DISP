@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this"
+             x:Class="App1.Templates.TarifTemplate">
+    <StackLayout>
+        <Frame CornerRadius="10" Margin="10,20,10,10" HasShadow="True" MinimumHeightRequest="100" MinimumWidthRequest="50" Grid.Row="0" x:Name="tarifView">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="1"
+                                    Grid.Column="0"
+                                    Padding="0"
+                                    HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="Center"
+                                   CornerRadius="100"
+                                   IsClippedToBounds="True"
+                                   HeightRequest="10"
+                                   WidthRequest="10"
+                                   BackgroundColor="#FFB800"/>
+                <BoxView BackgroundColor = "Gray"
+                         WidthRequest="3"
+                         Grid.Row="1"
+                         Grid.RowSpan="4"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Center"
+                             Margin="0,20,0,20"/>
+                <Frame Grid.Row="4"
+                        Grid.Column="0"
+                        Padding="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        CornerRadius="100"
+                        IsClippedToBounds="True"
+                        HeightRequest="10"
+                        WidthRequest="10"
+                       BackgroundColor="#FFB800"/>
+                <Label Text="" x:Name="tarifName" TextColor="#FFB800" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="" x:Name="tarifAmount" TextColor="Gray" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="" x:Name="tarifDays" TextColor="Gray" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="" x:Name="tarifAmountDay" TextColor="Gray" Grid.Row="3" Grid.Column="1"/>
+                <Label Text="" x:Name="tarifAmountTenDays" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentView>

@@ -61,12 +61,7 @@ namespace App1.Advertiser
             countInValid = 0;
             countValid = 0;
 
-            HttpClient client = new HttpClient();
-
-            var answer = await client.GetAsync(Server.ROOT_URL + "video/?id=" + nowUser.id);
-            var responseBody = await answer.Content.ReadAsStringAsync();
-
-            List<Video> list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
+            List<Video> list = await Server.GetVideos(nowUser, false);
 
             videosAct.Children.Clear();
             videosAppr.Children.Clear();
@@ -91,19 +86,25 @@ namespace App1.Advertiser
                     }
                 }
 
-                OverrideTitleView("Видеоролики", countValid);
+                OverrideTitleView("Видеоролики", countInValid);
             }
 
             if (!loaded)
             {
-                Label l = new Label();
-                l.Text = "У Вас нет загруженных видеороликов";
-                l.HorizontalOptions = LayoutOptions.Center;
-                l.VerticalOptions = LayoutOptions.Center;
-                videosAct.Children.Add(new Label());
-                videosAppr.Children.Add(new Label());
+                Label lAct = new Label();
+                lAct.Text = "У Вас нет загруженных видеороликов";
+                lAct.HorizontalOptions = LayoutOptions.Center;
+                lAct.VerticalOptions = LayoutOptions.Center;
 
-                OverrideTitleView("Видеоролики", -1);
+                Label lAppr = new Label();
+                lAppr.Text = "У Вас нет загруженных видеороликов";
+                lAppr.HorizontalOptions = LayoutOptions.Center;
+                lAppr.VerticalOptions = LayoutOptions.Center;
+
+                videosAct.Children.Add(lAct);
+                videosAppr.Children.Add(lAppr);
+
+                OverrideTitleView("Видеоролики(0)", -1);
             }
         }
 
@@ -118,7 +119,7 @@ namespace App1.Advertiser
             appr.IsVisible = true;
             loaded.TextColor = Color.FromHex("#BCBCBC");
             appeared.TextColor = Color.FromHex("#F39F26");
-            OverrideTitleView("Видеоролики", countInValid);
+            OverrideTitleView("Видеоролики", countValid);
             BtnAddVideoDialog.IsVisible = false;
         }
 
@@ -128,7 +129,7 @@ namespace App1.Advertiser
             appr.IsVisible = false;
             appeared.TextColor = Color.FromHex("#BCBCBC");
             loaded.TextColor = Color.FromHex("#F39F26");
-            OverrideTitleView("Видеоролики", countValid);
+            OverrideTitleView("Видеоролики", countInValid);
             BtnAddVideoDialog.IsVisible = true;
         }
 

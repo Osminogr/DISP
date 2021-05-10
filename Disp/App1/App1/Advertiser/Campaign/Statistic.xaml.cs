@@ -14,13 +14,17 @@ namespace App1.Advertiser.Campaign
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Statistic : ContentPage
     {
-        Compaign nowUser;
-        public Statistic(Compaign now)
+        public Statistic(Driver driver)
         {
-            nowUser = now;
             InitializeComponent();
 
             OverrideTitleView("Статистика", 70, -1);
+
+            if (driver != null)
+            {
+                carDriver.Text = String.Format("{0} {1} {2}", driver.car.mark, driver.car.model, driver.car.regNumberCar);
+                fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
+            }
         }
 
         private void OverrideTitleView(string name, int left, int count)

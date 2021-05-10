@@ -25,12 +25,12 @@
 
                     <Label Grid.Row="0" Text="Срок размещения" FontSize="18" TextColor="#FBB800"></Label>
                     <Label Grid.Row="1" Text="Количество дней" FontSize="12" TextColor="Black"></Label>
-                    <Label Grid.Row="2" Text="30" FontSize="16"></Label>
+                    <Label Grid.Row="2" Text="" x:Name="tarifDays" FontSize="16"></Label>
                     <BoxView BackgroundColor="LightGray" Grid.Row="3"></BoxView>
 
                     <Label Grid.Row="5" Text="Условия размещения" TextColor="#FBB800" FontSize="18"></Label>
                     <Label Grid.Row="6" Text="Количество экранов" FontSize="12" TextColor="Black"></Label>
-                    <Label Grid.Row="7" Text="10" FontSize="16"></Label>
+                    <Label Grid.Row="7" Text="" x:Name="tarifMonitor" FontSize="16"></Label>
                     <BoxView BackgroundColor="LightGray" Grid.Row="8"></BoxView>
 
                     <Label Grid.Row="10" x:Name="Amount" FontSize="17"></Label>

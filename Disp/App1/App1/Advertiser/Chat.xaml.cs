@@ -17,6 +17,7 @@ namespace App1.Advs
         Entity nowUser;
         bool running;
         private readonly SynchronizationContext _context;
+        List<Message> existsMessage = new List<Message>();
         public Chat(Entity now)
         {
             nowUser = now;
@@ -41,11 +42,23 @@ namespace App1.Advs
 
                     if (messages != null && messages.Count != 0)
                     {
-                        _context.Send(status => Stack.Children.Clear(), null);
-
+                        List<View> templates = new List<View>();
                         foreach (var message in messages)
                         {
-                            _context.Send(status => Stack.Children.Add(new MessageTemplate(message)), null);
+                            if (!IsMessageExists(message))
+                            {
+                                templates.Add(new MessageTemplate(message));
+                                existsMessage.Add(message);
+                            }   
+                        }
+
+                        if (templates.Count > 0)
+                        {
+                            foreach (var view in templates)
+                            {
+                                _context.Send(status => Stack.Children.Add(view), null);
+                                _context.Send(async status => await sc.ScrollToAsync(Stack, ScrollToPosition.End, true), null);
+                            } 
                         }
                     }
                 }
@@ -56,6 +69,21 @@ namespace App1.Advs
 
                 Thread.Sleep(1000);
             }
+        }
+
+        private bool IsMessageExists(Message message)
+        {
+            bool exists = false;
+
+            if (existsMessage.Count > 0)
+            {
+                foreach (var m in existsMessage)
+                {
+                    if (m.id == message.id) exists = true;
+                }
+            }
+
+            return exists;
         }
 
         private void OverrideTitleView(string name, int left, int count)

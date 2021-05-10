@@ -33,11 +33,11 @@ namespace App1.Advertiser.Campaign
             {
                 foreach (var dr in drivers)
                 {
-                    View view = new DriversTemplate();
+                    View view = new DriversTemplate(dr);
                     view.GestureRecognizers.Add(new TapGestureRecognizer()
                     {
                         Command = new Command(() => {
-                            Navigation.PushAsync(new Statistic(compaign));
+                            Navigation.PushAsync(new Statistic(dr));
                         })
                     });
                     driversList.Children.Add(view);

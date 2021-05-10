@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using App1.Domain;
 using App1.Utils;
+using System.Threading;
+using App1.Templates;
 
 namespace App1.Drivers
 {
@@ -13,35 +15,76 @@ namespace App1.Drivers
     public partial class Alerts : ContentPage
     {
         Driver nowUser;
+        List<Alert> existsAlerts = new List<Alert>();
+        bool running;
+        private readonly SynchronizationContext _context;
+
         public Alerts(Driver now)
         {
             InitializeComponent();
             nowUser = now;
-            Request();
 
             OverrideTitleView("Оповещения", -1);
+
+            _context = SynchronizationContext.Current;
+
+            running = true;
+            Thread t = new Thread(new ThreadStart(GetAlerts));
+            t.Start();
         }
 
-        public async void Request()
+        private async void GetAlerts()
         {
-            HttpClient client = new HttpClient();
+            while (running)
+            {
+                try
+                {
+                    List<Alert> alerts = await Server.GetAlerts(nowUser);
 
-            var answer = await client.GetAsync(Server.ROOT_URL + "alert/?phone=" + nowUser.person.phone.Trim('"'));
-            var responseBody = await answer.Content.ReadAsStringAsync();
-            char[] sym = new char[] { '[', ']', '{', ',' };
-            foreach (var ch in sym)
-            {
-                responseBody = responseBody.Replace(ch.ToString(), "");
+                    if (alerts != null && alerts.Count != 0)
+                    {
+                        List<View> templates = new List<View>();
+                        foreach (var alert in alerts)
+                        {
+                            if (!IsAlertExists(alert))
+                            {
+                                templates.Add(new AlertTemplate(alert));
+                                existsAlerts.Add(alert);
+                            }
+                        }
+
+                        if (templates.Count > 0)
+                        {
+                            foreach (var view in templates)
+                            {
+                                _context.Send(status => AlertsRoot.Children.Add(view), null);
+                                _context.Send(async status => await ScrollAlertsRoot.ScrollToAsync(AlertsRoot, ScrollToPosition.End, true), null);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+                Thread.Sleep(1000);
             }
-            string[] str = new string[] { "\\n", "\\r", "\\" };
-            foreach (var c in str)
+        }
+
+        private bool IsAlertExists(Alert alert)
+        {
+            bool exists = false;
+
+            if (existsAlerts.Count > 0)
             {
-                responseBody = responseBody.Replace(c.ToString(), " ");
+                foreach (var m in existsAlerts)
+                {
+                    if (m.id == alert.id) exists = true;
+                }
             }
-            responseBody = responseBody.Replace("text\":", " ").Trim(' ');
-            Console.WriteLine(responseBody);
-            Console.WriteLine(Server.ROOT_URL + "alert/?phone=" + nowUser.person.phone);
-            var dictionary = responseBody.Trim('}').Split('}');
+
+            return exists;
         }
 
         private void OverrideTitleView(string name, int count)

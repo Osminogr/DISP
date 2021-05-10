@@ -7,47 +7,32 @@
              x:Class="App1.Drivers.Settings.PersonalDataUpdate"
              Title="Настройки">
     <ContentPage.Content>
-        <Grid Margin="20,0,20,0">
+        <Grid Margin="20,10,20,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Label  Text="Имя"
-                    HorizontalOptions="Start" 
-                    Grid.Row ="1"/>
-            <Entry Grid.Row ="1" Margin="0,0,10,0" x:Name="Name"/>
+            <Label Text="Город" HorizontalOptions="Start" Grid.Row="0" Margin="3,0,10,0"/>
+            <Entry Grid.Row="0" Margin="0,10,0,0"  x:Name="City"/>
+
+            <Label Text="Имя" HorizontalOptions="Start" Grid.Row="1" Margin="3,0,10,0"/>
+            <Entry Grid.Row="1" Margin="0,10,0,0" x:Name="Name"/>
 
 
-            <Label  Text="Отчество" 
-                    HorizontalOptions="Start"
-                    Grid.Row ="2" Margin="0,0,10,0"/>
-            <Entry Grid.Row ="2" Margin="0,0,10,0"  x:Name="Patronymic"/>
+            <Label Text="Отчество" HorizontalOptions="Start" Grid.Row="2" Margin="3,0,10,0"/>
+            <Entry Grid.Row="2" Margin="0,10,0,0"  x:Name="Patronymic"/>
 
 
-            <Label Text="Фамилия"
-                HorizontalOptions="Start" Grid.Row ="3" Margin="0,0,10,0"
-                 />
-            <Entry Grid.Row ="3" Margin="0,0,10,0"  x:Name="LastName"/>
+            <Label Text="Фамилия" HorizontalOptions="Start" Grid.Row="3" Margin="3,0,10,0"/>
+            <Entry Grid.Row="3" Margin="0,10,0,0"  x:Name="LastName"/>
 
-            <Label Text="Город"
-                HorizontalOptions="Start" Grid.Row ="4" Margin="0,0,10,0"/>
-
-            <Picker Grid.Row="4" x:Name="city" Margin="3,0,10,0">
-                <Picker.Items>
-                    <x:String>Москва</x:String>
-                    <x:String>Митино</x:String>
-                    <x:String>Зеленоград</x:String>
-                    <x:String>Химки</x:String>
-                    <x:String>Санкт-Петербург</x:String>
-                </Picker.Items>
-            </Picker>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

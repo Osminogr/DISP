@@ -87,46 +87,35 @@ namespace App1
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false;
-                if (Mark.Text != null)
+                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false;
+                if (Mark.Text != null) b1 = true;
+                if (Model.Text != null) b2 = true;
+                if (Number.Text != null) b3 = true;
+                if (Data.Text != null) b4 = true;
+                if (Color.Text != null) b5 = true;
+                if (VIN.Text != null) b6 = true;
+                if (Reg.Text != null) b7 = true;
+
+                if (driver.car.photo1 != null && driver.car.photo2 != null && driver.car.photo3 != null) b8 = true;
+
+                if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && person.IsChecked)
                 {
-                    b1 = true;
                     driver.car.mark = Mark.Text;
-                }
-                if (Model.Text != null)
-                {
-                    b2 = true;
                     driver.car.model = Model.Text;
-                }
-                if (Number.Text != null)
-                {
-                    b3 = true;
                     driver.car.carNumber = Number.Text;
-                }
-                if (Data.Text != null)
-                {
-                    b4 = true;
                     driver.car.dataCar = Data.Text;
-                }
-                if (Color.Text != null)
-                {
-                    b5 = true;
                     driver.car.color = Color.Text;
-                }
-                if (VIN.Text != null)
-                {
-                    b6 = true;
                     driver.car.vin = VIN.Text;
-                }
-                if (Reg.Text != null)
-                {
-                    b7 = true;
                     driver.car.regNumberCar = Reg.Text;
+
+                    await Navigation.PushAsync(new Card(driver));
                 }
-                if (b1 && b2 && b3 && b4 && b5 && b6 && b7)
-                    Navigation.PushAsync(new Card(driver));
+                else
+                {
+                    await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                }
             })));
         }
     }

@@ -59,7 +59,7 @@ namespace App1
             if (number != null && number.Length == 10)
             {
                 ShowLoading(true);
-                Server.CreateCodeReq(number);
+                HttpResponseMessage answer = await Server.CreateCodeReq(number);
                 await Navigation.PushAsync(new СonfirmNumber(number));
                 ShowLoading(false);
             }

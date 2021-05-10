@@ -30,7 +30,8 @@ namespace App1
                 {
                     if (CrossMedia.Current.IsTakePhotoSupported)
                     {
-                        MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions() {
+                        MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions()
+                        {
                             SaveToAlbum = true,
                             Name = "photo" + DateTime.Now + ".jpg"
                         });
@@ -87,36 +88,27 @@ namespace App1
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false;
-                if (number.Text != null)
+                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false;
+                if (number.Text != null) b1 = true;
+                if (Data.Text != null) b2 = true;
+                if (Org.Text != null) b3 = true;
+                if (Code.Text != null) b4 = true;
+                if (Town.Text != null) b5 = true;
+                if (driver.person.passport.photo1 != null && driver.person.passport.photo2 != null && driver.person.passport.photo3 != null) b6 = true;
+
+                if (b1 && b2 && b3 && b4 && b5 && b6 && person.IsChecked)
                 {
-                    b1 = true;
                     driver.person.passport.number = number.Text;
-                }
-                if (Data.Text != null)
-                {
-                    b2 = true;
                     driver.person.passport.date = Data.Text;
-                }
-                if (Org.Text != null)
-                {
-                    b3 = true;
                     driver.person.passport.who = Org.Text;
-                }
-                if (Code.Text != null)
-                {
-                    b4 = true;
                     driver.person.passport.code = Code.Text;
-                }
-                if (Town.Text != null)
-                {
-                    b5 = true;
                     driver.person.city = Town.Text;
+
+                    await Navigation.PushAsync(new RegisterDrLic(driver));
                 }
-                if (b1 && b2 && b3 && b4 && b5)
-                    Navigation.PushAsync(new RegisterDrLic(driver));
+                else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
             })));
         }
     }

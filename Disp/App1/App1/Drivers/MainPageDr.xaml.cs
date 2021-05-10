@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
+using System.Collections.Generic;
 
 namespace App1
 {
@@ -18,13 +19,32 @@ namespace App1
 
             MoveMap();
             InitializeComponent();
-            UserName.Text = nowUser.person.firstName + " " + nowUser.person.lastName;
+            UserName.Text = String.Format("{0} {1} {2}", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
 
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
             SideBarBottom.IsVisible = true;
+
+            LoadVideos();
         }
 
+        private async void LoadVideos()
+        {
+            try
+            {
+                List<Video> videos = await Server.GetVideos(nowUser, true);
+
+                if (videos != null)
+                {
+                    if (videos.Count == 0) VideosCount.Text = "У Вас нет видеороликов";
+                    else VideosCount.Text = String.Format("У Вас {0} видеоролик(ов)", videos.Count);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
 
         private async void MoveMap()
         {
@@ -108,6 +128,7 @@ namespace App1
         {
             await Navigation.PushAsync(new Drivers.Alerts(nowUser));
         }
+
         public async void StatDriver_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Drivers.StatDriver(nowUser));

@@ -4,13 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.Drivers.Settings.PasportDataUpdate"
-             Title="Настройки">
+             x:Class="App1.Drivers.Settings.PasportDataUpdate">
     <ContentPage.Content>
         <Grid Margin="20,20,20,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="45"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
@@ -18,31 +18,29 @@
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
+            <Label Text="Дата выдачи" Padding="4, 0, 0, 0"
+                    HorizontalOptions="Start" Grid.Row ="1" 
+                   FontAttributes="None" />
 
-
-            <Label Text="Паспортные данные"  TextColor="#FFB800" 
-                   FontSize="25" HorizontalOptions="Start" 
-                   Grid.Row ="0" FontAttributes="Bold" />
-
-            <Entry Grid.Row ="1" Margin="0,0,10,0" Placeholder="Серия и номер"
+            <Entry Grid.Row ="1" Margin="0,10,0,0" Placeholder="Серия и номер"
                    x:Name="number" Keyboard="Numeric"/>
 
-            <Label Text="Дата выдачи"
+            <Label Text="Дата выдачи" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="2" 
-                   FontAttributes="Bold" />
-            <Entry Grid.Row ="2" Margin="0,0,10,0"
+                   FontAttributes="None" />
+            <Entry Grid.Row ="2" Margin="0,10,0,0"
                    x:Name="Data"/>
 
-            <Label Text="Кем выдан"
+            <Label Text="Кем выдан" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="3" 
-                   FontAttributes="Bold" />
-            <Entry Grid.Row ="3" Margin="0,0,10,0"
+                   FontAttributes="None" />
+            <Entry Grid.Row ="3" Margin="0,10,0,0"
                    x:Name="Org"/>
 
-            <Label Text="Код подразделения"
+            <Label Text="Код подразделения" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="4" 
-                   FontAttributes="Bold" />
-            <Entry Grid.Row ="4" Margin="0,0,10,0"
+                   FontAttributes="None" />
+            <Entry Grid.Row ="4" Margin="0,10,0,0"
                    x:Name="Code" Keyboard="Numeric"/>
         </Grid>
     </ContentPage.Content>

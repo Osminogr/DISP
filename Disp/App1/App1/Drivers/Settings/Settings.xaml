@@ -4,12 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="App1.Settings"
-             Title="Настройки"
-             BackgroundColor="#F5F5F5">
+             x:Class="App1.Settings">
     <ContentPage.Content>
         <Grid VerticalOptions="StartAndExpand">
             <Grid.RowDefinitions>
+                <RowDefinition Height="1"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -20,7 +19,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Margin="0, 0, 0, 0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -36,8 +35,11 @@
                         Margin="20,0,10,0" />
                 </Frame>
 
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -47,9 +49,6 @@
                         BackgroundColor="#00000000"
                         CornerRadius="5" Grid.ColumnSpan="7"
                         Clicked="PersonalDataUpdate" />
-                
-                
-
             </Grid>
 
             <Grid Grid.Row="2">
@@ -67,8 +66,11 @@
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
                         Margin="20,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -94,8 +96,11 @@
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
                         Margin="20,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -121,8 +126,11 @@
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
                         Margin="20,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -148,8 +156,11 @@
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
                         Margin="20,0,10,0" />
                 </Frame>
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"
@@ -177,8 +188,11 @@
                         Margin="20,0,10,0" />
                 </Frame>
 
-                <Image Source="go_next_str"
+                <Image Source="shape.png"
                        Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
                        Margin="0,0,15,0"

@@ -26,12 +26,6 @@
                 </Grid>
             </Frame>
 
-            <!--DatePicker MinimumDate="03/14/2021"
-                        MaximumDate="12/31/2021"
-                        Date="03/14/2021" 
-                        TextColor="#FFB800" BackgroundColor="#FFFFFF" 
-                        Grid.Row="1" Grid.ColumnSpan="4"/-->
-
             <ScrollView Grid.Row="1" Margin="0, 10, 0, 10"
                         Grid.ColumnSpan="4"
                         Grid.RowSpan="8" x:Name="act">

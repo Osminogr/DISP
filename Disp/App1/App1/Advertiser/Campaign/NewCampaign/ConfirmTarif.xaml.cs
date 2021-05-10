@@ -25,7 +25,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
             InitializeComponent();
             BindingContext = this;
 
-            Amount.Text = "Итого: " + compaign.tarif.amount.ToString() + "Р";
+            Amount.Text = String.Format("Итого: {0}Р", compaign.tarif.amount);
+            tarifDays.Text = compaign.tarif.minDays;
+            tarifMonitor.Text = "10";
 
             OverrideTitleView(compaign.tarif.name, "Дальше", -1);
         }

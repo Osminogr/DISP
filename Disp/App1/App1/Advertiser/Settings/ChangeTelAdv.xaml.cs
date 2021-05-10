@@ -16,6 +16,7 @@ namespace App1.Advertiser.Settings
     public partial class ChangeTelAdv : ContentPage
     {
         Adv nowUser;
+        public EventHandler<string> phoneAdvHandler;
         public ChangeTelAdv(Adv now)
         {
             nowUser = now;
@@ -47,10 +48,11 @@ namespace App1.Advertiser.Settings
                         }
                         else
                         {
-                            Server.SaveAuthObject(nowUser, nowUser.isCompany);
-                        }
+                            Server.SaveAuthObject(nowUser, true);
+                            phoneAdvHandler?.Invoke(this, nowUser.company.phone);
 
-                        await Navigation.PopAsync();
+                            await Navigation.PopAsync(true);
+                        }
                     }
                 }
             }

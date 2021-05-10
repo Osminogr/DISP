@@ -16,6 +16,7 @@ namespace App1.Advertiser.Settings
     public partial class CompanyDataSettingAdv : ContentPage
     {
         Adv nowUser;
+        public EventHandler<string> nameAdvHandler;
         public CompanyDataSettingAdv(Adv now)
         {
             nowUser = now;
@@ -40,51 +41,71 @@ namespace App1.Advertiser.Settings
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                nowUser.company.name = Name.Text;
-                nowUser.company.address = Address.Text;
-                nowUser.company.ogrn = Ogrn.Text;
-                nowUser.company.inn = Inn.Text;
-                nowUser.company.kpp = Kpp.Text;
+                bool v1 = false, v2 = false, v3 = false, v4 = false, v5 = false, v6 = false, v7 = false, v8 = false, v9 = false;
 
-                HttpContent answer = await Server.SaveCompany(nowUser.company);
-                string response = await answer.ReadAsStringAsync();
+                if (Name.Text.Length != 0) v1 = true;
+                if (Address.Text.Length != 0) v2 = true;
+                if (Ogrn.Text.Length == 13) v3 = true;
+                if (Inn.Text.Length == 10) v4 = true;
+                if (Kpp.Text.Length == 9) v5 = true;
+                if (fioDir.Text.Length != 0) v6 = true;
+                if (posDir.Text.Length != 0) v7 = true;
+                if (fioManag.Text.Length != 0) v6 = true;
+                if (posManag.Text.Length != 0) v7 = true;
 
-                if (response == null || (response != null && !response.Contains(nameof(Company))))
+                if (v1 && v2 && v3 && v4 && v5 && v6 && v7 && v8 && v9)
                 {
-                    await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
-                }
-                else
-                {
-                    nowUser.company.director.firstName = fioDir.Text;
-                    nowUser.company.director.position = posDir.Text;
+                    nowUser.company.name = Name.Text;
+                    nowUser.company.address = Address.Text;
+                    nowUser.company.ogrn = Ogrn.Text;
+                    nowUser.company.inn = Inn.Text;
+                    nowUser.company.kpp = Kpp.Text;
 
-                    answer = await Server.SavePerson(nowUser.company.director);
-                    response = await answer.ReadAsStringAsync();
+                    HttpContent answer = await Server.SaveCompany(nowUser.company);
+                    string response = await answer.ReadAsStringAsync();
 
-                    if (response != null && response.Contains(nameof(Person)))
+                    if (response == null || (response != null && !response.Contains(nameof(Company))))
                     {
-                        nowUser.company.manager.firstName = fioManag.Text;
-                        nowUser.company.manager.position = posManag.Text;
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                    }
+                    else
+                    {
+                        nowUser.company.director.firstName = fioDir.Text;
+                        nowUser.company.director.position = posDir.Text;
 
-                        answer = await Server.SavePerson(nowUser.company.manager);
+                        answer = await Server.SavePerson(nowUser.company.director);
                         response = await answer.ReadAsStringAsync();
 
                         if (response != null && response.Contains(nameof(Person)))
                         {
-                            Server.SaveAuthObject(nowUser, nowUser.isCompany);
+                            nowUser.company.manager.firstName = fioManag.Text;
+                            nowUser.company.manager.position = posManag.Text;
+
+                            answer = await Server.SavePerson(nowUser.company.manager);
+                            response = await answer.ReadAsStringAsync();
+
+                            if (response != null && response.Contains(nameof(Person)))
+                            {
+                                Server.SaveAuthObject(nowUser, true);
+                                nameAdvHandler?.Invoke(this, nowUser.company.name);
+
+                                await Navigation.PopAsync(true);
+                            }
+                            else
+                            {
+                                await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                            }
                         }
                         else
                         {
                             await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                         }
                     }
-                    else
-                    {
-                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
-                    }
                 }
-
-                await Navigation.PopAsync();
+                else
+                {
+                    await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                }
             })));
         }
     }

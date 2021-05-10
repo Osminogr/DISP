@@ -35,27 +35,23 @@ namespace App1.Drivers.Register
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
                 bool b1 = false, b2 = false, b3 = false;
 
-                if (Name.Text != null)
-                {
-                    b1 = true;
-                    driver.person.firstName = Name.Text;
-                }
-                if (LastName.Text != null)
-                {
-                    b2 = true;
-                    driver.person.lastName = LastName.Text;
-                }
-                if (Patronymic.Text != null)
-                {
-                    b3 = true;
-                    driver.person.patronymic = Patronymic.Text;
-                }
+                if (Name.Text != null) b1 = true;
+                if (LastName.Text != null) b2 = true;
+                if (Patronymic.Text != null) b3 = true;
+
                 if (b1 && b2 && b3)
-                    Navigation.PushAsync(new RegisterPasp(driver));
+                {
+                    driver.person.firstName = Name.Text;
+                    driver.person.lastName = LastName.Text;
+                    driver.person.patronymic = Patronymic.Text;
+
+                    await Navigation.PushAsync(new RegisterPasp(driver));
+                }
+                else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
             })));
         }
     }

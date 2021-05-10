@@ -28,7 +28,6 @@ namespace App1.Advertiser.Register
                     {
                         Navigation.PushAsync(new Organiz(phone.Text));
                     }
-                    
                 }
             })));
         }

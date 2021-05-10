@@ -72,6 +72,26 @@ namespace App1
             return adv;
         }
 
+        public static async Task<List<Video>> GetVideos(Entity entity, bool isDriver)
+        {
+            List<Video> list = null;
+
+            HttpClient client = new HttpClient();
+
+            string url = "avideo/";
+            if (isDriver) url = "dvideo/";
+
+            var answer = await client.GetAsync(ROOT_URL + url + entity.id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null)
+            {
+                list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
+            }
+                
+            return list;
+        }
+
         public static async Task<Driver> GetDriver(string number)
         {
             Driver driver = null;
@@ -306,6 +326,56 @@ namespace App1
             Preferences.Clear();
         }
 
+        public static void SaveShowAllDrivers(bool value)
+        {
+            string json = Preferences.Get(AUTH_OBJECT, null);
+
+            if (json != null)
+            {
+                AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
+
+                if (authObject != null)
+                {
+                    authObject.showAllDrivers = value;
+                    Preferences.Clear();
+                    Preferences.Set(AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
+                }
+            }
+        }
+
+        public static void SaveShowDriverAdReq(bool value)
+        {
+            string json = Preferences.Get(AUTH_OBJECT, null);
+
+            if (json != null)
+            {
+                AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
+
+                if (authObject != null)
+                {
+                    authObject.showDriverAdReq = value;
+                    Preferences.Set(AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
+                }
+            }
+        }
+
+        public static AuthObject GetAuthObject()
+        {
+            string json = Preferences.Get(AUTH_OBJECT, null);
+
+            if (json != null)
+            {
+                AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
+
+                if (authObject != null)
+                {
+                    return authObject;
+                }
+            }
+
+            return null;
+        }
+
         public static async Task<List<Compaign>> GetCompaigns(int id)
         {
             List<Compaign> list = null;
@@ -393,6 +463,51 @@ namespace App1
 
             string json = JsonConvert.SerializeObject(person, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""Person"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SavePassport(Passport passport)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "passport/{0}", passport.id));
+
+            string json = JsonConvert.SerializeObject(passport, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Passport"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SaveCar(Car car)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "car/{0}", car.id));
+
+            string json = JsonConvert.SerializeObject(car, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Car"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PutAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> SaveDriverLicence(DriverLicence driverLicence)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "driverlicence/{0}", driverLicence.id));
+
+            string json = JsonConvert.SerializeObject(driverLicence, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""DriverLicence"": " + json + "}";
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 

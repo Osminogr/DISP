@@ -30,6 +30,10 @@ namespace App1.Advertiser.Campaign.NewCampaign
             videoPlayer.Url = compaign.video.url;
 
             OverrideTitleView(compaign.tarif.name, -1);
+
+            tarifAmount.Text = String.Format("{0}Р", compaign.tarif.amount);
+            tarifDays.Text = String.Format("{0} дней", compaign.tarif.minDays);
+            tarifMonitor.Text = String.Format("{0} экранов", 10);
         }
 
         private void OverrideTitleView(string name, int count)

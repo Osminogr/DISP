@@ -7,19 +7,84 @@ using System.Collections.Generic;
 using App1.Domain;
 using App1.Utils;
 using App1.Templates;
+using System.Threading;
 
 namespace App1.Drivers
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Chat : ContentPage
     {
-        Driver nowUser = new Driver();
+        Driver nowUser;
+        bool running;
+        private readonly SynchronizationContext _context;
+        List<Message> existsMessage = new List<Message>();
+
         public Chat(Driver now)
         {
             nowUser = now;
             InitializeComponent();
 
             OverrideTitleView("Чат", 100, -1);
+
+            _context = SynchronizationContext.Current;
+
+            running = true;
+            Thread t = new Thread(new ThreadStart(GetMessages));
+            t.Start();
+        }
+
+        private async void GetMessages()
+        {
+            while (running)
+            {
+                try
+                {
+                    List<Message> messages = await Server.GetMessages(nowUser);
+
+                    if (messages != null && messages.Count != 0)
+                    {
+                        List<View> templates = new List<View>();
+                        foreach (var message in messages)
+                        {
+                            if (!IsMessageExists(message))
+                            {
+                                templates.Add(new MessageTemplate(message));
+                                existsMessage.Add(message);
+                            }
+                        }
+
+                        if (templates.Count > 0)
+                        {
+                            foreach (var view in templates)
+                            {
+                                _context.Send(status => Stack.Children.Add(view), null);
+                                _context.Send(async status => await sc.ScrollToAsync(Stack, ScrollToPosition.End, true), null);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+                Thread.Sleep(1000);
+            }
+        }
+
+        private bool IsMessageExists(Message message)
+        {
+            bool exists = false;
+
+            if (existsMessage.Count > 0)
+            {
+                foreach (var m in existsMessage)
+                {
+                    if (m.id == message.id) exists = true;
+                }
+            }
+
+            return exists;
         }
 
         private void OverrideTitleView(string name, int left, int count)
@@ -27,54 +92,26 @@ namespace App1.Drivers
             NavigationPage.SetTitleView(this, TitleView.OverrideView(name, left, count));
         }
 
-        private void createMessage(Message message)
+        public async void SendMsg(object sender, EventArgs e)
         {
-            Stack.Children.Add(new MessageTemplate(message));
-        }
-
-        async void NewMes()
-        {
-
-            Grid gr = new Grid
+            try
             {
-                RowSpacing = 2,
-                ColumnSpacing = 4,
-                RowDefinitions =
-                    {
-                        new RowDefinition(),
-                        new RowDefinition(),
-                        new RowDefinition(),
-                        new RowDefinition()
-                    }
-            };
-            Label notLabel = new Label
-            {
-                Text = "Сообщение"
-            };
-            Grid.SetColumnSpan(notLabel, 3);
-            Label textLabel = new Label
-            {
-                Text = message.Text
-            };
-            Grid.SetColumnSpan(textLabel, 4);
-            Grid.SetRow(textLabel, 2);
-            gr.Children.Add(notLabel);
-            gr.Children.Add(textLabel);
-            Frame fr = new Frame { BackgroundColor = Color.FromHex("F39F26"), CornerRadius = 10, Margin = new Thickness(10, 20, 10, 10), MinimumHeightRequest = 100, MinimumWidthRequest = 50 };
-            fr.Content = gr;
-            Stack.Children.Add(fr);
-        }
+                Message message = new Message();
+                message.receiver = nowUser.id;
+                message.text = textMessage.Text;
 
-        public void SendMsg(object sender, EventArgs e)
-        {
-            string content = @"{""msg"":{""author"":";
-            content += "";
-            content += @",""text"":""";
-            content += message.Text;
-            content += @"""}}";
-            Console.WriteLine(content);
-            Server.Request(content, "post", "msg");
-            message.Text = "";
+                HttpContent answer = await Server.SendMessage(message);
+                string response = await answer.ReadAsStringAsync();
+
+                if (response != null && response.Contains(nameof(Message)))
+                {
+                    textMessage.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }

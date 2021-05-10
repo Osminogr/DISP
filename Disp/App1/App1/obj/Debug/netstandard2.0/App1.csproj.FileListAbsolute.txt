@@ -444,3 +444,5 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Debug/netst
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/ref/DISP.dll
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/DISP.pdb
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/App1.csprojAssemblyReference.cache
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Templates/TarifTemplate.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Debug/netstandard2.0/Templates/AlertTemplate.xaml.g.cs

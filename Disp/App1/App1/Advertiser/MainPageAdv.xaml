@@ -58,7 +58,7 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Label Text="Видеоролики" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
-                                <Label Text="У Вас 1 загруженный видеоролик" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                                <Label Text="" x:Name="videosCount" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
                             </Grid>
                         </Frame>
 
@@ -90,7 +90,7 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Label Text="Статистика" TextColor="White" FontAttributes="Bold" Grid.Row="0" Padding="0, 0, 0, 0" HorizontalTextAlignment="Center"></Label>
-                                <Label Text="У Вас 2 рекламных компании" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
+                                <Label Text="" x:Name="compaignCount" TextColor="White" Grid.Row="1" HorizontalTextAlignment="Center"></Label>
                             </Grid>
                         </Frame>
 
@@ -152,10 +152,10 @@
                         </Grid.RowDefinitions>
 
                         <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="3" Margin="0, 0, 0, 0"/>
-                        <Label x:Name ="NLabel" Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                        <Label x:Name ="NLabel" Text="Пользователь" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
                        TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
                        FontSize="14"/>
-                        <Label x:Name ="CLabel" Text="ООО 'КОМПАНИЯ'" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                        <Label Text="" x:Name="companyName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
                        TextColor="White" HorizontalOptions="Center"
                        FontSize="14"  Grid.RowSpan="2"/>
                     </Grid>
@@ -195,7 +195,7 @@
                         Grid.Row="7"
                     Clicked="Chat"/>
                     <Button BackgroundColor="#0000" Text="Настройки"
-                        Margin="17,0,0,0"
+                        Margin="19,0,0,0"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Grid.Row="8"
@@ -204,8 +204,8 @@
                         HorizontalOptions="Start"
                        VerticalOptions="End"
                         Grid.Row="9" Margin="28,0,0,0"/>
-                    <Switch IsToggled="True" 
-                        Grid.Row="10"
+                    <Switch
+                        Grid.Row="10" x:Name="showAllDrivers"
                         HorizontalOptions="Start"
                         VerticalOptions="Start"
                         Toggled="Switched" Margin="18,0,0,0"/>

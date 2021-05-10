@@ -87,27 +87,23 @@ namespace App1
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() =>
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false;
-                if (Number.Text != null)
-                {
-                    b1 = true;
-                    driver.driverLicence.number = Number.Text;
-                }
-                if (Date.Text != null)
-                {
-                    b2 = true;
-                    driver.driverLicence.date = Date.Text;
-                }
-                if (Period.Text != null)
-                {
-                    b3 = true;
-                    driver.driverLicence.period = Period.Text;
-                }
+                bool b1 = false, b2 = false, b3 = false, b4 = false;
+                if (Number.Text != null) b1 = true;
+                if (Date.Text != null) b2 = true;
+                if (Period.Text != null) b3 = true;
+                if (driver.driverLicence.photo1 != null && driver.driverLicence.photo2 != null && driver.driverLicence.photo3 != null) b4 = true;
 
-                if (b1 && b2 && b3)
-                     Navigation.PushAsync(new RegisterCar(driver));
+                if (b1 && b2 && b3 && b4 && person.IsChecked)
+                {
+                    driver.driverLicence.number = Number.Text;
+                    driver.driverLicence.date = Date.Text;
+                    driver.driverLicence.period = Period.Text;
+
+                    await Navigation.PushAsync(new RegisterCar(driver));
+                }
+                else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
             })));
         }
     }

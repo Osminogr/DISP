@@ -10,7 +10,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid Padding="20,35,20,0" Grid.Row="0">
+                <Grid Padding="20,25,20,0" Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
@@ -21,21 +21,21 @@
                     </Grid.RowDefinitions>
 
                     <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
-                       x:Name="Name"
+                       x:Name="Name" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Адрес банка" Grid.Row="1"
-                       x:Name="Address"
+                       x:Name="Address" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
                        x:Name="NumberR"
-                       Keyboard="Numeric"
+                       Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
                        x:Name="NumberK"
-                       Keyboard="Numeric"
+                       Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="БИК банка" Grid.Row="4"
-                       FontSize="16"
+                       FontSize="16" Keyboard="Numeric" MaxLength="9"
                         x:Name="BIK"/>
                 </Grid>
             </Grid>
