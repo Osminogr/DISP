@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
+using App1.Advertiser.Settings;
 
 namespace App1.Advertiser.Settings
 {
@@ -25,6 +26,17 @@ namespace App1.Advertiser.Settings
                 nowUser.company.phone[2], nowUser.company.phone[3], nowUser.company.phone[4], nowUser.company.phone[5],
                 nowUser.company.phone[6], nowUser.company.phone[7], nowUser.company.phone[8], nowUser.company.phone[9]);
 
+            if (!nowUser.isCompany)
+            {
+                personDataShow.IsVisible = true;
+                companyDataShow.IsVisible = false;
+            }
+            else
+            {
+                companyDataShow.IsVisible = true;
+                personDataShow.IsVisible = false;
+            }
+
             OverrideTitleView("Настройки", 90, -1);
         }
 
@@ -39,6 +51,11 @@ namespace App1.Advertiser.Settings
             {
                 nameAdvHandler = OnNameAdvChanged
             }, true);
+        }
+
+        private async void PersonDataUpdate(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PersonalDataUpdate(nowUser));
         }
 
         private void OnNameAdvChanged(object sender, string nameAdv)

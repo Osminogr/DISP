@@ -40,8 +40,10 @@ namespace App1.RegisterAdvPh
                     adv.company.director.firstName = Name.Text;
                     adv.company.director.lastName = LastName.Text;
                     adv.company.director.patronymic = Patronymic.Text;
+                    adv.company.director.city = Town.Text;
                     adv.company.city = Town.Text;
                     adv.company.email = Email.Text;
+                    adv.company.name = string.Format("{0} {1} {2}", adv.company.director.lastName, adv.company.director.firstName, adv.company.director.patronymic);
 
                     await Navigation.PushAsync(new RegisterAdvPh.TermOfUse(adv));
                 }

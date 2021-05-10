@@ -36,6 +36,7 @@ namespace App1
             SideBarBottom.IsVisible = true;
 
             companyName.Text = now.company.name;
+            bottomName.Text = String.Format("Привет {0}!", now.company.name);
 
             AuthObject authObject = Server.GetAuthObject();
             if (authObject != null) showAllDrivers.IsToggled = authObject.showAllDrivers;
@@ -69,11 +70,18 @@ namespace App1
 
         private async void MoveMap()
         {
-            var locator = CrossGeolocator.Current;
-            Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
-            position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
-                                            Distance.FromMiles(1)));
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
+                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
+                                                Distance.FromMiles(1)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
             await Task.Delay(1000);
             actInd.IsRunning = false;

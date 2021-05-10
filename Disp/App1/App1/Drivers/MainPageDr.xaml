@@ -57,7 +57,7 @@
                         <BoxView BackgroundColor="Gray" Opacity="0.2" HeightRequest="5" Margin="0, 0, 0, 0" HorizontalOptions="Center" WidthRequest="50"></BoxView>
                     </StackLayout>
 
-                    <Label Text="Привет Саша!" FontAttributes="Bold" Grid.Row="1" Padding="0, 10, 0, 0" Grid.ColumnSpan="3"/>
+                    <Label Text="" x:Name="bottomName" FontAttributes="Bold" Grid.Row="1" Padding="0, 10, 0, 0" Grid.ColumnSpan="3"/>
                     <Label Text="Благодарю за выбор DISP!" Grid.Row="2" Grid.ColumnSpan="3"/>
 
                     <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="#FFB800" CornerRadius="10" Margin="0, 0, 10, 0" Padding="0, 5, 0, 0">
@@ -151,7 +151,10 @@
                     </Grid.RowDefinitions>
 
                     <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="4"/>
-                    <Label Text="UserName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                    <Label x:Name ="NLabel" Text="Пользователь" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                       TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
+                       FontSize="14"/>
+                    <Label Text="" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
                        TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
                        FontSize="14" Grid.RowSpan="2"
                        x:Name="UserName"/>

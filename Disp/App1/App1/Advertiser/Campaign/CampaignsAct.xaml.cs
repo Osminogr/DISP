@@ -20,7 +20,7 @@ namespace App1.Advertiser
         {
             nowUser = now;
             InitializeComponent();
-            Request();
+            Request(true);
 
             OverrideTitleView("Мои компании", -1);
         }
@@ -30,38 +30,46 @@ namespace App1.Advertiser
             NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
         }
 
-        public async void Request()
+        public async void Request(bool isActive)
         {
+            compaignAct.Children.Clear();
+            compaignCompl.Children.Clear();
             bool loaded = false;
 
             List<Compaign> list = await Server.GetCompaigns(nowUser.id);
 
             if (list != null && list.Count > 0)
             {
-                loaded = true;
                 foreach (var item in list)
                 {
-                    if (item.active)
-                        compaignAct.Children.Add(new CompaignTemplate(item));
+                    if (isActive)
+                    {
+                        if (item.active)
+                        {
+                            compaignAct.Children.Add(new CompaignTemplate(item));
+                            loaded = true;
+                        }
+                    }
                     else
-                        compaignCompl.Children.Add(new CompaignTemplate(item));
+                    {
+                        if (!item.active)
+                        {
+                            compaignCompl.Children.Add(new CompaignTemplate(item));
+                            loaded = true;
+                        }
+                    }
                 }
             }
 
             if (!loaded)
             {
-                Label lAct = new Label();
-                lAct.Text = "У Вас нет рекламных компаний";
-                lAct.HorizontalOptions = LayoutOptions.Center;
-                lAct.VerticalOptions = LayoutOptions.Center;
+                Label label = new Label();
+                label.Text = "У Вас нет рекламных компаний";
+                label.HorizontalOptions = LayoutOptions.Center;
+                label.VerticalOptions = LayoutOptions.Center;
 
-                Label lCompl = new Label();
-                lCompl.Text = "У Вас нет рекламных компаний";
-                lCompl.HorizontalOptions = LayoutOptions.Center;
-                lCompl.VerticalOptions = LayoutOptions.Center;
-
-                compaignAct.Children.Add(lAct);
-                compaignCompl.Children.Add(lCompl);
+                if (isActive) compaignAct.Children.Add(label);
+                else compaignCompl.Children.Add(label);
 
                 OverrideTitleView("Мои компании", -1);
             }
@@ -73,6 +81,7 @@ namespace App1.Advertiser
             compaignComplCont.IsVisible = true;
             btnAct.TextColor = Color.FromHex("#BCBCBC");
             btnCompl.TextColor = Color.FromHex("#F39F26");
+            Request(false);
         }
 
         public void ToAct(object sender, EventArgs e)
@@ -81,6 +90,7 @@ namespace App1.Advertiser
             compaignActCont.IsVisible = true;
             btnAct.TextColor = Color.FromHex("#F39F26");
             btnCompl.TextColor = Color.FromHex("#BCBCBC");
+            Request(true);
         }
 
         public async void NewCampaigns(object sender, EventArgs e)

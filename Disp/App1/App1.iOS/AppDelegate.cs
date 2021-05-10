@@ -23,8 +23,10 @@ namespace App1.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             Xamarin.FormsMaps.Init();
-            //Xamarin.FormsMaps.Init();
             //Xamarin.FormsMaps.Init(Constants.AppConstants.GoogleMapsApiKey);
+
+            MediaManager.CrossMediaManager.Current.Init();
+
             LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }

@@ -13,6 +13,8 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="5"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="70"></RowDefinition>
             </Grid.RowDefinitions>
@@ -45,6 +47,22 @@
             <RadioButton BorderColor="#FFB800" x:Name="company"
                                  BackgroundColor="Transparent"
                                  Grid.Row="3"
+                                 Grid.Column="0"
+                                 HorizontalOptions="EndAndExpand"
+                                 Padding="0,0,24,0"/>
+
+            <Label Text="Рекламное агенство"
+                           FontSize="15"
+                           VerticalOptions="CenterAndExpand"
+                           FontFamily="Roboto"
+                           TextColor="#6F6F6F"
+                           Padding="-20, 0, 0, 0"
+                           Grid.Row="5"
+                           Grid.ColumnSpan="3"
+                           Grid.Column="1"/>
+            <RadioButton BorderColor="#FFB800" x:Name="agent"
+                                 BackgroundColor="Transparent"
+                                 Grid.Row="5"
                                  Grid.Column="0"
                                  HorizontalOptions="EndAndExpand"
                                  Padding="0,0,24,0"/>

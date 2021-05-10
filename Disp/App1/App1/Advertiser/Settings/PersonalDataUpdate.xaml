@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Advertiser.Settings.PersonalDataUpdate"
+             Title="Настройки">
+    <ContentPage.Content>
+        <Grid Margin="20,10,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Город" HorizontalOptions="Start" Grid.Row="0" Margin="3,0,10,0"/>
+            <Entry Grid.Row="0" Margin="0,10,0,0"  x:Name="City"/>
+
+            <Label Text="Имя" HorizontalOptions="Start" Grid.Row="1" Margin="3,0,10,0"/>
+            <Entry Grid.Row="1" Margin="0,10,0,0" x:Name="Name"/>
+
+
+            <Label Text="Отчество" HorizontalOptions="Start" Grid.Row="2" Margin="3,0,10,0"/>
+            <Entry Grid.Row="2" Margin="0,10,0,0"  x:Name="Patronymic"/>
+
+
+            <Label Text="Фамилия" HorizontalOptions="Start" Grid.Row="3" Margin="3,0,10,0"/>
+            <Entry Grid.Row="3" Margin="0,10,0,0"  x:Name="LastName"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -13,6 +13,7 @@ using App1.Utils;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Octane.Xamarin.Forms.VideoPlayer;
+using System.Threading;
 
 namespace App1.Advertiser.Campaign.NewCampaign
 {
@@ -21,12 +22,19 @@ namespace App1.Advertiser.Campaign.NewCampaign
     {
         Compaign nowUser;
         List<View> frames;
+        List<VideoPlayer> videoPlayers = new List<VideoPlayer>();
+        private readonly SynchronizationContext _context;
+
         public ChoseVid(Compaign now)
         {
             nowUser = now;
             InitializeComponent();
 
             loadVideos();
+
+            _context = SynchronizationContext.Current;
+            Thread t = new Thread(new ThreadStart(AutoPlayVp));
+            t.Start();
         }
 
         private void OverrideTitleView(string name, string nameAction, int count)
@@ -38,12 +46,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
         private async void loadVideos()
         {
-            HttpClient client = new HttpClient();
-
-            var answer = await client.GetAsync(Server.ROOT_URL + "video/?id=" + nowUser.adv.id);
-            var responseBody = await answer.Content.ReadAsStringAsync();
-
-            List<Video> list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
+            List<Video> list = await Server.GetVideos(nowUser.adv, false);
 
             if (list != null && list.Count != 0)
             {
@@ -63,6 +66,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         videoPlayer.AutoPlay = false;
                         videoPlayer.Margin = new Thickness(0, -6, 0, 0);
                         videoPlayer.HeightRequest = 150;
+                        videoPlayer.Opacity = 0;
+
+                        videoPlayers.Add(videoPlayer);
 
                         Label label = new Label();
                         label.Text = item.name;
@@ -94,6 +100,22 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 }
 
                 OverrideTitleView("Видеоролики", "Дальше", count);
+            }
+        }
+
+        private void AutoPlayVp()
+        {
+            Thread.Sleep(2000);
+
+            if (videoPlayers.Count > 0)
+            {
+                foreach (var vp in videoPlayers)
+                {
+                    _context.Send(status => vp.Seek(1), null);
+                    _context.Send(status => vp.Seek(-1), null);
+                    _context.Send(status => videoLoading.IsVisible = false, null);
+                    _context.Send(status => vp.Opacity = 1, null);
+                }
             }
         }
     }

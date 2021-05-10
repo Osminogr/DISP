@@ -19,11 +19,13 @@ namespace App1
 
             MoveMap();
             InitializeComponent();
-            UserName.Text = String.Format("{0} {1} {2}", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
 
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
             SideBarBottom.IsVisible = true;
+
+            bottomName.Text = String.Format("Привет {0} {1} {2}!", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
+            UserName.Text = String.Format("{0} {1} {2}!", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
 
             LoadVideos();
         }

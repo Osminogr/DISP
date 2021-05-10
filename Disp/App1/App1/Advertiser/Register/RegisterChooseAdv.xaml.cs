@@ -39,7 +39,12 @@ namespace App1.Advertiser.Register
 
                 if (company.IsChecked)
                 {
-                    Navigation.PushAsync(new Organiz(phone));
+                    Navigation.PushAsync(new Organiz(phone, false));
+                }
+
+                if (agent.IsChecked)
+                {
+                    Navigation.PushAsync(new Organiz(phone, true));
                 }
             })));
         }

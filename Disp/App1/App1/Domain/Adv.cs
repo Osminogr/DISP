@@ -7,6 +7,7 @@ namespace App1.Domain
     {
         public Company company;
         public bool isCompany;
+        public bool isAgent;
 
         public Adv() {
         }

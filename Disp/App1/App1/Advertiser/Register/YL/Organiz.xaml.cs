@@ -10,12 +10,13 @@ namespace App1.RegisterAdvYL
     public partial class Organiz : ContentPage
     {
         Adv nowUser = new Adv();
-        public Organiz(string phone)
+        public Organiz(string phone, bool isAgent)
         {
             nowUser.company = new Company();
             nowUser.company.phone = phone;
             nowUser.company.director = new Person();
             nowUser.company.manager = new Person();
+            nowUser.isAgent = isAgent;
             nowUser.isCompany = true;
 
             InitializeComponent();

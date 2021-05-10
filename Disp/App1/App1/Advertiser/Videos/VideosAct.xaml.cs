@@ -20,8 +20,7 @@ namespace App1.Advertiser
     public partial class VideosAct : ContentPage
     {
         Adv nowUser;
-        int countValid = 0;
-        int countInValid = 0;
+        int count = 0;
         public VideosAct(Adv now)
         {
             nowUser = now;
@@ -47,62 +46,61 @@ namespace App1.Advertiser
                             AddVideoDialog.IsEnabled = false;
                             AddVideoDialog.IsVisible = false;
 
-                            Request();
+                            Request(true);
                         }
                     }
                 })
             });
 
-            Request();
+            Request(true);
         }
 
-        public async void Request()
+        public async void Request(bool showActive)
         {
-            countInValid = 0;
-            countValid = 0;
-
-            List<Video> list = await Server.GetVideos(nowUser, false);
-
             videosAct.Children.Clear();
             videosAppr.Children.Clear();
+            count = 0;
+
+            List<Video> list = await Server.GetVideos(nowUser, false);
 
             bool loaded = false;
 
             if (list != null && list.Count != 0)
             {
-                loaded = true;
-                
                 foreach (var item in list)
                 {
-                    if (!item.validated)
+                    if (showActive)
                     {
-                        videosAct.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
-                        countInValid++;
+                        if (!item.validated)
+                        {
+                            loaded = true;
+                            videosAct.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
+                            count++;
+                        }
                     }
                     else
                     {
-                        videosAppr.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
-                        countValid++;
+                        if (item.validated)
+                        {
+                            loaded = true;
+                            videosAppr.Children.Add(new VideoTemplate() { Name = item.name, Url = item.url, Margin = new Thickness(0, 10, 0, 0) });
+                            count++;
+                        }
                     }
                 }
 
-                OverrideTitleView("Видеоролики", countInValid);
+                OverrideTitleView("Видеоролики", count);
             }
 
             if (!loaded)
             {
-                Label lAct = new Label();
-                lAct.Text = "У Вас нет загруженных видеороликов";
-                lAct.HorizontalOptions = LayoutOptions.Center;
-                lAct.VerticalOptions = LayoutOptions.Center;
+                Label label = new Label();
+                label.Text = "У Вас нет загруженных видеороликов";
+                label.HorizontalOptions = LayoutOptions.Center;
+                label.VerticalOptions = LayoutOptions.Center;
 
-                Label lAppr = new Label();
-                lAppr.Text = "У Вас нет загруженных видеороликов";
-                lAppr.HorizontalOptions = LayoutOptions.Center;
-                lAppr.VerticalOptions = LayoutOptions.Center;
-
-                videosAct.Children.Add(lAct);
-                videosAppr.Children.Add(lAppr);
+                if (showActive) videosAct.Children.Add(label);
+                else videosAppr.Children.Add(label);
 
                 OverrideTitleView("Видеоролики(0)", -1);
             }
@@ -119,7 +117,7 @@ namespace App1.Advertiser
             appr.IsVisible = true;
             loaded.TextColor = Color.FromHex("#BCBCBC");
             appeared.TextColor = Color.FromHex("#F39F26");
-            OverrideTitleView("Видеоролики", countValid);
+            Request(false);
             BtnAddVideoDialog.IsVisible = false;
         }
 
@@ -129,7 +127,7 @@ namespace App1.Advertiser
             appr.IsVisible = false;
             appeared.TextColor = Color.FromHex("#BCBCBC");
             loaded.TextColor = Color.FromHex("#F39F26");
-            OverrideTitleView("Видеоролики", countInValid);
+            Request(true);
             BtnAddVideoDialog.IsVisible = true;
         }
 

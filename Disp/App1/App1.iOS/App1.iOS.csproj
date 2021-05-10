@@ -132,12 +132,32 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\App1\App1.csproj">
-      <Project>{5FF34D35-6465-4C9D-BE10-E0E230853F0A}</Project>
+      <Project>{24D189FF-9279-47AA-9825-F635813B016F}</Project>
       <Name>App1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Taxi.jpg" />
+    <BundleResource Include="Resources\shapemenu.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\go_next_str.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\mapex.png" />
+    <BundleResource Include="Resources\photoactive.png" />
+    <BundleResource Include="Resources\photodef.png" />
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\Right.png" />
+    <BundleResource Include="Resources\send.png" />
+    <BundleResource Include="Resources\sendcomplete.png" />
+    <BundleResource Include="Resources\senddef.png" />
+    <BundleResource Include="Resources\shape.png" />
+    <BundleResource Include="Resources\shapegray.png" />
+    <BundleResource Include="Resources\toolbarbg.png" />
+    <BundleResource Include="Resources\video1.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Logo.png" />

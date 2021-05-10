@@ -26,7 +26,7 @@ namespace App1.Advertiser.Register
                 {
                     if (isCompany)
                     {
-                        Navigation.PushAsync(new Organiz(phone.Text));
+                        Navigation.PushAsync(new Organiz(phone.Text, false));
                     }
                 }
             })));

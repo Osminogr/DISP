@@ -21,6 +21,8 @@ namespace App1.Advertiser.Settings
             nowUser = now;
             InitializeComponent();
 
+            if (nowUser.company.accountNumber == null) nowUser.company.accountNumber = new AccountNumber();
+
             Address.Text = nowUser.company.accountNumber.bankAddress;
             Name.Text = nowUser.company.accountNumber.bankName;
             BIK.Text = nowUser.company.accountNumber.bik;

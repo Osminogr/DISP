@@ -28,7 +28,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
+                <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5" x:Name="companyDataShow">
                     <Label Text="ООО Название компании" Grid.ColumnSpan="6" x:Name="nameAdv"
                        TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
                         Margin="20,0,10,0"/>
@@ -50,7 +50,39 @@
                         Clicked="CompanyDataUpdate"/>
             </Grid>
 
-            <Grid Grid.Row="2" Margin="0, 0, 0, 0" IsVisible="false">
+            <Grid Grid.Row="1" Margin="0, 0, 0, 0" x:Name="personDataShow" IsVisible="false">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame BackgroundColor="#FFFFFF"  Grid.ColumnSpan="7" Margin="10,0,10,5" HasShadow="True" CornerRadius="5">
+                    <Label Text="Личные данные" Grid.ColumnSpan="6"
+                       TextColor="Black" FontSize="Subtitle" VerticalTextAlignment="Center" 
+                        Margin="20,0,10,0"/>
+                </Frame>
+
+                <Image Source="shape.png"
+                       Grid.Column="6"
+                       Aspect="AspectFill"
+                       WidthRequest="9"
+                       HeightRequest="16"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"
+                       />
+
+                <Button Margin="10,0,10,0"
+                        BackgroundColor="#00000000"
+                        CornerRadius="5" Grid.ColumnSpan="7"
+                        Clicked="PersonDataUpdate"/>
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0, 0, 0, 0" IsVisible="false" x:Name="emailShow">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
