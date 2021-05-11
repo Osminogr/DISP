@@ -20,6 +20,10 @@ namespace App1.Domain
         [JsonIgnore]
         public Photo photo3;
 
+        public string urlPhoto1;
+        public string urlPhoto2;
+        public string urlPhoto3;
+
         public Car() { }
     }
 }

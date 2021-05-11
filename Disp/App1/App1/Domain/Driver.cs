@@ -9,6 +9,7 @@ namespace App1.Domain
         public AccountNumber accountNumber;
         public Person person;
 
+
         public Driver() { }
     }
 }

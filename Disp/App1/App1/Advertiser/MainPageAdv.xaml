@@ -231,7 +231,7 @@
                             FontSize="16"
                         TextColor="#FFB800"
                         HorizontalOptions="Start"
-                        Margin="10,0,0,0"
+                        Margin="5,0,0,0"
                         Grid.Row="12"
                     Clicked="Exit"/>
                 </Grid>

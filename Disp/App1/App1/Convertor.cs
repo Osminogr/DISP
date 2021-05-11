@@ -84,10 +84,7 @@ namespace App1
             var answer = await client.GetAsync(ROOT_URL + url + entity.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            if (responseBody != null)
-            {
-                list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
-            }
+            if (responseBody != null) list = JsonConvert.DeserializeObject<List<Video>>(responseBody);
                 
             return list;
         }
@@ -98,7 +95,7 @@ namespace App1
 
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(ROOT_URL + "drivers/" + number);
+            var answer = await client.GetAsync(ROOT_URL + "driver/" + number);
             var responseBody = await answer.Content.ReadAsStringAsync();
             if (responseBody != null && responseBody.Contains(nameof(Driver)))
             {
@@ -124,14 +121,8 @@ namespace App1
 
                 string type = (string)jObject["type"];
 
-                if (type == nameof(Adv))
-                {
-                    entity = JsonConvert.DeserializeObject<Adv>(jObject[nameof(Entity)].ToString());
-                }
-                else
-                {
-                    entity = JsonConvert.DeserializeObject<Driver>((string)jObject[nameof(Entity)].ToString());
-                }
+                if (type == nameof(Adv)) entity = JsonConvert.DeserializeObject<Adv>(jObject[nameof(Entity)].ToString());
+                else entity = JsonConvert.DeserializeObject<Driver>((string)jObject[nameof(Entity)].ToString());
             }
 
             return entity;
@@ -197,56 +188,25 @@ namespace App1
 
         public static async Task<HttpContent> AddDriver(Driver driver)
         {
-            var uri = new Uri(string.Format(ROOT_URL + "drivers/"));
+            var uri = new Uri(string.Format(ROOT_URL + "driver/"));
             var content = new MultipartFormDataContent();
 
             string json = JsonConvert.SerializeObject(driver, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""Driver"": " + json + "}";
 
-            if (driver.driverLicence.photo1 != null)
-            {
-                content.Add(new StreamContent(driver.driverLicence.photo1.data), "driverLicencePhoto1", driver.driverLicence.photo1.name);
-            }
+            if (driver.driverLicence.photo1 != null) content.Add(new StreamContent(driver.driverLicence.photo1.data), "driverLicencePhoto1", driver.driverLicence.photo1.name);
+            if (driver.driverLicence.photo2 != null) content.Add(new StreamContent(driver.driverLicence.photo2.data), "driverLicencePhoto2", driver.driverLicence.photo2.name);
+            if (driver.driverLicence.photo3 != null) content.Add(new StreamContent(driver.driverLicence.photo3.data), "driverLicencePhoto3", driver.driverLicence.photo3.name);
 
-            if (driver.driverLicence.photo2 != null)
-            {
-                content.Add(new StreamContent(driver.driverLicence.photo2.data), "driverLicencePhoto2", driver.driverLicence.photo2.name);
-            }
+            if (driver.car.photo1 != null) content.Add(new StreamContent(driver.car.photo1.data), "carPhoto1", driver.car.photo1.name);
+            if (driver.car.photo2 != null) content.Add(new StreamContent(driver.car.photo2.data), "carPhoto2", driver.car.photo2.name);
+            if (driver.car.photo3 != null) content.Add(new StreamContent(driver.car.photo3.data), "carPhoto3", driver.car.photo3.name);
 
-            if (driver.driverLicence.photo3 != null)
-            {
-                content.Add(new StreamContent(driver.driverLicence.photo3.data), "driverLicencePhoto3", driver.driverLicence.photo3.name);
-            }
+            if (driver.person.passport.photo1 != null)content.Add(new StreamContent(driver.person.passport.photo1.data), "personPassportPhoto1", driver.person.passport.photo1.name);
+            if (driver.person.passport.photo2 != null) content.Add(new StreamContent(driver.person.passport.photo2.data), "personPassportPhoto2", driver.person.passport.photo2.name);
+            if (driver.person.passport.photo3 != null) content.Add(new StreamContent(driver.person.passport.photo3.data), "personPassportPhoto3", driver.person.passport.photo3.name);
 
-            if (driver.car.photo1 != null)
-            {
-                content.Add(new StreamContent(driver.car.photo1.data), "carPhoto1", driver.car.photo1.name);
-            }
-
-            if (driver.car.photo2 != null)
-            {
-                content.Add(new StreamContent(driver.car.photo2.data), "carPhoto2", driver.car.photo2.name);
-            }
-
-            if (driver.car.photo3 != null)
-            {
-                content.Add(new StreamContent(driver.car.photo3.data), "carPhoto3", driver.car.photo3.name);
-            }
-
-            if (driver.person.passport.photo1 != null)
-            {
-                content.Add(new StreamContent(driver.person.passport.photo1.data), "personPassportPhoto1", driver.person.passport.photo1.name);
-            }
-
-            if (driver.person.passport.photo2 != null)
-            {
-                content.Add(new StreamContent(driver.person.passport.photo2.data), "personPassportPhoto2", driver.person.passport.photo2.name);
-            }
-
-            if (driver.person.passport.photo3 != null)
-            {
-                content.Add(new StreamContent(driver.person.passport.photo3.data), "personPassportPhoto3", driver.person.passport.photo3.name);
-            }
+            if (driver.person.selfPhoto != null) content.Add(new StreamContent(driver.person.selfPhoto.data), "personSelfPhoto", driver.person.selfPhoto.name);
 
             content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "json");
 
@@ -300,10 +260,7 @@ namespace App1
             var answer = await client.GetAsync(ROOT_URL + "message/" + entity.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            if (responseBody != null)
-            {
-                messages = JsonConvert.DeserializeObject<List<Message>>(responseBody);
-            }
+            if (responseBody != null) messages = JsonConvert.DeserializeObject<List<Message>>(responseBody);
 
             return messages;
         }
@@ -367,10 +324,7 @@ namespace App1
             {
                 AuthObject authObject = JsonConvert.DeserializeObject<AuthObject>(json);
 
-                if (authObject != null)
-                {
-                    return authObject;
-                }
+                if (authObject != null) return authObject;
             }
 
             return null;
@@ -385,10 +339,7 @@ namespace App1
             var answer = await client.GetAsync(ROOT_URL + "adreqcount/" + id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            if (responseBody != null)
-            {
-                list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
-            }
+            if (responseBody != null) list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
 
             return list;
         }
@@ -402,10 +353,7 @@ namespace App1
             var answer = await client.GetAsync(ROOT_URL + "tarif/");
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            if (responseBody != null)
-            {
-                tarifs = JsonConvert.DeserializeObject<List<Tarif>>(responseBody);
-            }
+            if (responseBody != null) tarifs = JsonConvert.DeserializeObject<List<Tarif>>(responseBody);
 
             return tarifs;
         }
@@ -419,10 +367,7 @@ namespace App1
             var answer = await client.GetAsync(ROOT_URL + "alert/" + entity.id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
-            if (responseBody != null)
-            {
-                alerts = JsonConvert.DeserializeObject<List<Alert>>(responseBody);
-            }
+            if (responseBody != null) alerts = JsonConvert.DeserializeObject<List<Alert>>(responseBody);
 
             return alerts;
         }
@@ -461,10 +406,14 @@ namespace App1
         {
             var uri = new Uri(string.Format(ROOT_URL + "person/{0}", person.id));
 
+            var content = new MultipartFormDataContent();
+
             string json = JsonConvert.SerializeObject(person, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""Person"": " + json + "}";
 
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "Person");
+
+            if (person.selfPhoto != null) content.Add(new StreamContent(person.selfPhoto.data), "photo1", person.selfPhoto.name);
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PutAsync(uri, content);
@@ -476,10 +425,16 @@ namespace App1
         {
             var uri = new Uri(string.Format(ROOT_URL + "passport/{0}", passport.id));
 
+            var content = new MultipartFormDataContent();
+
             string json = JsonConvert.SerializeObject(passport, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""Passport"": " + json + "}";
 
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "Passport");
+
+            if (passport.photo1 != null) content.Add(new StreamContent(passport.photo1.data), "photo1", passport.photo1.name);
+            if (passport.photo2 != null) content.Add(new StreamContent(passport.photo2.data), "photo2", passport.photo2.name);
+            if (passport.photo3 != null) content.Add(new StreamContent(passport.photo3.data), "photo3", passport.photo3.name);
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PutAsync(uri, content);
@@ -491,10 +446,16 @@ namespace App1
         {
             var uri = new Uri(string.Format(ROOT_URL + "car/{0}", car.id));
 
+            var content = new MultipartFormDataContent();
+
             string json = JsonConvert.SerializeObject(car, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""Car"": " + json + "}";
 
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "Car");
+
+            if (car.photo1 != null) content.Add(new StreamContent(car.photo1.data), "photo1", car.photo1.name);
+            if (car.photo2 != null) content.Add(new StreamContent(car.photo2.data), "photo2", car.photo2.name);
+            if (car.photo3 != null) content.Add(new StreamContent(car.photo3.data), "photo3", car.photo3.name);
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PutAsync(uri, content);
@@ -506,10 +467,16 @@ namespace App1
         {
             var uri = new Uri(string.Format(ROOT_URL + "driverlicence/{0}", driverLicence.id));
 
+            var content = new MultipartFormDataContent();
+
             string json = JsonConvert.SerializeObject(driverLicence, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
             json = @"{""DriverLicence"": " + json + "}";
 
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "DriverLicence");
+
+            if (driverLicence.photo1 != null) content.Add(new StreamContent(driverLicence.photo1.data), "photo1", driverLicence.photo1.name);
+            if (driverLicence.photo2 != null) content.Add(new StreamContent(driverLicence.photo2.data), "photo2", driverLicence.photo2.name);
+            if (driverLicence.photo3 != null) content.Add(new StreamContent(driverLicence.photo3.data), "photo3", driverLicence.photo3.name);
 
             var httpClient = new HttpClient();
             var httpResponseMessage = await httpClient.PutAsync(uri, content);

@@ -16,6 +16,10 @@ namespace App1.Domain
         public string period;
         public string date;
 
+        public string urlPhoto1;
+        public string urlPhoto2;
+        public string urlPhoto3;
+
         public DriverLicence() { }
     }
 }

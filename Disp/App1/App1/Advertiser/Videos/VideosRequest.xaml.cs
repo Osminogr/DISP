@@ -39,21 +39,24 @@ namespace App1.Advertiser
 
             photo1.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() => {
+                Command = new Command(() =>
+                {
                     AddPhoto(0);
                 })
             });
 
             photo2.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() => {
+                Command = new Command(() =>
+                {
                     AddPhoto(1);
                 })
             });
 
             photo3.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() => {
+                Command = new Command(() =>
+                {
                     AddPhoto(2);
                 })
             });
@@ -73,43 +76,40 @@ namespace App1.Advertiser
         {
             if (CrossMedia.Current.IsPickPhotoSupported)
             {
-                List<MediaFile> photos = await CrossMedia.Current.PickPhotosAsync(null, new MultiPickerOptions() { MaximumImagesCount = 1 }, default);
+                MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
 
-                if (photos != null && photos.Count == 1)
+                if (photo != null)
                 {
-                    foreach (var photo in photos)
+                    videoRequest.photos.Add(new Photo() { name = Path.GetFileName(photo.Path), data = photo.GetStream() });
+
+                    if (type == 0)
                     {
-                        videoRequest.photos.Add(new Photo() { name = Path.GetFileName(photo.Path), data = photo.GetStream() });
-
-                        if (type == 0)
+                        photo1Set = true;
+                        if (photo1Set && !photo2Set)
                         {
-                            photo1Set = true;
-                            if (photo1Set && !photo2Set)
-                            {
-                                photo2.IsEnabled = true;
-                                photo2.Source = "photoactive.png";
-                            }
-
-                            photo1.Source = photo.Path;
+                            photo2.IsEnabled = true;
+                            photo2.Source = "photoactive.png";
                         }
 
-                        if (type == 1)
-                        {
-                            photo2Set = true;
-                            if (photo2Set && !photo3Set)
-                            {
-                                photo3.IsEnabled = true;
-                                photo3.Source = "photoactive.png";
-                            }
+                        photo1.Source = photo.Path;
+                    }
 
-                            photo2.Source = photo.Path;
+                    if (type == 1)
+                    {
+                        photo2Set = true;
+                        if (photo2Set && !photo3Set)
+                        {
+                            photo3.IsEnabled = true;
+                            photo3.Source = "photoactive.png";
                         }
 
-                        if (type == 2)
-                        {
-                            photo3Set = true;
-                            photo3.Source = photo.Path;
-                        }
+                        photo2.Source = photo.Path;
+                    }
+
+                    if (type == 2)
+                    {
+                        photo3Set = true;
+                        photo3.Source = photo.Path;
                     }
                 }
             }

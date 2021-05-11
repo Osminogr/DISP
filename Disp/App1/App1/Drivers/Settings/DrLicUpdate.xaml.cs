@@ -4,6 +4,10 @@ using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using Plugin.Media;
+using System;
+using Plugin.Media.Abstractions;
+using System.IO;
 
 namespace App1.Drivers.Settings
 {
@@ -19,6 +23,67 @@ namespace App1.Drivers.Settings
             Number.Text = driver.driverLicence.number;
             Data.Text = driver.driverLicence.date;
             Period.Text = driver.driverLicence.period;
+
+            photo1.Source = driver.driverLicence.urlPhoto1;
+            photo2.Source = driver.driverLicence.urlPhoto2;
+            photo3.Source = driver.driverLicence.urlPhoto3;
+
+            photo1.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo1.Source = photo.Path;
+                            driver.driverLicence.photo1 = new Photo();
+                            driver.driverLicence.photo1.data = photo.GetStream();
+                            driver.driverLicence.photo1.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
+
+            photo2.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo2.Source = photo.Path;
+                            driver.driverLicence.photo2 = new Photo();
+                            driver.driverLicence.photo2.data = photo.GetStream();
+                            driver.driverLicence.photo2.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
+
+            photo3.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo3.Source = photo.Path;
+                            driver.driverLicence.photo3 = new Photo();
+                            driver.driverLicence.photo3.data = photo.GetStream();
+                            driver.driverLicence.photo3.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
 
             OverrideTitleView("Водит. удостоверение", "Сохранить", 15, -1);
         }

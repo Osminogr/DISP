@@ -4,6 +4,11 @@ using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System;
+using System.IO;
+using System.Collections.Generic;
 
 namespace App1.Drivers.Settings
 {
@@ -20,6 +25,67 @@ namespace App1.Drivers.Settings
             Data.Text = nowUser.person.passport.date;
             Org.Text = nowUser.person.passport.who;
             Code.Text = nowUser.person.passport.code;
+
+            photo1.Source = nowUser.person.passport.urlPhoto1;
+            photo2.Source = nowUser.person.passport.urlPhoto2;
+            photo3.Source = nowUser.person.passport.urlPhoto3;
+
+            photo1.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo1.Source = photo.Path;
+                            nowUser.person.passport.photo1 = new Photo();
+                            nowUser.person.passport.photo1.data = photo.GetStream();
+                            nowUser.person.passport.photo1.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
+
+            photo2.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo2.Source = photo.Path;
+                            nowUser.person.passport.photo2 = new Photo();
+                            nowUser.person.passport.photo2.data = photo.GetStream();
+                            nowUser.person.passport.photo2.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
+
+            photo3.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                        if (photo != null)
+                        {
+                            photo3.Source = photo.Path;
+                            nowUser.person.passport.photo3 = new Photo();
+                            nowUser.person.passport.photo3.data = photo.GetStream();
+                            nowUser.person.passport.photo3.name = Path.GetFileName(photo.Path);
+                        }
+                    }
+                })
+            });
 
             OverrideTitleView("Паспортные данные", "Сохранить", 40, -1);
         }

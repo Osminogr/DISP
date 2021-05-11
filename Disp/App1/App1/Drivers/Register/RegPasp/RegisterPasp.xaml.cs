@@ -30,11 +30,7 @@ namespace App1
                 {
                     if (CrossMedia.Current.IsTakePhotoSupported)
                     {
-                        MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions()
-                        {
-                            SaveToAlbum = true,
-                            Name = "photo" + DateTime.Now + ".jpg"
-                        });
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
 
                         if (photo != null)
                         {
@@ -53,7 +49,7 @@ namespace App1
                 {
                     if (CrossMedia.Current.IsPickPhotoSupported)
                     {
-                        MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions(), default);
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
 
                         if (photo != null)
                         {
@@ -72,7 +68,7 @@ namespace App1
                 {
                     if (CrossMedia.Current.IsPickPhotoSupported)
                     {
-                        MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions(), default);
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
 
                         if (photo != null)
                         {
