@@ -43,7 +43,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 {
                     foreach(var tarif in tarifs)
                     {
-                        TarifTemplate view = new TarifTemplate(tarif)
+                        TarifTemplate view = new TarifTemplate(tarif, false)
                         {
                             selectedTarif = OnTarifSelected
                         };

@@ -52,5 +52,15 @@
                 <Label Text="" x:Name="tarifAmountTenDays" TextColor="Gray" Grid.Row="4" Grid.Column="1"/>
             </Grid>
         </Frame>
+
+        <Frame CornerRadius="10" Margin="10,20,10,10" HasShadow="True" MinimumHeightRequest="50" MinimumWidthRequest="50" BorderColor="#CCCCCC" Grid.Row="0" IsVisible="false" x:Name="tarifViewInfo">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="" x:Name="tarifNameInfo" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" TextColor="#FFB800" Grid.Row="0"/>
+            </Grid>
+        </Frame>
     </StackLayout>
 </ContentView>

@@ -20,9 +20,10 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
-        <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
+        <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="9" Grid.Row="0" HasScrollEnabled="False" HasZoomEnabled="False" 
                   Grid.ColumnSpan="3"/>
 
         <Button Grid.Row="0" x:Name="menuBtn" ImageSource="shapemenu.png" BackgroundColor="Transparent" Clicked="Open" IsEnabled="True" Margin="-15, 10, 20, 0"></Button>
@@ -37,7 +38,7 @@
 
         <Button x:Name="Button1" Text ="Активировать" 
                             Clicked ="Activate"
-                            Grid.Row="6" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
+                            Grid.Row="7" BackgroundColor="#FFB800" TextColor="#FFFFFF" 
                             CornerRadius="40"
                             Margin="30,10" FontAttributes="Bold"
                 Grid.ColumnSpan="3"/>
@@ -124,7 +125,7 @@
             </StackLayout>
         </Frame>
 
-        <Frame Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="2" x:Name="SideBar" CornerRadius="40" Margin="-35, 50, 0, -25" IsVisible="True"  IsEnabled="False" Padding="20, 0, 0, 25">
+        <Frame Grid.RowSpan="8" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" x:Name="SideBar" CornerRadius="10" Margin="0, 0, 0, 0" IsVisible="True"  IsEnabled="False" Padding="0, 0, 0, 0">
             <Grid  BackgroundColor="#FBFBFB">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -150,11 +151,8 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="4"/>
-                    <Label x:Name ="NLabel" Text="Пользователь" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
-                       TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
-                       FontSize="14"/>
-                    <Label Text="" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                    <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="3"/>
+                    <Label Text="" Grid.Column="0" Grid.Row="3" VerticalOptions="Center" 
                        TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
                        FontSize="14" Grid.RowSpan="2"
                        x:Name="UserName"/>
@@ -164,12 +162,14 @@
                     HorizontalOptions="Start"
                     Margin="19,0,0,0"
                     Grid.Row="2"
+                        FontSize="14"
                     Clicked="Videos"/>
 
                 <Button BackgroundColor="#0000" Text="Баланс"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Margin="10,0,0,0"
+                        FontSize="14"
                         Grid.Row="3"
                     Clicked="Balance"/>
                 <Button BackgroundColor="#0000" Text="Оповещения"
@@ -177,15 +177,18 @@
                         HorizontalOptions="Start"
                         Margin="19,0,0,0"
                         Grid.Row="4"
+                        FontSize="14"
                     Clicked="Alerts"/>
                 <Button BackgroundColor="#0000" Text="Чат"
                         TextColor="Black"
+                        FontSize="14"
                         HorizontalOptions="Start"
                         Grid.Row="5"
                     Clicked="Chat"/>
                 <Button BackgroundColor="#0000" Text="Настройки"
                         Margin="19,0,0,0"
                         TextColor="Black"
+                        FontSize="14"
                         HorizontalOptions="Start"
                         Grid.Row="6"
                     Clicked="Settings"/>
@@ -193,7 +196,8 @@
                         FontAttributes="Bold"
                         TextColor="#FFB800"
                         HorizontalOptions="Start"
-                        Margin="19,0,0,0"
+                        Margin="15,0,0,0"
+                        FontSize="16"
                         Grid.Row="11"
                     Clicked="Exit"/>
             </Grid>

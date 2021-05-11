@@ -73,7 +73,7 @@ namespace App1
         private void CloseBottomMenu()
         {
             SideBarBottom.IsEnabled = false;
-            Grid.SetRow(SideBarBottom, 7);
+            Grid.SetRow(SideBarBottom, 8);
             Grid.SetRowSpan(SideBarBottom, 1);
             SideBarBottom.Margin = new Thickness(0, 20, 0, -60);
         }

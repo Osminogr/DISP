@@ -10,12 +10,18 @@
     <ContentPage.Content>
         <Grid x:Name="gridRoot">
             <Grid.GestureRecognizers>
-                    <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
-                    <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
-                </Grid.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
+                <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
+            </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
             <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="3" IsVisible="false" />
@@ -33,7 +39,7 @@
                 </Label.GestureRecognizers>
             </Label>
 
-            <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -60" IsVisible="True"  IsEnabled="True" Padding="0, 0, 0, 0">
+            <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -60" IsVisible="True" Opacity="1"  IsEnabled="True" Padding="0, 0, 0, 0">
                 <StackLayout Padding="0, 0, 0, 0">
                     <Grid HorizontalOptions="Fill" Margin="20, 17, 20, 0" Padding="0, 0, 0, 0">
                         <Grid.RowDefinitions>
@@ -125,8 +131,8 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="2" x:Name="SideBar" CornerRadius="40" Margin="-35, 50, 0, -25" IsVisible="True"  IsEnabled="False" Padding="20, 0, 0, 25">
-                <Grid BackgroundColor="#FBFBFB" HorizontalOptions="Fill">
+            <Frame Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="2" x:Name="SideBar" Grid.Row="1" CornerRadius="10" Margin="0, 0, 0, 0" IsVisible="True"  IsEnabled="False" Padding="0, 0, 0, 0">
+                <Grid BackgroundColor="White" HorizontalOptions="Fill" Padding="0" Margin="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -142,9 +148,8 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.RowSpan="2" BackgroundColor="#FFB800" >
+                    <Grid Grid.RowSpan="2" BackgroundColor="#FFB800">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
@@ -152,69 +157,82 @@
                         </Grid.RowDefinitions>
 
                         <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="3" Margin="0, 0, 0, 0"/>
-                        <Label x:Name ="NLabel" Text="Пользователь" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
-                       TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
-                       FontSize="14"/>
-                        <Label Text="" x:Name="companyName" Grid.Column="0" Grid.Row="3" VerticalOptions="End" 
+                        <Label Text="" x:Name="companyName" Grid.Column="0" Grid.Row="3" VerticalOptions="Center" 
                        TextColor="White" HorizontalOptions="Center"
                        FontSize="14"  Grid.RowSpan="2"/>
                     </Grid>
                     <Button BackgroundColor="#0000" Text="Видеоролики"
-                    TextColor="Black"
+                    TextColor="Black" 
+                    FontSize="14"
                     HorizontalOptions="Start"
                     Margin="16,0,0,0"
                     Grid.Row="2"
                     Clicked="Videos"/>
-                    <Button BackgroundColor="#0000" Text="Новая Компания"
+                    <Button BackgroundColor="#0000" Text="Рекламные Компании"
                         TextColor="Black"
+                            FontSize="14"
                         HorizontalOptions="Start"
                         Margin="16,0,0,0"
                         Grid.Row="3"
                     Clicked="NewСampaign"/>
-                    <Button BackgroundColor="#0000" Text="Статистика"
+                    <Button BackgroundColor="#0000" Text="Тарифный план"
                         TextColor="Black"
+                            FontSize="14"
                         HorizontalOptions="Start"
                         Margin="18,0,0,0"
                         Grid.Row="4"
+                    Clicked="Tarifs"/>
+                    <Button BackgroundColor="#0000" Text="Статистика"
+                        TextColor="Black"
+                            FontSize="14"
+                        HorizontalOptions="Start"
+                        Margin="18,0,0,0"
+                        Grid.Row="5"
                     Clicked="Statistic"/>
                     <Button BackgroundColor="#0000" Text="Способы оплаты"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Margin="19,0,0,0"
-                        Grid.Row="5"
+                            FontSize="14"
+                        Grid.Row="6"
                     Clicked="PayMethod"/>
                     <Button BackgroundColor="#0000" Text="Оповещения"
                         Margin="19,0,0,0"
                         TextColor="Black"
+                            FontSize="14"
                         HorizontalOptions="Start"
-                        Grid.Row="6"
+                        Grid.Row="7"
                     Clicked="Alerts"/>
                     <Button BackgroundColor="#0000" Text="Чат"
                         TextColor="Black"
+                            FontSize="14"
                         HorizontalOptions="Start"
-                        Grid.Row="7"
+                        Grid.Row="8"
                     Clicked="Chat"/>
                     <Button BackgroundColor="#0000" Text="Настройки"
                         Margin="19,0,0,0"
                         TextColor="Black"
+                            FontSize="14"
                         HorizontalOptions="Start"
-                        Grid.Row="8"
+                        Grid.Row="9"
                     Clicked="Settings"/>
                     <Label Text="Показать всех водителей Disp"
                         HorizontalOptions="Start"
                        VerticalOptions="End"
-                        Grid.Row="9" Margin="28,0,0,0"/>
+                           FontSize="14"
+                        Grid.Row="10" Margin="28,0,0,0"/>
                     <Switch
-                        Grid.Row="10" x:Name="showAllDrivers"
+                        Grid.Row="11" x:Name="showAllDrivers"
                         HorizontalOptions="Start"
                         VerticalOptions="Start"
-                        Toggled="Switched" Margin="18,0,0,0"/>
+                        Toggled="Switched" Margin="20,0,0,0"/>
                     <Button BackgroundColor="#0000" Text="Выйти"
                         FontAttributes="Bold"
+                            FontSize="16"
                         TextColor="#FFB800"
                         HorizontalOptions="Start"
                         Margin="10,0,0,0"
-                        Grid.Row="11"
+                        Grid.Row="12"
                     Clicked="Exit"/>
                 </Grid>
             </Frame>

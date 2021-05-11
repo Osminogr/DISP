@@ -151,6 +151,11 @@ namespace App1
             await Navigation.PushAsync(new VideosAct(nowUser));
         }
 
+        public async void Tarifs(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Tarifs(nowUser));
+        }
+
         public async void Alerts(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Advs.Alerts(nowUser));

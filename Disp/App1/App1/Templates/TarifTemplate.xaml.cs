@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Advertiser.Campaign;
+using App1.Advertiser;
 
 namespace App1.Templates
 {
@@ -18,24 +19,44 @@ namespace App1.Templates
     {
         public EventHandler<Tarif> selectedTarif;
         public Tarif tarifInner;
-        public TarifTemplate(Tarif tarif)
+        public TarifTemplate(Tarif tarif, bool info)
         {
             InitializeComponent();
 
-            tarifName.Text = tarif.name;
-            tarifAmount.Text = String.Format("Минимальная стоимость размещения: {0}Р", tarif.amount);
-            tarifDays.Text = String.Format("Минимальный срок размещения: {0} дней", tarif.minDays);
-            tarifAmountDay.Text = String.Format("День показа на одном экране: {0}Р", tarif.amountDay);
-            tarifAmountTenDays.Text = String.Format("День показа на десяти экранах: {0}Р", tarif.amountTenDays);
-
-            tarifView.GestureRecognizers.Add(new TapGestureRecognizer()
+            if (info)
             {
-                Command = new Command(() => {
-                    tarifView.BorderColor = Color.FromHex("#FFB800");
+                tarifView.IsVisible = false;
+                tarifViewInfo.IsVisible = true;
 
-                    selectedTarif?.Invoke(this, tarif);
-                })
-            });
+                tarifNameInfo.Text = tarif.name;
+
+                tarifViewInfo.GestureRecognizers.Add(new TapGestureRecognizer()
+                {
+                    Command = new Command(() => {
+                        Navigation.PushAsync(new TarifDetail(tarif), true);
+                    })
+                });
+            }
+            else
+            {
+                tarifView.IsVisible = true;
+                tarifViewInfo.IsVisible = false;
+
+                tarifName.Text = tarif.name;
+                tarifAmount.Text = String.Format("Минимальная стоимость размещения: {0}Р", tarif.amount);
+                tarifDays.Text = String.Format("Минимальный срок размещения: {0} дней", tarif.minDays);
+                tarifAmountDay.Text = String.Format("День показа на одном экране: {0}Р", tarif.amountDay);
+                tarifAmountTenDays.Text = String.Format("День показа на десяти экранах: {0}Р", tarif.amountTenDays);
+
+                tarifView.GestureRecognizers.Add(new TapGestureRecognizer()
+                {
+                    Command = new Command(() => {
+                        tarifView.BorderColor = Color.FromHex("#FFB800");
+
+                        selectedTarif?.Invoke(this, tarif);
+                    })
+                });
+            }
 
             tarifInner = tarif;
         }
