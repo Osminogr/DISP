@@ -32,19 +32,37 @@ namespace App1.Advertiser.Settings
             OverrideTitleView("Настройки", "Сохранить", 90, -1);
         }
 
+        private void ShowLoading()
+        {
+            actInd.IsVisible = true;
+            actInd.IsRunning = true;
+            gridRoot.Opacity = 0.3;
+            gridRoot.IsEnabled = false;
+        }
+
+        private void HideLoading()
+        {
+            actInd.IsVisible = false;
+            actInd.IsRunning = false;
+            gridRoot.Opacity = 1;
+            gridRoot.IsEnabled = true;
+        }
+
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
                 try
                 {
+                    ShowLoading();
+
                     bool v1 = false, v2 = false, v3 = false, v4 = false, v5 = false;
 
-                    if (Name.Text.Length != 0) v1 = true;
-                    if (Address.Text.Length != 0) v2 = true;
-                    if (NumberK.Text.Length == 20) v3 = true;
-                    if (NumberR.Text.Length == 20) v4 = true;
-                    if (BIK.Text.Length == 9) v5 = true;
+                    if (Name.Text != null && Name.Text.Length != 0) v1 = true;
+                    if (Address.Text != null && Address.Text.Length != 0) v2 = true;
+                    if (NumberK.Text != null && NumberK.Text.Length == 20) v3 = true;
+                    if (NumberR.Text != null && NumberR.Text.Length == 20) v4 = true;
+                    if (BIK.Text != null && BIK.Text.Length == 9) v5 = true;
 
                     if (v1 && v2 && v3 && v4 && v5)
                     {
@@ -59,6 +77,7 @@ namespace App1.Advertiser.Settings
 
                         if (response == null || (response != null && !response.Contains(nameof(AccountNumber))))
                         {
+                            HideLoading();
                             await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
                         }
                         else
@@ -70,12 +89,15 @@ namespace App1.Advertiser.Settings
                     }
                     else
                     {
+                        HideLoading();
                         await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
                     }
                 }
                 catch (Exception ex)
                 {
+                    HideLoading();
                     Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
                 }
             })));
         }

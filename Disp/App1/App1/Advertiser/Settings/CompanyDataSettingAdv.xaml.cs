@@ -37,21 +37,37 @@ namespace App1.Advertiser.Settings
             OverrideTitleView("Настройки", "Сохранить", 90, -1);
         }
 
+        private void ShowLoading()
+        {
+            actInd.IsVisible = true;
+            actInd.IsRunning = true;
+            gridRoot.Opacity = 0.3;
+            gridRoot.IsEnabled = false;
+        }
+
+        private void HideLoading()
+        {
+            actInd.IsVisible = false;
+            actInd.IsRunning = false;
+            gridRoot.Opacity = 1;
+            gridRoot.IsEnabled = true;
+        }
+
         private void OverrideTitleView(string name, string nameAction, int left, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
                 bool v1 = false, v2 = false, v3 = false, v4 = false, v5 = false, v6 = false, v7 = false, v8 = false, v9 = false;
 
-                if (Name.Text.Length != 0) v1 = true;
-                if (Address.Text.Length != 0) v2 = true;
-                if (Ogrn.Text.Length == 13) v3 = true;
-                if (Inn.Text.Length == 10) v4 = true;
-                if (Kpp.Text.Length == 9) v5 = true;
-                if (fioDir.Text.Length != 0) v6 = true;
-                if (posDir.Text.Length != 0) v7 = true;
-                if (fioManag.Text.Length != 0) v6 = true;
-                if (posManag.Text.Length != 0) v7 = true;
+                if (Name.Text != null && Name.Text.Length != 0) v1 = true;
+                if (Address.Text != null && Address.Text.Length != 0) v2 = true;
+                if (Ogrn.Text != null && Ogrn.Text.Length == 13) v3 = true;
+                if (Inn.Text != null && Inn.Text.Length == 10) v4 = true;
+                if (Kpp.Text != null && Kpp.Text.Length == 9) v5 = true;
+                if (fioDir.Text != null && fioDir.Text.Length != 0) v6 = true;
+                if (posDir.Text != null && posDir.Text.Length != 0) v7 = true;
+                if (fioManag.Text != null && fioManag.Text.Length != 0) v8 = true;
+                if (posManag.Text != null && posManag.Text.Length != 0) v9 = true;
 
                 if (v1 && v2 && v3 && v4 && v5 && v6 && v7 && v8 && v9)
                 {
@@ -61,11 +77,14 @@ namespace App1.Advertiser.Settings
                     nowUser.company.inn = Inn.Text;
                     nowUser.company.kpp = Kpp.Text;
 
+                    ShowLoading();
+
                     HttpContent answer = await Server.SaveCompany(nowUser.company);
                     string response = await answer.ReadAsStringAsync();
 
                     if (response == null || (response != null && !response.Contains(nameof(Company))))
                     {
+                        HideLoading();
                         await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                     }
                     else
@@ -93,17 +112,20 @@ namespace App1.Advertiser.Settings
                             }
                             else
                             {
+                                HideLoading();
                                 await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                             }
                         }
                         else
                         {
+                            HideLoading();
                             await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                         }
                     }
                 }
                 else
                 {
+                    HideLoading();
                     await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
                 }
             })));

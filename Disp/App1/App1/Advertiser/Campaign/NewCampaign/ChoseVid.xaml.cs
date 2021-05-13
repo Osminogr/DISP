@@ -39,8 +39,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
         private void OverrideTitleView(string name, string nameAction, int count)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, count, new Command(() => {
-                Navigation.PushAsync(new Confirm(nowUser));
+            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, count, new Command(async () => {
+                if (nowUser.video == null) await DisplayAlert("Сообщение", "Выбирите видеоролик!", "Закрыть");
+                else await Navigation.PushAsync(new Confirm(nowUser));
             })));
         }
 
@@ -100,6 +101,18 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 }
 
                 OverrideTitleView("Видеоролики", "Дальше", count);
+
+                if (count == 0)
+                {
+                    videoLoading.IsVisible = false;
+                    NoneVideos.IsVisible = true;
+                }
+            }
+            else
+            {
+                videoLoading.IsVisible = false;
+                NoneVideos.IsVisible = true;
+                OverrideTitleView("Видеоролики", "Дальше", 0);
             }
         }
 

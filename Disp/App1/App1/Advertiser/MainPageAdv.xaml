@@ -9,10 +9,6 @@
 
     <ContentPage.Content>
         <Grid x:Name="gridRoot">
-            <Grid.GestureRecognizers>
-                <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
-                <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
-            </Grid.GestureRecognizers>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -21,29 +17,29 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
 
             <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="3" IsVisible="false" />
 
-            <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="8" HasScrollEnabled="False" HasZoomEnabled="False" 
+            <maps:Map x:Name="map" IsShowingUser = "True" Grid.RowSpan="7" HasScrollEnabled="True" HasZoomEnabled="True" 
                   Grid.ColumnSpan="3"/>
 
             <Button Grid.Row="0" x:Name="menuBtn" ImageSource="shapemenu.png" BackgroundColor="Transparent" Clicked="Open" IsEnabled="True" Margin="-15, 10, 20, 0"></Button>
 
-            <Label Text="" Grid.Row="1" Grid.RowSpan="7" Grid.ColumnSpan="3">
-                <Label.GestureRecognizers>
-                    <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
+            <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, -10, 0, -20" IsVisible="True" Opacity="1"  IsEnabled="True" Padding="0, 0, 0, 0">
+                <Frame.GestureRecognizers>
                     <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
                     <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
-                </Label.GestureRecognizers>
-            </Label>
-
-            <Frame Grid.RowSpan="4" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="SideBarBottom" CornerRadius="40" Margin="0, 0, 0, -60" IsVisible="True" Opacity="1"  IsEnabled="True" Padding="0, 0, 0, 0">
+                </Frame.GestureRecognizers>
                 <StackLayout Padding="0, 0, 0, 0">
+                    <StackLayout.GestureRecognizers>
+                        <SwipeGestureRecognizer Direction="Up" Swiped="OpenBottom"/>
+                        <SwipeGestureRecognizer Direction="Down" Swiped="CloseBottom"/>
+                    </StackLayout.GestureRecognizers>
                     <Grid HorizontalOptions="Fill" Margin="20, 17, 20, 0" Padding="0, 0, 0, 0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="10"/>
                             <RowDefinition Height="30"/>
                             <RowDefinition Height="20"/>
                             <RowDefinition Height="130"/>
@@ -132,6 +128,9 @@
             </Frame>
 
             <Frame Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="2" x:Name="SideBar" Grid.Row="1" CornerRadius="10" Margin="0, 0, 0, 0" IsVisible="True"  IsEnabled="False" Padding="0, 0, 0, 0">
+                <Frame.GestureRecognizers>
+                    <SwipeGestureRecognizer Direction="Left" Swiped="Close"/>
+                </Frame.GestureRecognizers>
                 <Grid BackgroundColor="White" HorizontalOptions="Fill" Padding="0" Margin="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>

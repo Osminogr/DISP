@@ -13,6 +13,7 @@ using App1.Utils;
 using App1.Templates;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
+using System.Threading;
 
 namespace App1.Advertiser
 {
@@ -36,23 +37,69 @@ namespace App1.Advertiser
 
                         if (video != null)
                         {
-                            Video videoObject = new Video();
-                            videoObject.name = Path.GetFileName(video.Path);
-                            videoObject.data = video.GetStream();
-                            videoObject.path = video.Path;
-                            videoObject.adv = nowUser;
-                            await Server.LoadVideoAsync(videoObject);
+                            try
+                            {
+                                ShowLoading();
 
-                            AddVideoDialog.IsEnabled = false;
-                            AddVideoDialog.IsVisible = false;
+                                Video videoObject = new Video();
+                                videoObject.name = Path.GetFileName(video.Path);
+                                videoObject.data = video.GetStream();
+                                videoObject.path = video.Path;
+                                videoObject.adv = nowUser;
 
-                            Request(true);
+                                var answer = await Server.LoadVideoAsync(videoObject);
+
+                                if (answer != null)
+                                {
+                                    await DisplayAlert("Сообщение", "Видеоролик загружен!", "Закрыть");
+
+                                    Request(true);
+
+                                    AddVideoDialog.IsEnabled = false;
+                                    AddVideoDialog.IsVisible = false;
+
+                                    Thread.Sleep(1000);
+                                    HideLoading();
+                                }
+                                else
+                                {
+                                    Thread.Sleep(1000);
+                                    HideLoading();
+
+                                    await DisplayAlert("Сообщение", "Не удалось выполнить загрузку видеоролика! Попробуйте позже.", "Закрыть");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex);
+
+                                Thread.Sleep(1000);
+                                HideLoading();
+
+                                await DisplayAlert("Сообщение", "Не удалось выполнить загрузку видеоролика! Попробуйте позже.", "Закрыть");
+                            }
                         }
                     }
                 })
             });
 
             Request(true);
+        }
+
+        private void ShowLoading()
+        {
+            actInd.IsVisible = true;
+            actInd.IsRunning = true;
+            gridRoot.Opacity = 0.3;
+            gridRoot.IsEnabled = false;
+        }
+
+        private void HideLoading()
+        {
+            actInd.IsVisible = false;
+            actInd.IsRunning = false;
+            gridRoot.Opacity = 1;
+            gridRoot.IsEnabled = true;
         }
 
         public async void Request(bool showActive)

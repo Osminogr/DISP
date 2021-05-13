@@ -22,7 +22,7 @@ namespace App1.Advertiser.Settings
             InitializeComponent();
 
             nameAdv.Text = nowUser.company.name;
-            phoneAdv.Text = String.Format("+7({0}{1}{2}){3}{4}{5}-{6}{7}-{8}{9}", nowUser.company.phone[0], nowUser.company.phone[1],
+            phoneAdv.Text = String.Format("+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}", nowUser.company.phone[0], nowUser.company.phone[1],
                 nowUser.company.phone[2], nowUser.company.phone[3], nowUser.company.phone[4], nowUser.company.phone[5],
                 nowUser.company.phone[6], nowUser.company.phone[7], nowUser.company.phone[8], nowUser.company.phone[9]);
 
@@ -65,7 +65,7 @@ namespace App1.Advertiser.Settings
 
         private void OnPhoneAdvChanged(object sender, string phoneAdv)
         {
-            this.phoneAdv.Text = String.Format("+7({0}{1}{2}){3}{4}{5}-{6}{7}-{8}{9}", phoneAdv[0], phoneAdv[1],
+            this.phoneAdv.Text = String.Format("+7 ({0}{1}{2}) {3}{4}{5}-{6}{7}-{8}{9}", phoneAdv[0], phoneAdv[1],
                 phoneAdv[2], phoneAdv[3], phoneAdv[4], phoneAdv[5],
                 phoneAdv[6], phoneAdv[7], phoneAdv[8], phoneAdv[9]);
         }

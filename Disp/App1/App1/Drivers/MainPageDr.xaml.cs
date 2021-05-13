@@ -75,7 +75,7 @@ namespace App1
             SideBarBottom.IsEnabled = false;
             Grid.SetRow(SideBarBottom, 8);
             Grid.SetRowSpan(SideBarBottom, 1);
-            SideBarBottom.Margin = new Thickness(0, 20, 0, -60);
+            SideBarBottom.Margin = new Thickness(0, -10, 0, -20);
         }
 
         private void OpenBottomMenu()
@@ -83,7 +83,7 @@ namespace App1
             SideBarBottom.IsEnabled = true;
             Grid.SetRow(SideBarBottom, 5);
             Grid.SetRowSpan(SideBarBottom, 4);
-            SideBarBottom.Margin = new Thickness(0, 0, 0, -60);
+            SideBarBottom.Margin = new Thickness(0, -10, 0, -20);
         }
 
         private void OpenLeftMenu()

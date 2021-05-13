@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 
 namespace App1.Advertiser.Settings
 {
@@ -17,6 +18,7 @@ namespace App1.Advertiser.Settings
     {
         Adv nowUser;
         public EventHandler<string> phoneAdvHandler;
+        Dictionary<int, string> numbers = new Dictionary<int, string>();
         public ChangeTelAdv(Adv now)
         {
             nowUser = now;
@@ -33,33 +35,72 @@ namespace App1.Advertiser.Settings
         {
             try
             {
-                if (nowUser.isCompany)
+                ShowLoading();
+
+                string phoneTextCurrentExpr = currentPhone.Text;
+                string phoneNewCurrentExpr = newPhone.Text;
+
+                string pattern = @"\(?([0-9]{3})\)?([ .-]?)([0-9]{3})(-?)([0-9]{2})(-?)([0-9]{2})";
+
+                string phoneCurrent = null;
+                string phoneNew = null;
+
+                Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+                Match match = regex.Match(phoneTextCurrentExpr);
+                if (match.Groups != null && match.Groups.Count == 8) phoneCurrent = match.Groups[1].Value + match.Groups[3].Value + match.Groups[5].Value + match.Groups[7].Value;
+
+                match = regex.Match(phoneNewCurrentExpr);
+                if (match.Groups != null && match.Groups.Count == 8) phoneNew = match.Groups[1].Value + match.Groups[3].Value + match.Groups[5].Value + match.Groups[7].Value;
+
+
+                if (nowUser.company.phone == phoneCurrent)
                 {
-                    if (nowUser.company.phone == currentPhone.Text)
+                    nowUser.company.phone = phoneNew;
+
+                    HttpContent answer = await Server.SaveCompany(nowUser.company);
+                    string response = await answer.ReadAsStringAsync();
+
+                    if (response == null || (response != null && !response.Contains(nameof(Company))))
                     {
-                        nowUser.company.phone = newPhone.Text;
+                        HideLoading();
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                    }
+                    else
+                    {
+                        Server.SaveAuthObject(nowUser, true);
+                        phoneAdvHandler?.Invoke(this, nowUser.company.phone);
 
-                        HttpContent answer = await Server.SaveCompany(nowUser.company);
-                        string response = await answer.ReadAsStringAsync();
-
-                        if (response == null || (response != null && !response.Contains(nameof(Company))))
-                        {
-                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
-                        }
-                        else
-                        {
-                            Server.SaveAuthObject(nowUser, true);
-                            phoneAdvHandler?.Invoke(this, nowUser.company.phone);
-
-                            await Navigation.PopAsync(true);
-                        }
+                        await Navigation.PopAsync(true);
                     }
                 }
+                else
+                {
+                    HideLoading();
+                    await DisplayAlert("Сообщение", "Текущий номер телефона задан неверно!", "Закрыть");
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                HideLoading();
                 Console.WriteLine(ex);
             }
+        }
+
+        private void ShowLoading()
+        {
+            actInd.IsVisible = true;
+            actInd.IsRunning = true;
+            gridRoot.Opacity = 0.3;
+            gridRoot.IsEnabled = false;
+        }
+
+        private void HideLoading()
+        {
+            actInd.IsVisible = false;
+            actInd.IsRunning = false;
+            gridRoot.Opacity = 1;
+            gridRoot.IsEnabled = true;
         }
     }
 }

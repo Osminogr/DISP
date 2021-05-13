@@ -2,34 +2,46 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Settings.ChangeTelAdv"
-             xmlns:templates="clr-namespace:App1.Templates">
+             xmlns:templates="clr-namespace:App1.Templates"
+             xmlns:behavior="clr-namespace:App1.Utils">
     <ContentPage.Content>
-        <Grid Padding="24,40,24,20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="70"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="10"/>
-            </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="3" IsVisible="false" />
+            <Grid Padding="24,40,24,20" x:Name="gridRoot">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
 
-            <Label Text="Номер телефона" Grid.Row="0" Padding="4, 0, 0, 0"
+                <Label Text="Номер телефона" Grid.Row="0" Padding="4, 0, 0, 0"
                    FontFamily="RobotoBold"/>
-            <Entry Placeholder="+7(000) 000-00-00" Grid.Row="0"
+                <Entry Placeholder="+7(000) 000-00-00" Grid.Row="0" MaxLength="18"
                    FontSize="16" x:Name="currentPhone" Margin="0, 20, 0, 0"
-                   Keyboard="Telephone"/>
+                   Keyboard="Telephone">
+                    <Entry.Behaviors>
+                        <behavior:PhoneMaskBehavior x:Name="PhoneMaskCurrent" />
+                    </Entry.Behaviors>
+                </Entry>
 
-            <Label Text="Новый номер телефона" Grid.Row="1" Padding="4, 0, 0, 0"
+                <Label Text="Новый номер телефона" Grid.Row="1" Padding="4, 0, 0, 0"
                    FontFamily="RobotoBold"/>
-            <Entry Placeholder="+7(999) 999-99-99" Grid.Row="1" Margin="0, 20, 0, 0"
-                   FontSize="16" x:Name="newPhone"
-                   Keyboard="Telephone"/>
+                <Entry Placeholder="+7(999) 999-99-99" Grid.Row="1" Margin="0, 20, 0, 0" MaxLength="18"
+                   FontSize="16" x:Name="newPhone" 
+                   Keyboard="Telephone">
+                    <Entry.Behaviors>
+                        <behavior:PhoneMaskBehavior x:Name="PhoneMaskNew" />
+                    </Entry.Behaviors>
+                </Entry>
 
-            <Button Text="Готово" Grid.Row="2"
+                <Button Text="Готово" Grid.Row="2"
                     TextColor="#FFFFFF"
                     Margin="70,20,70,0" Clicked="SavePhone"
                     BackgroundColor="#FFB800"
                     CornerRadius="40"/>
-        </Grid>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
