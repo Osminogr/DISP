@@ -23,21 +23,37 @@ namespace App1
 
             driver.car = new Car();
 
+            personLabel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() =>
+                {
+                    person.IsChecked = true;
+                })
+            });
+
             photo1.GestureRecognizers.Add(new TapGestureRecognizer()
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsTakePhotoSupported)
                         {
-                            photo1.Source = photo.Path;
-                            driver.car.photo1 = new Photo();
-                            driver.car.photo1.data = photo.GetStream();
-                            driver.car.photo1.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo1.Source = photo.Path;
+                                driver.car.photo1 = new Photo();
+                                driver.car.photo1.data = photo.GetStream();
+                                driver.car.photo1.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -46,17 +62,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo2.Source = photo.Path;
-                            driver.car.photo2 = new Photo();
-                            driver.car.photo2.data = photo.GetStream();
-                            driver.car.photo2.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo2.Source = photo.Path;
+                                driver.car.photo2 = new Photo();
+                                driver.car.photo2.data = photo.GetStream();
+                                driver.car.photo2.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -65,17 +89,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo3.Source = photo.Path;
-                            driver.car.photo3 = new Photo();
-                            driver.car.photo3.data = photo.GetStream();
-                            driver.car.photo3.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo3.Source = photo.Path;
+                                driver.car.photo3 = new Photo();
+                                driver.car.photo3.data = photo.GetStream();
+                                driver.car.photo3.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -85,32 +117,40 @@ namespace App1
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false;
-                if (Mark.Text != null) b1 = true;
-                if (Model.Text != null) b2 = true;
-                if (Number.Text != null) b3 = true;
-                if (Data.Text != null) b4 = true;
-                if (Color.Text != null) b5 = true;
-                if (VIN.Text != null) b6 = true;
-                if (Reg.Text != null) b7 = true;
-
-                if (driver.car.photo1 != null && driver.car.photo2 != null && driver.car.photo3 != null) b8 = true;
-
-                if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && person.IsChecked)
+                try
                 {
-                    driver.car.mark = Mark.Text;
-                    driver.car.model = Model.Text;
-                    driver.car.carNumber = Number.Text;
-                    driver.car.dataCar = Data.Text;
-                    driver.car.color = Color.Text;
-                    driver.car.vin = VIN.Text;
-                    driver.car.regNumberCar = Reg.Text;
+                    bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false;
+                    if (Mark.Text != null) b1 = true;
+                    if (Model.Text != null) b2 = true;
+                    if (Number.Text != null) b3 = true;
+                    if (Data.Text != null) b4 = true;
+                    if (Color.Text != null) b5 = true;
+                    if (VIN.Text != null) b6 = true;
+                    if (Reg.Text != null) b7 = true;
 
-                    await Navigation.PushAsync(new Card(driver));
+                    if (driver.car.photo1 != null && driver.car.photo2 != null && driver.car.photo3 != null) b8 = true;
+
+                    if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && person.IsChecked)
+                    {
+                        driver.car.mark = Mark.Text;
+                        driver.car.model = Model.Text;
+                        driver.car.carNumber = Number.Text;
+                        driver.car.dataCar = Data.Text;
+                        driver.car.color = Color.Text;
+                        driver.car.vin = VIN.Text;
+                        driver.car.regNumberCar = Reg.Text;
+
+                        await Navigation.PushAsync(new Card(driver));
+                    }
+                    else
+                    {
+                        await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                    Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Непредвиденная ошибка! Попробуйте позже.", "Закрыть");
                 }
             })));
         }

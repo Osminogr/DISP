@@ -21,7 +21,13 @@ namespace App1.Advertiser
             tarif = now;
             InitializeComponent();
 
-            OverrideTitleView(tarif.name, 90, -1);
+            if (tarif.name.Length > 8) OverrideTitleView(tarif.name, 40, -1);
+            else OverrideTitleView(tarif.name, 90, -1);
+
+            minDays.Text = String.Format("{0} дней", tarif.minDays);
+            minMonitor.Text = tarif.minMonitor;
+            maxMonitor.Text = tarif.maxMonitor;
+            amountDay.Text = String.Format("{0} рублей", tarif.amountDay);
         }
 
         private void OverrideTitleView(string name, int left, int count)

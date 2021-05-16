@@ -44,7 +44,7 @@ namespace App1.Advertiser
                 {
                     if (isActive)
                     {
-                        if (item.active)
+                        if (item.active && item.paid)
                         {
                             compaignAct.Children.Add(new CompaignTemplate(item));
                             loaded = true;
@@ -95,7 +95,7 @@ namespace App1.Advertiser
 
         public async void NewCampaigns(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Campaign.NewCampaign.ChoseTarif(nowUser));
+            await Navigation.PushAsync(new Campaign.NewCampaign.ChoseVid(nowUser));
         }
     }
 }

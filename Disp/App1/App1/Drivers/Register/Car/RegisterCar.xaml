@@ -52,7 +52,7 @@
                            FontSize="15"
                            VerticalOptions="CenterAndExpand"
                            FontFamily="Roboto" Padding="-10, 0, 10, 0"
-                           TextColor="#6F6F6F"
+                           TextColor="#6F6F6F" x:Name="personLabel"
                            Grid.ColumnSpan="6"
                            Grid.Column="1"/>
                     <RadioButton BorderColor="#FFB800" x:Name="person"

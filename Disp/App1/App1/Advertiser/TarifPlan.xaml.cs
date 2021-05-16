@@ -13,36 +13,31 @@ using App1.Templates;
 namespace App1.Advertiser
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tarifs : ContentPage
+    public partial class TarifPlan : ContentPage
     {
         Adv nowUser;
-        bool inCar;
-        public Tarifs(Adv now, bool isInCar)
+        public TarifPlan(Adv now)
         {
             nowUser = now;
-            inCar = isInCar;
             InitializeComponent();
 
             OverrideTitleView("Тарифный план", 60, -1);
 
-            LoadTarifs();
-        }
-
-        private async void LoadTarifs()
-        {
-            List<Tarif> tarifs = await Server.GetTarifs();
-
-            if (tarifs != null && tarifs.Count > 0)
+            tarifInCar.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                foreach (var tarif in tarifs)
+                Command = new Command(() =>
                 {
-                    if (tarif.isInCar == inCar)
-                    {
-                        TarifTemplate tarifTemplate = new TarifTemplate(tarif, true);
-                        tarifsRoot.Children.Add(tarifTemplate);
-                    }
-                }
-            }
+                    Navigation.PushAsync(new Tarifs(nowUser, true), true);
+                })
+            });
+
+            tarifOutCar.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() =>
+                {
+                    Navigation.PushAsync(new Tarifs(nowUser, false), true);
+                })
+            });
         }
 
         private void OverrideTitleView(string name, int left, int count)

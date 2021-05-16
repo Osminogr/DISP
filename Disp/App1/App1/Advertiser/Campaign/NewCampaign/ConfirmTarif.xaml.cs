@@ -35,7 +35,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
         private void OverrideTitleView(string name, string nameAction, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, 80, count, new Command(() => {
-                Navigation.PushAsync(new ChoseVid(compaign));
+                Navigation.PushAsync(new Confirm(compaign));
             })));
         }
     }

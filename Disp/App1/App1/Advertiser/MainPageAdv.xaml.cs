@@ -153,7 +153,7 @@ namespace App1
 
         public async void Tarifs(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Tarifs(nowUser));
+            await Navigation.PushAsync(new TarifPlan(nowUser));
         }
 
         public async void Alerts(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace App1
 
         public async void NewCompaign(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Advertiser.Campaign.NewCampaign.ChoseTarif(nowUser));
+            await Navigation.PushAsync(new Advertiser.Campaign.NewCampaign.ChoseVid(nowUser));
         }
 
         public async void LoadStats(object sender, EventArgs e)

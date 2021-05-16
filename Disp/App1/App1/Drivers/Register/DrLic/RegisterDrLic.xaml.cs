@@ -27,17 +27,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsTakePhotoSupported)
                         {
-                            photo1.Source = photo.Path;
-                            driver.driverLicence.photo1 = new Photo();
-                            driver.driverLicence.photo1.data = photo.GetStream();
-                            driver.driverLicence.photo1.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo1.Source = photo.Path;
+                                driver.driverLicence.photo1 = new Photo();
+                                driver.driverLicence.photo1.data = photo.GetStream();
+                                driver.driverLicence.photo1.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -46,17 +54,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo2.Source = photo.Path;
-                            driver.driverLicence.photo2 = new Photo();
-                            driver.driverLicence.photo2.data = photo.GetStream();
-                            driver.driverLicence.photo2.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo2.Source = photo.Path;
+                                driver.driverLicence.photo2 = new Photo();
+                                driver.driverLicence.photo2.data = photo.GetStream();
+                                driver.driverLicence.photo2.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -65,18 +81,33 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo3.Source = photo.Path;
-                            driver.driverLicence.photo3 = new Photo();
-                            driver.driverLicence.photo3.data = photo.GetStream();
-                            driver.driverLicence.photo3.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo3.Source = photo.Path;
+                                driver.driverLicence.photo3 = new Photo();
+                                driver.driverLicence.photo3.data = photo.GetStream();
+                                driver.driverLicence.photo3.name = Path.GetFileName(photo.Path);
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
+                    }
+                })
+            });
+
+            personLabel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() => {
+                    person.IsChecked = true;
                 })
             });
         }
@@ -85,21 +116,29 @@ namespace App1
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false;
-                if (Number.Text != null) b1 = true;
-                if (Date.Text != null) b2 = true;
-                if (Period.Text != null) b3 = true;
-                if (driver.driverLicence.photo1 != null && driver.driverLicence.photo2 != null && driver.driverLicence.photo3 != null) b4 = true;
-
-                if (b1 && b2 && b3 && b4 && person.IsChecked)
+                try
                 {
-                    driver.driverLicence.number = Number.Text;
-                    driver.driverLicence.date = Date.Text;
-                    driver.driverLicence.period = Period.Text;
+                    bool b1 = false, b2 = false, b3 = false, b4 = false;
+                    if (Number.Text != null) b1 = true;
+                    if (Date.Text != null) b2 = true;
+                    if (Period.Text != null) b3 = true;
+                    if (driver.driverLicence.photo1 != null && driver.driverLicence.photo2 != null && driver.driverLicence.photo3 != null) b4 = true;
 
-                    await Navigation.PushAsync(new RegisterCar(driver));
+                    if (b1 && b2 && b3 && b4 && person.IsChecked)
+                    {
+                        driver.driverLicence.number = Number.Text;
+                        driver.driverLicence.date = Date.Text;
+                        driver.driverLicence.period = Period.Text;
+
+                        await Navigation.PushAsync(new RegisterCar(driver));
+                    }
+                    else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
                 }
-                else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Непредвиденная ошибка! Попробуйте позже.", "Закрыть");
+                }
             })));
         }
     }

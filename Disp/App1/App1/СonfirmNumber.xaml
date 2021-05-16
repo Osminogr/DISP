@@ -33,7 +33,7 @@
                    HorizontalOptions="Center"
                    Grid.Row="4" TextColor="#FFFFFF" FontSize="18"/>
             <Entry x:Name="CodeEnter" TextChanged="Change_code" 
-                    Keyboard="Telephone" MaxLength="4"
+                    Keyboard="Telephone" MaxLength="4" HorizontalTextAlignment="Center"
                     HorizontalOptions="Start" VerticalOptions="Center"
                     MinimumWidthRequest="4" Placeholder="Введите код из СМС"
                     TextColor="#FFFFFF" Grid.Row="5" 

@@ -46,8 +46,9 @@
                            VerticalOptions="CenterAndExpand"
                            FontFamily="Roboto" Padding="-10, 0, 10, 0"
                            TextColor="#6F6F6F"
-                           Grid.ColumnSpan="6"
-                           Grid.Column="1"/>
+                           Grid.ColumnSpan="6" x:Name="personLabel"
+                           Grid.Column="1">
+                    </Label>
                     <RadioButton BorderColor="#FFB800" x:Name="person"
                                  BackgroundColor="Transparent"
                                  Grid.Column="0" Margin="0, 0, 30, 0"

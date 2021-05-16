@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Advertiser.TarifPlan"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ScrollView VerticalOptions="FillAndExpand" Grid.Row="0">
+                <StackLayout x:Name="tarifsRoot" VerticalOptions="FillAndExpand">
+                    <Frame CornerRadius="10" Margin="10,20,10,10" HasShadow="True" MinimumHeightRequest="50" MinimumWidthRequest="50" BorderColor="#CCCCCC" Grid.Row="0" IsVisible="True" x:Name="tarifViewInfoInCar">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Монитор в такси" x:Name="tarifInCar" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" TextColor="#FFB800" Grid.Row="0"/>
+                        </Grid>
+                    </Frame>
+                    <Frame CornerRadius="10" Margin="10,20,10,10" HasShadow="True" MinimumHeightRequest="50" MinimumWidthRequest="50" BorderColor="#CCCCCC" Grid.Row="0" IsVisible="True" x:Name="tarifViewInfoOutCar">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Text="Экран на крыше" x:Name="tarifOutCar" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="20" TextColor="#FFB800" Grid.Row="0"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

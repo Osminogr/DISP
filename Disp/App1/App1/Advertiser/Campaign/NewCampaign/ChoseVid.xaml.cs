@@ -20,14 +20,16 @@ namespace App1.Advertiser.Campaign.NewCampaign
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChoseVid : ContentPage
     {
-        Compaign nowUser;
-        List<View> frames;
+        Adv adv;
+        Compaign compaign;
+        List<View> labels;
         List<VideoPlayer> videoPlayers = new List<VideoPlayer>();
+        List<Frame> frames = new List<Frame>();
         private readonly SynchronizationContext _context;
 
-        public ChoseVid(Compaign now)
+        public ChoseVid(Adv now)
         {
-            nowUser = now;
+            adv = now;
             InitializeComponent();
 
             loadVideos();
@@ -40,19 +42,23 @@ namespace App1.Advertiser.Campaign.NewCampaign
         private void OverrideTitleView(string name, string nameAction, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, count, new Command(async () => {
-                if (nowUser.video == null) await DisplayAlert("Сообщение", "Выбирите видеоролик!", "Закрыть");
-                else await Navigation.PushAsync(new Confirm(nowUser));
+                if (compaign.video == null) await DisplayAlert("Сообщение", "Выбирите видеоролик!", "Закрыть");
+                else await Navigation.PushAsync(new TarifPlan(compaign));
             })));
         }
 
         private async void loadVideos()
         {
-            List<Video> list = await Server.GetVideos(nowUser.adv, false);
+            List<Video> list = await Server.GetVideos(adv, false);
 
             if (list != null && list.Count != 0)
             {
                 int count = 0;
-                frames = new List<View>();
+                labels = new List<View>();
+
+                compaign = new Compaign();
+                compaign.adv = adv;
+
                 foreach (var item in list)
                 {
                     if (item.validated)
@@ -60,6 +66,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         count++;
 
                         Frame frame = new Frame() { Margin = new Thickness(0, 10, 0, 0), Padding = new Thickness(10, 0, 10, 0), BackgroundColor = Color.Transparent };
+                        frame.Opacity = 0;
 
                         VideoPlayer videoPlayer = new VideoPlayer();
                         videoPlayer.Source = item.url;
@@ -67,7 +74,6 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         videoPlayer.AutoPlay = false;
                         videoPlayer.Margin = new Thickness(0, -6, 0, 0);
                         videoPlayer.HeightRequest = 150;
-                        videoPlayer.Opacity = 0;
 
                         videoPlayers.Add(videoPlayer);
 
@@ -87,16 +93,17 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         frame.GestureRecognizers.Add(new TapGestureRecognizer()
                         {
                             Command = new Command(() => {
-                                foreach (var fr in frames)
+                                foreach (var fr in labels)
                                     ((Label)fr).BackgroundColor = Color.LightGray;
 
                                 label.BackgroundColor = Color.FromHex("#FFB800");
-                                nowUser.video = item;
+                                compaign.video = item;
                             })
                         });
 
                         videos.Children.Add(frame);
-                        frames.Add(label);
+                        labels.Add(label);
+                        frames.Add(frame);
                     } 
                 }
 
@@ -128,6 +135,14 @@ namespace App1.Advertiser.Campaign.NewCampaign
                     _context.Send(status => vp.Seek(-1), null);
                     _context.Send(status => videoLoading.IsVisible = false, null);
                     _context.Send(status => vp.Opacity = 1, null);
+                }
+            }
+
+            if (frames.Count > 0)
+            {
+                foreach (var fr in frames)
+                {
+                    _context.Send(status => fr.Opacity = 1, null);
                 }
             }
         }

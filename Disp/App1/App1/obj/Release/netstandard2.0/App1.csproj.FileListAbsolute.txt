@@ -327,3 +327,6 @@ C:/Users/Osminogr/Downloads/Telegram Desktop/Disp/Disp/App1/App1/obj/Release/net
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/Settings/PersonalDataUpdate.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/TarifDetail.xaml.g.cs
 /Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/Tarifs.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/Campaign/NewCampaign/PayTarif.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/Campaign/NewCampaign/TarifPlan.xaml.g.cs
+/Users/wecant/Projects/DISP/Disp/App1/App1/obj/Release/netstandard2.0/Advertiser/TarifPlan.xaml.g.cs

@@ -28,17 +28,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsTakePhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsTakePhotoSupported)
                         {
-                            photo1.Source = photo.Path;
-                            driver.person.passport.photo1 = new Photo();
-                            driver.person.passport.photo1.data = photo.GetStream();
-                            driver.person.passport.photo1.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo1.Source = photo.Path;
+                                driver.person.passport.photo1 = new Photo();
+                                driver.person.passport.photo1.data = photo.GetStream();
+                                driver.person.passport.photo1.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -47,17 +55,25 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo2.Source = photo.Path;
-                            driver.person.passport.photo2 = new Photo();
-                            driver.person.passport.photo2.data = photo.GetStream();
-                            driver.person.passport.photo2.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo2.Source = photo.Path;
+                                driver.person.passport.photo2 = new Photo();
+                                driver.person.passport.photo2.data = photo.GetStream();
+                                driver.person.passport.photo2.name = Path.GetFileName(photo.Path);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
                     }
                 })
             });
@@ -66,18 +82,33 @@ namespace App1
             {
                 Command = new Command(async () =>
                 {
-                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    try
                     {
-                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                        if (photo != null)
+                        if (CrossMedia.Current.IsPickPhotoSupported)
                         {
-                            photo3.Source = photo.Path;
-                            driver.person.passport.photo3 = new Photo();
-                            driver.person.passport.photo3.data = photo.GetStream();
-                            driver.person.passport.photo3.name = Path.GetFileName(photo.Path);
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                            if (photo != null)
+                            {
+                                photo3.Source = photo.Path;
+                                driver.person.passport.photo3 = new Photo();
+                                driver.person.passport.photo3.data = photo.GetStream();
+                                driver.person.passport.photo3.name = Path.GetFileName(photo.Path);
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex);
+                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
+                    }
+                })
+            });
+
+            personLabel.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() => {
+                    person.IsChecked = true;
                 })
             });
         }
@@ -86,25 +117,33 @@ namespace App1
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false;
-                if (number.Text != null) b1 = true;
-                if (Data.Text != null) b2 = true;
-                if (Org.Text != null) b3 = true;
-                if (Code.Text != null) b4 = true;
-                if (Town.Text != null) b5 = true;
-                if (driver.person.passport.photo1 != null && driver.person.passport.photo2 != null && driver.person.passport.photo3 != null) b6 = true;
-
-                if (b1 && b2 && b3 && b4 && b5 && b6 && person.IsChecked)
+                try
                 {
-                    driver.person.passport.number = number.Text;
-                    driver.person.passport.date = Data.Text;
-                    driver.person.passport.who = Org.Text;
-                    driver.person.passport.code = Code.Text;
-                    driver.person.city = Town.Text;
+                    bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false;
+                    if (number.Text != null) b1 = true;
+                    if (Data.Text != null) b2 = true;
+                    if (Org.Text != null) b3 = true;
+                    if (Code.Text != null) b4 = true;
+                    if (Town.Text != null) b5 = true;
+                    if (driver.person.passport.photo1 != null && driver.person.passport.photo2 != null && driver.person.passport.photo3 != null) b6 = true;
 
-                    await Navigation.PushAsync(new RegisterDrLic(driver));
+                    if (b1 && b2 && b3 && b4 && b5 && b6 && person.IsChecked)
+                    {
+                        driver.person.passport.number = number.Text;
+                        driver.person.passport.date = Data.Text;
+                        driver.person.passport.who = Org.Text;
+                        driver.person.passport.code = Code.Text;
+                        driver.person.city = Town.Text;
+
+                        await Navigation.PushAsync(new RegisterDrLic(driver));
+                    }
+                    else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
                 }
-                else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Непредвиденная ошибка! Попробуйте позже.", "Закрыть");
+                }
             })));
         }
     }

@@ -6,8 +6,8 @@
              xmlns:templates="clr-namespace:App1.Templates"
              BackgroundColor="#FAFAFA">
     <ContentPage.Content>
-        <ScrollView BindingContext="{x:Reference this}">
-            <StackLayout>
+        <ScrollView BindingContext="{x:Reference this}"> 
+            <StackLayout VerticalOptions="FillAndExpand">
                 <Grid Padding="20, 20, 20, 20">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>

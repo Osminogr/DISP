@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:behavior="clr-namespace:App1.Utils"
              x:Class="App1.StartPage"
              BackgroundImage ="TaxiYellow.jpg"
              BackgroundColor="#000000">
@@ -36,29 +37,28 @@
                    FontFamily="Roboto"/>
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
                 <Image Source="dots_icon.png"
-                       Grid.Column="0"
-                       Margin="0,15,-90,15" Aspect="AspectFit"/>
+                       Grid.Column="0" Margin="0, 0, 20, 0" HorizontalOptions="End"
+                       Aspect="AspectFit"/>
 
-                <Label Text="+7" Grid.Column="1" 
-                       HorizontalOptions="End" VerticalOptions="Center" 
-                       FontSize="25"
-                       FontFamily="Roboto"
-                       TextColor="#99FFFFFF"/>
                 <Entry x:Name="NumberEnter" TextChanged="Change_number" 
-                   Keyboard="Telephone" MaxLength="10"
+                   Keyboard="Telephone" MaxLength="18"
                    HorizontalOptions="Start" VerticalOptions="Center"
-                   MinimumWidthRequest="10" Placeholder="(XXX)XXX-XX-XX"
-                   TextColor="#FFFFFF" Grid.Column="2" 
-                   FontSize="25" 
+                   MinimumWidthRequest="18" Placeholder="+7 (XXX) XXX-XX-XX"
+                   TextColor="#FFFFFF" Grid.Column="1" 
+                   FontSize="25" Margin="-10, 0, 0, 0"
                    FontFamily="Roboto"
-                   Grid.ColumnSpan="3" PlaceholderColor="#99FFFFFF"/>
+                   Grid.ColumnSpan="3" PlaceholderColor="#99FFFFFF">
+                    <Entry.Behaviors>
+                        <behavior:PhoneMaskBehavior x:Name="PhoneMask" />
+                    </Entry.Behaviors>
+                </Entry>
             </Grid>
             <Button x:Name="Button1" Text ="Войти" 
                     Clicked ="Enter"

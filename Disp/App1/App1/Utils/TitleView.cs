@@ -23,7 +23,7 @@ namespace App1.Utils
                 view.Text += "(" + count + ")";
             view.TextColor = Color.Black;
             view.HorizontalTextAlignment = TextAlignment.Start;
-            view.Padding = new Thickness(left, 0, 0, 0);
+            view.Padding = new Thickness(0, 0, 0, 0);
             view.FontSize = 18;
 
             return view;

@@ -37,22 +37,8 @@ namespace App1.Advertiser.Settings
             {
                 ShowLoading();
 
-                string phoneTextCurrentExpr = currentPhone.Text;
-                string phoneNewCurrentExpr = newPhone.Text;
-
-                string pattern = @"\(?([0-9]{3})\)?([ .-]?)([0-9]{3})(-?)([0-9]{2})(-?)([0-9]{2})";
-
-                string phoneCurrent = null;
-                string phoneNew = null;
-
-                Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-
-                Match match = regex.Match(phoneTextCurrentExpr);
-                if (match.Groups != null && match.Groups.Count == 8) phoneCurrent = match.Groups[1].Value + match.Groups[3].Value + match.Groups[5].Value + match.Groups[7].Value;
-
-                match = regex.Match(phoneNewCurrentExpr);
-                if (match.Groups != null && match.Groups.Count == 8) phoneNew = match.Groups[1].Value + match.Groups[3].Value + match.Groups[5].Value + match.Groups[7].Value;
-
+                string phoneCurrent = Server.GetPhoneFromRegex(currentPhone.Text);
+                string phoneNew = Server.GetPhoneFromRegex(newPhone.Text);
 
                 if (nowUser.company.phone == phoneCurrent)
                 {

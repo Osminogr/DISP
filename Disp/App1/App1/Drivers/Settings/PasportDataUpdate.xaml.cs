@@ -18,7 +18,7 @@ namespace App1.Drivers.Settings
         Driver nowUser;
         public PasportDataUpdate(Driver now)
         {
-            nowUser = now;
+            nowUser = Server.GetAuthObject().driver;
             InitializeComponent();
 
             number.Text = nowUser.person.passport.number;
@@ -94,35 +94,44 @@ namespace App1.Drivers.Settings
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false;
-                if (number.Text != null) b1 = true;
-                if (Data.Text != null) b2 = true;
-                if (Org.Text != null) b3 = true;
-                if (Code.Text != null) b4 = true;
-
-                if (b1 && b2 && b3 && b4)
+                try
                 {
-                    nowUser.person.passport.number = number.Text;
-                    nowUser.person.passport.date = Data.Text;
-                    nowUser.person.passport.who = Org.Text;
-                    nowUser.person.passport.code = Code.Text;
+                    bool b1 = false, b2 = false, b3 = false, b4 = false;
+                    if (number.Text != null) b1 = true;
+                    if (Data.Text != null) b2 = true;
+                    if (Org.Text != null) b3 = true;
+                    if (Code.Text != null) b4 = true;
 
-                    HttpContent answer = await Server.SavePassport(nowUser.person.passport);
-                    string response = await answer.ReadAsStringAsync();
-
-                    if (response == null || (response != null && !response.Contains(nameof(Passport))))
+                    if (b1 && b2 && b3 && b4)
                     {
-                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                        nowUser.person.passport.number = number.Text;
+                        nowUser.person.passport.date = Data.Text;
+                        nowUser.person.passport.who = Org.Text;
+                        nowUser.person.passport.code = Code.Text;
+
+                        HttpContent answer = await Server.SavePassport(nowUser.person.passport);
+                        string response = await answer.ReadAsStringAsync();
+
+                        if (response == null || (response != null && !response.Contains(nameof(Passport))))
+                        {
+                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
+                        }
+                        else
+                        {
+                            nowUser = await Server.GetDriver(nowUser.id);
+                            Server.SaveAuthObject(nowUser, false);
+                            await Navigation.PopAsync(true);
+                        }
                     }
                     else
                     {
-                        Server.SaveAuthObject(nowUser, false);
-                        await Navigation.PopAsync(true);
+                        await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                    Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                 }
             })));
         }

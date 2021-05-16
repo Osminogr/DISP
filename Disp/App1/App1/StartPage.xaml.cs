@@ -56,11 +56,15 @@ namespace App1
 
         private async void Enter(object sender, EventArgs e)
         {
-            if (number != null && number.Length == 10)
+            if (number != null && number.Length == 18)
             {
                 ShowLoading(true);
-                HttpResponseMessage answer = await Server.CreateCodeReq(number);
-                await Navigation.PushAsync(new СonfirmNumber(number));
+
+                string phone = Server.GetPhoneFromRegex(String.Format("+7 {0}", number));
+
+                HttpResponseMessage answer = await Server.CreateCodeReq(phone);
+                await Navigation.PushAsync(new СonfirmNumber(phone));
+
                 ShowLoading(false);
             }
         }

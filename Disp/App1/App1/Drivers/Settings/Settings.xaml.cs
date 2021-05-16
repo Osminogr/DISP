@@ -14,6 +14,7 @@ namespace App1
         public Settings(Driver now)
         {
             nowUser = now;
+
             InitializeComponent();
             OverrideTitleView("Настройки", 90, -1);
         }

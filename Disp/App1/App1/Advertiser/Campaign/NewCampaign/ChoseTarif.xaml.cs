@@ -20,12 +20,14 @@ namespace App1.Advertiser.Campaign.NewCampaign
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChoseTarif : ContentPage
     {
-        Adv nowUser;
+        Compaign compaign;
+        bool inCar;
         Tarif selectedTarif;
         List<TarifTemplate> tarifTemplates = new List<TarifTemplate>();
-        public ChoseTarif(Adv adv)
+        public ChoseTarif(Compaign now, bool isInCar)
         {
-            this.nowUser = adv;
+            compaign = now;
+            inCar = isInCar;
             InitializeComponent();
 
             OverrideTitleView("Тарифный план", "Выбрать", -1);
@@ -43,13 +45,16 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 {
                     foreach(var tarif in tarifs)
                     {
-                        TarifTemplate view = new TarifTemplate(tarif, false)
+                        if (tarif.isInCar == inCar)
                         {
-                            selectedTarif = OnTarifSelected
-                        };
-                        tarifsView.Children.Add(view);
+                            TarifTemplate view = new TarifTemplate(tarif, false)
+                            {
+                                selectedTarif = OnTarifSelected
+                            };
+                            tarifsView.Children.Add(view);
 
-                        tarifTemplates.Add(view);
+                            tarifTemplates.Add(view);
+                        }
                     }
                 }
                 else
@@ -89,9 +94,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
         public async void SelectTarif(Tarif tarif)
         {
-            Compaign compaign = new Compaign();
             compaign.tarif = tarif;
-            compaign.adv = nowUser;
 
             await Navigation.PushAsync(new ConfirmTarif(compaign), true);
         }

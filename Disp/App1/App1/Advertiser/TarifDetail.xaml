@@ -9,86 +9,49 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="80"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="1"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="1"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="1"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
                         <RowDefinition Height="1"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="30"></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="1"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Text="Минимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
 
-                    <Label Grid.Row="0" Grid.Column="0" Text="Трансляция рекламных видеороликов на крыше экранов автомобилей" HorizontalTextAlignment="Center"></Label>
-                    <Image Grid.Row="1" Grid.Column="0" Source="Logo.png" Aspect="AspectFit"></Image>
-                    <Label Grid.Row="3" Grid.Column="0" Text="Минимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
-
-                    <Frame Grid.Row="4" Grid.Column="0" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="10" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Frame Grid.Row="1" Margin="120, 0, 120, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
+                        <Label Text="10" TextColor="White" HorizontalTextAlignment="Center" x:Name="minMonitor" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                     </Frame>
 
-                    <Label Grid.Row="6" Grid.Column="0" Text="Максимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="3" Text="Максимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
 
-                    <Frame Grid.Row="7" Grid.Column="0" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="50" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Frame Grid.Row="4" Margin="120, 0, 120, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
+                        <Label Text="50" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" x:Name="maxMonitor" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                     </Frame>
 
-                    <Label Grid.Row="9" Grid.Column="0" Text="Минимальный срок аренды экранов" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="6" Text="Минимальный срок аренды экранов" HorizontalTextAlignment="Center"></Label>
 
-                    <Frame Grid.Row="10" Grid.Column="0" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="30" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Frame Grid.Row="7" Margin="120, 0, 120, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
+                        <Label Text="30" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" x:Name="minDays" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                     </Frame>
 
-                    <Label Grid.Row="12" Grid.Column="0" Text="Стоимость аренды экрана в сутки" HorizontalTextAlignment="Center"></Label>
+                    <Label Grid.Row="9" Text="Стоимость аренды экрана в сутки" HorizontalTextAlignment="Center"></Label>
 
-                    <Frame Grid.Row="13" Grid.Column="0" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="80 рублей" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Frame Grid.Row="10" Margin="120, 0, 120, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
+                        <Label Text="80 рублей" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" x:Name="amountDay" VerticalTextAlignment="Center" FontAttributes="Bold"/>
                     </Frame>
 
-                    <Label Grid.Row="0" Grid.Column="2" Text="Трансляция рекламных видеороликов на крыше экранов автомобилей" HorizontalTextAlignment="Center"></Label>
-                    <Image Grid.Row="1" Grid.Column="2" Source="Logo.png" Aspect="AspectFit"></Image>
-                    <Label Grid.Row="3" Grid.Column="2" Text="Минимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
-
-                    <Frame Grid.Row="4" Grid.Column="2" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="10" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-                    </Frame>
-
-                    <Label Grid.Row="6" Grid.Column="2" Text="Максимальное количество экранов по тарифу" HorizontalTextAlignment="Center"></Label>
-
-                    <Frame Grid.Row="7" Grid.Column="2" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="50" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-                    </Frame>
-
-                    <Label Grid.Row="9" Grid.Column="2" Text="Минимальный срок аренды экранов" HorizontalTextAlignment="Center"></Label>
-
-                    <Frame Grid.Row="10" Grid.Column="2" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="30" TextColor="White" HorizontalTextAlignment="Center" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-                    </Frame>
-
-                    <Label Grid.Row="12" Grid.Column="2" Text="Стоимость аренды экрана в сутки" HorizontalTextAlignment="Center"></Label>
-
-                    <Frame Grid.Row="13" Grid.Column="2" Margin="40, 0, 40, 0" Padding="0" BackgroundColor="#FFB800" CornerRadius="10">
-                        <Label Text="80 рублей" HorizontalTextAlignment="Center" TextColor="White" FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
-                    </Frame>
-
-                    <BoxView BackgroundColor="Gray" Grid.ColumnSpan="3" Grid.Row="2" Opacity="0.2"></BoxView>
-                    <BoxView BackgroundColor="Gray" Grid.ColumnSpan="3" Grid.Row="5" Opacity="0.2"></BoxView>
-                    <BoxView BackgroundColor="Gray" Grid.ColumnSpan="3" Grid.Row="8" Opacity="0.2"></BoxView>
-                    <BoxView BackgroundColor="Gray" Grid.ColumnSpan="3" Grid.Row="11" Opacity="0.2"></BoxView>
-
-                    <BoxView BackgroundColor="Gray" Grid.Column="1" Grid.RowSpan="14" Opacity="0.2"></BoxView>
+                    <BoxView BackgroundColor="Gray" Grid.Row="2" Opacity="0.2"></BoxView>
+                    <BoxView BackgroundColor="Gray" Grid.Row="5" Opacity="0.2"></BoxView>
+                    <BoxView BackgroundColor="Gray" Grid.Row="8" Opacity="0.2"></BoxView>
                 </Grid>
             </StackLayout>
         </ScrollView>

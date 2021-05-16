@@ -4,8 +4,16 @@
              x:Class="App1.Advertiser.Tarifs"
              BackgroundColor="White">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout x:Name="tarifsRoot"></StackLayout>
-        </ScrollView>
+
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ScrollView VerticalOptions="FillAndExpand" Grid.Row="0">
+                <StackLayout x:Name="tarifsRoot" VerticalOptions="FillAndExpand"></StackLayout>
+            </ScrollView>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

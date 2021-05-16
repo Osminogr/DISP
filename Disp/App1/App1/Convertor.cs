@@ -14,6 +14,7 @@ using Newtonsoft.Json.Serialization;
 using System.Linq;
 using System.Reflection;
 using App1.Domain.Json;
+using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -54,13 +55,13 @@ namespace App1
             return Server.Request(@"{""CodeReq"":{""phone"":""" + number + @"""}}", "post", "gcode");
         }
 
-        public static async Task<Adv> GetAdv(string number)
+        public static async Task<Adv> GetAdv(int id)
         {
             Adv adv = null;
 
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(ROOT_URL + "adv/" + number);
+            var answer = await client.GetAsync(ROOT_URL + "adv/" + id);
             var responseBody = await answer.Content.ReadAsStringAsync();
 
             if (responseBody != null && responseBody.Contains(nameof(Adv)))
@@ -89,13 +90,13 @@ namespace App1
             return list;
         }
 
-        public static async Task<Driver> GetDriver(string number)
+        public static async Task<Driver> GetDriver(int id)
         {
             Driver driver = null;
 
             HttpClient client = new HttpClient();
 
-            var answer = await client.GetAsync(ROOT_URL + "driver/" + number);
+            var answer = await client.GetAsync(ROOT_URL + "driver/" + id);
             var responseBody = await answer.Content.ReadAsStringAsync();
             if (responseBody != null && responseBody.Contains(nameof(Driver)))
             {
@@ -482,6 +483,20 @@ namespace App1
             var httpResponseMessage = await httpClient.PutAsync(uri, content);
 
             return httpResponseMessage.Content;
+        }
+
+        public static string GetPhoneFromRegex(string uiPhone)
+        {
+            string phone = null;
+
+            string pattern = @"\(?([0-9]{3})\)?([ .-]?)([0-9]{3})(-?)([0-9]{2})(-?)([0-9]{2})";
+
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+            Match match = regex.Match(uiPhone);
+            if (match.Groups != null && match.Groups.Count == 8) phone = match.Groups[1].Value + match.Groups[3].Value + match.Groups[5].Value + match.Groups[7].Value;
+
+            return phone;
         }
     }
 }
