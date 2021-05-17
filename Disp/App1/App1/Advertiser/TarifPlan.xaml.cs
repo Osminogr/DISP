@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
-using App1.Templates;
 
 namespace App1.Advertiser
 {
@@ -33,9 +26,9 @@ namespace App1.Advertiser
 
             tarifOutCar.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() =>
+                Command = new Command(async () =>
                 {
-                    Navigation.PushAsync(new Tarifs(nowUser, false), true);
+                    await Navigation.PushAsync(new Tarifs(nowUser, false), true);
                 })
             });
         }

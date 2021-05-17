@@ -31,9 +31,9 @@ namespace App1.RegisterAdvYL
                 bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false, b9 = false;
                 if (Name.Text != null) b1 = true;
                 if (Address.Text != null) b2 = true;
-                if (Ogrn.Text != null) b3 = true;
-                if (Inn.Text != null) b4 = true;
-                if (Kpp.Text != null) b5 = true;
+                if (Ogrn.Text != null && Ogrn.Text.Length == 15) b3 = true;
+                if (Inn.Text != null && Inn.Text.Length == 10) b4 = true;
+                if (Kpp.Text != null && Kpp.Text.Length == 9) b5 = true;
                 if (FioDirector.Text != null) b6 = true;
                 if (PositionDirector.Text != null) b7 = true;
                 if (FioManager.Text != null) b8 = true;

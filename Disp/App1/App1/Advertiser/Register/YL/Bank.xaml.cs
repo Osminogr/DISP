@@ -26,9 +26,9 @@ namespace App1.RegisterAdvYL
                 bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false;
                 if (Name.Text != null) b1 = true;
                 if (Address.Text != null) b2 = true;
-                if (NumberK.Text != null) b3 = true;
-                if (NumberR.Text != null) b4 = true;
-                if (BIK.Text != null) b5 = true;
+                if (NumberK.Text != null && NumberK.Text.Length == 20) b3 = true;
+                if (NumberR.Text != null && NumberR.Text.Length == 20) b4 = true;
+                if (BIK.Text != null && BIK.Text.Length == 9) b5 = true;
 
                 if (b1 && b2 && b3 && b4 && b5)
                 {

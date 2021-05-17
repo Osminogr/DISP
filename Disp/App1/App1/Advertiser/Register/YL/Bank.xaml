@@ -26,15 +26,15 @@
                        x:Name="Address"
                        FontSize="16"/>
                     <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
-                       x:Name="NumberR" TextColor="#CCCCCC"
+                       x:Name="NumberR" TextColor="#CCCCCC" MaxLength="20"
                        Keyboard="Numeric"
                        FontSize="16"/>
                     <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
                        x:Name="NumberK" TextColor="#CCCCCC"
-                       Keyboard="Numeric"
+                       Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="БИК банка" Grid.Row="4"
-                       FontSize="16" TextColor="#CCCCCC"
+                       FontSize="16" TextColor="#CCCCCC" MaxLength="9"
                         x:Name="BIK"/>
                 </Grid>
             </StackLayout>

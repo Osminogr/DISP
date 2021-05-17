@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "eY6YKj7+db/YHdou+SJCMQmLsJFHtYVU/8QJ0u6ia1vR0bPgvxXfCa5SgIL2XTIt1MXvsZb/UZj0A07ITIPlSw==",
+  "dgSpecHash": "tDUsol3Hi32OMld0prCedhnYxWc/Eb3LlknwjxVwOOlCFOLM0LR+Pgz1iEl6smIuTw4l8Dx0M5rmU3fiN0Lk/g==",
   "success": true,
   "projectFilePath": "/Users/wecant/Projects/DISP/Disp/App1/App1/App1.csproj",
   "expectedPackageFiles": [
-    "/Users/wecant/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/wecant/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/bouncycastle.netcore/1.8.8/bouncycastle.netcore.1.8.8.nupkg.sha512",
     "/Users/wecant/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/wecant/.nuget/packages/octane.xam.videoplayer/3.1.0/octane.xam.videoplayer.3.1.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/plugin.mediamanager/1.0.8/plugin.mediamanager.1.0.8.nupkg.sha512",
     "/Users/wecant/.nuget/packages/plugin.mediamanager.forms/1.0.8/plugin.mediamanager.forms.1.0.8.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/portable.bouncycastle/1.8.10/portable.bouncycastle.1.8.10.nupkg.sha512",
     "/Users/wecant/.nuget/packages/skiasharp/1.68.0/skiasharp.1.68.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xam.plugin.geolocator/4.6.2-beta/xam.plugin.geolocator.4.6.2-beta.nupkg.sha512",

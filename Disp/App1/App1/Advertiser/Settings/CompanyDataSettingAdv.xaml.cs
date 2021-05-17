@@ -61,7 +61,7 @@ namespace App1.Advertiser.Settings
 
                 if (Name.Text != null && Name.Text.Length != 0) v1 = true;
                 if (Address.Text != null && Address.Text.Length != 0) v2 = true;
-                if (Ogrn.Text != null && Ogrn.Text.Length == 13) v3 = true;
+                if (Ogrn.Text != null && Ogrn.Text.Length == 15) v3 = true;
                 if (Inn.Text != null && Inn.Text.Length == 10) v4 = true;
                 if (Kpp.Text != null && Kpp.Text.Length == 9) v5 = true;
                 if (fioDir.Text != null && fioDir.Text.Length != 0) v6 = true;

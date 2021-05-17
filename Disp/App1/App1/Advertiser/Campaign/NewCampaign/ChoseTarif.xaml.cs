@@ -88,7 +88,11 @@ namespace App1.Advertiser.Campaign.NewCampaign
         private void OverrideTitleView(string name, string nameAction, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, count, new Command(() => {
-                SelectTarif(selectedTarif);
+                if (selectedTarif == null)
+                {
+                    DisplayAlert("Сообщение", "Выбирите тариф!", "Закрыть");
+                }
+                else  SelectTarif(selectedTarif);
             })));
         }
 

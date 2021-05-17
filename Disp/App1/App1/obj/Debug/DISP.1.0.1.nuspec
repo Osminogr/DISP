@@ -7,11 +7,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package Description</description>
     <dependencies>
-      <group targetFramework=".NETStandard2.0">
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="BouncyCastle.NetCore" version="1.8.8" exclude="Build,Analyzers" />
         <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
         <dependency id="Octane.Xam.VideoPlayer" version="3.1.0" exclude="Build,Analyzers" />
         <dependency id="Plugin.MediaManager" version="1.0.8" exclude="Build,Analyzers" />
         <dependency id="Plugin.MediaManager.Forms" version="1.0.8" exclude="Build,Analyzers" />
+        <dependency id="Portable.BouncyCastle" version="1.8.10" exclude="Build,Analyzers" />
         <dependency id="Xam.Plugin.Geolocator" version="4.6.2-beta" exclude="Build,Analyzers" />
         <dependency id="Xam.Plugin.Media" version="5.0.1" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Essentials" version="1.6.1" exclude="Build,Analyzers" />
@@ -23,6 +25,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="/Users/wecant/Projects/DISP/Disp/App1/App1/bin/Debug/netstandard2.0/DISP.dll" target="lib/netstandard2.0/DISP.dll" />
+    <file src="/Users/wecant/Projects/DISP/Disp/App1/App1/bin/Debug/netstandard2.1/DISP.dll" target="lib/netstandard2.1/DISP.dll" />
   </files>
 </package>

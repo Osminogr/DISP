@@ -498,5 +498,74 @@ namespace App1
 
             return phone;
         }
+
+        public static async Task<JPayResponse> PayInit(JPayInit jPayInit)
+        {
+            var uri = new Uri("https://securepay.tinkoff.ru/v2/Init");
+
+
+            string json = JsonConvert.SerializeObject(jPayInit, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            JPayResponse jPayResponse = null;
+
+            if (httpResponseMessage != null)
+            {
+                string answer = await httpResponseMessage.Content.ReadAsStringAsync();
+                jPayResponse = JsonConvert.DeserializeObject<JPayResponse>(answer);
+            }
+
+            return jPayResponse;
+        }
+
+        public static async Task<JPayResponse> PayFinishAuthorize(JPayFinishAuthorize jPayFinishAuthorize)
+        {
+            var uri = new Uri("https://securepay.tinkoff.ru/v2/FinishAuthorize");
+
+
+            string json = JsonConvert.SerializeObject(jPayFinishAuthorize, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            JPayResponse jPayResponse = null;
+
+            if (httpResponseMessage != null)
+            {
+                string answer = await httpResponseMessage.Content.ReadAsStringAsync();
+                jPayResponse = JsonConvert.DeserializeObject<JPayResponse>(answer);
+            }
+
+            return jPayResponse;
+        }
+
+        public static async Task<JPayResponse> PayConfirm(JPayConfirm jPayConfirm)
+        {
+            var uri = new Uri("https://securepay.tinkoff.ru/v2/Confirm");
+
+
+            string json = JsonConvert.SerializeObject(jPayConfirm, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            JPayResponse jPayResponse = null;
+
+            if (httpResponseMessage != null)
+            {
+                string answer = await httpResponseMessage.Content.ReadAsStringAsync();
+                jPayResponse = JsonConvert.DeserializeObject<JPayResponse>(answer);
+            }
+
+            return jPayResponse;
+        }
     }
 }

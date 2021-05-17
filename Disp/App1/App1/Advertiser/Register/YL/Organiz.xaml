@@ -34,16 +34,16 @@
                            FontSize="17" x:Name="Address"
                            Grid.Row="1" TextColor="#CCCCCC"
                            Grid.ColumnSpan="2"/>
-                <Entry Placeholder="ОГРН"
+                <Entry Placeholder="ОГРН" MaxLength="15" 
                            FontSize="17" TextColor="#CCCCCC"
                            Grid.Row="2" x:Name="Ogrn"
                            Grid.ColumnSpan="2"/>
-                <Entry Placeholder="ИНН"
+                <Entry Placeholder="ИНН" MaxLength="10"
                            FontSize="17" TextColor="#CCCCCC"
                            Grid.Row="3" x:Name="Inn"
                            Grid.Column="0"
                            Keyboard="Numeric"/>
-                <Entry Placeholder="КПП"
+                <Entry Placeholder="КПП" Margin="9"
                            FontSize="17" TextColor="#CCCCCC"
                            Grid.Row="3" x:Name="Kpp"
                            Grid.Column="1"
