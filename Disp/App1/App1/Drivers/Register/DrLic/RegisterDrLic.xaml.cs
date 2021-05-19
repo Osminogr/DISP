@@ -7,6 +7,7 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace App1
 {
@@ -35,10 +36,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo1.Source = photo.Path;
                                 driver.driverLicence.photo1 = new Photo();
                                 driver.driverLicence.photo1.data = photo.GetStream();
                                 driver.driverLicence.photo1.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -62,10 +65,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo2.Source = photo.Path;
                                 driver.driverLicence.photo2 = new Photo();
                                 driver.driverLicence.photo2.data = photo.GetStream();
                                 driver.driverLicence.photo2.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -89,10 +94,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo3.Source = photo.Path;
                                 driver.driverLicence.photo3 = new Photo();
                                 driver.driverLicence.photo3.data = photo.GetStream();
                                 driver.driverLicence.photo3.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -106,7 +113,8 @@ namespace App1
 
             personLabel.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() => {
+                Command = new Command(() =>
+                {
                     person.IsChecked = true;
                 })
             });
@@ -118,21 +126,53 @@ namespace App1
             {
                 try
                 {
-                    bool b1 = false, b2 = false, b3 = false, b4 = false;
-                    if (Number.Text != null) b1 = true;
-                    if (Date.Text != null) b2 = true;
-                    if (Period.Text != null) b3 = true;
-                    if (driver.driverLicence.photo1 != null && driver.driverLicence.photo2 != null && driver.driverLicence.photo3 != null) b4 = true;
-
-                    if (b1 && b2 && b3 && b4 && person.IsChecked)
+                    if (serialNumberLicence.Text == null && (serialNumberLicence.Text != null && serialNumberLicence.Text.Length != 12))
                     {
-                        driver.driverLicence.number = Number.Text;
-                        driver.driverLicence.date = Date.Text;
-                        driver.driverLicence.period = Period.Text;
-
-                        await Navigation.PushAsync(new RegisterCar(driver));
+                        await DisplayAlert("Сообщение", "Ошибка заполнения серии и номера водительского удостоверения!", "Закрыть");
+                        return;
                     }
-                    else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+
+                    if (dateFromLicence.Date == null)
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения даты получения водительского удостоверения!", "Закрыть");
+                        return;
+                    }
+
+                    if (dateToLicence.Date == null)
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения срока действия водительского удостоверения!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.driverLicence.photo1 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте первую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.driverLicence.photo2 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте вторую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.driverLicence.photo3 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте третью фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (!person.IsChecked)
+                    {
+                        await DisplayAlert("Сообщение", "Согласие не подтверждено!", "Закрыть");
+                        return;
+                    }
+
+                    driver.driverLicence.number = serialNumberLicence.Text;
+                    driver.driverLicence.date = dateFromLicence.Date.ToShortDateString();
+                    driver.driverLicence.period = dateToLicence.Date.ToShortDateString();
+
+                    await Navigation.PushAsync(new RegisterCar(driver));
                 }
                 catch (Exception ex)
                 {

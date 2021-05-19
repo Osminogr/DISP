@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:App1.Utils"
              x:Class="App1.RegisterCar"
              Title="Регистрация">
     <ContentPage.Content>
@@ -23,20 +24,24 @@
 
                 <Label Text="Автомобиль" Padding="3, 0, 0, 0" TextColor="#FFB800" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row ="0" FontAttributes="None" />
 
-                <Entry Grid.Row ="1" Placeholder="Марка" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Mark"/>
+                <Entry Grid.Row ="1" Placeholder="Марка" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="mark"/>
 
-                <Entry Grid.Row ="2" Placeholder ="Модель" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Model"/>
+                <Entry Grid.Row ="2" Placeholder ="Модель" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="model"/>
 
-                <Entry Grid.Row ="3" Placeholder ="Госномер" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Number"/>
+                <Entry Grid.Row ="3" Placeholder ="Госномер" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="number" MaxLength="9"/>
 
-                <Entry Grid.Row ="4" Placeholder ="Год выпуска" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Data"/>
+                <Entry Grid.Row ="4" Placeholder ="Год выпуска" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="year" MaxLength="4" Keyboard="Numeric"/>
 
-                <Entry Grid.Row ="5" Placeholder ="Цвет" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Color"/>
+                <Entry Grid.Row ="5" Placeholder ="Цвет" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="color"/>
 
-                <Entry Grid.Row ="6" Placeholder ="VIN" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="VIN"/>
+                <Entry Grid.Row ="6" Placeholder ="VIN" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="vin" MaxLength="17"/>
 
                 <Label Grid.Row ="7" Text="СТС" Padding="4, 0, 0, 0"/>
-                <Entry Grid.Row ="7" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="Reg"/>
+                <Entry Grid.Row ="7" TextColor="#CCCCCC" Margin="0,10,10,0" x:Name="ctc" MaxLength="12">
+                    <Entry.Behaviors>
+                        <behavior:SerialNumberPassportMaskBehavior x:Name="SerialNumberPassportMask"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Сфотографировать лицевую	сторону	водительского	удостоверения, оборотную	сторону водительского удостоверения и с	лицевой	стороной водительского удостоверения" Padding="5, 10, 0, 0" FontSize="12" TextColor="#CCCCCC" Opacity="0.7"
                     HorizontalOptions="Start" Grid.Row ="8" />

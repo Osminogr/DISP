@@ -1,16 +1,11 @@
 ﻿using App1.Advertiser;
 using App1.Advertiser.Settings;
-using Plugin.Geolocator;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
-using Xamarin.Essentials;
 using App1.Advertiser.Campaign;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
@@ -24,12 +19,11 @@ namespace App1
         {
             nowUser = now;
 
-            MoveMap();
             InitializeComponent();
 
-            actInd.IsRunning = true;
-            actInd.IsVisible = true;
-            gridRoot.IsEnabled = false;
+            gridRoot.Opacity = 0;
+
+            MoveMap();
 
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
@@ -72,11 +66,12 @@ namespace App1
         {
             try
             {
-                var locator = CrossGeolocator.Current;
-                Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
-                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
-                map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
-                                                Distance.FromMiles(1)));
+                //var locator = CrossGeolocator.Current;
+                //Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
+                //position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
+                //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude), Distance.FromMiles(1)));
+
+                await LoadDriversMapAsync();
             }
             catch (Exception ex)
             {
@@ -86,7 +81,81 @@ namespace App1
             await Task.Delay(1000);
             actInd.IsRunning = false;
             actInd.IsVisible = false;
-            gridRoot.IsEnabled = true;
+            gridRoot.Opacity = 1;
+        }
+
+        private async Task<bool> LoadDriversMapAsync()
+        {
+            try
+            {
+                List<Coords> coords = new List<Coords>();
+
+                Coords coord1 = new Coords();
+                coord1.lat = "48.1390196";
+                coord1.ltd = "11.5744422";
+                coord1.fioDriver = "Driver1";
+                coord1.car = "Nissan Teana C777CC77";
+                coord1.idDriver = 2;
+
+                coords.Add(coord1);
+
+                Coords coord2 = new Coords();
+                coord2.lat = "48.1390179";
+                coord2.ltd = "13.5744419";
+                coord2.fioDriver = "Driver2";
+                coord2.car = "Audi A6 P777PP77";
+                coord2.idDriver = 2;
+
+                coords.Add(coord2);
+
+                Coords coord3 = new Coords();
+                coord3.lat = "48.1390123";
+                coord3.ltd = "12.5744488";
+                coord3.fioDriver = "Driver3";
+                coord3.car = "Mercedes CLS O777OO77";
+                coord3.idDriver = 2;
+
+                coords.Add(coord3);
+
+                if (coords != null && coords.Count != 0)
+                {
+                    foreach (var crd in coords)
+                    {
+                        Pin pin = new Pin()
+                        {
+                            Position = new Position(Double.Parse(crd.lat), Double.Parse(crd.ltd)),
+                            Label = crd.fioDriver,
+                            Address = crd.car,
+                            StyleId = crd.idDriver.ToString()
+                        };
+
+                        pin.InfoWindowClicked += Pin_InfoWindowClickedAsync;
+
+                        map.Pins.Add(pin);
+                    }
+
+                    map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(Double.Parse(coords[0].lat), Double.Parse(coords[0].ltd)), Distance.FromMeters(100)));
+                }
+
+                await Task.Delay(1000);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                await Task.Delay(1000);
+
+                Console.WriteLine(ex);
+
+                return false;
+            }
+        }
+
+        private async void Pin_InfoWindowClickedAsync(object sender, PinClickedEventArgs e)
+        {
+            Driver driver = await Server.GetDriver(ushort.Parse(((Pin)sender).StyleId));
+
+            await Navigation.PushAsync(new Statistic(driver), true);
         }
 
         public async void Activate(object sender, EventArgs e)

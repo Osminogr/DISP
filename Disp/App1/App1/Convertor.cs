@@ -567,5 +567,28 @@ namespace App1
 
             return jPayResponse;
         }
+
+        public static async Task<JPayResponse> PayCancel(JPayCancel jPayCancel)
+        {
+            var uri = new Uri("https://securepay.tinkoff.ru/v2/Cancel");
+
+
+            string json = JsonConvert.SerializeObject(jPayCancel, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            JPayResponse jPayResponse = null;
+
+            if (httpResponseMessage != null)
+            {
+                string answer = await httpResponseMessage.Content.ReadAsStringAsync();
+                jPayResponse = JsonConvert.DeserializeObject<JPayResponse>(answer);
+            }
+
+            return jPayResponse;
+        }
     }
 }

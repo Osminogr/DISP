@@ -12,7 +12,6 @@ namespace App1
     {
         public App()
         {
-            //Preferences.Clear();
             InitializeComponent();
 
             MainPage = new NavigationPage(new LogoPage())

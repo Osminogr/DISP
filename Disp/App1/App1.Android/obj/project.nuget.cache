@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7XaEATslBhs63IrF9o3D7ubnug+HltKEWAispTOdTSM4moY8xGzgIOPn8AR49VIQaaWNa04vUPqjrct3btFoIQ==",
+  "dgSpecHash": "yGwhkWcGYGtJHJVUPLf4ZydrWhYRV5BjnzPuRR8MRMEVZlgddAB5fk/rOJXCSRufzJK22lmGRgtbYtkXkSBH1w==",
   "success": true,
   "projectFilePath": "/Users/wecant/Projects/DISP/Disp/App1/App1.Android/App1.Android.csproj",
   "expectedPackageFiles": [
@@ -110,6 +110,7 @@
     "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg/2.4.11.982/xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg.forms/2.4.11.982/xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.forms.googlemaps/3.3.0/xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms.maps/5.0.0.2012/xamarin.forms.maps.5.0.0.2012.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.google.android.material/1.1.0.5-rc3/xamarin.google.android.material.1.1.0.5-rc3.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512",

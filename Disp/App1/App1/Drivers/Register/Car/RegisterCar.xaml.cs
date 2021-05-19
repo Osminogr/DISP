@@ -7,6 +7,8 @@ using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System;
 using System.IO;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -43,10 +45,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo1.Source = photo.Path;
                                 driver.car.photo1 = new Photo();
                                 driver.car.photo1.data = photo.GetStream();
                                 driver.car.photo1.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -70,10 +74,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo2.Source = photo.Path;
                                 driver.car.photo2 = new Photo();
                                 driver.car.photo2.data = photo.GetStream();
                                 driver.car.photo2.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -97,10 +103,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo3.Source = photo.Path;
                                 driver.car.photo3 = new Photo();
                                 driver.car.photo3.data = photo.GetStream();
                                 driver.car.photo3.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -119,33 +127,87 @@ namespace App1
             {
                 try
                 {
-                    bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false, b8 = false;
-                    if (Mark.Text != null) b1 = true;
-                    if (Model.Text != null) b2 = true;
-                    if (Number.Text != null) b3 = true;
-                    if (Data.Text != null) b4 = true;
-                    if (Color.Text != null) b5 = true;
-                    if (VIN.Text != null) b6 = true;
-                    if (Reg.Text != null) b7 = true;
-
-                    if (driver.car.photo1 != null && driver.car.photo2 != null && driver.car.photo3 != null) b8 = true;
-
-                    if (b1 && b2 && b3 && b4 && b5 && b6 && b7 && b8 && person.IsChecked)
+                    if (mark.Text == null || (mark.Text != null && mark.Text.Length < 3))
                     {
-                        driver.car.mark = Mark.Text;
-                        driver.car.model = Model.Text;
-                        driver.car.carNumber = Number.Text;
-                        driver.car.dataCar = Data.Text;
-                        driver.car.color = Color.Text;
-                        driver.car.vin = VIN.Text;
-                        driver.car.regNumberCar = Reg.Text;
+                        await DisplayAlert("Сообщение", "Ошибка заполнения марки ТС!", "Закрыть");
+                        return;
+                    }
 
-                        await Navigation.PushAsync(new Card(driver));
-                    }
-                    else
+                    if (model.Text == null || (model.Text != null && model.Text.Length < 3))
                     {
-                        await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+                        await DisplayAlert("Сообщение", "Ошибка заполнения модели ТС!", "Закрыть");
+                        return;
                     }
+
+                    if (number.Text == null || (number.Text != null && number.Text.Length < 8))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения номера ТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (year.Text == null || (year.Text != null && year.Text.Length != 4))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения года ТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (color.Text == null || (color.Text != null && color.Text.Length < 3))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения цвета!", "Закрыть");
+                        return;
+                    }
+
+                    if (vin.Text == null || (vin.Text != null && vin.Text.Length != 17))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения VIN!", "Закрыть");
+                        return;
+                    }
+
+                    if (ctc.Text == null || (ctc.Text != null && ctc.Text.Length != 12))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения СТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.car.photo1 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте первую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.car.photo2 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте вторую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.car.photo3 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте третью фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (!person.IsChecked)
+                    {
+                        await DisplayAlert("Сообщение", "Согласие не подтверждено!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(vin.Text, @"^[a-zA-Z0-9]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "VIN должен состоять из цифр и букв!", "Закрыть");
+                        return;
+                    }
+
+                    driver.car.mark = mark.Text;
+                    driver.car.model = model.Text;
+                    driver.car.carNumber = number.Text;
+                    driver.car.dataCar = year.Text;
+                    driver.car.color = color.Text;
+                    driver.car.vin = vin.Text;
+                    driver.car.regNumberCar = ctc.Text;
+
+                    await Navigation.PushAsync(new Card(driver));
                 }
                 catch (Exception ex)
                 {

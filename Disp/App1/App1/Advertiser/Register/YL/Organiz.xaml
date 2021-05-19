@@ -43,7 +43,7 @@
                            Grid.Row="3" x:Name="Inn"
                            Grid.Column="0"
                            Keyboard="Numeric"/>
-                <Entry Placeholder="КПП" Margin="9"
+                <Entry Placeholder="КПП" MaxLength="9"
                            FontSize="17" TextColor="#CCCCCC"
                            Grid.Row="3" x:Name="Kpp"
                            Grid.Column="1"

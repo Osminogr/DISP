@@ -49,6 +49,7 @@ namespace App1.RegisterAdvPh
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 await DisplayAlert("Сообщение", "Не удалось выполнить регистрацию! Попробуйте позже.", "Закрыть");
                 await Navigation.PushAsync(new StartPage());
             }

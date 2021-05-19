@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tDUsol3Hi32OMld0prCedhnYxWc/Eb3LlknwjxVwOOlCFOLM0LR+Pgz1iEl6smIuTw4l8Dx0M5rmU3fiN0Lk/g==",
+  "dgSpecHash": "ST+GxOWExLmq/iBF+uvGKQl1iyoBxk78EI2LKAyNhOWARyrPUX0bLhcaBsTGGwOs+pqhleh4xhRG4OQSIP23KA==",
   "success": true,
   "projectFilePath": "/Users/wecant/Projects/DISP/Disp/App1/App1/App1.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg/2.4.11.982/xamarin.ffimageloading.svg.2.4.11.982.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.ffimageloading.svg.forms/2.4.11.982/xamarin.ffimageloading.svg.forms.2.4.11.982.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "/Users/wecant/.nuget/packages/xamarin.forms.googlemaps/3.3.0/xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
     "/Users/wecant/.nuget/packages/xamarin.forms.maps/5.0.0.2012/xamarin.forms.maps.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []

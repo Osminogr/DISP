@@ -17,13 +17,13 @@
             </Grid.RowDefinitions>
             
             <Label Text="Имя" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="0"/>
-            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="0" x:Name="Name"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="0" x:Name="Name" Keyboard="Plain"/>
 
             <Label Text="Фамилия" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="1"/>
-            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="1" x:Name="LastName"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="1" x:Name="LastName" Keyboard="Plain"/>
 
             <Label Text="Отчество" TextColor="Black" Padding="4, 0, 0, 0" Grid.Row="2"/>
-            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="2" x:Name="Patronymic"/>
+            <Entry TextColor="#CCCCCC" FontSize="16" Grid.Row="2" x:Name="Patronymic" Keyboard="Plain"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -15,6 +15,8 @@ namespace App1.Domain.Json
         public string Message;
         public string Details;
         public string CardId;
+        public string OriginalAmount;
+        public string NewAmount;
 
         public JPayResponse()
         {

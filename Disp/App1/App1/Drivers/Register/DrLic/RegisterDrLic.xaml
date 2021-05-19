@@ -1,39 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:App1.Utils"
              x:Class="App1.RegisterDrLic">
     <ContentPage.Content>
         <Grid Padding="24,20,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="100"/>
-                <RowDefinition Height="70"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
 
             <Label Text="Водительское удостоверение"  TextColor="#FFB800" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row ="0" FontAttributes="None" />
 
-            <Entry Grid.Row ="1" Margin="0,0,0,0" Placeholder="Серия и номер" TextColor="#CCCCCC" x:Name="Number" Keyboard="Numeric"/>
+            <Entry Grid.Row ="1" Margin="0,0,0,0" MaxLength="12" Placeholder="Серия и номер" TextColor="#CCCCCC" x:Name="serialNumberLicence" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <behavior:SerialNumberPassportMaskBehavior x:Name="SerialNumberLicenceMask"/>
+                </Entry.Behaviors>
+            </Entry>
 
-            <Entry Grid.Row ="2" Margin="0,0,0,0" Placeholder ="Дата выдачи" TextColor="#CCCCCC" x:Name="Date"/>
+            <Label Text="Дата получения"  TextColor="#FFB800" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row ="2" FontAttributes="None" />
+            <DatePicker x:Name="dateFromLicence" Grid.Row="3" Margin="0,0,0,0" Format="dd.MM.yyyy"/>
 
-            <Entry Grid.Row ="3" Margin="0,0,0,0" Placeholder ="Срок действия" TextColor="#CCCCCC" x:Name="Period"/>
+            <Label Text="Срок действия"  TextColor="#FFB800" FontSize="20" HorizontalOptions="Start" VerticalOptions="Center" Grid.Row ="4" FontAttributes="None" />
+            <DatePicker x:Name="dateToLicence" Grid.Row="5" Margin="0,0,0,0" Format="dd.MM.yyyy"/>
 
             <Label Text="Сфотографировать лицевую	сторону	водительского	удостоверения, оборотную	сторону водительского удостоверения и с	лицевой	стороной водительского удостоверения" Padding="5, 10, 0, 0" FontSize="12" TextColor="#CCCCCC" Opacity="0.7"
-                    HorizontalOptions="Start" Grid.Row ="4" />
+                    HorizontalOptions="Start" Grid.Row ="6" />
 
-            <Grid Grid.Row="5">
+            <Grid Grid.Row="7">
                 <Image Source="photoactive.png" Grid.Column="0" x:Name="photo1"></Image>
                 <Image Source="photoactive.png" Grid.Column="1" x:Name="photo2"></Image>
                 <Image Source="photoactive.png" Grid.Column="2" x:Name="photo3"></Image>
             </Grid>
 
-            <Grid Grid.Row="6" Margin="0, 20, 0, 0">
+            <Grid Grid.Row="8" Margin="0, 20, 0, 0">
                 <Label Text="Предоставляя эти данные, вы соглашаетесь с условиями сервиса"
                            FontSize="15"
                            VerticalOptions="CenterAndExpand"

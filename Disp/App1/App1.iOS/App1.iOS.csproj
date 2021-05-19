@@ -158,6 +158,7 @@
     <BundleResource Include="Resources\shapegray.png" />
     <BundleResource Include="Resources\toolbarbg.png" />
     <BundleResource Include="Resources\video1.png" />
+    <BundleResource Include="Resources\car.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Logo.png" />

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:App1.Utils"
              x:Class="App1.RegisterPasp">
     <ContentPage.Content>
         <ScrollView VerticalOptions="Fill">
@@ -17,19 +18,27 @@
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
 
-                <Entry Placeholder="Город" Grid.Row="0" TextColor="#CCCCCC" FontSize="16" x:Name="Town" Margin="0,0,10,0"/>
+                <Entry Placeholder="Город" Grid.Row="0" TextColor="#CCCCCC" FontSize="16" x:Name="town" Margin="0,0,10,0" Keyboard="Plain"/>
 
                 <Label Text="Паспортные данные"  TextColor="#FFB800" FontSize="20" HorizontalOptions="Start" Padding="3, 0, 0, 0" Grid.Row="1" FontAttributes="None" />
-                <Entry Grid.Row="1" Margin="0,20,10,0" Placeholder="Серия и номер" TextColor="#CCCCCC" x:Name="number" Keyboard="Numeric"/>
+                <Entry Grid.Row="1" Margin="0,20,10,0" Placeholder="Серия и номер" MaxLength="12" TextColor="#CCCCCC" x:Name="serialNumberPassport" Keyboard="Numeric">
+                    <Entry.Behaviors>
+                        <behavior:SerialNumberPassportMaskBehavior x:Name="SerialNumberPassportMask"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Дата выдачи" Padding="4, 0, 0, 0" HorizontalOptions="Start" Grid.Row ="2" FontAttributes="None" />
-                <Entry Grid.Row="2" Margin="0,10,10,0" TextColor="#CCCCCC" x:Name="Data"/>
+                <DatePicker x:Name="datePassport" Grid.Row="2" Margin="0,10,10,0" Format="dd.MM.yyyy"/>
 
                 <Label Text="Кем выдан" Padding="4, 0, 0, 0" HorizontalOptions="Start" Grid.Row ="3" FontAttributes="None" />
-                <Entry Grid.Row="3" Margin="0,0,10,0" TextColor="#CCCCCC" x:Name="Org"/>
+                <Entry Grid.Row="3" Margin="0,0,10,0" TextColor="#CCCCCC" x:Name="whoPassport"/>
 
                 <Label Text="Код подразделения" Padding="4, 0, 0, 0" HorizontalOptions="Start" Grid.Row ="4" FontAttributes="None" />
-                <Entry Grid.Row="4" Margin="0,0,10,0" TextColor="#CCCCCC" x:Name="Code" Keyboard="Numeric"/>
+                <Entry Grid.Row="4" Margin="0,0,10,0" TextColor="#CCCCCC" x:Name="codePassport" Keyboard="Numeric" MaxLength="7">
+                    <Entry.Behaviors>
+                        <behavior:DepartmentMaskBehavior x:Name="DepartmentMask"/>
+                    </Entry.Behaviors>
+                </Entry>
 
                 <Label Text="Сфотографировать первую страницу паспорта, страницу паспорта с постоянной	регистрацией и вместе с  раскрытым паспортом	1	страницы" Padding="5, 10, 0, 0" FontSize="12" TextColor="#CCCCCC" Opacity="0.7"
                     HorizontalOptions="Start" Grid.Row ="5" />

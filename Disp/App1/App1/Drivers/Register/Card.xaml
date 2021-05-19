@@ -17,22 +17,22 @@
                     </Grid.RowDefinitions>
 
                     <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0"
-                       x:Name="Name" TextColor="#CCCCCC" MaxLength="50"
+                       x:Name="nameBank" TextColor="#CCCCCC" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Адрес банка" Grid.Row="1" TextColor="#CCCCCC"
-                       x:Name="Address" MaxLength="50"
+                       x:Name="address" MaxLength="50"
                        FontSize="16"/>
                     <Entry Placeholder="Номер расчётного счёта" Grid.Row="2"
-                       x:Name="NumberR" TextColor="#CCCCCC"
+                       x:Name="accNumberR" TextColor="#CCCCCC"
                        Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3"
-                       x:Name="NumberK" TextColor="#CCCCCC"
+                       x:Name="accNumberC" TextColor="#CCCCCC"
                        Keyboard="Numeric" MaxLength="20"
                        FontSize="16"/>
                     <Entry Placeholder="БИК банка" Grid.Row="4"
                        FontSize="16" TextColor="#CCCCCC" MaxLength="9"
-                        x:Name="BIK"/>
+                        x:Name="bik"/>
                 </Grid>
             </StackLayout>
         </ScrollView>

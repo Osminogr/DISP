@@ -41,7 +41,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
             {
                 JPayInit jPayInit = new JPayInit();
                 jPayInit.TerminalKey = "1593419054745DEMO";
-                jPayInit.OrderId = "100";
+                jPayInit.OrderId = "103";
                 jPayInit.Amount = 1000;
                 JPayResponse jPayResponse = await Server.PayInit(jPayInit);
 
@@ -53,7 +53,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         jPayFinishAuthorize.TerminalKey = jPayInit.TerminalKey;
                         jPayFinishAuthorize.PaymentId = jPayResponse.PaymentId;
 
-                        string card = "PAN=5368290048301438;ExpDate=1121;CardHolder=EVGENIY MELNIKOV;CVV=618";
+                        string card = "PAN=4000000000000119;ExpDate=1122;CVV=111";//"PAN=5368290048301438;ExpDate=1121;CardHolder=EVGENIY MELNIKOV;CVV=618";
 
                         jPayFinishAuthorize.CardData = RsaEncryptWithPublic(card, String.Format("-----BEGIN PUBLIC KEY-----\n{0}\n-----END PUBLIC KEY-----\n", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv5yse9ka3ZQE0feuGtemYv3IqOlLck8zHUM7lTr0za6lXTszRSXfUO7jMb+L5C7e2QNFs+7sIX2OQJ6a+HG8kr+jwJ4tS3cVsWtd9NXpsU40PE4MeNr5RqiNXjcDxA+L4OsEm/BlyFOEOh2epGyYUd5/iO3OiQFRNicomT2saQYAeqIwuELPs1XpLk9HLx5qPbm8fRrQhjeUD5TLO8b+4yCnObe8vy/BMUwBfq+ieWADIjwWCMp2KTpMGLz48qnaD9kdrYJ0iyHqzb2mkDhdIzkim24A3lWoYitJCBrrB2xM05sm9+OdCI1f7nPNJbl5URHobSwR94IRGT7CJcUjvwIDAQAB"));
 
@@ -63,13 +63,13 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
                         if (jPayResponse != null)
                         {
-                            JPayConfirm jPayConfirm = new JPayConfirm();
-                            jPayConfirm.TerminalKey = jPayResponse.TerminalKey;
-                            jPayConfirm.PaymentId = jPayResponse.PaymentId;
+                            JPayCancel jPayCancel = new JPayCancel();
+                            jPayCancel.TerminalKey = jPayResponse.TerminalKey;
+                            jPayCancel.PaymentId = jPayResponse.PaymentId;
 
-                            jPayConfirm.Token = CalculateHash256("xu14trddhg9zngjo" + jPayConfirm.PaymentId + jPayConfirm.TerminalKey);
+                            jPayCancel.Token = CalculateHash256("xu14trddhg9zngjo" + jPayCancel.PaymentId + jPayCancel.TerminalKey);
 
-                            jPayResponse = await Server.PayConfirm(jPayConfirm);
+                            jPayResponse = await Server.PayCancel(jPayCancel);
                         }
                     }
                 }

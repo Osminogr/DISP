@@ -8,6 +8,8 @@ using Plugin.Media.Abstractions;
 using System.Collections.Generic;
 using System;
 using System.IO;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace App1
 {
@@ -36,10 +38,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo1.Source = photo.Path;
                                 driver.person.passport.photo1 = new Photo();
                                 driver.person.passport.photo1.data = photo.GetStream();
                                 driver.person.passport.photo1.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -63,10 +67,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo2.Source = photo.Path;
                                 driver.person.passport.photo2 = new Photo();
                                 driver.person.passport.photo2.data = photo.GetStream();
                                 driver.person.passport.photo2.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -90,10 +96,12 @@ namespace App1
 
                             if (photo != null)
                             {
+                                await Task.Delay(1000);
                                 photo3.Source = photo.Path;
                                 driver.person.passport.photo3 = new Photo();
                                 driver.person.passport.photo3.data = photo.GetStream();
                                 driver.person.passport.photo3.name = Path.GetFileName(photo.Path);
+                                await Task.Delay(1000);
                             }
                         }
                     }
@@ -107,7 +115,8 @@ namespace App1
 
             personLabel.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(() => {
+                Command = new Command(() =>
+                {
                     person.IsChecked = true;
                 })
             });
@@ -119,25 +128,73 @@ namespace App1
             {
                 try
                 {
-                    bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false;
-                    if (number.Text != null) b1 = true;
-                    if (Data.Text != null) b2 = true;
-                    if (Org.Text != null) b3 = true;
-                    if (Code.Text != null) b4 = true;
-                    if (Town.Text != null) b5 = true;
-                    if (driver.person.passport.photo1 != null && driver.person.passport.photo2 != null && driver.person.passport.photo3 != null) b6 = true;
-
-                    if (b1 && b2 && b3 && b4 && b5 && b6 && person.IsChecked)
+                    if (town.Text == null || (town.Text != null && town.Text.Length < 3))
                     {
-                        driver.person.passport.number = number.Text;
-                        driver.person.passport.date = Data.Text;
-                        driver.person.passport.who = Org.Text;
-                        driver.person.passport.code = Code.Text;
-                        driver.person.city = Town.Text;
-
-                        await Navigation.PushAsync(new RegisterDrLic(driver));
+                        await DisplayAlert("Сообщение", "Ошибка заполнения города!", "Закрыть");
+                        return;
                     }
-                    else await DisplayAlert("Сообщение", "Необходимо заполнить всю информацию!", "Закрыть");
+
+                    if (serialNumberPassport.Text == null || (serialNumberPassport.Text != null && serialNumberPassport.Text.Length != 12))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения серии и номера паспорта!", "Закрыть");
+                        return;
+                    }
+
+                    if (datePassport.Date == null)
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения даты выдачи паспорта!", "Закрыть");
+                        return;
+                    }
+
+                    if (whoPassport.Text == null || (whoPassport.Text != null && whoPassport.Text.Length < 10))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения органа выдавшего паспорт!", "Закрыть");
+                        return;
+                    }
+
+                    if (codePassport.Text == null || (codePassport.Text != null && codePassport.Text.Length != 7))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения кода подразделения паспорт!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.person.passport.photo1 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте первую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.person.passport.photo2 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте вторую фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (driver.person.passport.photo3 == null)
+                    {
+                        await DisplayAlert("Сообщение", "Добавьте третью фотографию!", "Закрыть");
+                        return;
+                    }
+
+                    if (!person.IsChecked)
+                    {
+                        await DisplayAlert("Сообщение", "Согласие не подтверждено!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(town.Text, @"^[a-zA-Z]+$") && !Regex.IsMatch(town.Text, @"^[а-яА-Я]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "Город не должен содержать цифры!", "Закрыть");
+                        return;
+                    }
+
+                    driver.person.passport.number = serialNumberPassport.Text;
+                    driver.person.passport.date = datePassport.Date.ToShortDateString();
+                    driver.person.passport.who = whoPassport.Text;
+                    driver.person.passport.code = codePassport.Text;
+                    driver.person.city = town.Text;
+
+                    await Navigation.PushAsync(new RegisterDrLic(driver));
                 }
                 catch (Exception ex)
                 {

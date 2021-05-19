@@ -2,8 +2,8 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Runtime;
 using FFImageLoading.Forms.Platform;
+using Xamarin.Forms.GoogleMaps.Android;
 
 namespace App1.Droid
 {
@@ -34,9 +34,14 @@ namespace App1.Droid
 
             base.OnCreate(savedInstanceState);
 
+            var platformConfig = new PlatformConfig
+            {
+                BitmapDescriptorFactory = new BitmapConfig()
+            };
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            Xamarin.FormsMaps.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             MediaManager.CrossMediaManager.Current.Init();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
