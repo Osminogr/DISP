@@ -17,7 +17,25 @@ namespace App1
         Adv nowUser;
         public MainPageAdv(Adv now)
         {
-            nowUser = now;
+            if (now == null)
+            {
+                try
+                {
+                    nowUser = Server.GetAuthObject().adv;
+
+                    if (nowUser == null)
+                    {
+                        Navigation.PushAsync(new StartPage());
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Navigation.PushAsync(new StartPage());
+                    return;
+                }
+            }
+            else nowUser = now;
 
             InitializeComponent();
 

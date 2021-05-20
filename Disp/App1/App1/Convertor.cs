@@ -15,6 +15,11 @@ using System.Linq;
 using System.Reflection;
 using App1.Domain.Json;
 using System.Text.RegularExpressions;
+using System.Security.Cryptography;
+using Org.BouncyCastle.Crypto.Encodings;
+using Org.BouncyCastle.Crypto;
+using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.OpenSsl;
 
 namespace App1
 {
@@ -22,6 +27,17 @@ namespace App1
     {
         public static string ROOT_URL = "http://46.101.167.149:8003/api/";
         public static string AUTH_OBJECT = "AUTH_OBJECT";
+
+        public struct BankDataAuth
+        {
+            public static string TerminalKeyDemo = "1593419054745DEMO";
+            public static string PasswordDemo = "xu14trddhg9zngjo";
+
+            public static string TerminalKey = "1593419054745";
+            public static string Password = "458wobix0n72xu9h";
+
+            public static string PublicKey = String.Format("-----BEGIN PUBLIC KEY-----\n{0}\n-----END PUBLIC KEY-----\n", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv5yse9ka3ZQE0feuGtemYv3IqOlLck8zHUM7lTr0za6lXTszRSXfUO7jMb+L5C7e2QNFs+7sIX2OQJ6a+HG8kr+jwJ4tS3cVsWtd9NXpsU40PE4MeNr5RqiNXjcDxA+L4OsEm/BlyFOEOh2epGyYUd5/iO3OiQFRNicomT2saQYAeqIwuELPs1XpLk9HLx5qPbm8fRrQhjeUD5TLO8b+4yCnObe8vy/BMUwBfq+ieWADIjwWCMp2KTpMGLz48qnaD9kdrYJ0iyHqzb2mkDhdIzkim24A3lWoYitJCBrrB2xM05sm9+OdCI1f7nPNJbl5URHobSwR94IRGT7CJcUjvwIDAQAB");
+        }
 
         public static async Task<HttpResponseMessage> Request(string content, string type, string url)
         {
@@ -503,7 +519,6 @@ namespace App1
         {
             var uri = new Uri("https://securepay.tinkoff.ru/v2/Init");
 
-
             string json = JsonConvert.SerializeObject(jPayInit, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -525,7 +540,6 @@ namespace App1
         public static async Task<JPayResponse> PayFinishAuthorize(JPayFinishAuthorize jPayFinishAuthorize)
         {
             var uri = new Uri("https://securepay.tinkoff.ru/v2/FinishAuthorize");
-
 
             string json = JsonConvert.SerializeObject(jPayFinishAuthorize, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
 
@@ -549,7 +563,6 @@ namespace App1
         {
             var uri = new Uri("https://securepay.tinkoff.ru/v2/Confirm");
 
-
             string json = JsonConvert.SerializeObject(jPayConfirm, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -572,7 +585,6 @@ namespace App1
         {
             var uri = new Uri("https://securepay.tinkoff.ru/v2/Cancel");
 
-
             string json = JsonConvert.SerializeObject(jPayCancel, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -589,6 +601,52 @@ namespace App1
             }
 
             return jPayResponse;
+        }
+
+        public static async Task<HttpResponseMessage> Pay3DSChecking(JPay3DSChecking jPay3DSChecking, string url)
+        {
+            var uri = new Uri(url);
+
+            var nvc = new List<KeyValuePair<string, string>>();
+
+            nvc.Add(new KeyValuePair<string, string>(nameof(jPay3DSChecking.MD), jPay3DSChecking.MD));
+            nvc.Add(new KeyValuePair<string, string>(nameof(jPay3DSChecking.PaReq), jPay3DSChecking.PaReq));
+            nvc.Add(new KeyValuePair<string, string>(nameof(jPay3DSChecking.TermUrl), jPay3DSChecking.TermUrl));
+
+            var content = new FormUrlEncodedContent(nvc);
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage;
+        }
+
+        public static string CalculateHash256(string value)
+        {
+            var bytes = Encoding.UTF8.GetBytes(value);
+            using (SHA256 mySHA256 = SHA256.Create())
+            {
+                var hashBytes = mySHA256.ComputeHash(bytes);
+                return BitConverter.ToString(hashBytes, 0).Replace("-", "").ToLower();
+            }
+        }
+
+        public static string RsaEncryptWithPublic(string clearText, string publicKey)
+        {
+            var bytesToEncrypt = Encoding.UTF8.GetBytes(clearText);
+
+            var encryptEngine = new Pkcs1Encoding(new RsaEngine());
+
+            using (var txtreader = new StringReader(publicKey))
+            {
+                var keyParameter = (AsymmetricKeyParameter)new PemReader(txtreader).ReadObject();
+
+                encryptEngine.Init(true, keyParameter);
+            }
+
+            var encrypted = Convert.ToBase64String(encryptEngine.ProcessBlock(bytesToEncrypt, 0, bytesToEncrypt.Length));
+            return encrypted;
+
         }
     }
 }

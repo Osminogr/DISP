@@ -20,6 +20,7 @@
         <dependency id="Xamarin.FFImageLoading.Svg" version="2.4.11.982" exclude="Build,Analyzers" />
         <dependency id="Xamarin.FFImageLoading.Svg.Forms" version="2.4.11.982" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Forms" version="5.0.0.2012" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Forms.GoogleMaps" version="3.3.0" exclude="Build,Analyzers" />
         <dependency id="Xamarin.Forms.Maps" version="5.0.0.2012" exclude="Build,Analyzers" />
       </group>
     </dependencies>

@@ -45,18 +45,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
         {
             try
             {
-                HttpContent response = await Server.AddCompaign(compaign);
-                string answer = await response.ReadAsStringAsync();
-
-                if (answer != null && answer.Contains(nameof(Compaign)))
-                {
-                    await Navigation.PushAsync(new PayTarif(compaign));
-                }
-                else
-                {
-                    await DisplayAlert("Сообщение", "Не удалось выполнить запуск рекламной компании! Попробуйте позже.", "Закрыть");
-                    await Navigation.PushAsync(new CampaignsAct(compaign.adv));
-                }
+                await Navigation.PushAsync(new PayTarif(compaign));
             }
             catch (Exception ex)
             {
