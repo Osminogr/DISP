@@ -54,14 +54,25 @@ namespace App1.Droid
             {
                 Android.Views.View view;
 
-                view = inflater.Inflate(Resource.Layout.InfoWindow, null);
+                if (marker.Snippet != null)
+                {
+                    view = inflater.Inflate(Resource.Layout.InfoWindow, null);
 
-                var fio = view.FindViewById<TextView>(Resource.Id.textView1);
-                var car = view.FindViewById<TextView>(Resource.Id.textView2);
+                    var fio = view.FindViewById<TextView>(Resource.Id.textView1);
+                    var car = view.FindViewById<TextView>(Resource.Id.textView2);
 
-                fio.Text = marker.Title;
-                car.Text = marker.Snippet;
+                    fio.Text = marker.Title;
+                    car.Text = marker.Snippet;
+                }
+                else
+                {
+                    view = inflater.Inflate(Resource.Layout.InfoWindowEasy, null);
 
+                    var fio = view.FindViewById<TextView>(Resource.Id.textView1);
+
+                    fio.Text = marker.Title;
+                }
+                
                 return view;
             }
             return null;

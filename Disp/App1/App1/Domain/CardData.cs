@@ -9,6 +9,7 @@ namespace App1.Domain
         public string CVV;
         public string ExpDate;
         public string CardHolder;
+        public int idEntity;
 
         public CardData() {
         }

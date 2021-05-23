@@ -106,34 +106,7 @@ namespace App1
         {
             try
             {
-                List<Coords> coords = new List<Coords>();
-
-                Coords coord1 = new Coords();
-                coord1.lat = "48.1390196";
-                coord1.ltd = "11.5744422";
-                coord1.fioDriver = "Driver1";
-                coord1.car = "Nissan Teana C777CC77";
-                coord1.idDriver = 2;
-
-                coords.Add(coord1);
-
-                Coords coord2 = new Coords();
-                coord2.lat = "48.1390179";
-                coord2.ltd = "13.5744419";
-                coord2.fioDriver = "Driver2";
-                coord2.car = "Audi A6 P777PP77";
-                coord2.idDriver = 2;
-
-                coords.Add(coord2);
-
-                Coords coord3 = new Coords();
-                coord3.lat = "48.1390123";
-                coord3.ltd = "12.5744488";
-                coord3.fioDriver = "Driver3";
-                coord3.car = "Mercedes CLS O777OO77";
-                coord3.idDriver = 2;
-
-                coords.Add(coord3);
+                List<Coords> coords = await Server.GetDriverCoords();
 
                 if (coords != null && coords.Count != 0)
                 {

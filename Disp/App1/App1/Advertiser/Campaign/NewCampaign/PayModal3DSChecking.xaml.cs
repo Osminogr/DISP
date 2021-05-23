@@ -62,6 +62,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
                             if (jPayResponse.Status == JPayStatus.Confirmed)
                             {
                                 payment.date = DateTime.Now.Date.ToShortDateString();
+
+                                await Server.AddPayment(payment, compaign.adv.id);
+
                                 await AddCompaign();
                                 return;
                             }
@@ -80,6 +83,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                     if (jPayResponse.Status == JPayStatus.Confirmed)
                                     {
                                         payment.date = DateTime.Now.Date.ToShortDateString();
+
+                                        await Server.AddPayment(payment, compaign.adv.id);
+
                                         await AddCompaign();
                                         return;
                                     }
@@ -124,6 +130,15 @@ namespace App1.Advertiser.Campaign.NewCampaign
             {
                 await Task.Delay(1000);
                 await DisplayAlert("Сообщение", "Оплачено! Рекламная компания создана.", "Закрыть");
+
+                Alert alert = new Alert();
+                alert.date = DateTime.Now.ToShortDateString();
+                alert.header = "Сообщение";
+                alert.title = "Создание рекламной компании";
+                alert.text = "Ваша рекламная компания запустится " + alert.date + " в 09:00.";
+
+                await Server.AddAlert(alert, compaign.adv.id);
+
                 await Navigation.PushAsync(new CampaignsAct(compaign.adv), true);
             }
             else

@@ -6,6 +6,8 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace App1
 {
@@ -13,12 +15,16 @@ namespace App1
     public partial class MainPageDr : ContentPage
     {
         Driver nowUser;
+        bool running;
+        private readonly SynchronizationContext _context;
+
         public MainPageDr(Driver now)
         {
             nowUser = now;
 
-            MoveMap();
             InitializeComponent();
+
+            MoveMap();
 
             NavigationPage.SetHasNavigationBar(this, false);
             SideBar.IsVisible = false;
@@ -28,6 +34,33 @@ namespace App1
             UserName.Text = String.Format("{0} {1} {2}!", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
 
             LoadVideos();
+
+            _context = SynchronizationContext.Current;
+        }
+
+        private async void SendCoords()
+        {
+            while (running)
+            {
+                try
+                {
+                    Plugin.Geolocator.Abstractions.Position position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(1));
+
+                    await Server.AddCoord(new Coords()
+                    {
+                        lat = position.Latitude.ToString(),
+                        ltd = position.Longitude.ToString(),
+                        fioDriver = String.Format("{0} {1} {2}", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic),
+                        car = String.Format("{0} {1} {2}", nowUser.car.mark, nowUser.car.model, nowUser.car.regNumberCar),
+                        idDriver = nowUser.id
+                    });
+                    await Task.Delay(60000);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
         }
 
         private async void LoadVideos()
@@ -50,13 +83,27 @@ namespace App1
 
         private async void MoveMap()
         {
-            var locator = CrossGeolocator.Current;
-            Plugin.Geolocator.Abstractions.Position position;
-            position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
+            try
+            {
+                Plugin.Geolocator.Abstractions.Position position = await CrossGeolocator.Current.GetPositionAsync(TimeSpan.FromSeconds(1));
+                Pin pin = new Pin()
+                {
+                    Position = new Position(position.Latitude, position.Longitude),
+                    Label = "Мое местоположение"
+                };
 
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude),
-                                            Distance.FromMiles(1)));
-
+                map.Pins.Add(pin);
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude), Distance.FromMiles(1)));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
+            await Task.Delay(1000);
+            actInd.IsRunning = false;
+            actInd.IsVisible = false;
+            gridRoot.Opacity = 1;
         }
 
         public void OpenBottom(object sender, EventArgs e)
@@ -100,9 +147,20 @@ namespace App1
             menuBtn.IsVisible = true;
         }
 
-        public async void Activate(object sender, EventArgs e)
+        public void Activate(object sender, EventArgs e)
         {
-            await DisplayAlert("Ошибка", "Аккаунт не подтверждён", "OK");
+            if (btnActivate.Text == "Активировать")
+            {
+                running = true;
+                Thread t = new Thread(new ThreadStart(SendCoords));
+                t.Start();
+                btnActivate.Text = "Деактивировать";
+            }
+            else
+            {
+                running = false;
+                btnActivate.Text = "Активировать";
+            }
         }
 
         public void Open(object sender, EventArgs e)
@@ -148,6 +206,7 @@ namespace App1
 
         public async void Exit(object sender, EventArgs e)
         {
+            running = false;
             Server.ClearAuthObject();
             await Navigation.PushAsync(new StartPage());
         }

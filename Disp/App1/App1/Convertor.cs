@@ -648,5 +648,94 @@ namespace App1
             return encrypted;
 
         }
+
+        public static async Task<HttpContent> AddCoord(Coords coord)
+        {
+            var uri = new Uri(string.Format(ROOT_URL + "coords/{0}", coord.idDriver));
+
+            coord.idDriver = 0;
+            string json = JsonConvert.SerializeObject(coord, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Coords"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<List<Coords>> GetDriverCoords()
+        {
+            List<Coords> coords = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "coords/");
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null) coords = JsonConvert.DeserializeObject<List<Coords>>(responseBody);
+
+            return coords;
+        }
+
+        public static async Task<HttpContent> AddCardData(CardData cardData)
+        {
+            var uri = new Uri(ROOT_URL + "carddata/");
+
+            string json = JsonConvert.SerializeObject(cardData, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""CardData"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<List<CardData>> GetCardDatas(Entity entity)
+        {
+            List<CardData> coords = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "carddata/" + entity.id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null) coords = JsonConvert.DeserializeObject<List<CardData>>(responseBody);
+
+            return coords;
+        }
+
+        public static async Task<HttpContent> AddAlert(Alert alert, int id)
+        {
+            var uri = new Uri(ROOT_URL + "alert/" + id);
+
+            string json = JsonConvert.SerializeObject(alert, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Alert"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
+
+        public static async Task<HttpContent> AddPayment(Payment alert, int id)
+        {
+            var uri = new Uri(ROOT_URL + "payment/" + id);
+
+            string json = JsonConvert.SerializeObject(alert, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate });
+            json = @"{""Payment"": " + json + "}";
+
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.PostAsync(uri, content);
+
+            return httpResponseMessage.Content;
+        }
     }
 }

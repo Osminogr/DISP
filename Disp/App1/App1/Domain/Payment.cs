@@ -10,6 +10,7 @@ namespace App1.Domain
         public string card;
         public string paymentId;
         public string orderId;
+        public int idCardData;
 
         public Payment() {
         }
