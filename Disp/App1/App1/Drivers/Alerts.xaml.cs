@@ -1,7 +1,5 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using System.Net.Http;
 using System;
 using System.Collections.Generic;
 using App1.Domain;

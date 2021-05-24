@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Linq;
-using System.Net.Http;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
-
 using App1.Domain;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
-using System.Threading;
 using App1.Utils;
-using App1.RegisterAdvYL;
-using App1.RegisterAdvPh;
 using System.Text.RegularExpressions;
 
 namespace App1.Drivers.Register
@@ -21,16 +10,12 @@ namespace App1.Drivers.Register
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterChooseDriver : ContentPage
     {
-        string phone;
         Driver driver;
-        public RegisterChooseDriver(string number)
+        public RegisterChooseDriver(Driver drv)
         {
             InitializeComponent();
 
-            phone = number;
-            driver = new Driver();
-            driver.person = new Person();
-            driver.person.phone = phone;
+            driver = drv;
             OverrideTitleView("Регистрация", "Дальше", 80, -1);
         }
 

@@ -22,11 +22,11 @@
                         <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
-                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0" x:Name="Name" MaxLength="50" FontSize="16"/>
-                    <Entry Placeholder="Адрес банка" Grid.Row="1" x:Name="Address" MaxLength="50" FontSize="16"/>
-                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2" x:Name="NumberR" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
-                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3" x:Name="NumberK" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
-                    <Entry Placeholder="БИК банка" Grid.Row="4" FontSize="16" Keyboard="Numeric" MaxLength="9" x:Name="BIK"/>
+                    <Entry Placeholder="Наименование обслуживающего банка" Grid.Row="0" x:Name="nameBank" MaxLength="50" FontSize="16"/>
+                    <Entry Placeholder="Адрес банка" Grid.Row="1" x:Name="address" MaxLength="50" FontSize="16"/>
+                    <Entry Placeholder="Номер расчётного счёта" Grid.Row="2" x:Name="accNumberR" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
+                    <Entry Placeholder="Номер корреспондентского счёта" Grid.Row="3" x:Name="accNumberC" Keyboard="Numeric" MaxLength="20" FontSize="16"/>
+                    <Entry Placeholder="БИК банка" Grid.Row="4" FontSize="16" Keyboard="Numeric" MaxLength="9" x:Name="bik"/>
                 </Grid>
             </Grid>
         </StackLayout>

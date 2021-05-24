@@ -1,16 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Net.Http;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 
-using App1.Domain;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
-using System.Threading;
 using App1.Utils;
 using App1.Advertiser.Register;
 using App1.Drivers.Register;
@@ -34,7 +24,7 @@ namespace App1
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() => {
                 if (driver.IsChecked)
                 {
-                    Navigation.PushAsync(new RegisterChooseDriver(phone));
+                    Navigation.PushAsync(new SelfPhotoDriver(phone));
                 }
 
                 if (adv.IsChecked)

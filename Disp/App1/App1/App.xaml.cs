@@ -1,10 +1,4 @@
 ﻿using Xamarin.Forms;
-using Xamarin.Essentials;
-using Newtonsoft.Json;
-using App1.Domain;
-using System.Net.Http;
-using System.Linq;
-using Newtonsoft.Json.Linq;
 
 namespace App1
 {

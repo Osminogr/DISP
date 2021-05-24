@@ -1,9 +1,10 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using System.Net.Http;
+using System;
+using System.Text.RegularExpressions;
 
 namespace App1.Drivers.Settings
 {
@@ -28,15 +29,50 @@ namespace App1.Drivers.Settings
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(async () =>
             {
-                bool b1 = false, b2 = false, b3 = false, b4 = false;
-
-                if (Name.Text != null) b1 = true;
-                if (LastName.Text != null) b2 = true;
-                if (Patronymic.Text != null) b3 = true;
-                if (City.Text != null) b4 = true;
-
-                if (b1 && b2 && b3 && b4)
+                try
                 {
+                    if (Name.Text == null || (Name.Text != null && Name.Text.Length < 5))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения имени!", "Закрыть");
+                        return;
+                    }
+
+                    if (LastName.Text == null || (LastName.Text != null && LastName.Text.Length < 5))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения фамилии!", "Закрыть");
+                        return;
+                    }
+
+                    if (Patronymic.Text == null || (Patronymic.Text != null && Patronymic.Text.Length < 5))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения отчества!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(Name.Text, @"^[a-zA-Z]+$") && !Regex.IsMatch(Name.Text, @"^[а-яА-Я]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "Имя не должно содержать цифры!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(LastName.Text, @"^[a-zA-Z]+$") && !Regex.IsMatch(LastName.Text, @"^[а-яА-Я]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "Фамилия не должно содержать цифры!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(Patronymic.Text, @"^[a-zA-Z]+$") && !Regex.IsMatch(Patronymic.Text, @"^[а-яА-Я]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "Отчество не должно содержать цифры!", "Закрыть");
+                        return;
+                    }
+
+                    if(!Regex.IsMatch(City.Text, @"^[a-zA-Z]+$") && !Regex.IsMatch(City.Text, @"^[а-яА-Я]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "Город не должен содержать цифры!", "Закрыть");
+                        return;
+                    }
+
                     nowUser.person.firstName = Name.Text;
                     nowUser.person.lastName = LastName.Text;
                     nowUser.person.patronymic = Patronymic.Text;
@@ -55,9 +91,10 @@ namespace App1.Drivers.Settings
                         await Navigation.PopAsync(true);
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                    Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                 }
             })));
         }

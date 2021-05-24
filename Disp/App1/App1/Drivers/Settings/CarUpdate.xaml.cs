@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
@@ -8,6 +7,7 @@ using Plugin.Media;
 using System;
 using Plugin.Media.Abstractions;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace App1.Drivers.Settings
 {
@@ -20,13 +20,13 @@ namespace App1.Drivers.Settings
             nowUser = Server.GetAuthObject().driver;
 
             InitializeComponent();
-            Mark.Text = nowUser.car.mark;
-            Model.Text = nowUser.car.model;
-            Number.Text = nowUser.car.carNumber;
-            Data.Text = nowUser.car.dataCar;
-            Color.Text = nowUser.car.color;
-            VIN.Text = nowUser.car.vin;
-            Reg.Text = nowUser.car.regNumberCar;
+            mark.Text = nowUser.car.mark;
+            model.Text = nowUser.car.model;
+            number.Text = nowUser.car.carNumber;
+            year.Text = nowUser.car.dataCar;
+            color.Text = nowUser.car.color;
+            vin.Text = nowUser.car.vin;
+            ctc.Text = nowUser.car.regNumberCar;
 
             photo1.Source = nowUser.car.urlPhoto1;
             photo2.Source = nowUser.car.urlPhoto2;
@@ -98,42 +98,74 @@ namespace App1.Drivers.Settings
             {
                 try
                 {
-                    bool b1 = false, b2 = false, b3 = false, b4 = false, b5 = false, b6 = false, b7 = false;
-                    if (Mark.Text != null) b1 = true;
-                    if (Model.Text != null) b2 = true;
-                    if (Number.Text != null) b3 = true;
-                    if (Data.Text != null) b4 = true;
-                    if (Color.Text != null) b5 = true;
-                    if (VIN.Text != null) b6 = true;
-                    if (Reg.Text != null) b7 = true;
-
-                    if (b1 && b2 && b3 && b4 && b5 && b6 && b7)
+                    if (mark.Text == null || (mark.Text != null && mark.Text.Length < 3))
                     {
-                        nowUser.car.mark = Mark.Text;
-                        nowUser.car.model = Model.Text;
-                        nowUser.car.carNumber = Number.Text;
-                        nowUser.car.dataCar = Data.Text;
-                        nowUser.car.color = Color.Text;
-                        nowUser.car.vin = VIN.Text;
-                        nowUser.car.regNumberCar = Reg.Text;
+                        await DisplayAlert("Сообщение", "Ошибка заполнения марки ТС!", "Закрыть");
+                        return;
+                    }
 
-                        HttpContent answer = await Server.SaveCar(nowUser.car);
-                        string response = await answer.ReadAsStringAsync();
+                    if (model.Text == null || (model.Text != null && model.Text.Length < 3))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения модели ТС!", "Закрыть");
+                        return;
+                    }
 
-                        if (response == null || (response != null && !response.Contains(nameof(Car))))
-                        {
-                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
-                        }
-                        else
-                        {
-                            nowUser = await Server.GetDriver(nowUser.id);
-                            Server.SaveAuthObject(nowUser, false);
-                            await Navigation.PopAsync(true);
-                        }
+                    if (number.Text == null || (number.Text != null && number.Text.Length < 8))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения номера ТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (year.Text == null || (year.Text != null && year.Text.Length != 4))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения года ТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (color.Text == null || (color.Text != null && color.Text.Length < 3))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения цвета!", "Закрыть");
+                        return;
+                    }
+
+                    if (vin.Text == null || (vin.Text != null && vin.Text.Length != 17))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения VIN!", "Закрыть");
+                        return;
+                    }
+
+                    if (ctc.Text == null || (ctc.Text != null && ctc.Text.Length != 12))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения СТС!", "Закрыть");
+                        return;
+                    }
+
+                    if (!Regex.IsMatch(vin.Text, @"^[a-zA-Z0-9]+$"))
+                    {
+                        await DisplayAlert("Сообщение", "VIN должен состоять из цифр и букв!", "Закрыть");
+                        return;
+                    }
+
+                    nowUser.car.mark = mark.Text;
+                    nowUser.car.model = model.Text;
+                    nowUser.car.carNumber = number.Text;
+                    nowUser.car.dataCar = year.Text;
+                    nowUser.car.color = color.Text;
+                    nowUser.car.vin = vin.Text;
+                    nowUser.car.regNumberCar = ctc.Text;
+
+                    HttpContent answer = await Server.SaveCar(nowUser.car);
+                    string response = await answer.ReadAsStringAsync();
+
+                    if (response == null || (response != null && !response.Contains(nameof(Car))))
+                    {
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                     }
                     else
                     {
-                        await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                        nowUser = await Server.GetDriver(nowUser.id);
+                        Server.SaveAuthObject(nowUser, false);
+                        await Navigation.PopAsync(true);
                     }
                 }
                 catch (Exception ex)

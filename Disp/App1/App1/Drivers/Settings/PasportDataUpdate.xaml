@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:behavior="clr-namespace:App1.Utils"
              x:Class="App1.Drivers.Settings.PasportDataUpdate">
     <ContentPage.Content>
         <Grid Margin="20,20,20,0">
@@ -18,30 +19,35 @@
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
 
-            <Label Text="Дата выдачи" Padding="4, 0, 0, 0"
+            <Label Text="Серия и номер" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="1" 
                    FontAttributes="None" />
 
-            <Entry Grid.Row ="1" Margin="0,10,0,0" Placeholder="Серия и номер"
-                   x:Name="number" Keyboard="Numeric"/>
+            <Entry Grid.Row ="1" Margin="0,10,0,0" Placeholder="Серия и номер" MaxLength="12"
+                   x:Name="serialNumberPassport" Keyboard="Numeric">
+                <Entry.Behaviors>
+                    <behavior:SerialNumberPassportMaskBehavior x:Name="SerialNumberPassportMask"/>
+                </Entry.Behaviors>
+            </Entry>
 
             <Label Text="Дата выдачи" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="2" 
                    FontAttributes="None" />
-            <Entry Grid.Row ="2" Margin="0,10,0,0"
-                   x:Name="Data"/>
+            <DatePicker x:Name="datePassport" Grid.Row="2" Margin="0,10,10,0" Format="dd.MM.yyyy"/>
 
             <Label Text="Кем выдан" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="3" 
                    FontAttributes="None" />
-            <Entry Grid.Row ="3" Margin="0,10,0,0"
-                   x:Name="Org"/>
+            <Entry Grid.Row="3" Margin="0,0,10,0" x:Name="whoPassport"/>
 
             <Label Text="Код подразделения" Padding="4, 0, 0, 0"
                     HorizontalOptions="Start" Grid.Row ="4" 
                    FontAttributes="None" />
-            <Entry Grid.Row ="4" Margin="0,10,0,0"
-                   x:Name="Code" Keyboard="Numeric"/>
+            <Entry Grid.Row="4" Margin="0,0,10,0" x:Name="codePassport" Keyboard="Numeric" MaxLength="7">
+                <Entry.Behaviors>
+                    <behavior:DepartmentMaskBehavior x:Name="DepartmentMask"/>
+                </Entry.Behaviors>
+            </Entry>
 
             <Grid Grid.Row="5" Margin="0, 20, 0, 0">
                 <Grid.RowDefinitions>

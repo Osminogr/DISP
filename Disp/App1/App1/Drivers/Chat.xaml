@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="App1.Drivers.Chat"
+             xmlns:local="clr-namespace:App1"
              BackgroundColor="White">
     <ContentPage.Content>
         <Grid>
@@ -28,7 +29,7 @@
                     <RowDefinition Height="40"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Frame BorderColor="LightGray" CornerRadius="30"  Grid.Row="0" Grid.Column="0" Padding="0" Margin="0, 0, 0, 0" Grid.ColumnSpan="5">
-                    <Entry x:Name="textMessage" TextColor="Black" VerticalOptions="FillAndExpand" Margin="10, 0, 0, 0" />
+                    <local:CustomEntry IsShowBorder="false" x:Name="textMessage" TextColor="Black" VerticalOptions="FillAndExpand" Margin="10, 0, 0, 0" />
                 </Frame>
                 <Button ImageSource="send.png" Grid.Row="0" HeightRequest="40" WidthRequest="40"
                     BackgroundColor="Transparent" Grid.Column="5"

@@ -3,12 +3,10 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
-using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Net.Http;
 using Xamarin.Essentials;
 using System.Threading.Tasks;
-using System.Threading;
 
 namespace App1
 {

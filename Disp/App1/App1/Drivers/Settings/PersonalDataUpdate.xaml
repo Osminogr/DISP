@@ -7,7 +7,7 @@
              x:Class="App1.Drivers.Settings.PersonalDataUpdate"
              Title="Настройки">
     <ContentPage.Content>
-        <Grid Margin="20,10,20,0">
+        <Grid Margin="20,20,20,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
                 <RowDefinition Height="60"/>
@@ -20,18 +20,18 @@
             </Grid.RowDefinitions>
 
             <Label Text="Город" HorizontalOptions="Start" Grid.Row="0" Margin="3,0,10,0"/>
-            <Entry Grid.Row="0" Margin="0,10,0,0"  x:Name="City"/>
+            <Entry Grid.Row="0" Margin="0,10,0,0"  x:Name="City" Keyboard="Plain"/>
 
             <Label Text="Имя" HorizontalOptions="Start" Grid.Row="1" Margin="3,0,10,0"/>
-            <Entry Grid.Row="1" Margin="0,10,0,0" x:Name="Name"/>
+            <Entry Grid.Row="1" Margin="0,10,0,0" x:Name="Name" Keyboard="Plain"/>
 
 
             <Label Text="Отчество" HorizontalOptions="Start" Grid.Row="2" Margin="3,0,10,0"/>
-            <Entry Grid.Row="2" Margin="0,10,0,0"  x:Name="Patronymic"/>
+            <Entry Grid.Row="2" Margin="0,10,0,0"  x:Name="Patronymic" Keyboard="Plain"/>
 
 
             <Label Text="Фамилия" HorizontalOptions="Start" Grid.Row="3" Margin="3,0,10,0"/>
-            <Entry Grid.Row="3" Margin="0,10,0,0"  x:Name="LastName"/>
+            <Entry Grid.Row="3" Margin="0,10,0,0"  x:Name="LastName" Keyboard="Plain"/>
 
         </Grid>
     </ContentPage.Content>

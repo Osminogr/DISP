@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
@@ -20,9 +19,9 @@ namespace App1.Drivers.Settings
             driver = Server.GetAuthObject().driver;
             InitializeComponent();
 
-            Number.Text = driver.driverLicence.number;
-            Data.Text = driver.driverLicence.date;
-            Period.Text = driver.driverLicence.period;
+            serialNumberLicence.Text = driver.driverLicence.number;
+            dateFromLicence.Date = DateTime.Parse(driver.driverLicence.date);
+            dateToLicence.Date = DateTime.Parse(driver.driverLicence.period);
 
             photo1.Source = driver.driverLicence.urlPhoto1;
             photo2.Source = driver.driverLicence.urlPhoto2;
@@ -94,34 +93,40 @@ namespace App1.Drivers.Settings
             {
                 try
                 {
-                    bool b1 = false, b2 = false, b3 = false;
-                    if (Number.Text != null) b1 = true;
-                    if (Data.Text != null) b2 = true;
-                    if (Period.Text != null) b3 = true;
-
-                    if (b1 && b2 && b3)
+                    if (serialNumberLicence.Text == null && (serialNumberLicence.Text != null && serialNumberLicence.Text.Length != 12))
                     {
-                        driver.driverLicence.number = Number.Text;
-                        driver.driverLicence.date = Data.Text;
-                        driver.driverLicence.period = Period.Text;
+                        await DisplayAlert("Сообщение", "Ошибка заполнения серии и номера водительского удостоверения!", "Закрыть");
+                        return;
+                    }
 
-                        HttpContent answer = await Server.SaveDriverLicence(driver.driverLicence);
-                        string response = await answer.ReadAsStringAsync();
+                    if (dateFromLicence.Date == null)
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения даты получения водительского удостоверения!", "Закрыть");
+                        return;
+                    }
 
-                        if (response == null || (response != null && !response.Contains(nameof(DriverLicence))))
-                        {
-                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
-                        }
-                        else
-                        {
-                            driver = await Server.GetDriver(driver.id);
-                            Server.SaveAuthObject(driver, false);
-                            await Navigation.PopAsync(true);
-                        }
+                    if (dateToLicence.Date == null)
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения срока действия водительского удостоверения!", "Закрыть");
+                        return;
+                    }
+
+                    driver.driverLicence.number = serialNumberLicence.Text;
+                    driver.driverLicence.date = dateFromLicence.Date.ToShortDateString();
+                    driver.driverLicence.period = dateToLicence.Date.ToShortDateString();
+
+                    HttpContent answer = await Server.SaveDriverLicence(driver.driverLicence);
+                    string response = await answer.ReadAsStringAsync();
+
+                    if (response == null || (response != null && !response.Contains(nameof(DriverLicence))))
+                    {
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже", "Закрыть");
                     }
                     else
                     {
-                        await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                        driver = await Server.GetDriver(driver.id);
+                        Server.SaveAuthObject(driver, false);
+                        await Navigation.PopAsync(true);
                     }
                 }
                 catch (Exception ex)

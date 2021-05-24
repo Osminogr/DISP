@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
@@ -17,11 +16,11 @@ namespace App1.Drivers.Settings
             nowUser = now;
             InitializeComponent();
 
-            Address.Text = nowUser.accountNumber.bankAddress;
-            Name.Text = nowUser.accountNumber.bankName;
-            BIK.Text = nowUser.accountNumber.bik;
-            NumberK.Text = nowUser.accountNumber.bunkNumberK;
-            NumberR.Text = nowUser.accountNumber.bunkNumberR;
+            address.Text = nowUser.accountNumber.bankAddress;
+            nameBank.Text = nowUser.accountNumber.bankName;
+            bik.Text = nowUser.accountNumber.bik;
+            accNumberC.Text = nowUser.accountNumber.bunkNumberK;
+            accNumberR.Text = nowUser.accountNumber.bunkNumberR;
 
             OverrideTitleView("Банковские реквизиты", "Сохранить", 30, -1);
         }
@@ -32,43 +31,59 @@ namespace App1.Drivers.Settings
             {
                 try
                 {
-                    bool v1 = false, v2 = false, v3 = false, v4 = false, v5 = false;
-
-                    if (Name.Text.Length != 0) v1 = true;
-                    if (Address.Text.Length != 0) v2 = true;
-                    if (NumberK.Text.Length == 20) v3 = true;
-                    if (NumberR.Text.Length == 20) v4 = true;
-                    if (BIK.Text.Length == 9) v5 = true;
-
-                    if (v1 && v2 && v3 && v4 && v5)
+                    if (nameBank.Text == null || (nameBank.Text != null && nameBank.Text.Length < 5))
                     {
-                        nowUser.accountNumber.bankAddress = Address.Text;
-                        nowUser.accountNumber.bankName = Name.Text;
-                        nowUser.accountNumber.bik = BIK.Text;
-                        nowUser.accountNumber.bunkNumberK = NumberK.Text;
-                        nowUser.accountNumber.bunkNumberR = NumberR.Text;
+                        await DisplayAlert("Сообщение", "Ошибка заполнения наименования Банка!", "Закрыть");
+                        return;
+                    }
 
-                        HttpContent answer = await Server.SaveAccountNumber(nowUser.accountNumber);
-                        string response = await answer.ReadAsStringAsync();
+                    if (address.Text == null || (address.Text != null && address.Text.Length < 5))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения адресса Банка!", "Закрыть");
+                        return;
+                    }
 
-                        if (response == null || (response != null && !response.Contains(nameof(AccountNumber))))
-                        {
-                            await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
-                        }
-                        else
-                        {
-                            Server.SaveAuthObject(nowUser, false);
-                            await Navigation.PopAsync(true);
-                        }
+                    if (accNumberR.Text == null || (accNumberR.Text != null && accNumberR.Text.Length != 20))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения Расчет. Счета Банка!", "Закрыть");
+                        return;
+                    }
+
+                    if (accNumberC.Text == null || (accNumberC.Text != null && accNumberC.Text.Length != 20))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения Корр. Счета Банка!", "Закрыть");
+                        return;
+                    }
+
+                    if (bik.Text == null || (bik.Text != null && bik.Text.Length != 9))
+                    {
+                        await DisplayAlert("Сообщение", "Ошибка заполнения БИК Банка!", "Закрыть");
+                        return;
+                    }
+
+                    nowUser.accountNumber.bankAddress = address.Text;
+                    nowUser.accountNumber.bankName = nameBank.Text;
+                    nowUser.accountNumber.bik = bik.Text;
+                    nowUser.accountNumber.bunkNumberK = accNumberC.Text;
+                    nowUser.accountNumber.bunkNumberR = accNumberR.Text;
+
+                    HttpContent answer = await Server.SaveAccountNumber(nowUser.accountNumber);
+                    string response = await answer.ReadAsStringAsync();
+
+                    if (response == null || (response != null && !response.Contains(nameof(AccountNumber))))
+                    {
+                        await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
                     }
                     else
                     {
-                        await DisplayAlert("Сообщение", "Не все поля заполнены корректно!", "Закрыть");
+                        Server.SaveAuthObject(nowUser, false);
+                        await Navigation.PopAsync(true);
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
+                    await DisplayAlert("Сообщение", "Не удалось выполнить сохранение! Попробуйте позже.", "Закрыть");
                 }
             })));
         }
