@@ -132,10 +132,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 await DisplayAlert("Сообщение", "Оплачено! Рекламная компания создана.", "Закрыть");
 
                 Alert alert = new Alert();
-                alert.date = DateTime.Now.ToShortDateString();
                 alert.header = "Сообщение";
                 alert.title = "Создание рекламной компании";
-                alert.text = "Ваша рекламная компания запустится " + alert.date + " в 09:00.";
+                alert.text = "Ваша рекламная компания запустится " + DateTime.Now.ToShortDateString() + " в 09:00.";
 
                 await Server.AddAlert(alert, compaign.adv.id);
 

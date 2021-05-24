@@ -17,12 +17,13 @@ namespace App1.Advertiser.Campaign.NewCampaign
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddCard : ContentPage
     {
-        Compaign compaign;
+        public Entity entity;
         public EventHandler<CardData> cardDataHandler;
-        public AddCard(Compaign now)
+        public AddCard(Entity ent)
         {
-            compaign = now;
             InitializeComponent();
+
+            entity = ent;
 
             OverrideTitleView("Добавление карты", 60, -1);
         }
@@ -58,7 +59,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 cardData.CardHolder = CardHolder.Text;
                 cardData.PAN = PAN.Text;
                 cardData.ExpDate = ExpDate.Text;
-                cardData.idEntity = compaign.adv.id;
+                cardData.idEntity = entity.id;
 
                 HttpContent response = await Server.AddCardData(cardData);
                 string answer = await response.ReadAsStringAsync();
@@ -66,12 +67,12 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 if (answer != null && answer.Contains(nameof(CardData)))
                 {
                     await DisplayAlert("Сообщение", "Карта успешно добавлена!", "Закрыть");
+                    cardDataHandler?.Invoke(this, cardData);
                     await Navigation.PopAsync(true);
                 }
                 else
                 {
                     await DisplayAlert("Сообщение", "Не удалось добавить карту! Попробуйте позже.", "Закрыть");
-                    cardDataHandler?.Invoke(this, cardData);
                     await Navigation.PopAsync(true);
                 }
             }

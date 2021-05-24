@@ -2,19 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Advertiser.Campaign.NewCampaign.PayTarif"
-             BackgroundColor="White"
-             xmlns:templates="clr-namespace:App1.Templates">
+             BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
             <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" IsVisible="false" />
+
+            <StackLayout x:Name="cardsList" VerticalOptions="FillAndExpand">
+
+             </StackLayout>
+
             <ScrollView Margin="0, 0, 0, 0" VerticalOptions="FillAndExpand" x:Name="ScRoot">
                 <Grid Padding="0,0,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <Frame BorderColor="#CCCCCC"
@@ -44,13 +46,8 @@
                                    Grid.Column="1"/>
                         </Grid>
                     </Frame>
-
-                    <StackLayout x:Name="cardsList" Grid.Row="1">
-
-                    </StackLayout>
                 </Grid>
             </ScrollView>
-
             <Button Clicked="Pay" HorizontalOptions="Center" Margin="0, 0, 0, 20"  WidthRequest="250" Text="Оплатить" FontSize="14" CornerRadius="30" TextColor="White" BackgroundColor="#FFB800"/>
         </StackLayout>
     </ContentPage.Content>

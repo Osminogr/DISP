@@ -29,7 +29,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
             newCard.GestureRecognizers.Add(new TapGestureRecognizer() {
                 Command = new Command(async () => {
-                    await Navigation.PushAsync(new AddCard(compaign) {
+                    await Navigation.PushAsync(new AddCard(compaign.adv) {
                         cardDataHandler = OnAddCardFromAdd
                     }, true);
                 })
@@ -63,7 +63,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         CardDataTemplate cardDataTemplate = new CardDataTemplate(card, true)
                         {
                             cardDataHandler = OnSelectedCardData,
-                            checkedHandler = OnSelectedCardData
+                            cardDataDeleteHandler = OnAddCardFromAdd
                         };
                         cardTemplates.Add(cardDataTemplate);
 
@@ -77,22 +77,19 @@ namespace App1.Advertiser.Campaign.NewCampaign
             }
         }
 
-        private void OnSelectedCardData(object sender, CardData data)
+        private void OnSelectedCardData(object sender, CardDataTemplate cardDataTemplate)
         {
-            selectedCardData = data;
-        }
+            selectedCardData = cardDataTemplate.cardDataInner;
 
-        private void OnSelectedCardData(object sender, RadioButton radioButton)
-        {
             if (cardTemplates.Count > 0)
             {
                 foreach (var ct in cardTemplates)
                 {
-                    if (ct.radioButtonInner.Id != radioButton.Id)
+                    if (ct.radioButtonInner.Id != cardDataTemplate.radioButtonInner.Id)
                     {
                         ct.radioButtonInner.IsChecked = false;
-                        ct.CVVEntryInnter.Opacity = 0;
-                        ct.CVVLabelInner.Opacity = 0;
+                        ct.CVVEntryInnter.IsVisible = false;
+                        ct.CVVLabelInner.IsVisible = false;
                     }
                 }
             }
@@ -280,10 +277,9 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 await DisplayAlert("Сообщение", "Оплачено! Рекламная компания создана.", "Закрыть");
 
                 Alert alert = new Alert();
-                alert.date = DateTime.Now.ToShortDateString();
                 alert.header = "Сообщение";
                 alert.title = "Создание рекламной компании";
-                alert.text = "Ваша рекламная компания запустится " + alert.date + " в 09:00.";
+                alert.text = "Ваша рекламная компания запустится " + DateTime.Now.ToShortDateString() + " в 09:00.";
 
                 await Server.AddAlert(alert, compaign.adv.id);
 

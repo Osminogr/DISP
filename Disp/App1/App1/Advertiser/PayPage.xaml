@@ -8,6 +8,42 @@
         <ScrollView VerticalOptions="FillAndExpand" BackgroundColor="White" Margin="0, 0, 0, 0">
             <StackLayout VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="cardDataList" VerticalOptions="FillAndExpand"></StackLayout>
+
+                <Grid Padding="0,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+
+                    <Frame BorderColor="#CCCCCC"
+                           Grid.Row="0"
+                           HasShadow="True"
+                           Margin="0"
+                           x:Name="newCard"
+                           Padding="0">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                                <ColumnDefinition Width="0.85*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="+"
+                                   FontSize="25"
+                                   TextColor="#6F6F6F"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   Grid.Row="0"
+                                   Grid.Column="0"/>
+                            <Label Text="Новая карта"
+                                   FontSize="16"
+                                   VerticalOptions="CenterAndExpand"
+                                   FontFamily="Roboto"
+                                   TextColor="#6F6F6F"
+                                   Grid.Row="0"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+                </Grid>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

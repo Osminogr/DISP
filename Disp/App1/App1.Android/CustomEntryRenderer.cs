@@ -19,15 +19,36 @@ namespace App1.Droid
         {
             base.OnElementChanged(e);
 
-            if (this.Control != null)
+            if (e.NewElement != null)
             {
-                //this.Control.SetBackgroundColor(global::Android.Graphics.Color.Transparent);
-                var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RectShape());
-                shape.Paint.Color = Xamarin.Forms.Color.Black.ToAndroid();
-                shape.Paint.SetStyle(Paint.Style.Stroke);
-                shape.Paint.StrokeWidth = 5;
-                this.Control.Background = shape;
-                this.Control.SetPadding(10, 0, 0, 0);
+                CustomEntry entry = (CustomEntry)e.NewElement;
+
+                if (entry.IsShowBorder)
+                {
+                    if (this.Control != null)
+                    {
+                        float[] radii = new float[] { 20, 20, 20, 20, 20, 20, 20, 20 };
+                        var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RoundRectShape(radii, null, null));
+                        shape.Paint.Color = Xamarin.Forms.Color.Black.ToAndroid();
+                        shape.Paint.SetStyle(Paint.Style.Stroke);
+                        shape.Paint.StrokeWidth = 3;
+                        this.Control.Background = shape;
+                        this.Control.SetPadding(10, 0, 0, 0);
+                    }
+                }
+                else
+                {
+                    if (this.Control != null)
+                    {
+                        float[] radii = new float[] { 2, 2, 2, 2, 2, 2, 2, 2 };
+                        var shape = new ShapeDrawable(new Android.Graphics.Drawables.Shapes.RoundRectShape(radii, null, null));
+                        shape.Paint.Color = Xamarin.Forms.Color.Transparent.ToAndroid();
+                        shape.Paint.SetStyle(Paint.Style.Stroke);
+                        shape.Paint.StrokeWidth = 3;
+                        this.Control.Background = shape;
+                        this.Control.SetPadding(10, 0, 0, 0);
+                    }
+                }
             }
         }
     }

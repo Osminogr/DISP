@@ -737,5 +737,15 @@ namespace App1
 
             return httpResponseMessage.Content;
         }
+
+        public static async Task<HttpContent> DeleteCardData(int id)
+        {
+            var uri = new Uri(ROOT_URL + "carddata/" + id);
+
+            var httpClient = new HttpClient();
+            var httpResponseMessage = await httpClient.DeleteAsync(uri);
+
+            return httpResponseMessage.Content;
+        }
     }
 }

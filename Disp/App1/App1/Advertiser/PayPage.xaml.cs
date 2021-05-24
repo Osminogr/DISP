@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Domain;
 using App1.Utils;
 using App1.Templates;
+using App1.Advertiser.Campaign.NewCampaign;
 
 namespace App1.Advertiser.Settings
 {
@@ -22,16 +20,29 @@ namespace App1.Advertiser.Settings
             nowUser = now;
             InitializeComponent();
 
-            OverrideTitleView("Оплата", "Изменить", 90, -1);
+            OverrideTitleView("Оплата", 90, -1);
+
+            newCard.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () => {
+                    await Navigation.PushAsync(new AddCard(nowUser)
+                    {
+                        cardDataHandler = OnAddCardFromAdd
+                    }, true);
+                })
+            });
 
             LoadCardData();
         }
 
-        private void OverrideTitleView(string name, string nameAction, int left, int count)
+        private void OnAddCardFromAdd(object sender, CardData data)
         {
-            NavigationPage.SetTitleView(this, TitleView.OverrideGridView(name, nameAction, left, count, new Command(() => {
-                Navigation.PushAsync(new EditPayMethod(nowUser));
-            })));
+            LoadCardData();
+        }
+
+        private void OverrideTitleView(string name, int left, int count)
+        {
+            NavigationPage.SetTitleView(this, TitleView.OverrideView(name, left, count));
         }
 
         private async void LoadCardData()
@@ -47,7 +58,8 @@ namespace App1.Advertiser.Settings
                     foreach (var card in cardDatas)
                     {
                         CardDataTemplate cardDataTemplate = new CardDataTemplate(card, false) {
-                            checkedHandler = OnSelectedCardData
+                            cardDataHandler = OnSelectedCardData,
+                            cardDataDeleteHandler = OnAddCardFromAdd
                         };
 
                         cardTemplates.Add(cardDataTemplate);
@@ -62,13 +74,13 @@ namespace App1.Advertiser.Settings
             }
         }
 
-        private void OnSelectedCardData(object sender, RadioButton radioButton)
+        private void OnSelectedCardData(object sender, CardDataTemplate cardDataTemplate)
         {
             if (cardTemplates.Count > 0)
             {
                 foreach (var ct in cardTemplates)
                 {
-                    if (ct.radioButtonInner.Id != radioButton.Id)
+                    if (ct.radioButtonInner.Id != cardDataTemplate.radioButtonInner.Id)
                     {
                         ct.radioButtonInner.IsChecked = false;
                         ct.CVVEntryInnter.IsVisible = false;
