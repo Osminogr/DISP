@@ -35,7 +35,7 @@
                         </Entry>
 
                         <Label Text="Дата выдачи" Padding="4, 0, 0, 0" HorizontalOptions="Start" Grid.Row ="2" FontAttributes="None" />
-                        <DatePicker x:Name="datePassport" Grid.Row="2" Margin="0,10,10,0" Format="dd.MM.yyyy"/>
+                        <DatePicker x:Name="datePassport" Grid.Row="2" Margin="0,10,10,0" TextColor="#CCCCCC" Format="dd.MM.yyyy"/>
 
                         <Label Text="Кем выдан" Padding="4, 0, 0, 0" HorizontalOptions="Start" Grid.Row ="3" FontAttributes="None" />
                         <Entry Grid.Row="3" Margin="0,0,10,0" TextColor="#CCCCCC" x:Name="whoPassport"/>

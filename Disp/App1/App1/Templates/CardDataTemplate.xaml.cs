@@ -89,7 +89,7 @@ namespace App1.Templates
                 HttpContent httpContent = await Server.DeleteCardData(cardDataInner.id);
                 string answer = await httpContent.ReadAsStringAsync();
 
-                if (answer != null)
+                if (answer != null && answer.Contains(nameof(CardData)))
                 {
                     await Application.Current.MainPage.DisplayAlert("Сообщение", "Карта удалена!", "Закрыть");
                     cardDataDeleteHandler?.Invoke(this, cardDataInner);

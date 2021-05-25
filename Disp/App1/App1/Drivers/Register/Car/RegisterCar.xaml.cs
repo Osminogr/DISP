@@ -15,6 +15,7 @@ namespace App1
     public partial class RegisterCar : ContentPage
     {
         Driver driver = new Driver();
+        int currentPhotoAdd = 0;
         public RegisterCar(Driver now)
         {
             driver = now;
@@ -34,90 +35,166 @@ namespace App1
 
             photo1.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(async () =>
+                Command = new Command(() =>
                 {
-                    try
-                    {
-                        if (CrossMedia.Current.IsTakePhotoSupported)
-                        {
-                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                            if (photo != null)
-                            {
-                                await Task.Delay(1000);
-                                photo1.Source = photo.Path;
-                                driver.car.photo1 = new Photo();
-                                driver.car.photo1.data = photo.GetStream();
-                                driver.car.photo1.name = Path.GetFileName(photo.Path);
-                                await Task.Delay(1000);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
-                    }
+                    OpenAddPhotoDialog(1);
                 })
             });
 
             photo2.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(async () =>
+                Command = new Command(() =>
                 {
-                    try
-                    {
-                        if (CrossMedia.Current.IsPickPhotoSupported)
-                        {
-                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                            if (photo != null)
-                            {
-                                await Task.Delay(1000);
-                                photo2.Source = photo.Path;
-                                driver.car.photo2 = new Photo();
-                                driver.car.photo2.data = photo.GetStream();
-                                driver.car.photo2.name = Path.GetFileName(photo.Path);
-                                await Task.Delay(1000);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
-                    }
+                    OpenAddPhotoDialog(2);
                 })
             });
 
             photo3.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command(async () =>
+                Command = new Command(() =>
                 {
-                    try
-                    {
-                        if (CrossMedia.Current.IsPickPhotoSupported)
-                        {
-                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-
-                            if (photo != null)
-                            {
-                                await Task.Delay(1000);
-                                photo3.Source = photo.Path;
-                                driver.car.photo3 = new Photo();
-                                driver.car.photo3.data = photo.GetStream();
-                                driver.car.photo3.name = Path.GetFileName(photo.Path);
-                                await Task.Delay(1000);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex);
-                        await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
-                    }
+                    OpenAddPhotoDialog(3);
                 })
             });
+        }
+
+        public void CloseAddPhotoDialog(object sender, EventArgs e)
+        {
+            gridData.IsEnabled = true;
+            AddPhotoDialog.IsVisible = false;
+            AddPhotoDialog.Margin = new Thickness(0, 0, 0, 0);
+            currentPhotoAdd = 0;
+        }
+
+        public void OpenAddPhotoDialog(int number)
+        {
+            gridData.IsEnabled = false;
+            AddPhotoDialog.IsVisible = true;
+            AddPhotoDialog.Margin = new Thickness(0, 0, 0, 0);
+            currentPhotoAdd = number;
+        }
+
+        public async void LoadPhoto(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+
+                    if (photo != null)
+                    {
+                        actInd.IsRunning = true;
+                        actInd.IsVisible = true;
+                        AddPhotoDialog.IsVisible = false;
+                        gridData.Opacity = 0;
+
+                        await Task.Delay(1000);
+
+                        if (currentPhotoAdd == 3)
+                        {
+                            photo3.Source = photo.Path;
+                            driver.car.photo3 = new Photo();
+                            driver.car.photo3.data = photo.GetStream();
+                            driver.car.photo3.name = Path.GetFileName(photo.Path);
+                        }
+
+                        if (currentPhotoAdd == 2)
+                        {
+                            photo2.Source = photo.Path;
+                            driver.car.photo2 = new Photo();
+                            driver.car.photo2.data = photo.GetStream();
+                            driver.car.photo2.name = Path.GetFileName(photo.Path);
+                        }
+
+                        if (currentPhotoAdd == 1)
+                        {
+                            photo1.Source = photo.Path;
+                            driver.car.photo1 = new Photo();
+                            driver.car.photo1.data = photo.GetStream();
+                            driver.car.photo1.name = Path.GetFileName(photo.Path);
+                        }
+
+                        await Task.Delay(1000);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
+            }
+
+            gridData.IsEnabled = true;
+            gridData.Opacity = 1;
+            actInd.IsRunning = false;
+            actInd.IsVisible = false;
+            AddPhotoDialog.Margin = new Thickness(0, 0, 0, 0);
+            AddPhotoDialog.IsVisible = false;
+            currentPhotoAdd = 0;
+        }
+
+        public async void TakePhoto(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CrossMedia.Current.IsTakePhotoSupported)
+                {
+                    MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions()
+                    {
+                        SaveToAlbum = true
+                    });
+
+                    if (photo != null)
+                    {
+                        actInd.IsRunning = true;
+                        actInd.IsVisible = true;
+                        AddPhotoDialog.IsVisible = false;
+                        gridData.Opacity = 0;
+
+                        await Task.Delay(1000);
+
+                        if (currentPhotoAdd == 3)
+                        {
+                            photo3.Source = photo.Path;
+                            driver.car.photo3 = new Photo();
+                            driver.car.photo3.data = photo.GetStream();
+                            driver.car.photo3.name = Path.GetFileName(photo.Path);
+                        }
+
+                        if (currentPhotoAdd == 2)
+                        {
+                            photo2.Source = photo.Path;
+                            driver.car.photo2 = new Photo();
+                            driver.car.photo2.data = photo.GetStream();
+                            driver.car.photo2.name = Path.GetFileName(photo.Path);
+                        }
+
+                        if (currentPhotoAdd == 1)
+                        {
+                            photo1.Source = photo.Path;
+                            driver.car.photo1 = new Photo();
+                            driver.car.photo1.data = photo.GetStream();
+                            driver.car.photo1.name = Path.GetFileName(photo.Path);
+                        }
+
+                        await Task.Delay(1000);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                await DisplayAlert("Сообщение", "Не удалось загрузить фотографию! Попробуйте позже.", "Закрыть");
+            }
+
+            gridData.IsEnabled = true;
+            gridData.Opacity = 1;
+            actInd.IsRunning = false;
+            actInd.IsVisible = false;
+            AddPhotoDialog.Margin = new Thickness(0, 0, 0, 0);
+            AddPhotoDialog.IsVisible = false;
+            currentPhotoAdd = 0;
         }
 
         private void OverrideTitleView(string name, string nameAction, int left, int count)
