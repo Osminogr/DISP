@@ -21,10 +21,14 @@ namespace App1.Advertiser.Campaign.NewCampaign
     public partial class PayModal3DSChecking : ContentPage
     {
         Compaign compaign;
+        CardData cardData;
         Payment payment;
-        public PayModal3DSChecking(Compaign now, string httpContent, Payment pay)
+        public EventHandler<CardData> confirmedStatusHandler;
+        public PayModal3DSChecking(Entity now, string httpContent, Payment pay)
         {
-            compaign = now;
+            if (typeof(Compaign) == now.GetType()) compaign = (Compaign)now;
+            else cardData = (CardData)now;
+
             payment = pay;
             InitializeComponent();
 
@@ -59,13 +63,42 @@ namespace App1.Advertiser.Campaign.NewCampaign
 
                         if (jPayResponse != null)
                         {
+                            if (jPayResponse.Status == JPayStatus.AuthFail)
+                            {
+                                if (cardData != null) confirmedStatusHandler?.Invoke(this, null);
+
+                                if (compaign != null) await DisplayAlert("Сообщение", String.Format("Не удалось выполнить подтверждение платежа({0})! Попробуйте позже.", jPayResponse.Message), "Закрыть");
+
+                                await Navigation.PopAsync(true);
+                                return;
+                            }
+
                             if (jPayResponse.Status == JPayStatus.Confirmed)
                             {
-                                payment.date = DateTime.Now.Date.ToShortDateString();
+                                if (cardData != null)
+                                {
+                                    JPayCancel jPayCancel = new JPayCancel();
+                                    jPayCancel.PaymentId = jPayResponse.PaymentId;
+                                    jPayCancel.TerminalKey = Server.BankDataAuth.TerminalKey;
+                                    jPayCancel.Token = Server.CalculateHash256(Server.BankDataAuth.Password + jPayResponse.PaymentId + Server.BankDataAuth.TerminalKey);
 
-                                await Server.AddPayment(payment, compaign.adv.id);
+                                    jPayResponse = await Server.PayCancel(jPayCancel);
 
-                                await AddCompaign();
+                                    if (jPayResponse != null && jPayResponse.Success && jPayResponse.Status == JPayStatus.Refunded) confirmedStatusHandler?.Invoke(this, cardData);
+                                    else confirmedStatusHandler?.Invoke(this, null);
+
+                                    await Navigation.PopAsync(true);
+                                }
+
+                                if (compaign != null)
+                                {
+                                    payment.date = DateTime.Now.Date.ToShortDateString();
+
+                                    await Server.AddPayment(payment, compaign.adv.id);
+
+                                    await AddCompaign();
+                                }
+                                
                                 return;
                             }
 
@@ -82,24 +115,49 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                 {
                                     if (jPayResponse.Status == JPayStatus.Confirmed)
                                     {
-                                        payment.date = DateTime.Now.Date.ToShortDateString();
+                                        if (compaign != null)
+                                        {
+                                            payment.date = DateTime.Now.Date.ToShortDateString();
 
-                                        await Server.AddPayment(payment, compaign.adv.id);
+                                            await Server.AddPayment(payment, compaign.adv.id);
 
-                                        await AddCompaign();
+                                            await AddCompaign();
+                                        }
+
+                                        if (cardData != null)
+                                        {
+                                            JPayCancel jPayCancel = new JPayCancel();
+                                            jPayCancel.PaymentId = jPayResponse.PaymentId;
+                                            jPayCancel.TerminalKey = Server.BankDataAuth.TerminalKey;
+                                            jPayCancel.Token = Server.CalculateHash256(Server.BankDataAuth.Password + jPayResponse.PaymentId + Server.BankDataAuth.TerminalKey);
+
+                                            jPayResponse = await Server.PayCancel(jPayCancel);
+
+                                            if (jPayResponse != null && jPayResponse.Success && jPayResponse.Status == JPayStatus.Refunded) confirmedStatusHandler?.Invoke(this, cardData);
+                                            else confirmedStatusHandler?.Invoke(this, null);
+
+                                            await Navigation.PopAsync(true);
+                                        }
+                                        
                                         return;
                                     }
 
                                     if (jPayResponse.Status == JPayStatus.Rejected)
                                     {
-                                        await DisplayAlert("Сообщение", String.Format("Не удалось выполнить подтверждение платежа({0})! Попробуйте позже.", jPayResponse.Message), "Закрыть");
+                                        if (compaign != null) await DisplayAlert("Сообщение", String.Format("Не удалось выполнить подтверждение платежа({0})! Попробуйте позже.", jPayResponse.Message), "Закрыть");
+
+                                        if (cardData != null) confirmedStatusHandler?.Invoke(this, null);
+
                                         await Navigation.PopAsync(true);
                                         return;
                                     }
                                 }
                                 else
                                 {
-                                    await DisplayAlert("Сообщение", "Не удалось выполнить подтверждение платежа! Попробуйте позже.", "Закрыть");
+                                    if (compaign != null) await DisplayAlert("Сообщение", "Не удалось выполнить подтверждение платежа! Попробуйте позже.", "Закрыть");
+
+                                    if (cardData != null) confirmedStatusHandler?.Invoke(this, null);
+
                                     await Navigation.PopAsync(true);
                                     return;
                                 }
@@ -111,7 +169,11 @@ namespace App1.Advertiser.Campaign.NewCampaign
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                await DisplayAlert("Сообщение", "Не удалось выполнить подтверждение платежа! Попробуйте позже.", "Закрыть");
+
+                if (compaign != null) await DisplayAlert("Сообщение", "Не удалось выполнить подтверждение платежа! Попробуйте позже.", "Закрыть");
+
+                if (cardData != null) confirmedStatusHandler?.Invoke(this, null);
+
                 await Navigation.PopAsync(true);
             }
         }

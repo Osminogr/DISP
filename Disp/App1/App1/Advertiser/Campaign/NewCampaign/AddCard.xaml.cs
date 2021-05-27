@@ -11,6 +11,7 @@ using App1.Utils;
 using App1.Templates;
 using System.Net.Http;
 using System.Text.RegularExpressions;
+using App1.Domain.Json;
 
 namespace App1.Advertiser.Campaign.NewCampaign
 {
@@ -55,26 +56,26 @@ namespace App1.Advertiser.Campaign.NewCampaign
                     return;
                 }
 
+                if (CVV.Text == null || (CVV.Text != null && CVV.Text.Length != 3))
+                {
+                    await DisplayAlert("Сообщение", "CVV карты задан некорректно!", "Закрыть");
+                    return;
+                }
+
                 CardData cardData = new CardData();
                 cardData.CardHolder = CardHolder.Text;
                 cardData.PAN = PAN.Text;
                 cardData.ExpDate = ExpDate.Text;
                 cardData.idEntity = entity.id;
+                cardData.CVV = CVV.Text;
 
-                HttpContent response = await Server.AddCardData(cardData);
-                string answer = await response.ReadAsStringAsync();
+                ShowLoading();
 
-                if (answer != null && answer.Contains(nameof(CardData)))
-                {
-                    await DisplayAlert("Сообщение", "Карта успешно добавлена!", "Закрыть");
-                    cardDataHandler?.Invoke(this, cardData);
-                    await Navigation.PopAsync(true);
-                }
-                else
-                {
-                    await DisplayAlert("Сообщение", "Не удалось добавить карту! Попробуйте позже.", "Закрыть");
-                    await Navigation.PopAsync(true);
-                }
+                int typeConfirmCard = await CheckCardPay(cardData);
+
+                if (typeConfirmCard == 1) await AddCardExt(cardData);
+
+                if (typeConfirmCard == 0) await DisplayAlert("Сообщение", "Карта недействительна! Попробуйте позже.", "Закрыть");
             }
             catch (Exception ex)
             {
@@ -82,6 +83,135 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 await DisplayAlert("Сообщение", "Не удалось добавить карту! Попробуйте позже.", "Закрыть");
                 await Navigation.PopAsync(true);
             }
+        }
+
+        private async Task AddCardExt(CardData cardData)
+        {
+            HttpContent response = await Server.AddCardData(cardData);
+            string answer = await response.ReadAsStringAsync();
+
+            if (answer != null && answer.Contains(nameof(CardData)))
+            {
+                await DisplayAlert("Сообщение", "Карта успешно добавлена!", "Закрыть");
+                cardDataHandler?.Invoke(this, cardData);
+                await Navigation.PopAsync(true);
+            }
+            else
+            {
+                await DisplayAlert("Сообщение", "Не удалось добавить карту! Попробуйте позже.", "Закрыть");
+                await Navigation.PopAsync(true);
+            }
+
+            HideLoading();
+        }
+
+        private async Task<int> CheckCardPay(CardData cardData)
+        {
+            int confirmed = 0;
+
+            Random generator = new Random();
+
+            JPayInit jPayInit = new JPayInit();
+            jPayInit.TerminalKey = Server.BankDataAuth.TerminalKey;
+            jPayInit.OrderId = String.Format("{0}_{1}", nameof(CardData), generator.Next(100000, 999999).ToString());
+            jPayInit.Amount = 100;
+            JPayResponse jPayResponse = await Server.PayInit(jPayInit);
+
+            if (jPayResponse != null && jPayResponse.Status == JPayStatus.New && jPayResponse.Success)
+            {
+                JPayFinishAuthorize jPayFinishAuthorize = new JPayFinishAuthorize();
+                jPayFinishAuthorize.TerminalKey = jPayInit.TerminalKey;
+                jPayFinishAuthorize.PaymentId = jPayResponse.PaymentId;
+                jPayFinishAuthorize.CardData = Server.RsaEncryptWithPublic(cardData.ToCardData(), Server.BankDataAuth.PublicKey);
+                jPayFinishAuthorize.Token = Server.CalculateHash256(jPayFinishAuthorize.CardData + Server.BankDataAuth.Password + jPayFinishAuthorize.PaymentId + Server.BankDataAuth.TerminalKey);
+
+                jPayResponse = await Server.PayFinishAuthorize(jPayFinishAuthorize);
+
+                if (jPayResponse != null && jPayResponse.Success)
+                {
+                    if (jPayResponse.Status == JPayStatus.Confirmed)
+                    {
+                        JPayCancel jPayCancel = new JPayCancel();
+                        jPayCancel.PaymentId = jPayResponse.PaymentId;
+                        jPayCancel.TerminalKey = Server.BankDataAuth.TerminalKey;
+                        jPayCancel.Token = Server.CalculateHash256(Server.BankDataAuth.Password + jPayFinishAuthorize.PaymentId + Server.BankDataAuth.TerminalKey);
+
+                        jPayResponse = await Server.PayCancel(jPayCancel);
+
+                        if (jPayResponse != null && jPayResponse.Success && jPayResponse.Status == JPayStatus.Refunded) confirmed = 1;
+                    }
+
+                    if (jPayResponse.Status == JPayStatus.Authorized)
+                    {
+                        JPayConfirm jPayConfirm = new JPayConfirm();
+                        jPayConfirm.TerminalKey = Server.BankDataAuth.TerminalKey;
+                        jPayConfirm.PaymentId = jPayResponse.PaymentId;
+                        jPayConfirm.Token = Server.CalculateHash256(Server.BankDataAuth.Password + jPayFinishAuthorize.PaymentId + Server.BankDataAuth.TerminalKey);
+
+                        jPayResponse = await Server.PayConfirm(jPayConfirm);
+
+                        if (jPayResponse != null && jPayResponse.Success && jPayResponse.Status == JPayStatus.Confirmed)
+                        {
+                            JPayCancel jPayCancel = new JPayCancel();
+                            jPayCancel.PaymentId = jPayResponse.PaymentId;
+                            jPayCancel.TerminalKey = Server.BankDataAuth.TerminalKey;
+                            jPayCancel.Token = Server.CalculateHash256(Server.BankDataAuth.Password + jPayFinishAuthorize.PaymentId + Server.BankDataAuth.TerminalKey);
+
+                            jPayResponse = await Server.PayCancel(jPayCancel);
+
+                            if (jPayResponse != null && jPayResponse.Success && jPayResponse.Status == JPayStatus.Refunded) confirmed = 1;
+                        }
+                    }
+
+                    if (jPayResponse.Status == JPayStatus.Checking)
+                    {
+                        JPay3DSChecking jPay3DSChecking = new JPay3DSChecking();
+                        jPay3DSChecking.MD = jPayResponse.MD;
+                        jPay3DSChecking.PaReq = jPayResponse.PaReq;
+
+                        HttpResponseMessage response = await Server.Pay3DSChecking(jPay3DSChecking, jPayResponse.ACSUrl);
+
+                        if (response != null)
+                        {
+                            string content = await response.Content.ReadAsStringAsync();
+                            Payment payment = new Payment();
+                            payment.orderId = jPayInit.OrderId;
+                            await Navigation.PushAsync(new PayModal3DSChecking(cardData, content, payment) {
+                                confirmedStatusHandler = Card3DSPayConfirmedCallback
+                            });
+
+                            confirmed = 2;
+                        }
+                    }
+                }
+            }
+
+            return confirmed;
+        }
+
+        private async void Card3DSPayConfirmedCallback(object sender, CardData cardData)
+        {
+            if (cardData != null) await AddCardExt(cardData);
+            else await DisplayAlert("Сообщение", "Карта недействительна! Попробуйте позже.", "Закрыть");
+
+            HideLoading();
+        }
+
+        private void ShowLoading()
+        {
+            actInd.IsVisible = true;
+            actInd.IsRunning = true;
+            gridRoot.IsVisible = false;
+            btnAdd.IsVisible = false;
+        }
+
+        private async void HideLoading()
+        {
+            await Task.Delay(1000);
+            actInd.IsVisible = false;
+            actInd.IsRunning = false;
+            gridRoot.IsVisible = true;
+            btnAdd.IsVisible = true;
         }
     }
 }

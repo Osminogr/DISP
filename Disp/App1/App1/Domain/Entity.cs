@@ -6,5 +6,6 @@ namespace App1.Domain
     {
         public int id;
         public string name;
+        public string date;
     }
 }

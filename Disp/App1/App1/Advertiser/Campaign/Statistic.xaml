@@ -111,8 +111,8 @@
                         HeightRequest="10"
                         WidthRequest="10"
                        BackgroundColor="#FFB800"/>
-                        <Label Text="Начало участия в рекламной компании: 01.01.2021" TextColor="Gray" Grid.Row="1" FontSize="12" Grid.Column="1"/>
-                        <Label Text="Количество показов на данный момент: 2301" TextColor="Gray" Grid.Row="2" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="startDateCompaign" Text="" TextColor="Gray" Grid.Row="1" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="showsCountAll" Text="" TextColor="Gray" Grid.Row="2" FontSize="12" Grid.Column="1"/>
 
                         <Grid Grid.Row="3" HeightRequest="1" Grid.Column="1" Margin="0, 0, 30, 0">
                             <Grid.RowDefinitions>
@@ -121,10 +121,10 @@
                             <Frame HasShadow="false" HeightRequest="1" BackgroundColor="LightGray" Opacity="1"></Frame>
                         </Grid>
 
-                        <Label Text="Начало сотрудничества с DISP: 01.02.2021" TextColor="Gray" Grid.Row="4" FontSize="12" Grid.Column="1"/>
-                        <Label Text="Количество активных рекламных компаний: 11" TextColor="Gray" Grid.Row="5" FontSize="12" Grid.Column="1"/>
-                        <Label Text="Количество завершенных рекламных компаний: 5" TextColor="Gray" Grid.Row="6" FontSize="12" Grid.Column="1"/>
-                        <Label Text="Количество показов в данный момент: 11300" TextColor="Gray" Grid.Row="7" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="registerDate" Text="" TextColor="Gray" Grid.Row="4" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="compaignsActiveCount" Text="" TextColor="Gray" Grid.Row="5" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="compaignsCompletedCount" Text="" TextColor="Gray" Grid.Row="6" FontSize="12" Grid.Column="1"/>
+                        <Label x:Name="showsCountCurrent" Text="Количество показов в данный момент: 11300" TextColor="Gray" Grid.Row="7" FontSize="12" Grid.Column="1"/>
                     </Grid>
 
                 </Grid>

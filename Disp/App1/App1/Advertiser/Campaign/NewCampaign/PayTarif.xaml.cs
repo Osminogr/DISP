@@ -112,14 +112,13 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 }
 
                 ScRoot.Opacity = 0;
+                cardsList.Opacity = 0;
                 actInd.IsRunning = true;
                 actInd.IsVisible = true;
 
                 Random generator = new Random();
 
                 CardData cardData = selectedCardData;
-                cardData.PAN = cardData.PAN.Replace(" ", "").ToUpper();
-                cardData.ExpDate = cardData.ExpDate.Replace("/", "");
 
                 Payment payment = new Payment();
                 payment.orderId = String.Format("{0}{1}_{2}", nameof(Adv), compaign.adv.id, generator.Next(100000, 999999).ToString());
@@ -183,6 +182,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                     await DisplayAlert("Сообщение", String.Format("Не удалось выполнить подтверждение платежа({0})! Попробуйте позже.", jPayResponse.Message), "Закрыть");
                                     await Task.Delay(1000);
                                     ScRoot.Opacity = 1;
+                                    cardsList.Opacity = 1;
                                     actInd.IsRunning = false;
                                     actInd.IsVisible = false;
                                     return;
@@ -193,6 +193,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                 await DisplayAlert("Сообщение", "Не удалось выполнить подтверждение платежа! Попробуйте позже.", "Закрыть");
                                 await Task.Delay(1000);
                                 ScRoot.Opacity = 1;
+                                cardsList.Opacity = 1;
                                 actInd.IsRunning = false;
                                 actInd.IsVisible = false;
                                 return;
@@ -213,6 +214,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                 await Navigation.PushAsync(new PayModal3DSChecking(compaign, content, payment));
 
                                 ScRoot.Opacity = 1;
+                                cardsList.Opacity = 1;
                                 actInd.IsRunning = false;
                                 actInd.IsVisible = false;
                                 return;
@@ -222,6 +224,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                                 await DisplayAlert("Сообщение", "Не удалось выполнить создание платежа! Попробуйте позже.", "Закрыть");
                                 await Task.Delay(1000);
                                 ScRoot.Opacity = 1;
+                                cardsList.Opacity = 1;
                                 actInd.IsRunning = false;
                                 actInd.IsVisible = false;
                                 return;
@@ -233,6 +236,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                             await DisplayAlert("Сообщение", String.Format("Не удалось выполнить создание платежа({0})! Попробуйте позже.", jPayResponse.Message), "Закрыть");
                             await Task.Delay(1000);
                             ScRoot.Opacity = 1;
+                            cardsList.Opacity = 1;
                             actInd.IsRunning = false;
                             actInd.IsVisible = false;
                             return;
@@ -243,6 +247,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                         await DisplayAlert("Сообщение", "Не удалось выполнить создание платежа! Попробуйте позже.", "Закрыть");
                         await Task.Delay(1000);
                         ScRoot.Opacity = 1;
+                        cardsList.Opacity = 1;
                         actInd.IsRunning = false;
                         actInd.IsVisible = false;
                         return;
@@ -253,6 +258,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                     await DisplayAlert("Сообщение", "Не удалось выполнить создание платежа! Попробуйте позже.", "Закрыть");
                     await Task.Delay(1000);
                     ScRoot.Opacity = 1;
+                    cardsList.Opacity = 1;
                     actInd.IsRunning = false;
                     actInd.IsVisible = false;
                     return;

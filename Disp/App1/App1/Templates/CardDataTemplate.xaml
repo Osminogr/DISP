@@ -12,9 +12,9 @@
                 </Grid.RowDefinitions>
                 <Image Source="mastercard_icon.png" Grid.Row="0" HorizontalOptions="End" Grid.Column="0" Grid.ColumnSpan="1"></Image>
                 <Label Text="" x:Name="PAN" FontSize="16" VerticalTextAlignment="Center" Grid.Row="0" Padding="10, 0, 0, 0" Grid.Column="1" Grid.ColumnSpan="4"/>
-                <Label Text="11/21" IsVisible="false" Grid.Row="0" TextColor="#CCCCCC" Grid.Column="4" VerticalOptions="Center"></Label>
+                <Label Text="" x:Name="ExpDateLabel" IsVisible="True" Grid.Row="0" TextColor="#CCCCCC" Grid.Column="4" VerticalOptions="Center"></Label>
                 <Label Text="CVV" x:Name="CVVLabel" IsVisible="False" Grid.Row="0" TextColor="#CCCCCC" Grid.Column="5" VerticalOptions="Center"></Label>
-                <local:CustomEntry x:Name="CVV" Grid.Row="0" Grid.Column="6" Margin="-10, 0, 10, 0" IsVisible="False" MaxLength="3" Keyboard="Numeric"></local:CustomEntry>
+                <local:CustomEntry x:Name="CVV" Grid.Row="0" Grid.Column="6" Margin="-10, 10, 10, 10" IsVisible="False" MaxLength="3" Keyboard="Numeric"></local:CustomEntry>
                 <RadioButton Grid.Column="7" Grid.Row="0" x:Name="cardChecked"/>
                 <Button x:Name="btnDelete" Text="Удалить" IsVisible="False" Grid.Row="0" Padding="0" Margin="0" Grid.ColumnSpan="3" Grid.Column="5" BackgroundColor="Red" TextColor="White"/>
             </Grid>

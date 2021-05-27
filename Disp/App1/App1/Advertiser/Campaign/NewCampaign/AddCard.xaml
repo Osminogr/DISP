@@ -8,9 +8,11 @@
     <ContentPage.Content>
 
         <StackLayout VerticalOptions="FillAndExpand">
-            <Grid Padding="20">
+            <ActivityIndicator x:Name="actInd" IsRunning="false" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" IsVisible="false" />
+
+            <Grid Padding="10, 10, 10, 10" x:Name="gridRoot">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="10"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
@@ -18,7 +20,24 @@
                     <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="40"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Frame Grid.Row="0" HasShadow="True" Grid.RowSpan="6" BackgroundColor="#FFB800" Opacity="1" Padding="0" CornerRadius="20" Grid.ColumnSpan="4">
+
+                <Frame Grid.Row="0" HasShadow="True" Grid.RowSpan="6" BackgroundColor="LightGray" Opacity="1" Padding="0" CornerRadius="20" Grid.ColumnSpan="5" Margin="0, 30, 0, 0" Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <BoxView BackgroundColor="LightSteelBlue" Grid.Row="0" Grid.ColumnSpan="5"></BoxView>
+                        <Label Text="CVV" Grid.Row="1" Grid.Column="4" Padding="4, 0, 0, 0" FontSize="12"  FontAttributes="bold"></Label>
+                        <local:CustomEntry x:Name="CVV" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="1" TextColor="White" Margin="4, -10, 16, 10" Keyboard="Numeric" MaxLength="3"></local:CustomEntry>
+                        <BoxView BackgroundColor="LightSteelBlue" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="5"></BoxView>
+                    </Grid>
+                </Frame>
+
+                <Frame Grid.Row="0" HasShadow="True" Grid.RowSpan="6" BackgroundColor="#FFB800" Opacity="1" Padding="0" Margin="0, 0, 0, 30" CornerRadius="20" Grid.ColumnSpan="5" Grid.Column="0">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"></RowDefinition>
@@ -48,7 +67,7 @@
                     </Grid>
                 </Frame>
             </Grid>
-            <Button Clicked="Add" HorizontalOptions="Center" Margin="0, 0, 0, 20"  WidthRequest="250" Text="Добавить" FontSize="14" CornerRadius="30" TextColor="White" BackgroundColor="#FFB800"/>
+            <Button x:Name="btnAdd" Clicked="Add" HorizontalOptions="Center" Margin="0, 0, 0, 20"  WidthRequest="250" Text="Добавить" FontSize="14" CornerRadius="30" TextColor="White" BackgroundColor="#FFB800"/>
         </StackLayout>
 
     </ContentPage.Content>

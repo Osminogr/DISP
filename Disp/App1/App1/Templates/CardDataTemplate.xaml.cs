@@ -25,6 +25,7 @@ namespace App1.Templates
             InitializeComponent();
 
             PAN.Text = String.Format("*{0}", cardData.PAN.Substring(cardData.PAN.Length - 4));
+            ExpDateLabel.Text = cardData.ExpDate;
 
             cardDataFrame.GestureRecognizers.Add(new TapGestureRecognizer()
             {
@@ -58,6 +59,8 @@ namespace App1.Templates
 
             if (showCVV)
                 CVV.TextChanged += CVV_TextChanged;
+            else
+                cardChecked.IsVisible = false;
 
             cardChecked.CheckedChanged += delegate
             {
