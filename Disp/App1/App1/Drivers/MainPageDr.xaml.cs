@@ -33,6 +33,9 @@ namespace App1
             bottomName.Text = String.Format("Привет {0} {1} {2}!", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
             UserName.Text = String.Format("{0} {1} {2}!", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic);
 
+            if (nowUser.person.urlSelfPhoto != null) selfPhoto.Source = nowUser.person.urlSelfPhoto;
+            else selfPhoto.Source = "User.png";
+
             LoadVideos();
 
             _context = SynchronizationContext.Current;
@@ -51,7 +54,7 @@ namespace App1
                         lat = position.Latitude.ToString(),
                         ltd = position.Longitude.ToString(),
                         fioDriver = String.Format("{0} {1} {2}", nowUser.person.lastName, nowUser.person.firstName, nowUser.person.patronymic),
-                        car = String.Format("{0} {1} {2}", nowUser.car.mark, nowUser.car.model, nowUser.car.regNumberCar),
+                        car = String.Format("{0} {1} {2}", nowUser.car.mark, nowUser.car.model, nowUser.car.carNumber),
                         idDriver = nowUser.id
                     });
                     await Task.Delay(60000);

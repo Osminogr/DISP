@@ -7,8 +7,8 @@
              x:Class="App1.Advs.Alerts">
 
     <ContentPage.Content>
-        <ScrollView VerticalOptions="FillAndExpand" x:Name="ScrollAlertsRoot">
-            <StackLayout x:Name="AlertsRoot">
+        <ScrollView VerticalOptions="FillAndExpand" x:Name="ScrollAlertsRoot" >
+            <StackLayout x:Name="AlertsRoot" VerticalOptions="FillAndExpand" Margin="0, 0, 0, 0" Padding="0, 0, 0, 10">
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

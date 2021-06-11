@@ -8,13 +8,17 @@ using App1.Domain;
 using App1.Advertiser.Campaign;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using App1.Templates;
+using System.Threading;
 
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPageAdv : ContentPage
+    public partial class MainPageAdv : PopUpTemplate
     {
         Adv nowUser;
+        bool running = false;
+        private readonly SynchronizationContext _context;
         public MainPageAdv(Adv now)
         {
             if (now == null)
@@ -39,6 +43,8 @@ namespace App1
 
             InitializeComponent();
 
+            _context = SynchronizationContext.Current;
+
             gridRoot.Opacity = 0;
 
             MoveMap();
@@ -54,6 +60,24 @@ namespace App1
             if (authObject != null) showAllDrivers.IsToggled = authObject.showAllDrivers;
 
             LoadStatsVideos();
+
+            running = true;
+            Thread thrd = new Thread(Callback);
+            thrd.Start();
+        }
+
+        private async void Callback()
+        {
+            while (running)
+            {
+                await Task.Delay(10000);
+                List<Alert> alerts = await Server.GetAlerts(nowUser);
+                if (alerts != null && alerts.Count != Server.GetAuthObject().countAlerts)
+                {
+                    _context.Send(status => ShowAlertAsync("У Вас одно новое уведомление!", (View)this.GetTemplateChild("alertViewPopUp")), null);;
+                    Server.SaveCountAlertsAuthObject(alerts.Count);
+                }
+            }
         }
 
         private async void LoadStatsVideos()
@@ -228,7 +252,7 @@ namespace App1
 
         public async void Statistic(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Statistic(null));
+            await Navigation.PushAsync(new StatisticAdv(nowUser));
         }
 
         public async void PayMethod(object sender, EventArgs e)
@@ -270,7 +294,7 @@ namespace App1
 
         public async void LoadStats(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Statistic(null));
+            await Navigation.PushAsync(new StatisticAdv(nowUser));
         }
     }
 }

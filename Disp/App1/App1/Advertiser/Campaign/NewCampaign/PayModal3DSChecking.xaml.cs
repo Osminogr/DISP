@@ -196,7 +196,7 @@ namespace App1.Advertiser.Campaign.NewCampaign
                 Alert alert = new Alert();
                 alert.header = "Сообщение";
                 alert.title = "Создание рекламной компании";
-                alert.text = "Ваша рекламная компания запустится " + DateTime.Now.ToShortDateString() + " в 09:00.";
+                alert.text = "Ваша рекламная компания запустится " + DateTime.Now.AddDays(1).ToShortDateString() + " в 09:00.";
 
                 await Server.AddAlert(alert, compaign.adv.id);
 

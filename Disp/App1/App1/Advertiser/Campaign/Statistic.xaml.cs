@@ -22,7 +22,7 @@ namespace App1.Advertiser.Campaign
 
             if (driver != null)
             {
-                carDriver.Text = String.Format("{0} {1} {2}", driver.car.mark, driver.car.model, driver.car.regNumberCar);
+                carDriver.Text = String.Format("{0} {1} {2}", driver.car.mark, driver.car.model, driver.car.carNumber);
                 fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
             }
 

@@ -50,6 +50,7 @@ namespace App1.Advertiser
                             loaded = true;
                         }
                     }
+                    /*
                     else
                     {
                         if (!item.active)
@@ -58,6 +59,7 @@ namespace App1.Advertiser
                             loaded = true;
                         }
                     }
+                    */
                 }
             }
 

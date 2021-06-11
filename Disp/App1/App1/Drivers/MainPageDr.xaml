@@ -130,8 +130,8 @@
                 </Frame.GestureRecognizers>
                 <Grid  BackgroundColor="#FBFBFB">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -144,19 +144,35 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.RowSpan="2" BackgroundColor="#F39F26">
+                    <Grid Grid.RowSpan="2" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0" BackgroundColor="#F39F26">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="20"/>
                         </Grid.RowDefinitions>
 
-                        <Image Source="User.png" Aspect="AspectFit" Grid.RowSpan="3"/>
+                        <Grid Grid.RowSpan="3" Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                            <Frame Margin="0, 3, 0, 0"
+                                   BorderColor="Black"
+                                   CornerRadius="50"
+                                   WidthRequest="30"
+                                   HeightRequest="40"
+                                   IsClippedToBounds="True"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                                <Image x:Name="selfPhoto"
+                                         Aspect="AspectFill"
+                                         Margin="-20"
+                                         HeightRequest="100"
+                                         WidthRequest="100" />
+                            </Frame>
+                        </Grid>
+
                         <Label Text="" Grid.Column="0" Grid.Row="3" VerticalOptions="Center" 
                        TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
-                       FontSize="14" Grid.RowSpan="2"
+                       FontSize="14" Grid.RowSpan="1"
                        x:Name="UserName"/>
                     </Grid>
                     <Button BackgroundColor="#0000" Text="Видеоролики"

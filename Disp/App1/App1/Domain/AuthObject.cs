@@ -9,6 +9,7 @@ namespace App1.Domain
         public bool isCompany;
         public bool showAllDrivers;
         public bool showDriverAdReq;
+        public int countAlerts;
 
         public AuthObject()
         {
