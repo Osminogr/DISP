@@ -4,17 +4,17 @@
              x:Name="this"
              x:Class="App1.Templates.DriversTemplate">
     <Grid BackgroundColor="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="50"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
 
-            <Frame Grid.Row="0"
+        <Frame Grid.Row="0"
                 Grid.Column="0"
                 Grid.RowSpan="2"
                 Padding="0"
@@ -24,13 +24,27 @@
                 IsClippedToBounds="True"
                 HeightRequest="70"
                 WidthRequest="70">
+            <Grid Padding="0, 0, 0, 0" Margin="0, 0, 0, 0">
+                <Frame Margin="0, 3, 0, 0"
+                                   BorderColor="Black"
+                                   CornerRadius="50"
+                                   WidthRequest="30"
+                                   HeightRequest="40"
+                                   IsClippedToBounds="True"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
                     <Image Source="https://funik.ru/wp-content/uploads/2018/10/c23b96b3b171b5882d67-768x922.jpg"
-                        VerticalOptions="FillAndExpand"
-                        HorizontalOptions="FillAndExpand"/>
-            </Frame>
-            <Label Text="" x:Name="fioDriver" FontSize="15" TextColor="#FFB800" Grid.Row="0" Grid.RowSpan="1" Grid.Column="1" Margin="0, 30, 0, 0"/>
-            <Label Text="" x:Name="carDriver" FontSize="12" TextColor="Gray" Grid.Row="1" Grid.RowSpan="1" Grid.Column="1" Margin="0, 0, 0, 0"/>
+                           x:Name="selfPhotoDriver"
+                                         Aspect="AspectFill"
+                                         Margin="-20"
+                                         HeightRequest="100"
+                                         WidthRequest="100" />
+                </Frame>
+            </Grid>
+        </Frame>
+        <Label Text="" x:Name="fioDriver" FontSize="15" TextColor="#FFB800" Grid.Row="0" Grid.RowSpan="1" Grid.Column="1" Margin="0, 30, 0, 0"/>
+        <Label Text="" x:Name="carDriver" FontSize="12" TextColor="Gray" Grid.Row="1" Grid.RowSpan="1" Grid.Column="1" Margin="0, 0, 0, 0"/>
 
-            <Button ImageSource="shapegray.png" Grid.Row="1" BackgroundColor="Transparent" Grid.Column="2" Margin="0, 0, 0, 60"></Button>
-        </Grid>
+        <Button ImageSource="shapegray.png" Grid.Row="1" BackgroundColor="Transparent" Grid.Column="2" Margin="0, 0, 0, 60"></Button>
+    </Grid>
 </ContentView>

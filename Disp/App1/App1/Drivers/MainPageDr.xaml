@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<template:PopUpTemplate  xmlns:template="clr-namespace:App1.Templates"
+                         xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             ControlTemplate="{StaticResource baseTemplate}"
              x:Class="App1.MainPageDr"
              xmlns:local="clr-namespace:App1">
     <StackLayout VerticalOptions="FillAndExpand" x:Name="rootContainer">
@@ -190,7 +192,7 @@
                         FontSize="14"
                         Grid.Row="3"
                     Clicked="Balance"/>
-                    <Button BackgroundColor="#0000" Text="Оповещения"
+                    <Button BackgroundColor="#0000" Text="Оповещения" x:Name="alertsLabel"
                         TextColor="Black"
                         HorizontalOptions="Start"
                         Margin="19,0,0,0"
@@ -222,4 +224,4 @@
             </Frame>
         </Grid>
     </StackLayout>
-</ContentPage>
+</template:PopUpTemplate>

@@ -25,6 +25,12 @@ namespace App1.Advertiser
             OverrideTitleView("Мои компании", -1);
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            Navigation.PushAsync(new MainPageAdv(nowUser), true);
+            return true;
+        }
+
         private void OverrideTitleView(string name, int count)
         {
             NavigationPage.SetTitleView(this, TitleView.OverrideView(name, count));
@@ -50,16 +56,6 @@ namespace App1.Advertiser
                             loaded = true;
                         }
                     }
-                    /*
-                    else
-                    {
-                        if (!item.active)
-                        {
-                            compaignCompl.Children.Add(new CompaignTemplate(item));
-                            loaded = true;
-                        }
-                    }
-                    */
                 }
             }
 

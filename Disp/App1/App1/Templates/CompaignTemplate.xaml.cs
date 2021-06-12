@@ -50,7 +50,7 @@ namespace App1.Templates
             compaign = (Compaign) entity;
 
             url = compaign.video.url;
-            videoName = compaign.video.name;
+            videoName = String.Format("{0}-{1}", DateTime.Parse(compaign.date).ToString("dd.MM.yyyy"), DateTime.Parse(compaign.date).AddDays(30).ToString("dd.MM.yyyy"));
 
             InitializeComponent();
 
@@ -82,7 +82,7 @@ namespace App1.Templates
 
         private void AutoPlayVp()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             _context.Send(status => vp.Seek(1), null);
             _context.Send(status => vp.Seek(-1), null);

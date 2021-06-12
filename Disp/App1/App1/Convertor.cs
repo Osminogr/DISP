@@ -292,11 +292,12 @@ namespace App1
             Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));
         }
 
-        public static void SaveCountAlertsAuthObject(int countAlerts)
+        public static void SaveCountAlertsAuthObject(int countAlerts, int countNewAlerts)
         {
             AuthObject authObject = GetAuthObject();
 
-            authObject.countAlerts = countAlerts;
+            if (countAlerts != 0) authObject.countAlerts = countAlerts;
+            authObject.countNewAlerts = countNewAlerts;
 
             ClearAuthObject();
             Preferences.Set(Server.AUTH_OBJECT, JsonConvert.SerializeObject(authObject));

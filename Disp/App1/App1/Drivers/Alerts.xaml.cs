@@ -29,6 +29,8 @@ namespace App1.Drivers
             running = true;
             Thread t = new Thread(new ThreadStart(GetAlerts));
             t.Start();
+
+            Server.SaveCountAlertsAuthObject(0, 0);
         }
 
         private async void GetAlerts()

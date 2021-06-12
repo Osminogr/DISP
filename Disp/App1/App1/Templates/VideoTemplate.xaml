@@ -10,13 +10,13 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Frame BackgroundColor="#FFB800"
+        <Frame BackgroundColor="#FFB800" Grid.ColumnSpan="2"
                        CornerRadius="12" Grid.Column="0" Grid.Row="0" Margin="0,0,0,-20">
 
             <Label Text="{Binding Name}"
-                               FontSize="Small"
+                               FontSize="12"
                                TextColor="White"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="Start"
                                VerticalOptions="StartAndExpand"
                                Margin="0,-12,0,0"/>
 
@@ -26,13 +26,13 @@
                        DisplayControls="True"
                        AutoPlay="False"
                        VerticalOptions="FillAndExpand"
-                       Grid.ColumnSpan="2"
+                       Grid.ColumnSpan="3"
                        Grid.Row="1"
                        x:Name="vp"
                        HeightRequest="200"
                        Margin="0,0,0,0"/>
 
-        <Frame Grid.Row="1" Grid.ColumnSpan="2" x:Name="videoLoading" IsVisible="true">
+        <Frame Grid.Row="1" Grid.ColumnSpan="3" x:Name="videoLoading" IsVisible="true">
             <ActivityIndicator x:Name="actInd" IsRunning="True" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" Grid.Row="0" />
         </Frame>
     </Grid>

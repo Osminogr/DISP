@@ -21,9 +21,9 @@
                        CornerRadius="12" Grid.Column="0" Grid.Row="0" Margin="0,0,0,-20 ">
 
                     <Label Text="{Binding videoName, Source={x:Reference this}}"
-                               FontSize="Small"
+                               FontSize="12"
                                TextColor="White"
-                               HorizontalOptions="Center"
+                               HorizontalOptions="Start"
                                VerticalOptions="StartAndExpand"
                                Margin="0,-12,0,0"/>
 

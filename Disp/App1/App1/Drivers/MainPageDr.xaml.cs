@@ -8,11 +8,12 @@ using App1.Domain;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using App1.Templates;
 
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPageDr : ContentPage
+    public partial class MainPageDr : PopUpTemplate
     {
         Driver nowUser;
         bool running;
@@ -39,6 +40,44 @@ namespace App1
             LoadVideos();
 
             _context = SynchronizationContext.Current;
+        }
+
+        private async void Callback()
+        {
+            while (running)
+            {
+                await Task.Delay(10000);
+                List<Alert> alerts = await Server.GetAlerts(nowUser);
+                if (alerts != null && alerts.Count != Server.GetAuthObject().countAlerts)
+                {
+                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новых оповещениий!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
+                    _context.Send(status => alertsLabel.Text = String.Format("Оповещения({0})", alerts.Count - Server.GetAuthObject().countAlerts), null);
+                    Server.SaveCountAlertsAuthObject(alerts.Count, alerts.Count - Server.GetAuthObject().countAlerts);
+                }
+
+                if (Server.GetAuthObject().countNewAlerts == 0) _context.Send(status => alertsLabel.Text = "Оповещения", null);
+            }
+        }
+
+        protected override void OnDisappearing()
+        {
+            running = false;
+            base.OnDisappearing();
+        }
+
+        protected override void OnAppearing()
+        {
+            running = true;
+            Thread thrd = new Thread(Callback);
+            thrd.Start();
+
+            base.OnAppearing();
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Server.ClearAuthObject();
+            return base.OnBackButtonPressed();
         }
 
         private async void SendCoords()

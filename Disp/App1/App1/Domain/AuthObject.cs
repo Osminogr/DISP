@@ -10,6 +10,7 @@ namespace App1.Domain
         public bool showAllDrivers;
         public bool showDriverAdReq;
         public int countAlerts;
+        public int countNewAlerts;
 
         public AuthObject()
         {

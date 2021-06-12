@@ -24,6 +24,7 @@ namespace App1.Advertiser.Campaign
             {
                 carDriver.Text = String.Format("{0} {1} {2}", driver.car.mark, driver.car.model, driver.car.carNumber);
                 fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
+                selfPhoto.Source = driver.person.urlSelfPhoto;
             }
 
             LoadData();

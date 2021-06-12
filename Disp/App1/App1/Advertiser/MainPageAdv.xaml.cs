@@ -60,10 +60,27 @@ namespace App1
             if (authObject != null) showAllDrivers.IsToggled = authObject.showAllDrivers;
 
             LoadStatsVideos();
+        }
 
+        protected override void OnDisappearing()
+        {
+            running = false;
+            base.OnDisappearing();
+        }
+
+        protected override void OnAppearing()
+        {
             running = true;
             Thread thrd = new Thread(Callback);
             thrd.Start();
+
+            base.OnAppearing();
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Server.ClearAuthObject();
+            return base.OnBackButtonPressed();
         }
 
         private async void Callback()
@@ -74,9 +91,12 @@ namespace App1
                 List<Alert> alerts = await Server.GetAlerts(nowUser);
                 if (alerts != null && alerts.Count != Server.GetAuthObject().countAlerts)
                 {
-                    _context.Send(status => ShowAlertAsync("У Вас одно новое уведомление!", (View)this.GetTemplateChild("alertViewPopUp")), null);;
-                    Server.SaveCountAlertsAuthObject(alerts.Count);
+                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новых оповещениий!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
+                    _context.Send(status => alertsLabel.Text = String.Format("Оповещения({0})", alerts.Count - Server.GetAuthObject().countAlerts), null);
+                    Server.SaveCountAlertsAuthObject(alerts.Count, alerts.Count - Server.GetAuthObject().countAlerts);
                 }
+
+                if (Server.GetAuthObject().countNewAlerts == 0) _context.Send(status => alertsLabel.Text = "Оповещения", null);
             }
         }
 
@@ -232,50 +252,49 @@ namespace App1
 
         public async void Videos(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new VideosAct(nowUser));
+            await Navigation.PushAsync(new VideosAct(nowUser), true);
         }
 
         public async void Tarifs(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TarifPlan(nowUser));
+            await Navigation.PushAsync(new TarifPlan(nowUser), true);
         }
 
         public async void Alerts(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Advs.Alerts(nowUser));
+            await Navigation.PushAsync(new Advs.Alerts(nowUser), true);
         }
 
         public async void Chat(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Advs.Chat(nowUser));
+            await Navigation.PushAsync(new Advs.Chat(nowUser), true);
         }
 
         public async void Statistic(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StatisticAdv(nowUser));
+            await Navigation.PushAsync(new StatisticAdv(nowUser), true);
         }
 
         public async void PayMethod(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PayPage(nowUser));
+            await Navigation.PushAsync(new PayPage(nowUser), true);
         }
 
         public async void NewСampaign(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new CampaignsAct(nowUser));
+            await Navigation.PushAsync(new CampaignsAct(nowUser), true);
         }
 
         public async void Settings(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsAdv(nowUser));
+            await Navigation.PushAsync(new SettingsAdv(nowUser), true);
         }
 
         public async void Exit(object sender, EventArgs e)
         {
             Server.ClearAuthObject();
-            await Navigation.PushAsync(new StartPage());
+            await Navigation.PushAsync(new StartPage(), true);
         }
-
 
         public void Switched(object sender, EventArgs e)
         {
@@ -284,17 +303,17 @@ namespace App1
 
         public async void LoadVideo(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new VideosAct(nowUser));
+            await Navigation.PushAsync(new VideosAct(nowUser), true);
         }
 
         public async void NewCompaign(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Advertiser.Campaign.NewCampaign.ChoseVid(nowUser));
+            await Navigation.PushAsync(new Advertiser.Campaign.NewCampaign.ChoseVid(nowUser), true);
         }
 
         public async void LoadStats(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new StatisticAdv(nowUser));
+            await Navigation.PushAsync(new StatisticAdv(nowUser), true);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace App1.Templates
@@ -26,6 +27,13 @@ namespace App1.Templates
             await Task.Delay(3000);
             await view.FadeTo(0, 1000, Easing.CubicOut);
             view.IsVisible = false;
+        }
+
+        public async void GoToAlerts(object sender, EventArgs args)
+        {
+            if (Server.GetAuthObject().adv != null)
+                await Navigation.PushAsync(new App1.Advs.Alerts(Server.GetAuthObject().adv), true);
+            else await Navigation.PushAsync(new App1.Drivers.Alerts(Server.GetAuthObject().driver), true);
         }
     }
 }

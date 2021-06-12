@@ -194,7 +194,7 @@
                             FontSize="14"
                         Grid.Row="6"
                     Clicked="PayMethod"/>
-                    <Button BackgroundColor="#0000" Text="Оповещения"
+                    <Button BackgroundColor="#0000" Text="Оповещения" x:Name="alertsLabel"
                         Margin="19,0,0,0"
                         TextColor="Black"
                             FontSize="14"

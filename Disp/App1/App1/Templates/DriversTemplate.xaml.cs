@@ -20,8 +20,12 @@ namespace App1.Templates
         {
             InitializeComponent();
 
-            carDriver.Text = String.Format("{0} {1}", driver.car.mark, driver.car.model);
-            fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
+            if (driver != null)
+            {
+                selfPhotoDriver.Source = driver.person.urlSelfPhoto;
+                carDriver.Text = String.Format("{0} {1}", driver.car.mark, driver.car.model);
+                fioDriver.Text = String.Format("{0} {1} {2}", driver.person.lastName, driver.person.firstName, driver.person.patronymic);
+            }
         }
     }
 }
