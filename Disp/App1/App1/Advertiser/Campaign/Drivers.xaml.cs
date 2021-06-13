@@ -37,7 +37,7 @@ namespace App1.Advertiser.Campaign
                     view.GestureRecognizers.Add(new TapGestureRecognizer()
                     {
                         Command = new Command(() => {
-                            Navigation.PushAsync(new Statistic(dr));
+                            Navigation.PushAsync(new Statistic(dr, compaign), true);
                         })
                     });
                     driversList.Children.Add(view);

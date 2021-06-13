@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using App1.Templates;
 using System.Threading;
+using Plugin.Geolocator;
 
 namespace App1
 {
@@ -91,7 +92,7 @@ namespace App1
                 List<Alert> alerts = await Server.GetAlerts(nowUser);
                 if (alerts != null && alerts.Count != Server.GetAuthObject().countAlerts)
                 {
-                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новых оповещениий!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
+                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новое(ых) оповещение(й)!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
                     _context.Send(status => alertsLabel.Text = String.Format("Оповещения({0})", alerts.Count - Server.GetAuthObject().countAlerts), null);
                     Server.SaveCountAlertsAuthObject(alerts.Count, alerts.Count - Server.GetAuthObject().countAlerts);
                 }
@@ -128,12 +129,12 @@ namespace App1
         {
             try
             {
-                //var locator = CrossGeolocator.Current;
-                //Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
-                //position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
-                //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude), Distance.FromMiles(1)));
-
                 await LoadDriversMapAsync();
+
+                var locator = CrossGeolocator.Current;
+                Plugin.Geolocator.Abstractions.Position position = new Plugin.Geolocator.Abstractions.Position();
+                position = await locator.GetPositionAsync(TimeSpan.FromSeconds(1));
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(position.Latitude, position.Longitude), Distance.FromMiles(1)));
             }
             catch (Exception ex)
             {
@@ -169,7 +170,7 @@ namespace App1
                         map.Pins.Add(pin);
                     }
 
-                    map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(Double.Parse(coords[0].lat), Double.Parse(coords[0].ltd)), Distance.FromMeters(100)));
+                    //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(Double.Parse(coords[0].lat), Double.Parse(coords[0].ltd)), Distance.FromMeters(100)));
                 }
 
                 await Task.Delay(1000);
@@ -190,7 +191,7 @@ namespace App1
         {
             Driver driver = await Server.GetDriver(ushort.Parse(((Pin)sender).StyleId));
 
-            await Navigation.PushAsync(new Statistic(driver), true);
+            await Navigation.PushAsync(new StatisticAdv(nowUser), true);
         }
 
         public async void Activate(object sender, EventArgs e)

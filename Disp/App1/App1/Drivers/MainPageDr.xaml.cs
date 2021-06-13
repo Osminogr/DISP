@@ -50,7 +50,7 @@ namespace App1
                 List<Alert> alerts = await Server.GetAlerts(nowUser);
                 if (alerts != null && alerts.Count != Server.GetAuthObject().countAlerts)
                 {
-                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новых оповещениий!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
+                    _context.Send(status => ShowAlertAsync(String.Format("У Вас {0} новое(ых) оповещение(й)!", alerts.Count - Server.GetAuthObject().countAlerts), (View)this.GetTemplateChild("alertViewPopUp")), null);
                     _context.Send(status => alertsLabel.Text = String.Format("Оповещения({0})", alerts.Count - Server.GetAuthObject().countAlerts), null);
                     Server.SaveCountAlertsAuthObject(alerts.Count, alerts.Count - Server.GetAuthObject().countAlerts);
                 }

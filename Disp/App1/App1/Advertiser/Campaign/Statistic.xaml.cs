@@ -14,9 +14,14 @@ namespace App1.Advertiser.Campaign
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Statistic : ContentPage
     {
-        public Statistic(Driver driver)
+        Driver driverInner;
+        Compaign compaignInner;
+        public Statistic(Driver driver, Compaign compaign)
         {
             InitializeComponent();
+
+            driverInner = driver;
+            compaignInner = compaign;
 
             OverrideTitleView("Статистика", 70, -1);
 
@@ -38,33 +43,35 @@ namespace App1.Advertiser.Campaign
 
                 if (adv != null)
                 {
-                    adv.date = "20.02.2021";
-                    registerDate.Text = String.Format("Начало сотрудничества с DISP: {0}", adv.date);
+                    registerDate.Text = String.Format("Начало сотрудничества с DISP: {0}", DateTime.Parse(driverInner.date).ToString("dd.MM.yyyy"));
 
-                    List<Compaign> compaigns = await Server.GetCompaigns(adv.id);
+                    List<Compaign> compaigns = await Server.GetCompaignsByDriver(driverInner.id);
                     int countActive = 0;
                     int countCompleted = 0;
-                    int showsAll = 0;
-                    DateTime startDate = DateTime.Now;
-
+                    
                     if (compaigns != null && compaigns.Count != 0)
                     {
-                        foreach (var compaign in compaigns) compaign.date = DateTime.Now.ToShortDateString();
-
-                        startDate = DateTime.Parse(compaigns[0].date);
                         foreach (var compaign in compaigns)
                         {
                             if (compaign.active) countActive++;
                             else countCompleted++;
-
-                            if (startDate > DateTime.Parse(compaign.date)) startDate = DateTime.Parse(compaign.date);
                         }
                     }
+
                     compaignsActiveCount.Text = String.Format("Количество активных рекламных компаний: {0}", countActive);
                     compaignsCompletedCount.Text = String.Format("Количество завершенных рекламных компаний: {0}", countCompleted);
-                    startDateCompaign.Text = String.Format("Начало участия в рекламной компании: {0}", startDate.Date.ToShortDateString());
+                    startDateCompaign.Text = String.Format("Начало участия в рекламной компании: {0}", DateTime.Parse(compaignInner.date).ToString("dd.MM.yyyy"));
 
-                    showsCountAll.Text = String.Format("Количество показов на данный момент всего: {0}", showsAll);
+                    int showsAll = 0;
+                    int days = (int)(DateTime.Now - DateTime.Parse(compaignInner.date).AddDays(1)).TotalDays;
+                    showsAll = showsAll + days * 12 * 60 * 60 / 15;
+                    showsCountAll.Text = String.Format("Количество показов на данный момент: {0}", showsAll);
+
+                    int showsCurrent = 0;
+                    int hours = DateTime.Now.Hour - 10;
+                    if (DateTime.Now.Hour > 22) hours = 12;
+                    showsCurrent = hours * 60 * 60 / 15;
+                    showsCountCurrent.Text = String.Format("Количество показов сегодня: {0}", showsCurrent);
                 }
             }
             catch (Exception ex)

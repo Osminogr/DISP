@@ -369,6 +369,20 @@ namespace App1
             return list;
         }
 
+        public static async Task<List<Compaign>> GetCompaignsByDriver(int id)
+        {
+            List<Compaign> list = null;
+
+            HttpClient client = new HttpClient();
+
+            var answer = await client.GetAsync(ROOT_URL + "adreqbydriver/" + id);
+            var responseBody = await answer.Content.ReadAsStringAsync();
+
+            if (responseBody != null) list = JsonConvert.DeserializeObject<List<Compaign>>(responseBody);
+
+            return list;
+        }
+
         public static async Task<List<Tarif>> GetTarifs()
         {
             List<Tarif> tarifs = null;
